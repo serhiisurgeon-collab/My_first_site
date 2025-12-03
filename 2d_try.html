@@ -62,10 +62,17 @@ h2 {
   animation: blink 2s infinite;
 }
 
+h3 { 
+  color: DarkViolet;
+  font-size: 30px;
+ margin-bottom: 9px;
+text-align: center;
+} 
+
 /* Абзаци */
 p.intro {
   color: IndianRed;
-  font-size: 18px
+  font-size: 18px;
 }
 
   .intro {
@@ -99,8 +106,7 @@ li:nth-child(3) { color: blue; }
   padding: 15px;              
   border-radius: 10px;
   font-size: 15px;
-  display: flex;        
-}
+  }
 
 .flex-test {
   display: flex;
@@ -132,6 +138,32 @@ justify-content: center;
 .card:hover {
   transform: scale(1.03);
 }
+
+.gallery {
+column-count: 3;
+column-gap: 20px;
+margin-top: 30px;
+} 
+
+.gallery .photo {
+break-inside: avoid;
+background: LightSkyBlue;
+border-radius: 10px;
+margin-bottom: 20px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.gallery .photo img {
+width: 100%;
+display: block;
+}
+
+.gallery .photo p {
+ padding: 10px 12px 12px;
+  font-size: 14px;
+}
+
 </style>
 
 </head>
@@ -226,6 +258,55 @@ justify-content: center;
   <a href="https://en.wikipedia.org/wiki/Bene_Gesserit" target="_blank">
     Хочеш дізнатися більше? <br><b>ЖМИ!</b>
   </a>
+</div>
+
+<h3><i> Ось декілька цікавих світлин адаптацій у кіно </i></h3>
+
+<div class="gallery">
+<div class="photo">
+<img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/01/rebecca-ferguson-in-dune-with-bene-gesserit-concept-art-in-the-background.jpg?w=1200&h=900&fit=crop" 
+alt="Преполобна матір Джесика">
+<p> Акторка Фергюсон Ребекка зіграла головну роль у фільми саме як Леді Джесика </p>
+</div>
+
+<div class="photo">
+<img src="https://upload.wikimedia.org/wikipedia/en/0/09/Mohiam%2BBeneGesserit-1984.jpg" 
+alt="Преподобна матір Мохіам">
+<p> Преподобна Мати Гая Хелен Мохіам (яку зіграла акторка Сіан Філліпс) та інші Бене Гессерит із «Дюни» у екранізації Девіда Лінча </p>
+</div>
+
+<div class="photo">
+<img src="https://static.wikia.nocookie.net/dune/images/8/86/Sisters2.jpg/revision/latest?cb=20250611123714" 
+alt="Малюнок з книги">
+<p> Малюнок з книги "Дюна" -американська епічна космічна опера 1984 року , сценарій і режисер якої написав Девід Лінч , заснована на однойменному романі Френка Герберта 1965 року </p>
+</div>
+
+<div class="photo">
+<img src="https://cdnb.artstation.com/p/assets/images/images/045/567/399/large/anato-finnstark-web.jpg?1643041874" 
+alt="Малюнок з фанфіку">
+<p> А так одна з Бене Гессеріт була зображана одним художником у його вільному стилістичному офрмлені, зверніть увагу, що основні риси завжди зберігаються, це високий 
+конусоподібний головний убор, та чорна довга накидка </p>
+</div>
+
+<div class="photo">
+<img src="https://danienlared.wordpress.com/wp-content/uploads/2007/12/benegesserit2000_1.jpg" 
+alt="Малюнок з міні-серіалу">
+<p> Зузана Гейслерова зіграла роль Мати Гаюс Хелен Мохіам у міні-серіла "Бенна Гессеріт". Цікаво що маленькі костюми у мінісеріалі, аколітів у білих капелюхах 
+, які виглядають так, ніби вони прийшли з монастирської школи, і особливо матері Мохіам з цією важкодоступною річчю на голові - відходят від канонічних норм написаних Лінчем.
+ Інода коли ти так сильно намагаєшся бути оригінальними, ти заходиш надто далеко.</p>
+</div>
+
+<div class="photo">
+<img src="https://pbs.twimg.com/media/FK3KaznXwAEBuqB.jpg" 
+alt="Тесса Шарлотта Ремплінг">
+<p> На мою думку, краще всього образ Мати Гая Хелен Мохіам зіграла Шарлотта Ремплінг, вона повністю і віком, і мудрістю увійшла в роль, наче вона все життя дійсно була нею </p>
+</div>
+
+<div class="photo">
+<img src="https://static.wikia.nocookie.net/dune/images/3/31/Bene_Gesserit.png/revision/latest/scale-to-width-down/1200?cb=20160520140646&path-prefix=ru" 
+alt="Домівка">
+<p> "Енциклопедія Дюни" описує дванадцять "капітульних" планет Бене Гессеріт. </p>
+</div>
 </div>
 </div>
 </body>
