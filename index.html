@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сергій – мій сайт-візитівка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
+      min-height: 100vh;
+      color: #1f2a3c;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 90px 24px 40px; 
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 139, 139, 0.96); /* DarkCyan з легким прозорим ефектом */
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+
+    .navbar-inner {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      color: #f1f7ff;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #ffeb3b;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #f0ffff; /* MintCream */
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #ffeb3b;
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Бургер */
+
+    .burger {
+      display: none;
+      font-size: 26px;
+      color: #f0ffff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* ───── Hero-блок (верхній) ───── */
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 280px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .hero-badge span {
+      font-size: 16px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #1b1b3a;
+      text-shadow: 0 0 10px rgba(0, 139, 139, 0.6);
+      animation: glow 1.6s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 6px rgba(0, 139, 139, 0.6);
+      }
+      to {
+        text-shadow: 0 0 18px rgba(0, 139, 139, 1);
+      }
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 10px 18px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(255, 87, 34, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 10px 22px rgba(255, 87, 34, 0.8);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.85);
+      color: #1f2a3c;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px) scale(1.02);
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .hero-tag {
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    .hero-visual {
+      flex: 0 1 280px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+      max-width: 280px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .hero-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-text {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .pill {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e0f7fa;
+      border: 1px solid rgba(0, 150, 136, 0.4);
+    }
+
+    /* ───── Секції ───── */
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #202040;
+    }
+
+    .section-desc {
+      font-size: 14px;
+      margin-bottom: 18px;
+      opacity: 0.9;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 20px;
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .about-box h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #283593;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    .tag {
+      background: #fff3cd;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 193, 7, 0.6);
+    }
+
+    /* ───── Картки проєктів ───── */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 14px;
+      padding: 16px 18px 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.5), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+
+    .project-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ff5722;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .project-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .project-text {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .project-card a {
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #1a237e;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ───── Підвал ───── */
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.8;
+      padding: 14px 10px 22px;
+    }
+
+    /* ───── Адаптивність ───── */
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 80px 16px 32px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 52px;
+        right: 0;
+        background: rgba(0, 139, 139, 0.98);
+        flex-direction: column;
+        width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+      }
+
+      .nav-links li {
+        padding: 8px 16px;
+        text-align: right;
+      }
+
+      .burger {
+        display: block;
+      }
+
+      /* Плавна поява мобільного меню */
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .menu-toggle:checked + .burger + .nav-links {
+        display: flex;
+        animation: slideDown 0.25s ease forwards;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero {
+        gap: 18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Навігація -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="logo">Сергій<span>.dev</span></div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="burger">☰</label>
+
+      <ul class="nav-links">
+        <li><a href="#home">Головна</a></li>
+        <li><a href="#about">Про мене</a></li>
+        <li><a href="#projects">Мої проєкти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page" id="home">
+    <!-- Hero-блок -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>✨</span>
+          <span>Мій перший сайт-візитівка</span>
+        </div>
+        <h1>Привіт! Я Сергій, і я починаю свій шлях у фронтенді.</h1>
+        <p>
+          Я вчуся створювати сайти за допомогою <b>HTML</b> та <b>CSS</b>, 
+          експериментую з навігацією, анімаціями та версткою. 
+          Ця сторінка – місце, де я збираю свої перші роботи,
+          щоб бачити прогрес і з часом перетворити це на повноцінне портфоліо.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            Подивитися мої проєкти 🚀
+          </a>
+          <a href="#about" class="btn-secondary">
+            Хто я і що роблю 🙂
+          </a>
+        </div>
+
+        <div class="hero-tag">
+          Поки що все в процесі навчання, але кожен день додає +1 до скілу 💪
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-title">Що я вчу зараз</div>
+          <div class="hero-card-text">
+            • Основи HTML (структура сторінки)<br>
+            • CSS (кольори, шрифти, блоки, анімації)<br>
+            • Навігація, списки, адаптивність
+          </div>
+          <div class="hero-pill">
+            <div class="pill">HTML</div>
+            <div class="pill">CSS</div>
+            <div class="pill">Навігація</div>
+            <div class="pill">GitHub Pages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Про мене -->
+    <section id="about">
+      <h2>Трішки про мене</h2>
+      <p class="section-desc">
+        Я починаю вчити фронтенд з нуля, поєднуючи це з основною роботою.
+        Люблю, коли навчання має практичний результат, тому роблю маленькі,
+        але живі сайти, які можна показати друзям і зберегти як етапи шляху.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Чому я це роблю</h3>
+          <p>
+            Мені цікаво, як працюють сайти зсередини, як із простого тексту
+            й тегів виходять справжні інтерфейси. Я хочу вміти створювати
+            сторінки, які будуть корисними, красивими та зрозумілими для людей.
+          </p>
+          <p>
+            Цей сайт-візитівка – моя особиста «точка старту», з якої почнеться
+            далі щось більше.
+          </p>
+        </div>
+        <div class="about-box">
+          <h3>Що планую освоїти далі</h3>
+          <p>
+            Окрім HTML і CSS, я хочу поступово вивчити:
+          </p>
+          <div class="tag-list">
+            <span class="tag">Адаптивна верстка</span>
+            <span class="tag">Flexbox / Grid</span>
+            <span class="tag">JavaScript базовий</span>
+            <span class="tag">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Мої проєкти -->
+    <section id="projects">
+      <h2>Мої перші проєкти</h2>
+      <p class="section-desc">
+        Тут я зберігаю пробні сторінки, щоб бачити, як росту. 
+        З часом цей список поповниться новими роботами.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Проєкт 1: Дюна -->
+        <div class="project-card">
+          <div class="project-label">Проєкт 1</div>
+          <div class="project-title">«Світ Дюни» – сторінка про Бене Ґессерит</div>
+          <p class="project-text">
+            Мій перший великий навчальний проєкт: сторінка з навігацією, 
+            текстовими блоками, таблицею, «цікавими фактами» та галереєю зображень 
+            всесвіту «Дюни».
+          </p>
+          <p class="project-meta">
+            Використано: HTML, CSS, списки, адаптивна навігація, анімація тексту.
+          </p>
+          <a href="2d_try_main.html">
+            Перейти до проєкту →
+          </a>
+        </div>
+
+        <!-- Місце для майбутніх проєктів -->
+        <div class="project-card">
+          <div class="project-label">Проєкт 2 (скоро)</div>
+          <div class="project-title">Сайт про донорство крові в Україні</div>
+          <p class="project-text">
+            Ідея наступного проєкту – створити сайт про важливість донорства крові:
+            хто може бути донором, як проходить процедура, чому це актуально сьогодні.
+          </p>
+          <p class="project-meta">
+            План: секції з фактами, FAQ, просте пояснення кроків, 
+            акценти на користі для людей.
+          </p>
+          <span style="font-size: 13px; opacity: 0.8;">
+            Робота в процесі ✨
+          </span>
+        </div>
+
+        <div class="project-card">
+          <div class="project-label">Проєкт 3 (на майбутнє)</div>
+          <div class="project-title">Ще один навчальний сайт</div>
+          <p class="project-text">
+            Тут з’явиться наступна робота, коли я зроблю новий проєкт 
+            і захочу додати його до свого невеликого онлайн-портфоліо.
+          </p>
+          <span style="font-size: 13px; opacity: 0.8;">
+            Місце зарезервовано 😉
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Сергій. Мій перший сайт-візитівка. <br>
+      Вчусь, експериментую, зберігаю прогрес.
+    </footer>
+  </div>
+
+  <script>
+    // Маленький бонус: поточний рік у підвалі
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
