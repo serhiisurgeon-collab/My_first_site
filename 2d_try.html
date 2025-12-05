@@ -7,7 +7,11 @@
 
 <style>
 
-* {
+html {
+    scroll-behavior: smooth;
+}
+
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -25,25 +29,37 @@
   .page {
             max-width: 1100px;
             margin: 0 auto;
-            background-image: linear-gradient(to top, #9890e3 0%, #78cfb3 100%);
+            background-image: linear-gradient(to top, #5342ad 0%, #b4c4d4 100%);
             border-radius: 10px;
             padding: 24px 28px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
+@media (max-width: 600px) {
+    .page {
+        padding: 16px;
+        border-radius: 6px;
+    }
+    
+    .sidebar {
+        display: none; /* приховати sidebar на маленькому екрані */
+    }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: DarkCyan;
+  background: rgba(255, 255, 255, 0.2);
   padding: 12px 15px;
   border-radius: 10px;
   width: 100%;
+  backdrop-filter: blur(4px);
 }
 
 .logo {
-  color: LightSteelBlue;
+  color: #166291;
   font-size: 22px;
   font-weight: bold;
 }
@@ -57,21 +73,20 @@
 }
 
 .nav-links a {
-  color: MintCream;
+  display: inline-block;  
+  color: #093c5c;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
- display: inline-block;   
-  transition: 0.2s ease;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 6px;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
-  transform: scale(1.05);
-}
-
-.nav-links a {
-  transition: 0.2s ease;
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 6px 14px rgba(225, 225, 225, 0.25);
 }
 
 .burger {
@@ -381,12 +396,13 @@ display: block;
     padding: 8px 10px;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.15);
-    transition: 0.2s;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .toc a:hover {
     background: rgba(255, 255, 255, 0.35);
-    transform: translateX(4px);
+    transform: translateX(6px);
+    box-shadow: 0 0 8px rgba(225, 225, 225, 0.1);
 }
 
 .page {
@@ -609,10 +625,9 @@ alt="Преподобна матір Мохіам">
 </div>
 
 <div class="photo">
-<img src="https://beyondhogwarts.com/wp-content/uploads/2024/03/Dune-Names-3-Kwisatz-Haderach.jpg.webp" 
-alt="Шкатулка випробувань">
-<p> Гом Джаббар технічно є тестом, щоб переконатися, що Квісатц Хадерах цивілізований. На справді це є спеціальна голка з краплею отрути на вістря, що застосовувалася зазвичай у 
-випробуванні на усвідомлення себе людиною (альтернативою у випробуванні є смерть).</p>
+<img src="https://static.wikia.nocookie.net/dune/images/8/86/Sisters2.jpg/revision/latest?cb=20250611123714" 
+alt="Малюнок з книги">
+<p> Малюнок з книги "Дюна" -американська епічна космічна опера 1984 року , сценарій і режисер якої написав Девід Лінч , заснована на однойменному романі Френка Герберта 1965 року </p>
 </div>
 
 <div class="photo">
@@ -637,19 +652,10 @@ alt="Тесса Шарлотта Ремплінг">
 </div>
 
 <div class="photo">
-<img src="https://beyondhogwarts.com/wp-content/uploads/2024/03/Dune-Names-1-Bene-Gesserit.jpg" 
+<img src="https://static.wikia.nocookie.net/dune/images/3/31/Bene_Gesserit.png/revision/latest/scale-to-width-down/1200?cb=20160520140646&path-prefix=ru" 
 alt="Домівка">
-<p> Леа Сейду зіграла роль Леді Марго Фенрінг — яка була архетипний приклад відьми Бене Гессерит. </p>
+<p> "Енциклопедія Дюни" описує дванадцять "капітульних" планет Бене Гессеріт. </p>
 </div>
-
-<div class="photo">
-<img src="https://cdnb.artstation.com/p/assets/images/images/025/505/527/large/christopher-russell-bene-gesserit-witches.jpg?1586009645" 
-alt="Домівка">
-<p> Один з варіантів альтернативного зображення Бене Гессерит — ключова соціальна, релігійна та політична сила у вигаданому всесвіті Френка Герберта «Дюна».
- Група описується як ексклюзивне сестринство, 
-члени якого роками тренують свої тіла та розум, щоб отримати надлюдські сили та здібності, які можуть здаватися магічними для сторонніх. </p>
-</div>
-
 </div>
 
 <div class="card">
