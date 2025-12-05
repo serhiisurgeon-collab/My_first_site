@@ -1,109 +1,147 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  const intro = document.querySelector('.intro-hero');     
-  const card  = document.querySelector('.page-wrapper');   
 
-  function onScroll() {
-    if (!intro || !card) return;
+  const intro = document.querySelector('.intro-hero');
+  const card = document.querySelector('.page-wrapper');
 
+  const navbar = document.querySelector('.navbar');
+  const toTop = document.getElementById('toTop');
+
+  let lastScroll = 0;
+
+  function handleScroll() {
     const vh = window.innerHeight;
     const scroll = window.scrollY;
 
-    let progress = scroll / vh;
-    if (progress < 0) progress = 0;
-    if (progress > 1) progress = 1;
+    
+    if (intro && card) {
+      let progress = scroll / vh;
 
-    const eased = Math.pow(progress, 0.7); 
+      if (progress < 0) progress = 0;
+      if (progress > 1) progress = 1;
 
-    const introScale = 1.05 - 0.07 * eased;      
-    const introTranslate = -50 * eased;         
-    const introOpacity = 1 - 0.8 * eased;        
+      const eased = Math.pow(progress, 0.7);
 
-    intro.style.transform = `translateY(${introTranslate}px) scale(${introScale})`;
-    intro.style.opacity = introOpacity.toString();
+          const introScale = 1.05 - 0.07 * eased;
+      const introTranslate = -50 * eased;
+      const introOpacity = 1 - 0.8 * eased;
 
-    const cardScale = 0.7 + 0.5 * eased;         
-    const cardTranslate = 700 * (1 - eased);     
-    const cardOpacity = eased;                   
+      intro.style.transform = `translateY(${introTranslate}px) scale(${introScale})`;
+      intro.style.opacity = String(introOpacity);
 
-    card.style.transform = `translateY(${cardTranslate}px) scale(${cardScale})`;
-    card.style.opacity = cardOpacity.toString();
+        const cardScale = 0.7 + 0.5 * eased;
+      const cardTranslate = 700 * (1 - eased);
+      const cardOpacity = eased;
+
+      card.style.transform = `translateY(${cardTranslate}px) scale(${cardScale})`;
+      card.style.opacity = String(cardOpacity);
+    }
+
+    if (navbar) {
+      if (scroll > lastScroll && scroll > 80) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+    }
+
+       if (toTop) {
+      if (scroll > 400) {
+        toTop.classList.add('show');
+      } else {
+        toTop.classList.remove('show');
+      }
+    }
+
+    lastScroll = scroll;
   }
 
-  onScroll();
-
-  window.addEventListener('scroll', onScroll);
-});
+  handleScroll();
+  window.addEventListener('scroll', handleScroll);
 
 
-
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScroll) {
-    
-    navbar.classList.add('hidden');
-  } else {
-    
-  navbar.classList.remove('hidden');
+  if (toTop) {
+    toTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   }
 
-  lastScroll = currentScroll;
+
+  if (typeof ScrollReveal !== 'undefined') {
+    const sr = ScrollReveal({
+      reset: true
+    });
+
+    sr.reveal('.hero-text', {
+      origin: 'left',
+      distance: '60px',
+      duration: 900,
+      easing: 'ease-out',
+      opacity: 0
+    });
+
+    sr.reveal('.hero-visual', {
+      origin: 'right',
+      distance: '60px',
+      duration: 900,
+      easing: 'ease-out',
+      opacity: 0
+    });
+
+    sr.reveal('h2', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 700,
+      easing: 'ease-out',
+      opacity: 0,
+      interval: 120
+    });
+
+    sr.reveal('.about-box', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-out',
+      opacity: 0,
+      interval: 200
+    });
+
+    sr.reveal('.project-card', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 900,
+      easing: 'ease-out',
+      opacity: 0,
+      interval: 180
+    });
+  }
+
+
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const targetId = href.substring(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
 });
-
-
-const sr = ScrollReveal({
-    reset: true 
-});
-
-sr.reveal('.hero-text', {
-    origin: 'left',
-    distance: '60px',
-    duration: 900,
-    easing: 'ease-out',
-    opacity: 0
-});
-
-sr.reveal('.hero-visual', {
-    origin: 'right',
-    distance: '60px',
-    duration: 900,
-    easing: 'ease-out',
-    opacity: 0
-});
-
-sr.reveal('h2', {
-    origin: 'bottom',
-    distance: '40px',
-    duration: 700,
-    easing: 'ease-out',
-    opacity: 0,
-    interval: 120
-});
-
-sr.reveal('.about-box', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 800,
-    easing: 'ease-out',
-    opacity: 0,
-    interval: 200
-});
-
-sr.reveal('.project-card', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 900,
-    easing: 'ease-out',
-    opacity: 0,
-    interval: 180
-});
-

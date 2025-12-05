@@ -1,5 +1,12 @@
 <style>
-    * {
+   
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* підлаштуй під висоту свого navbar */
+}
+
+
+{
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -540,6 +547,41 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
   text-indent: 40px;             
   margin-top: 8px;               
   line-height: 1.5;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #003b46;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.to-top:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
 }
 
   </style>
