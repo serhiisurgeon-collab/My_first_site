@@ -31,7 +31,7 @@ html {
       height: 100vh;
 
 
-      background-image: url('file:///D:/%D0%A2%D1%80%D0%B5%D0%BD%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F/my_first_site/photo_for_page.jpg'); 
+      background-image: url('photo_for_page.jpg'); 
       background-size: cover;
       background-position: center;
       display: flex;
@@ -549,6 +549,7 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
   line-height: 1.5;
 }
 
+
 .to-top {
   position: fixed;
   bottom: 100px;
@@ -568,7 +569,7 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   z-index: 9999;
 }
 
@@ -585,3 +586,6 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
 }
 
   </style>
+=======
+  </style>
+>>>>>>> 2a480507164a1b167068a218244e3dfec671b07c
