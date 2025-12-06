@@ -11,6 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
  {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +44,7 @@ html {
     }
     
     .sidebar {
-        display: none; /* приховати sidebar на маленькому екрані */
+        display: none; 
     }
 }
 
@@ -92,7 +93,7 @@ html {
 .burger {
   display: none;
   font-size: 26px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -280,7 +281,9 @@ th {
 
 .float-box {
   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-  width: 350px;
+  max-width: 350px;
+  flex: 1 1 300px;
+  width: 100%;
   border: 3px solid DarkSlateGray;    
   margin-top: 10px;           
   padding: 15px;              
@@ -298,8 +301,8 @@ th {
 }
 
 .float-box:hover {
-  transform: translateY(-8px); /* піднімається */
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25); /* сильніша тінь */
+  transform: translateY(-8px); 
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25); 
 }
 
 .flex-test {
@@ -307,7 +310,8 @@ th {
   flex-direction: row;  
   justify-content: center;
   align-items: center; 
-  gap: 20px;  
+  gap: 20px;
+  flex-wrap: wrap;  
 }
 
 .card {
@@ -426,6 +430,39 @@ display: block;
       opacity: 0.8;
       padding: 14px 10px 22px;
     }
+
+.to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #003b46;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
+}
 
 </style>
 </head>
@@ -674,6 +711,23 @@ alt="Домівка">
   
 </div>
 </div>
+<button class="to-top" id="toTop">⇧</button>
+<script>
+  const toTopBtn = document.getElementById("toTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      toTopBtn.classList.add("show");
+    } else {
+      toTopBtn.classList.remove("show");
+    }
+  });
+
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 
 </body>
+
 </html>
