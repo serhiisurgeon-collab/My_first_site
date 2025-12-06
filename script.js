@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       intro.style.transform = `translateY(${introTranslate}px) scale(${introScale})`;
       intro.style.opacity = String(introOpacity);
 
-        const cardScale = 0.7 + 0.5 * eased;
+        const cardScale = 0.7 + 0.3 * eased;
       const cardTranslate = 700 * (1 - eased);
       const cardOpacity = eased;
 

@@ -2,15 +2,17 @@
    
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* підлаштуй під висоту свого navbar */
+  scroll-padding-top: 90px; 
 }
 
 
-{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -44,7 +46,7 @@ html {
       
       z-index: 1;
       transform-origin: center bottom;
-      box-shadow: 0 20px 40 px rgba(0,0,0,0.5);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
       transition: transform 0.7s ease, box-shadow 0.7s ease;
     }
 
@@ -498,7 +500,7 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
 
       .nav-links {
         position: absolute;
-        top: 52px;
+        bottom: 52px;
         right: 0;
         background: rgba(0, 139, 139, 0.98);
         flex-direction: column;
@@ -517,12 +519,7 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
         display: block;
       }
 
-      @keyframes slideDown {
-        0% { opacity: 0; transform: translateY(-10px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      .menu-toggle:checked + .burger + .nav-links {
+       .menu-toggle:checked + .burger + .nav-links {
         display: flex;
         animation: slideDown 0.25s ease forwards;
       }
@@ -531,6 +528,11 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
         grid-template-columns: 1fr;
       }
     }
+
+@keyframes slideDown {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
 
     @media (max-width: 480px) {
       .hero-main h1 {
@@ -586,6 +588,4 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
 }
 
   </style>
-=======
-  </style>
->>>>>>> 2a480507164a1b167068a218244e3dfec671b07c
+
