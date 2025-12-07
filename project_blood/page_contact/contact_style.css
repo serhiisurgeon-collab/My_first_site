@@ -1,0 +1,407 @@
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+ body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 70%); 
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+            font-family: "Tektur", system-ui, sans-serif;
+        } 
+
+.blood-footer {
+  background: linear-gradient(to top, #2e181b, #5c252e);
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer-inner {
+  display: grid;
+  padding: 60px 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+        "brand center social"
+        "brand center hotline";
+  gap: 10px;
+  column-gap: 90px;
+}
+
+.footer-social {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  transition: .3s;
+}
+.footer-social a:hover {
+  color: #ffcaca;
+}
+
+.footer-center-text {
+  grid-area: center;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 0 20px;
+}
+
+.footer-hotline {
+  grid-area: hotline;
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: .9;
+}
+
+.footer-brand {
+  grid-area: brand;
+  text-align: right;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-logo:hover { color: #ffcdcd; }
+
+
+.footer-copy {
+  margin-top: 30px;
+  opacity: .8;
+  font-size: 13px;
+  
+  line-height: 1.3;
+}
+/*кінець футера*/
+
+.navbar-main{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;   
+  width: auto;
+  z-index:1000;
+  box-sizing:border-box;
+  background:transparent;
+  transition: background .3s ease, box-shadow .3s ease;
+}
+
+
+.navbar-main.scrolled{
+  background: rgba(0,0,0,0.78);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+
+.navbar-inner{
+  max-width:1200px;
+  padding: 10px 0;
+  margin:0 auto;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+
+.burger{
+  background:none;
+  border:none;
+  padding:4px;
+  cursor:pointer;
+
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+
+.burger span{
+  display:block;
+  width:40px;
+  height:3px;
+  background:#fff;
+  border-radius:999px;
+  transition:.3s;
+}
+
+
+
+.burger.open span:nth-child(1){
+  transform: rotate(45deg) translateY(8px);
+}
+
+.burger.open span:nth-child(2){
+  opacity:0;
+}
+
+.burger.open span:nth-child(3){
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+
+.nav-menu{
+  display:none;
+  position: absolute;
+  top: 100%;
+  right: 150px;    
+  left: auto;
+  list-style:none;
+  width: 80%;
+  max-width: 400px; 
+  margin:0;
+  padding:16px 24px;
+  background: rgba(0,0,0,0.65);
+  flex-direction:column;
+  gap:30px;
+}
+
+.nav-menu.open{
+  display:flex;       
+}
+
+.nav-menu a{
+  color:#fff;
+  text-decoration:none;
+  font-size:30px;
+  transition:.3s;
+  }
+
+.nav-menu li {
+  text-align:center;
+}
+
+.nav-menu a:hover{
+  color:#9e3434;
+}
+
+.nav-btn.main-link {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+.nav-btn.main-link:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+.nav-logo img {
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover img {
+  transform: scale(1.05);
+}
+
+
+  .page-after {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: none;
+            padding: 15px;
+           }
+
+
+.contact-section {
+  padding: 120px 0 40px;
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  color: #0e093d;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.contact-info h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: #7a0014;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: #7a0014;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-map {
+  flex: 1.2;
+  height: 400px;
+
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+
+.contact-hours {
+  margin-top: 16px;
+}
+
+.contact-hours h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #7a0014;
+}
+
+.contact-hours ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.contact-hours li span:last-child {
+  font-weight: 500;
+}
+
+.contact-note-wrapper {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 15px 15px;
+  color: #0e093d;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.contact-note-wrapper b {
+  color: #7a0014;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    height: 260px;
+  }
+
+.navbar-inner {
+    padding: 8px 16px;
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+
+  .nav-menu {
+    top: 100%;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-width: none;
+    padding: 12px 16px;
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+.footer-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "center"
+      "social"
+      "hotline";
+    row-gap: 20px;
+    column-gap: 0;
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-center-text {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .footer-hotline,
+  .footer-social a {
+    font-size: 14px;
+  }
+
+  .footer-copy {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+}
+
+
+</style>
