@@ -338,6 +338,7 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
     .hero-card-text {
       font-size: 13px;
       margin-bottom: 10px;
+      padding: 0 12px;
     }
 
     .hero-pill {
@@ -462,6 +463,14 @@ background: linear-gradient(135deg, #ffb3c6, #b5e2fa, #bde0fe);
       font-size: 13px;
       line-height: 1.5;
       margin-bottom: 10px;
+      padding-inline: 10px;
+    }
+
+    .project-features {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      padding-inline: 10px;
     }
 
     .project-meta {
