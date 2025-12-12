@@ -125,23 +125,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const links = document.querySelectorAll('a[href^="#"]');
-
-  links.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      const targetId = href.substring(1);
-      const target = document.getElementById(targetId);
-      if (!target) return;
-
-      e.preventDefault();
-
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  });
 });

@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">  
 
 </head>
-<body>
 
+<body>
   
  <section class="intro-hero">
   <svg class="signature" viewBox="0 0 1400 400">
@@ -29,12 +29,59 @@
         <div class="logo">Сергій<span>.front-end</span></div>
 
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="burger">☰</label>
+        <label for="menu-toggle" class="burger" aria-label="Відкрити меню">☰</label>
+
+          <div class="nav-social" aria-label="Соцмережі">
+          <a class="social" href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" class="icon">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm4.5-.9a1.1 1.1 0 1 1-2.2 0a1.1 1.1 0 0 1 2.2 0z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://x.com/serhides?s=21" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" class="icon"> <path d="M18.9 2H22l-7.4 8.5L23 22h-6.2l-4.9-6.1L6.6 22H2l7.9-9.1L1 2h6.3l4.5 5.6L18.9 2z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" class="icon">
+              <path d="M13 22v-8h3l1-4h-4V7.5c0-1 .5-1.5 1.6-1.5H17V2.1C16.4 2 15.2 2 13.8 2 10.9 2 9 3.7 9 6.7V10H6v4h3v8h4z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://t.me/God_Haides" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" class="icon">
+              <path d="M22 2L2 11l5.8 2.1L9.7 19l3.4-4.2L18.5 18 22 2z"/>
+            </svg>
+          </a>
+        </div>
 
         <ul class="nav-links">
           <li><a href="#home">Головна</a></li>
           <li><a href="#about">Про мене</a></li>
           <li><a href="#projects">Мої проєкти</a></li>
+
+          <!-- Дубль для мобілки (показуємо тільки в бургері) -->
+          <li class="nav-social--mobile">
+            <div class="nav-social nav-social__inside">
+              <a class="social" href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm4.5-.9a1.1 1.1 0 1 1-2.2 0a1.1 1.1 0 0 1 2.2 0z"/>
+                </svg>
+              </a>
+              <a class="social" href="https://x.com/serhides?s=21" target="_blank" rel="noopener" aria-label="X">
+                <svg viewBox="0 0 24 24" class="icon"> <path d="M18.9 2H22l-7.4 8.5L23 22h-6.2l-4.9-6.1L6.6 22H2l7.9-9.1L1 2h6.3l4.5 5.6L18.9 2z"/>
+                </svg>
+              </a>
+              <a class="social" href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M13 22v-8h3l1-4h-4V7.5c0-1 .5-1.5 1.6-1.5H17V2.1C16.4 2 15.2 2 13.8 2 10.9 2 9 3.7 9 6.7V10H6v4h3v8h4z"/>
+                </svg>
+              </a>
+              <a class="social" href="https://t.me/God_Haides" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path d="M22 2L2 11l5.8 2.1L9.7 19l3.4-4.2L18.5 18 22 2z"/>
+                </svg>
+              </a>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
