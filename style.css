@@ -1392,6 +1392,19 @@ body.focus-mode .navbar {
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
     padding: 10px 0;
   }
+  
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 14px;
+  }
 }
 
 
@@ -1422,62 +1435,6 @@ body.focus-mode .navbar {
   }
 }
 
-@media (max-width: 760px) {
-  .project-card--blood.project-focus-card.is-active {
-    position: fixed;
-
-    top: max(16px, env(safe-area-inset-top));
-    right: 16px;
-    bottom: max(16px, env(safe-area-inset-bottom));
-    left: 16px;
-
-    width: auto;
-    height: auto;
-    margin: 0;
-
-    overflow: hidden;
-    z-index: 120;
-
-    transform: none;
-    opacity: 1;
-    filter: none;
-  }
-
-  .project-card--blood.project-focus-card.is-active .project-card-inner {
-    height: 100%;
-    min-height: 0 !important;
-    max-height: none !important;
-
-    overflow: hidden;
-    transform-style: flat;
-  }
-
-  .project-card--blood.project-focus-card.is-active.is-flipped .project-card-inner {
-    transform: none !important;
-  }
-
-  .project-card--blood.project-focus-card.is-active.is-flipped .project-card-front {
-    display: none !important;
-  }
-
-  .project-card--blood.project-focus-card.is-active.is-flipped .project-card-back {
-    position: absolute;
-    inset: 0;
-
-    transform: none !important;
-
-    height: 100%;
-    min-height: 0;
-    max-height: none !important;
-
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    touch-action: pan-y;
-
-    padding-bottom: 100px;
-  }
-}
 
 @media (max-width: 480px) {
   .hero-main {

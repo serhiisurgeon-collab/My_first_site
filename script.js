@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const detailButtons = document.querySelectorAll('.project-details-btn');
   const closeButtons = document.querySelectorAll('.project-close-btn');
 
+    if (toTop) {
+      toTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+
   let lastScroll = window.scrollY;
 
   function handleScroll() {
