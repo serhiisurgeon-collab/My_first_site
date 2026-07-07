@@ -41,6 +41,17 @@
       max-width: 100%;
     }
 
+    body.no-scroll {
+  overflow: hidden;
+    }
+
+    body.focus-mode .navbar,
+    body.focus-mode .to-top,
+    body.focus-mode .lang-switch {
+      opacity: 0;
+      pointer-events: none;
+    }
+
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--text-main);
@@ -1092,25 +1103,6 @@ body.focus-mode .navbar {
   color: var(--accent-dark);
 }
 
-@media (max-width: 980px) {
-  .projects-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .project-card-front {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card-inner {
-    min-height: 760px;
-  }
-
-  .project-preview-mockup {
-    min-height: 240px;
-  }
-}
-
 .blood-preview-text h4 {
   font-size: 28px;
   line-height: 1.15;
@@ -1284,12 +1276,73 @@ body.focus-mode .navbar {
     grid-template-columns: 1fr;
   }
 
-  .project-card--horizontal {
+  .project-card-front--dune {
     grid-template-columns: 1fr;
   }
 
   .project-image {
     min-height: 260px;
+  }
+
+  .project-preview-mockup {
+    min-height: 240px;
+  }
+
+  /*
+    На мобільній версії активна картка працює як модальне вікно,
+    без 3D-перевороту. Це стабільніше для iPhone/Safari.
+  */
+  .project-focus-card.is-active {
+    position: fixed;
+
+    top: max(16px, env(safe-area-inset-top));
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    left: 16px;
+
+    width: auto;
+    height: auto;
+    max-height: none;
+
+    margin: 0;
+    z-index: 120;
+
+    transform: none;
+    opacity: 1;
+    filter: none;
+    overflow: hidden;
+  }
+
+  .project-focus-card.is-active .project-card-inner {
+    height: 100%;
+    min-height: 0 !important;
+    max-height: none !important;
+    transform-style: flat;
+  }
+
+  .project-focus-card.is-active.is-flipped .project-card-inner {
+    transform: none !important;
+  }
+
+  .project-focus-card.is-active.is-flipped .project-card-front {
+    display: none;
+  }
+
+  .project-focus-card.is-active.is-flipped .project-card-back {
+    position: relative;
+    inset: auto;
+    transform: none !important;
+
+    height: 100%;
+    min-height: 0;
+    max-height: none !important;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+
+    padding-bottom: 90px;
   }
 }
 
@@ -1341,34 +1394,14 @@ body.focus-mode .navbar {
   }
 }
 
-@media (max-width: 768px) {
-  .project-focus-card.is-active {
-    max-height: calc(100dvh - 48px);
-    overflow: hidden;
-  }
-
-  .project-focus-card.is-active .project-card-inner {
-    max-height: calc(100dvh - 48px);
-  }
-
-  .project-focus-card.is-active .project-card-back {
-    max-height: calc(100dvh - 48px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* =========================
-   ADAPTIVE: MOBILE
-========================= */
 
 @media (max-width: 560px) {
   .project-card {
     padding: 16px;
   }
 
-  .project-card-inner {
-    min-height: 820px;
+  .project-focus-card {
+    padding: 0;
   }
 
   .project-card-back {
@@ -1378,10 +1411,16 @@ body.focus-mode .navbar {
   .project-back-meta {
     grid-template-columns: 1fr;
   }
+
+  .blood-drop {
+    width: 82px;
+    height: 112px;
+  }
+
+  .blood-preview-text h4 {
+    font-size: 23px;
+  }
 }
-
-
-
 
 @media (max-width: 480px) {
   .hero-main {
