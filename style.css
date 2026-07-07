@@ -1341,6 +1341,22 @@ body.focus-mode .navbar {
   }
 }
 
+@media (max-width: 768px) {
+  .project-focus-card.is-active {
+    max-height: calc(100dvh - 48px);
+    overflow: hidden;
+  }
+
+  .project-focus-card.is-active .project-card-inner {
+    max-height: calc(100dvh - 48px);
+  }
+
+  .project-focus-card.is-active .project-card-back {
+    max-height: calc(100dvh - 48px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 /* =========================
    ADAPTIVE: MOBILE
