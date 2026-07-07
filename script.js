@@ -1,56 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+  // Поточний рік у footer
   const yearEl = document.getElementById('year');
+
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-
-  const intro = document.querySelector('.intro-hero');
-  const card = document.querySelector('.page-wrapper');
-
+  // Основні елементи
+  const pageWrapper = document.querySelector('.page-wrapper');
   const navbar = document.querySelector('.navbar');
   const toTop = document.getElementById('toTop');
 
-  let lastScroll = 0;
+  // Елементи секції проєктів
+  const projectsSection = document.querySelector('.projects-section');
+  const projectsOverlay = document.querySelector('.projects-overlay');
+  const detailButtons = document.querySelectorAll('.project-details-btn');
+  const closeButtons = document.querySelectorAll('.project-close-btn');
+
+  let lastScroll = window.scrollY;
 
   function handleScroll() {
-    const vh = window.innerHeight;
     const scroll = window.scrollY;
 
-    
-    if (intro && card) {
-      let progress = scroll / vh;
 
-      if (progress < 0) progress = 0;
-      if (progress > 1) progress = 1;
+    if (pageWrapper) {
+      const rect = pageWrapper.getBoundingClientRect();
 
-      const eased = Math.pow(progress, 0.7);
-
-          const introScale = 1.05 - 0.07 * eased;
-      const introTranslate = -50 * eased;
-      const introOpacity = 1 - 0.8 * eased;
-
-      intro.style.transform = `translateY(${introTranslate}px) scale(${introScale})`;
-      intro.style.opacity = String(introOpacity);
-
-        const cardScale = 0.7 + 0.3 * eased;
-      const cardTranslate = 700 * (1 - eased);
-      const cardOpacity = eased;
-
-      card.style.transform = `translateY(${cardTranslate}px) scale(${cardScale})`;
-      card.style.opacity = String(cardOpacity);
+      if (rect.top <= 5) {
+        pageWrapper.classList.add('solid');
+      } else {
+        pageWrapper.classList.remove('solid');
+      }
     }
 
+
     if (navbar) {
-      if (scroll > lastScroll && scroll > 80) {
+      const nearBottom =
+        window.innerHeight + scroll >= document.documentElement.scrollHeight - 20;
+
+      const pageStarted =
+        pageWrapper && pageWrapper.getBoundingClientRect().top <= 120;
+
+      if (!pageStarted) {
+        navbar.classList.remove('visible');
+        navbar.classList.add('hidden');
+      } else if (nearBottom) {
+        navbar.classList.add('visible');
+        navbar.classList.remove('hidden');
+      } else if (scroll > lastScroll && scroll > 80) {
+        navbar.classList.remove('visible');
         navbar.classList.add('hidden');
       } else {
+        navbar.classList.add('visible');
         navbar.classList.remove('hidden');
       }
     }
 
-       if (toTop) {
+
+    if (toTop) {
       if (scroll > 400) {
         toTop.classList.add('show');
       } else {
@@ -62,67 +69,120 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   handleScroll();
-  window.addEventListener('scroll', handleScroll);
 
 
-  if (toTop) {
-    toTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
       });
-    });
-  }
+
+      ticking = true;
+    }
+  }, { passive: true });
 
 
+function closeActiveProject() {
+  const activeCard = document.querySelector('.project-focus-card.is-active');
+
+  if (!activeCard || !projectsSection) return;
+
+  activeCard.classList.remove('is-flipped');
+
+  setTimeout(() => {
+    activeCard.classList.remove('is-active');
+    projectsSection.classList.remove('focus-mode');
+    document.body.classList.remove('focus-mode', 'no-scroll');
+  }, 450);
+}
+
+detailButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.project-focus-card');
+
+    if (!card || !projectsSection) return;
+
+    document.body.classList.add('focus-mode', 'no-scroll');
+    projectsSection.classList.add('focus-mode');
+    card.classList.add('is-active');
+
+    setTimeout(() => {
+      card.classList.add('is-flipped');
+    }, 280);
+  });
+});
+
+closeButtons.forEach((button) => {
+  button.addEventListener('click', closeActiveProject);
+});
+
+if (projectsOverlay) {
+  projectsOverlay.addEventListener('click', closeActiveProject);
+}
+
+  /*
+    ScrollReveal — анімації появи блоків.
+    Глобально reset: false, щоб не перевантажувати всю сторінку.
+    Повторну анімацію вмикаємо тільки для потрібних блоків.
+  */
   if (typeof ScrollReveal !== 'undefined') {
     const sr = ScrollReveal({
-      reset: true
+      reset: false,
+      cleanup: false
     });
 
     sr.reveal('.hero-text', {
-      origin: 'left',
-      distance: '60px',
-      duration: 900,
+      origin: 'bottom',
+      distance: '24px',
+      duration: 700,
       easing: 'ease-out',
       opacity: 0
     });
 
     sr.reveal('.hero-visual', {
-      origin: 'right',
-      distance: '60px',
-      duration: 900,
+      origin: 'bottom',
+      distance: '24px',
+      duration: 700,
       easing: 'ease-out',
       opacity: 0
     });
 
     sr.reveal('h2', {
       origin: 'bottom',
-      distance: '40px',
-      duration: 700,
+      distance: '20px',
+      duration: 600,
       easing: 'ease-out',
       opacity: 0,
-      interval: 120
+      interval: 80
     });
 
     sr.reveal('.about-box', {
       origin: 'bottom',
-      distance: '50px',
-      duration: 800,
+      distance: '24px',
+      duration: 650,
       easing: 'ease-out',
       opacity: 0,
-      interval: 200
+      interval: 120,
+      reset: true
     });
 
-    sr.reveal('.project-card', {
+    /*
+      Для проєктних карток краще не вішати reveal на .project-card,
+      бо .project-card / .project-focus-card бере участь у flip/focus-анімації.
+      Якщо хочеш повторну reveal-анімацію проєкту — додай клас reveal-card
+      до article або до безпечного wrapper-елемента.
+    */
+    sr.reveal('.reveal-card', {
       origin: 'bottom',
-      distance: '50px',
-      duration: 900,
+      distance: '24px',
+      duration: 700,
       easing: 'ease-out',
       opacity: 0,
-      interval: 180
+      interval: 120,
+      reset: true
     });
   }
-
-
 });
