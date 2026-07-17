@@ -2266,6 +2266,22 @@ body.focus-mode .navbar {
 ========================= */
 
 @media (max-width: 768px) {
+  .page-wrapper {
+    min-height: auto;
+    display:block;
+  }
+
+  .page {
+    flex:none;
+    min-height: 0;
+    padding-bottom: 40px;
+  }
+
+  .site-footer {
+    margin-top: 0;
+    padding-bottom: 100px;
+  }
+
   .navbar {
     left: 12px;
     right: 12px;
