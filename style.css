@@ -34,6 +34,13 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  /* Не дозволяємо мобільному rubber-band скролу
+     створювати хибний «простір» під сторінкою. */
+  html {
+    overscroll-behavior-y: none;
   }
 
     img,
@@ -2298,13 +2305,13 @@ body.focus-mode .navbar {
 
   .navbar.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     pointer-events: auto;
   }
 
   .navbar.hidden {
     opacity: 0;
-    transform: translateY(calc(140% + env(safe-area-inset-bottom)));
+    transform: translate3d(0, calc(100% + 48px + env(safe-area-inset-bottom)), 0);
     pointer-events: none;
   }
 

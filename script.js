@@ -105,45 +105,63 @@ if (heroScrollButton) {
       });
     }
 
-let lastScrollY = window.scrollY;
+let lastScrollY = Math.max(0, window.scrollY);
 let ticking = false;
+let navbarVisible = false;
 
-function handleScroll() {
-  const currentScrollY = window.scrollY;
+function setNavbarVisible(shouldShow) {
+  if (!navbar || navbarVisible === shouldShow) return;
 
-  const viewportBottom =
-    currentScrollY + window.innerHeight;
+  navbarVisible = shouldShow;
+  navbar.classList.toggle('visible', shouldShow);
+  navbar.classList.toggle('hidden', !shouldShow);
+}
 
-  const documentHeight = Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight
-  );
+function getScrollMetrics() {
+  const root = document.documentElement;
 
   /*
-    Допуск у 4 px потрібен через дробові значення висоти,
-    масштаб браузера та особливості мобільних браузерів.
+    clientHeight стабільніший за innerHeight на телефоні:
+    адресний рядок браузера може змінювати innerHeight прямо під час скролу.
   */
-  const reachedPageBottom =
-    viewportBottom >= documentHeight - 4;
+  const viewportHeight = root.clientHeight;
+  const documentHeight = root.scrollHeight;
+  const maxScrollY = Math.max(0, documentHeight - viewportHeight);
+  const rawScrollY = window.scrollY;
 
-  const scrollingUp =
-    currentScrollY < lastScrollY;
+  return {
+    rawScrollY,
+    currentScrollY: Math.min(Math.max(rawScrollY, 0), maxScrollY),
+    maxScrollY
+  };
+}
 
-  if (navbar) {
-    /*
-      Навбар з’являється лише в самому низу сторінки.
-      Щойно користувач починає рухатися вгору —
-      навбар одразу ховається.
-    */
-    if (reachedPageBottom && !scrollingUp) {
-      navbar.classList.add('visible');
-      navbar.classList.remove('hidden');
-    } else {
-      navbar.classList.remove('visible');
-      navbar.classList.add('hidden');
-    }
+function handleScroll() {
+  const {
+    rawScrollY,
+    currentScrollY,
+    maxScrollY
+  } = getScrollMetrics();
+
+  const scrollingUp = currentScrollY < lastScrollY - 1;
+
+  /*
+    На реальних телефонах rubber-band / overscroll може тимчасово дати
+    scrollY нижче 0 або вище maxScrollY. Такий стан не є справжнім низом.
+  */
+  const isOverscrolling =
+    rawScrollY < -1 || rawScrollY > maxScrollY + 1;
+
+  const distanceToBottom = maxScrollY - currentScrollY;
+  const reachedRealBottom =
+    !isOverscrolling && distanceToBottom <= 8;
+
+  if (scrollingUp) {
+    setNavbarVisible(false);
+  } else if (reachedRealBottom) {
+    setNavbarVisible(true);
+  } else if (distanceToBottom > 24) {
+    setNavbarVisible(false);
   }
 
   if (toTop) {
@@ -169,6 +187,11 @@ window.addEventListener('scroll', requestScrollUpdate, {
 });
 
 window.addEventListener('resize', requestScrollUpdate);
+window.addEventListener('orientationchange', requestScrollUpdate);
+
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', requestScrollUpdate);
+}
 
 /*
   Повторна перевірка після завантаження фото, шрифтів
@@ -176,8 +199,8 @@ window.addEventListener('resize', requestScrollUpdate);
 */
 window.addEventListener('load', requestScrollUpdate);
 
+setNavbarVisible(false);
 handleScroll();
-
 
 function closeActiveProject() {
   const activeCard = document.querySelector('.project-focus-card.is-active');
