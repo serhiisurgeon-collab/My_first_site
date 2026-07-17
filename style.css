@@ -2267,9 +2267,29 @@ body.focus-mode .navbar {
 
 @media (max-width: 768px) {
   .navbar {
-    bottom: 12px;
-    width: calc(100% - 24px);
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+
+    width: auto;
+    max-width: none;
+    margin: 0;
+
     border-radius: 24px;
+
+    z-index: 9999;
+  }
+
+  .navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .navbar.hidden {
+    opacity: 0;
+    transform: translateY(calc(140% + env(safe-area-inset-bottom)));
+    pointer-events: none;
   }
 
   .navbar-inner {
@@ -2291,22 +2311,27 @@ body.focus-mode .navbar {
 
   .nav-links {
     position: absolute;
-    bottom: 58px;
     right: 0;
+    bottom: calc(100% + 10px);
 
-    width: 240px;
+    width: min(240px, calc(100vw - 24px));
+
     display: none;
     flex-direction: column;
     gap: 0;
 
-    background: rgba(31, 42, 36, 0.88);
+    padding: 10px 0;
+
+    background: rgba(31, 42, 36, 0.92);
     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
+
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
-    padding: 10px 0;
   }
-  
+
   .menu-toggle:checked ~ .nav-links {
     display: flex;
   }
