@@ -12,19 +12,95 @@
 
 <body>
   
-  <section class="intro-hero">
-    <svg class="signature" viewBox="0 0 1400 400">
-      <text x="50" y="140" class="signature-line">
-        Привіт, я Сергій 
-      </text>
-      <text x="50" y="250" class="signature-line signature-line-2">
-        і мій напрямок - це
-      </text>
-      <text x="50" y="330" class="signature-line signature-line-2">
-        військова медицина · TCCC-protocols · освітні проєкти
-      </text>
-    </svg>
-  </section>
+<header class="start-hero" id="home">
+  <div class="start-hero__glow start-hero__glow--left"></div>
+  <div class="start-hero__glow start-hero__glow--right"></div>
+
+  <div class="start-hero__grid">
+
+    <div class="start-hero__content">
+
+      <div class="start-hero__eyebrow hero-reveal hero-reveal--1">
+        <span class="start-hero__eyebrow-line"></span>
+        <span>Військовий лікар · Україна</span>
+      </div>
+
+      <h1 class="start-hero__title">
+        <span class="hero-reveal hero-reveal--2">Сергій</span>
+        <span class="hero-reveal hero-reveal--3">Пелішенко</span>
+      </h1>
+
+      <div class="start-hero__roles hero-reveal hero-reveal--4">
+        <span>Військовий лікар</span>
+        <span>Тактична медицина · Освіта · Цифрові проєкти</span>
+      </div>
+
+      <p class="start-hero__description hero-reveal hero-reveal--5">
+        Практична медицина, підготовка людей і цифрові освітні
+        проєкти для роботи у складних умовах.
+      </p>
+
+      <div class="start-hero__actions hero-reveal hero-reveal--6">
+        <a href="#projects" class="start-hero__btn start-hero__btn--primary">
+          Переглянути проєкти
+          <span>→</span>
+        </a>
+
+        <a href="#about" class="start-hero__btn start-hero__btn--secondary">
+          Про мене
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="start-hero__stats hero-reveal hero-reveal--7">
+
+        <div class="start-hero__stat">
+          <strong>5+</strong>
+          <span>роки служби</span>
+        </div>
+
+        <div class="start-hero__stat">
+          <strong>Навчання</strong>
+          <span>практична підготовка</span>
+        </div>
+
+        <div class="start-hero__stat">
+          <strong>Цифровізація</strong>
+          <span>освітні проєкти</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="start-hero__visual hero-photo-reveal">
+
+      <div class="start-hero__dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="start-hero__photo-wrap">
+        <img
+          src="hero-serhii.webp"
+          alt="Сергій Пелішенко — військовий лікар та інструктор TCCC/CLS"
+          class="start-hero__photo"
+        >
+        <span class="start-hero__photo-shine" aria-hidden="true"></span>
+      </div>
+
+      <span class="start-hero__corner start-hero__corner--top"></span>
+      <span class="start-hero__corner start-hero__corner--bottom"></span>
+    </div>
+
+  </div>
+
+  <a href="#main-content" class="start-hero__scroll hero-reveal hero-reveal--7">
+    <span>Далі</span>
+    <span>↓</span>
+  </a>
+</header>
 
 <div class="lang-switch">
   <a href="index.html" class="active">UA</a>
@@ -32,7 +108,7 @@
   <a href="index-en.html">EN</a>
 </div>
 
-  <div class="page-wrapper js-page">
+  <div class="page-wrapper js-page" id="main-content">
 
     <nav class="navbar">
       <div class="navbar-inner">
@@ -100,11 +176,13 @@
     
       <section class="hero-main">
         <div class="hero-text">
-          <div class="hero-badge" id="home">
-            <span>📒</span>
+          <div class="hero-badge">
+            <span>■</span>
             <span>Тактична медицина · освіта · цифрові застосунки</span>
           </div>
+          <div class="hero-title-glass">
           <h1>Медицина, навчання і цифрові інструменти — в одному напрямку.</h1>
+          </div>
           <p>
             <span class="indent"> Я лікар за освітою та працюю у військовому середовищі, де медицина часто
   потребує не лише знань, а й чітких рішень, практичного мислення та вміння

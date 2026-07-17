@@ -1,5 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Поточний рік у footer
+  requestAnimationFrame(() => {
+  document.body.classList.add('hero-loaded');
+  const heroScrollButton = document.querySelector('.start-hero__scroll');
+
+const heroPhotoWrap = document.querySelector('.start-hero__photo-wrap');
+
+if (heroPhotoWrap) {
+  heroPhotoWrap.addEventListener('pointermove', (event) => {
+    const rect = heroPhotoWrap.getBoundingClientRect();
+
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const xPercent = (x / rect.width) * 100;
+    const yPercent = (y / rect.height) * 100;
+
+    heroPhotoWrap.style.setProperty('--light-x', `${xPercent}%`);
+    heroPhotoWrap.style.setProperty('--light-y', `${yPercent}%`);
+
+    heroPhotoWrap.style.setProperty(
+      '--light-x-num',
+      String(x / rect.width)
+    );
+
+    heroPhotoWrap.style.setProperty(
+      '--light-y-num',
+      String(y / rect.height)
+    );
+  });
+
+  heroPhotoWrap.addEventListener('pointerleave', () => {
+    heroPhotoWrap.style.setProperty('--light-x', '50%');
+    heroPhotoWrap.style.setProperty('--light-y', '50%');
+    heroPhotoWrap.style.setProperty('--light-x-num', '0.5');
+    heroPhotoWrap.style.setProperty('--light-y-num', '0.5');
+  });
+}
+
+if (heroScrollButton) {
+  heroScrollButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const targetSelector = heroScrollButton.getAttribute('href');
+    const target = document.querySelector(targetSelector);
+
+    if (!target) return;
+
+    const startPosition = window.scrollY;
+    const targetPosition =
+      target.getBoundingClientRect().top + window.scrollY;
+
+    const distance = targetPosition - startPosition;
+    const duration = 1300;
+    const startTime = performance.now();
+
+    function easeInOutCubic(progress) {
+      return progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+    }
+
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeInOutCubic(progress);
+
+      window.scrollTo(
+        0,
+        startPosition + distance * easedProgress
+      );
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+
+    requestAnimationFrame(animateScroll);
+  });
+}
+});
   const yearEl = document.getElementById('year');
 
   if (yearEl) {
@@ -26,72 +105,78 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-  let lastScroll = window.scrollY;
+let lastScrollY = window.scrollY;
+let ticking = false;
 
-  function handleScroll() {
-    const scroll = window.scrollY;
+function handleScroll() {
+  const currentScrollY = window.scrollY;
 
+  const viewportBottom =
+    currentScrollY + window.innerHeight;
 
-    if (pageWrapper) {
-      const rect = pageWrapper.getBoundingClientRect();
+  const documentHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight
+  );
 
-      if (rect.top <= 5) {
-        pageWrapper.classList.add('solid');
-      } else {
-        pageWrapper.classList.remove('solid');
-      }
+  /*
+    Допуск у 4 px потрібен через дробові значення висоти,
+    масштаб браузера та особливості мобільних браузерів.
+  */
+  const reachedPageBottom =
+    viewportBottom >= documentHeight - 4;
+
+  const scrollingUp =
+    currentScrollY < lastScrollY;
+
+  if (navbar) {
+    /*
+      Навбар з’являється лише в самому низу сторінки.
+      Щойно користувач починає рухатися вгору —
+      навбар одразу ховається.
+    */
+    if (reachedPageBottom && !scrollingUp) {
+      navbar.classList.add('visible');
+      navbar.classList.remove('hidden');
+    } else {
+      navbar.classList.remove('visible');
+      navbar.classList.add('hidden');
     }
-
-
-    if (navbar) {
-      const nearBottom =
-        window.innerHeight + scroll >= document.documentElement.scrollHeight - 20;
-
-      const pageStarted =
-        pageWrapper && pageWrapper.getBoundingClientRect().top <= 120;
-
-      if (!pageStarted) {
-        navbar.classList.remove('visible');
-        navbar.classList.add('hidden');
-      } else if (nearBottom) {
-        navbar.classList.add('visible');
-        navbar.classList.remove('hidden');
-      } else if (scroll > lastScroll && scroll > 80) {
-        navbar.classList.remove('visible');
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.add('visible');
-        navbar.classList.remove('hidden');
-      }
-    }
-
-
-    if (toTop) {
-      if (scroll > 400) {
-        toTop.classList.add('show');
-      } else {
-        toTop.classList.remove('show');
-      }
-    }
-
-    lastScroll = scroll;
   }
 
-  handleScroll();
+  if (toTop) {
+    toTop.classList.toggle('show', currentScrollY > 400);
+  }
 
+  lastScrollY = currentScrollY;
+}
 
-  let ticking = false;
+function requestScrollUpdate() {
+  if (ticking) return;
 
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        handleScroll();
-        ticking = false;
-      });
+  ticking = true;
 
-      ticking = true;
-    }
-  }, { passive: true });
+  requestAnimationFrame(() => {
+    handleScroll();
+    ticking = false;
+  });
+}
+
+window.addEventListener('scroll', requestScrollUpdate, {
+  passive: true
+});
+
+window.addEventListener('resize', requestScrollUpdate);
+
+/*
+  Повторна перевірка після завантаження фото, шрифтів
+  та інших елементів, які можуть змінити висоту сторінки.
+*/
+window.addEventListener('load', requestScrollUpdate);
+
+handleScroll();
 
 
 function closeActiveProject() {
@@ -143,21 +228,6 @@ if (projectsOverlay) {
       cleanup: false
     });
 
-    sr.reveal('.hero-text', {
-      origin: 'bottom',
-      distance: '24px',
-      duration: 700,
-      easing: 'ease-out',
-      opacity: 0
-    });
-
-    sr.reveal('.hero-visual', {
-      origin: 'bottom',
-      distance: '24px',
-      duration: 700,
-      easing: 'ease-out',
-      opacity: 0
-    });
 
     sr.reveal('h2', {
       origin: 'bottom',
