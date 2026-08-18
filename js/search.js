@@ -134,9 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
         lang,
         type: "article",
         slug: article.slug || "",
+
         url:
           lang === "en"
-            ? `/article-en.html?article=${article.slug}`
+            ? `/en/article-en.html?article=${article.slug}`
             : `/article.html?article=${article.slug}`
       }));
     };
