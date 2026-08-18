@@ -1,0 +1,876 @@
+  .site-nav__brand {
+  color: #f5f6f2;
+  }
+
+  .site-nav__link {
+    color: rgba(232, 237, 229, 0.72);
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link[aria-current="page"] {
+    color: #ffffff;
+  }
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  background:
+    radial-gradient(
+      circle at 18% 0%,
+      rgba(111, 143, 123, 0.07),
+      transparent 30%
+    ),
+    #111613;
+
+  color: rgba(239, 243, 237, 0.72);
+}
+
+.site-footer__inner {
+  padding-top: 50px;
+  padding-bottom: 18px;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1.25fr)
+    minmax(120px, 0.7fr)
+    minmax(150px, 0.8fr)
+    minmax(220px, 1fr);
+
+  gap: clamp(48px, 7vw, 110px);
+
+  padding-bottom: 56px;
+}
+
+.site-footer__logo {
+  display: inline-flex;
+  margin-bottom: 18px;
+
+  color: #f5f6f2;
+  text-decoration: none;
+
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.site-footer__logo span {
+  color: #91ad55;
+}
+
+.site-footer__tagline {
+  max-width: 280px;
+  margin: 0;
+
+  color: rgba(236, 240, 234, 0.52);
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.site-footer__heading {
+  margin: 0 0 20px;
+
+  color: rgba(241, 244, 239, 0.48);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-footer__nav,
+.site-footer__socials,
+.site-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer__nav a,
+.site-footer__socials a,
+.site-footer__contacts a,
+.site-footer__contacts p {
+  margin: 0 0 12px;
+
+  color: rgba(238, 242, 236, 0.68);
+  text-decoration: none;
+
+  font-size: 14px;
+  line-height: 1.45;
+
+  transition:
+    color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.site-footer__nav a:hover,
+.site-footer__socials a:hover,
+.site-footer__contacts a:hover {
+  color: #f5f6f2;
+  transform: translateX(3px);
+}
+
+.site-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.site-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0;
+  color: #c7c9c2;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.site-footer__contact-item i {
+  width: 18px;
+  text-align: center;
+  color: #b8b39a;
+  flex-shrink: 0;
+}
+
+.site-footer__contact-item:hover {
+  color: #ffffff;
+}
+
+.site-footer__socials a i {
+  width: 18px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer__bottom p,
+.site-footer__bottom a {
+  margin: 0;
+
+  color: rgba(236, 240, 234, 0.42);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.site-footer__bottom a {
+  text-decoration: underline;
+  text-decoration-color: rgba(236, 240, 234, 0.22);
+  text-underline-offset: 4px;
+
+  transition: color 0.22s ease;
+}
+
+.site-footer__bottom a:hover {
+  color: rgba(245, 247, 243, 0.8);
+}
+
+
+@media (max-width: 980px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .site-footer__inner {
+    padding-top: 56px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 44px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+:root {
+  --privacy-dark: #0a0a0a;
+  --privacy-dark-green: #123b2e;
+  --privacy-deep-green: #273526;
+
+  --privacy-light-mint: #d4ebe2;
+  --privacy-light-gray: #edf0f2;
+  --privacy-surface: #f3f5f4;
+
+  --privacy-accent: #19bc7e;
+  --privacy-muted-green: #7fa18e;
+  --privacy-soft-green: #d4e4dc;
+
+  --privacy-text: #17201c;
+  --privacy-text-muted: #59645f;
+  --privacy-border: #bdccc7;
+}
+
+
+/* Основна секція */
+
+.privacy-policy {
+  position: relative;
+  overflow: hidden;
+
+  padding: 128px 0;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(212, 235, 226, 0.75),
+      transparent 34%
+    ),
+    var(--privacy-surface);
+
+  color: var(--privacy-text);
+}
+
+
+/* Контейнер */
+
+.privacy-policy .container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.privacy-policy__header {
+  max-width: 820px;
+  margin-bottom: 72px;
+}
+
+
+/* Маленький текст над заголовком */
+
+.privacy-policy__eyebrow {
+  margin: 0 0 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  color: var(--privacy-muted-green);
+}
+
+
+/* Головний заголовок */
+
+.privacy-policy__title {
+  margin: 0 0 28px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 68px;
+
+  letter-spacing: -0.005em;
+
+  color: var(--privacy-dark-green);
+}
+
+
+/* Вступний текст */
+
+.privacy-policy__intro {
+  max-width: 760px;
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+
+  color: var(--privacy-text-muted);
+}
+
+
+/* Дата оновлення */
+
+.privacy-policy__updated {
+  margin: 24px 0 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+
+  letter-spacing: 0.02em;
+
+  color: var(--privacy-muted-green);
+}
+
+
+/* =====================================================
+   ACCORDION
+===================================================== */
+
+.privacy-policy__accordion {
+  border-top: 1px solid var(--privacy-border);
+}
+
+
+/* Один пункт */
+
+.privacy-item {
+  border-bottom: 1px solid var(--privacy-border);
+}
+
+
+/* Прибираємо стандартний маркер браузера */
+
+.privacy-item__summary {
+  list-style: none;
+}
+
+.privacy-item__summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Рядок із питанням */
+
+.privacy-item__summary {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 24px;
+
+  min-height: 112px;
+  padding: 24px 0;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    color 250ms ease,
+    padding 250ms ease;
+}
+
+
+/* Номер питання */
+
+.privacy-item__number {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+
+  letter-spacing: 0.12em;
+
+  color: var(--privacy-muted-green);
+
+  transition: color 250ms ease;
+}
+
+
+/* Саме питання */
+
+.privacy-item__question {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+
+  color: var(--privacy-text);
+
+  transition:
+    color 250ms ease,
+    transform 250ms ease;
+}
+
+
+/* =====================================================
+   PLUS / MINUS ICON
+===================================================== */
+
+.privacy-item__icon {
+  position: relative;
+
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--privacy-border);
+  border-radius: 50%;
+
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    transform 350ms ease;
+}
+
+
+/* Горизонтальна лінія */
+
+.privacy-item__icon::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 14px;
+  height: 1px;
+
+  background-color: var(--privacy-dark-green);
+
+  transform: translate(-50%, -50%);
+
+  transition: background-color 250ms ease;
+}
+
+
+/* Вертикальна лінія */
+
+.privacy-item__icon::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 1px;
+  height: 14px;
+
+  background-color: var(--privacy-dark-green);
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease,
+    background-color 250ms ease;
+}
+
+
+/* =====================================================
+   OPEN STATE
+===================================================== */
+
+.privacy-item[open] .privacy-item__summary {
+  color: var(--privacy-dark-green);
+}
+
+
+.privacy-item[open] .privacy-item__number {
+  color: var(--privacy-accent);
+}
+
+
+.privacy-item[open] .privacy-item__question {
+  color: var(--privacy-dark-green);
+}
+
+
+.privacy-item[open] .privacy-item__icon {
+  border-color: var(--privacy-dark-green);
+  background-color: var(--privacy-dark-green);
+
+  transform: rotate(180deg);
+}
+
+
+.privacy-item[open] .privacy-item__icon::before {
+  background-color: var(--privacy-surface);
+}
+
+
+.privacy-item[open] .privacy-item__icon::after {
+  opacity: 0;
+
+  background-color: var(--privacy-surface);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(90deg);
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+@media (hover: hover) {
+
+  .privacy-item__summary:hover .privacy-item__question {
+    color: var(--privacy-dark-green);
+    transform: translateX(6px);
+  }
+
+  .privacy-item__summary:hover .privacy-item__number {
+    color: var(--privacy-accent);
+  }
+
+  .privacy-item__summary:hover .privacy-item__icon {
+    border-color: var(--privacy-dark-green);
+    background-color: var(--privacy-dark-green);
+  }
+
+  .privacy-item__summary:hover .privacy-item__icon::before,
+  .privacy-item__summary:hover .privacy-item__icon::after {
+    background-color: var(--privacy-surface);
+  }
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.privacy-item__content {
+  max-width: 860px;
+
+  padding:
+    0
+    64px
+    48px
+    96px;
+}
+
+
+/* Звичайні абзаци */
+
+.privacy-item__content p {
+  margin: 0 0 18px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+
+  color: var(--privacy-text-muted);
+}
+
+
+/* Останній абзац без зайвого відступу */
+
+.privacy-item__content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Списки */
+
+.privacy-item__content ul {
+  display: grid;
+  gap: 12px;
+
+  margin: 24px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* Елемент списку */
+
+.privacy-item__content li {
+  position: relative;
+
+  padding-left: 26px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+
+  color: var(--privacy-text-muted);
+}
+
+
+/* Зелена крапка */
+
+.privacy-item__content li::before {
+  content: "";
+
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background-color: var(--privacy-accent);
+}
+
+
+/* Виділений текст */
+
+.privacy-item__content strong {
+  font-weight: 600;
+  color: var(--privacy-text);
+}
+
+
+/* Посилання */
+
+.privacy-item__content a {
+  position: relative;
+
+  color: var(--privacy-dark-green);
+  font-weight: 600;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Підкреслення посилання */
+
+.privacy-item__content a::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: 0;
+
+  height: 1px;
+
+  background-color: currentColor;
+
+  transform: scaleX(1);
+  transform-origin: left;
+
+  transition: transform 250ms ease;
+}
+
+
+@media (hover: hover) {
+
+  .privacy-item__content a:hover::after {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+}
+
+
+/* =====================================================
+   KEYBOARD FOCUS
+===================================================== */
+
+.privacy-item__summary:focus-visible {
+  outline: 2px solid var(--privacy-accent);
+  outline-offset: 6px;
+  border-radius: 2px;
+}
+
+
+.privacy-item__content a:focus-visible {
+  outline: 2px solid var(--privacy-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .privacy-policy {
+    padding: 104px 0;
+  }
+
+  .privacy-policy .container {
+    width: min(100% - 40px, 920px);
+  }
+
+  .privacy-policy__header {
+    margin-bottom: 56px;
+  }
+
+  .privacy-policy__eyebrow {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .privacy-policy__title {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .privacy-policy__intro {
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .privacy-item__summary {
+    grid-template-columns: 56px minmax(0, 1fr) 40px;
+    gap: 20px;
+
+    min-height: 104px;
+  }
+
+  .privacy-item__question {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .privacy-item__content {
+    padding:
+      0
+      56px
+      40px
+      76px;
+  }
+
+  .privacy-item__content p,
+  .privacy-item__content li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .privacy-policy {
+    padding: 72px 0;
+  }
+
+  .privacy-policy .container {
+    width: min(100% - 32px, 600px);
+  }
+
+  .privacy-policy__header {
+    margin-bottom: 48px;
+  }
+
+  .privacy-policy__eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .privacy-policy__title {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+    line-height: 44px;
+
+    letter-spacing: -0.005em;
+  }
+
+  .privacy-policy__intro {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .privacy-policy__updated {
+    margin-top: 20px;
+
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .privacy-item__summary {
+    grid-template-columns: minmax(0, 1fr) 36px;
+    gap: 16px;
+
+    min-height: 92px;
+    padding: 22px 0;
+  }
+
+  .privacy-item__number {
+    display: none;
+  }
+
+  .privacy-item__question {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .privacy-item__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .privacy-item__content {
+    max-width: none;
+
+    padding:
+      0
+      0
+      36px;
+  }
+
+  .privacy-item__content p,
+  .privacy-item__content li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .privacy-item__content ul {
+    gap: 10px;
+
+    margin: 20px 0;
+  }
+
+  .privacy-item__content li {
+    padding-left: 22px;
+  }
+
+}
+
+
+/* Дуже вузькі екрани */
+
+@media (max-width: 380px) {
+
+  .privacy-policy .container {
+    width: min(100% - 24px, 600px);
+  }
+
+  .privacy-policy__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .privacy-item__question {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+}

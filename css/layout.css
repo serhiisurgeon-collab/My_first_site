@@ -1,0 +1,65 @@
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding-block: var(--space-10);
+}
+
+.section--large {
+  padding-block: var(--space-11);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* =========================
+   STACK
+========================= */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack--sm {
+  gap: var(--space-4);
+}
+
+.stack--md {
+  gap: var(--space-5);
+}
+
+.stack--lg {
+  gap: var(--space-7);
+}
+
+/* =========================
+   VISUALLY HIDDEN
+========================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

@@ -1,0 +1,104 @@
+@media (max-width: 900px) {
+
+  .site-nav__inner {
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  /* Ховаємо desktop navigation */
+  .site-nav__links {
+    display: none;
+  }
+
+  /* Бренд */
+  .site-nav__brand {
+    flex-shrink: 0;
+  }
+
+  /* Перемикач мови лишаємо */
+  .site-nav__language-switcher {
+    margin-left: auto;
+  }
+
+  /* Показуємо кнопку меню */
+  .site-nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  .mobile-nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    display: grid;
+
+    max-height: 0;
+    overflow: hidden;
+
+    background: rgba(10, 15, 12, 0.96);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  .mobile-nav.is-open {
+    max-height: 420px;
+    opacity: 1;
+  }
+
+  .mobile-nav__inner {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 24px 28px;
+  }
+
+  .mobile-nav__inner a {
+    padding: 15px 0;
+
+    color: rgba(245, 247, 242, 0.78);
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-nav__inner a:last-child {
+    border-bottom: none;
+  }
+}

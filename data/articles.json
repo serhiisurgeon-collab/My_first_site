@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "how-kaolin-works",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Як і чому працює каолін",
+    "description": "Що насправді відбувається після контакту каоліну з кров’ю — і чому розуміння цього механізму має практичне значення.",
+    "date": "2026-04-03",
+    "updated": "2026-04-03",
+    "readTime": 9,
+    "author": "Сергій Пелішенко",
+    "content": "how-kaolin-works.md",
+    "featured": true
+  },
+  {
+    "slug": "group-medical-bag",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Від IFAK до групової медичної сумки",
+    "description": "Розбираємо, які завдання має вирішувати спільне медичне оснащення і чому простого дублювання IFAK недостатньо.",
+    "date": "2026-08-02",
+    "readTime": 15,
+    "author": "Сергій Пелішенко",
+    "content": "group-medical-bag.md",
+    "featured": false
+  },
+  {
+    "slug": "example-expert-comment",
+    "type": "publication",
+    "format": "article",
+    "category": "tactical-medicine",
+    "role": "Інтерв’ю",
+    "title": "Роль санітарного інструктора в сучасній тактичній медицині",
+    "source": "Міністерство внутрішніх справ України",
+    "date": "2022-09-30",
+    "url": "https://mvs.gov.ua/news/travmi-buli-riznimi-deyaki-vipadki-ne-zustricav-pid-cas-navcannya-ale-reaguvati-treba-bulo-svidko-nacgvardijec-sergii-pelisenko"
+  },
+  {
+    "slug": "field-medicine-interview",
+    "type": "publication",
+    "format": "video",
+    "category": "tactical-medicine",
+    "role": "Інтерв’ю",
+    "title": "Польова медицина та досвід реальної практики",
+    "source": "Facebook",
+    "date": "2022-11-17",
+    "url": "https://www.facebook.com/share/v/14kGYB25fUb/"
+  },
+  {
+    "slug": "example-expert-comment",
+    "type": "publication",
+    "format": "article",
+    "category": "tactical-medicine",
+    "role": "Думка експерта",
+    "title": "Сучасні дані щодо каолінових та хітозанових пов'язок",
+    "source": "Гемостаз сьогодні",
+    "date": "2026-07-19",
+    "url": "https://hemostasistoday.com/voices/serhii-pelishenko-70252"
+  }
+]

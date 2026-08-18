@@ -1,0 +1,576 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/policy.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html" >
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./policy.html"
+    lang="uk"
+    aria-current="page"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/policy-en.html"
+    lang="en"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html">Головна</a>
+    <a href="./about.html">Про мене</a>
+    <a href="./projects.html">Проєкти</a>
+    <a href="./articles.html">Статті</a>
+    <a href="./contact.html">Контакти</a>
+
+  </div>
+</div>
+
+<header>
+<section class="privacy-policy" id="privacy-policy">
+  <div class="container">
+
+    <header class="privacy-policy__header">
+      <p class="privacy-policy__eyebrow">
+        Юридична інформація
+      </p>
+
+      <h1 class="privacy-policy__title">
+        Політика конфіденційності
+      </h1>
+
+      <p class="privacy-policy__intro">
+        Ця Політика конфіденційності пояснює, які дані можуть
+        оброблятися під час використання вебсайту
+        <strong>serhiipelishenko.com</strong>, для чого вони потрібні
+        та які права має користувач.
+      </p>
+
+      <p class="privacy-policy__updated">
+        Останнє оновлення: 22 липня 2026 року
+      </p>
+    </header>
+
+    <div class="privacy-policy__accordion">
+
+      <!-- 1. Власник сайту -->
+      <details class="privacy-item" open>
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">01</span>
+
+          <span class="privacy-item__question">
+            Хто є власником сайту?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Власником вебсайту
+            <strong>serhiipelishenko.com</strong>
+            є Сергій Пелішенко.
+          </p>
+
+          <p>
+            Для будь-яких питань щодо конфіденційності можна
+            звернутися електронною поштою:
+          </p>
+
+          <p>
+            <a href="mailto:hello@serhiipelishenko.com">
+              hello@serhiipelishenko.com
+            </a>
+          </p>
+        </div>
+      </details>
+
+      <!-- 2. Дані -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">02</span>
+
+          <span class="privacy-item__question">
+            Які дані можуть збиратися?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Під час використання сайту можуть автоматично або
+            добровільно оброблятися такі дані:
+          </p>
+
+          <ul>
+            <li>IP-адреса користувача;</li>
+            <li>тип і версія браузера;</li>
+            <li>операційна система пристрою;</li>
+            <li>дата та час відвідування сайту;</li>
+            <li>сторінки, які переглядав користувач;</li>
+            <li>
+              інформація, яку користувач добровільно надсилає
+              електронною поштою.
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 3. Мета обробки -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">03</span>
+
+          <span class="privacy-item__question">
+            Для чого використовуються ці дані?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Дані можуть використовуватися виключно для:
+          </p>
+
+          <ul>
+            <li>забезпечення стабільної роботи сайту;</li>
+            <li>відповіді на звернення користувачів;</li>
+            <li>підвищення безпеки сайту;</li>
+            <li>виявлення та усунення технічних помилок;</li>
+            <li>
+              аналізу роботи та відвідуваності сайту, якщо будуть
+              підключені відповідні аналітичні сервіси.
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 4. Cookies -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">04</span>
+
+          <span class="privacy-item__question">
+            Чи використовує сайт cookies?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Сайт може використовувати технічні файли cookies,
+            необхідні для його коректної та безпечної роботи.
+          </p>
+
+          <p>
+            Якщо в майбутньому буде підключено Google Analytics
+            або інші аналітичні чи рекламні сервіси, ця Політика
+            конфіденційності буде відповідним чином оновлена.
+          </p>
+
+          <p>
+            Користувач може обмежити або вимкнути використання
+            cookies у налаштуваннях свого браузера.
+          </p>
+        </div>
+      </details>
+
+      <!-- 5. Зовнішні сервіси -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">05</span>
+
+          <span class="privacy-item__question">
+            Які сторонні сервіси можуть використовуватися?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Для розміщення, захисту, оформлення та функціонування
+            сайту можуть використовуватися сторонні сервіси,
+            зокрема:
+          </p>
+
+          <ul>
+            <li>GitHub Pages — для розміщення сайту;</li>
+            <li>Namecheap — для обслуговування доменного імені;</li>
+            <li>Font Awesome — для відображення іконок;</li>
+            <li>Google Fonts — для завантаження шрифтів, якщо підключено;</li>
+            <li>Cloudflare — для безпеки та доставки контенту, якщо підключено;</li>
+            <li>
+              соціальні мережі та зовнішні платформи, посилання
+              на які розміщені на сайті.
+            </li>
+          </ul>
+
+          <p>
+            Такі сервіси можуть самостійно обробляти технічну
+            інформацію відповідно до власних політик
+            конфіденційності.
+          </p>
+        </div>
+      </details>
+
+      <!-- 6. Електронна пошта -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">06</span>
+
+          <span class="privacy-item__question">
+            Які дані обробляються під час звернення електронною поштою?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Якщо користувач добровільно надсилає електронного
+            листа, можуть оброблятися:
+          </p>
+
+          <ul>
+            <li>ім’я або інше зазначене користувачем ім’я;</li>
+            <li>адреса електронної пошти;</li>
+            <li>текст повідомлення;</li>
+            <li>файли та вкладення, додані до листа;</li>
+            <li>
+              інша інформація, яку користувач добровільно вказав
+              у своєму зверненні.
+            </li>
+          </ul>
+
+          <p>
+            Ці дані використовуються лише для розгляду звернення,
+            підготовки відповіді та подальшої комунікації.
+          </p>
+        </div>
+      </details>
+
+      <!-- 7. Передача третім особам -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">07</span>
+
+          <span class="privacy-item__question">
+            Чи передаються дані третім особам?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Персональні дані користувачів не продаються,
+            не обмінюються та не передаються третім особам,
+            окрім випадків:
+          </p>
+
+          <ul>
+            <li>коли це необхідно для технічної роботи сайту;</li>
+            <li>коли користувач надав на це свою згоду;</li>
+            <li>
+              коли така передача прямо передбачена законодавством
+              України або законною вимогою уповноваженого органу.
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- 8. Безпека -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">08</span>
+
+          <span class="privacy-item__question">
+            Як забезпечується безпека даних?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Сайт використовує захищене HTTPS-з’єднання та доступні
+            сучасні технічні засоби захисту інформації.
+          </p>
+
+          <p>
+            Вживаються розумні організаційні й технічні заходи,
+            спрямовані на запобігання несанкціонованому доступу,
+            зміні, втраті або розголошенню даних.
+          </p>
+
+          <p>
+            Водночас жоден спосіб передавання або зберігання
+            інформації в мережі Інтернет не може гарантувати
+            абсолютну безпеку.
+          </p>
+        </div>
+      </details>
+
+      <!-- 9. Права користувача -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">09</span>
+
+          <span class="privacy-item__question">
+            Які права має користувач?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Користувач має право:
+          </p>
+
+          <ul>
+            <li>
+              дізнатися, чи обробляються його персональні дані;
+            </li>
+            <li>
+              отримати інформацію про дані, які були надані
+              користувачем;
+            </li>
+            <li>
+              попросити виправити неточні або застарілі дані;
+            </li>
+            <li>
+              попросити видалити дані, якщо немає законних підстав
+              для їх подальшого зберігання;
+            </li>
+            <li>
+              відкликати раніше надану згоду на обробку даних.
+            </li>
+          </ul>
+
+          <p>
+            Для реалізації цих прав необхідно надіслати звернення
+            на електронну адресу:
+            <a href="mailto:hello@serhiipelishenko.com">
+              hello@serhiipelishenko.com
+            </a>.
+          </p>
+        </div>
+      </details>
+
+      <!-- 10. Контакти -->
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">10</span>
+
+          <span class="privacy-item__question">
+            Як зв’язатися щодо питань конфіденційності?
+          </span>
+
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+
+        <div class="privacy-item__content">
+          <p>
+            Якщо у Вас виникли запитання щодо цієї Політики
+            конфіденційності, обробки або видалення персональних
+            даних, звертайтеся електронною поштою:
+          </p>
+
+          <p>
+            <a href="mailto:hello@serhiipelishenko.com">
+              hello@serhiipelishenko.com
+            </a>
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+</header>
+
+
+  <main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html">Головна</a>
+        <a href="./about.html">Про мене</a>
+        <a href="./projects.html">Проєкти</a>
+        <a href="./articles.html">Статті</a>
+        <a href="./contact.html">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380984538527" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (098) 453-85-27</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

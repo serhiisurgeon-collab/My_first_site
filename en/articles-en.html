@@ -1,0 +1,397 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/articles.css">
+  <link rel="stylesheet" href="../css/pages/about.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="../index-en.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index-en.html" >
+        Home
+      </a>
+
+      <a class="site-nav__link" href="./about-en.html">
+        About me
+      </a>
+
+      <a class="site-nav__link" href="./projects-en.html">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="./articles-en.html" aria-current="page">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="./contact-en.html">
+        Contact
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Search the site"
+  title="Search"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Language switcher"
+>
+  <a
+    class="site-nav__language-option"
+    href="../articles.html"
+    lang="uk"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="./articles-en.html"
+    lang="en"
+    aria-current="page"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index-en.html">Home</a>
+    <a href="./about-en.html">About me</a>
+    <a href="./projects-en.html">Projects</a>
+    <a href="./articles-en.html">Articles</a>
+    <a href="./contact-en.html">Contact</a>
+
+  </div>
+</div>
+
+<header>
+<div class="articles-page">
+
+  <!-- =========================
+       HERO
+  ========================== -->
+<section class="articles-hero">
+  <div class="articles-hero__inner">
+
+    <div class="articles-hero__content">
+
+    <div class="articles-hero__eyebrow">
+        <span>Articles & publications</span>
+        <span class="articles-hero__eyebrow-line"></span>
+    </div>
+
+    <h1 class="articles-hero__title">
+        Thoughts worth<br>
+        writing down.
+    </h1>
+
+    <p class="articles-hero__description">
+        Articles, professional observations, and publications
+        on medicine, tactical care, education,
+        and technology.
+    </p>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- =========================
+       CONTENT
+  ========================== -->
+  <section class="articles-content">
+
+    <div class="articles-content__inner">
+
+
+      <!-- =========================
+           FILTERS
+      ========================== -->
+      <div
+        class="articles-filters"
+        aria-label="Content filter"
+      >
+
+        <button
+          class="articles-filter is-active"
+          type="button"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="articles-filter"
+          type="button"
+          data-filter="article"
+        >
+          Articles
+        </button>
+
+        <button
+          class="articles-filter"
+          type="button"
+          data-filter="publication"
+        >
+          Publications
+        </button>
+
+        <span
+          class="articles-filters__divider"
+          aria-hidden="true"
+        ></span>
+
+        <button
+          class="articles-filter"
+          type="button"
+          data-filter="tactical-medicine"
+        >
+          Tactical medicine
+        </button>
+
+        <button
+          class="articles-filter"
+          type="button"
+          data-filter="medicine"
+        >
+          Medicine
+        </button>
+
+        <button
+          class="articles-filter"
+          type="button"
+          data-filter="technology"
+        >
+          Technology
+        </button>
+
+      </div>
+
+
+      <!-- =========================
+           ARTICLES
+      ========================== -->
+      <section
+        class="writing-section"
+        aria-labelledby="articles-heading"
+      >
+
+        <div class="writing-section__header">
+
+          <h2
+            class="writing-section__title"
+            id="articles-heading"
+          >
+            Articles
+          </h2>
+
+          <span
+            class="writing-section__count"
+            id="articlesCount"
+          ></span>
+
+        </div>
+
+
+        <div
+          class="articles-list"
+          id="articlesList"
+        >
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           PUBLICATIONS & MENTIONS
+      ========================== -->
+      <section
+        class="writing-section publications-section"
+        aria-labelledby="publications-heading"
+      >
+
+        <div class="writing-section__header">
+
+          <div>
+
+            <h2
+              class="writing-section__title"
+              id="publications-heading"
+            >
+              Publications & mentions
+            </h2>
+
+            <p class="writing-section__description">
+              Articles, comments, interviews, and professional insights
+              published on other platforms.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="publications-grid"
+          id="publicationsList"
+        >
+
+
+
+
+    </div>
+
+  </section>
+
+</div>
+</header>
+
+<main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index-en.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — in one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="./index-en.html">Home</a>
+        <a href="./about-en.html">About me</a>
+        <a href="./projects-en.html">Projects</a>
+        <a href="./articles-en.html">Articles</a>
+        <a href="./contact-en.html">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contact</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380984538527" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (098) 453-85-27</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="./policy-en.html">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+</main>
+
+<script type="module" src="../js/main.js"></script>
+<script src="../js/articles.js"></script>
+
+<script>
+  document.documentElement.classList.add("js");
+</script>
+</body>
+</html>

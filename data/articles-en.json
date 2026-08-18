@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "how-kaolin-works-en",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "How and Why Kaolin Works",
+    "description": "What actually happens when kaolin comes into contact with blood — and why understanding this mechanism matters in practice.",
+    "date": "2026-04-03",
+    "updated": "2026-04-03",
+    "readTime": 9,
+    "author": "Serhii Pelishenko",
+    "content": "how-kaolin-works.md",
+    "featured": true
+  },
+  {
+    "slug": "group-medical-bag",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "From IFAK to Group Medical Kit",
+    "description": "We analyze the tasks that group medical equipment should address and why simply duplicating IFAK is insufficient.",
+    "date": "2026-08-02",
+    "readTime": 18,
+    "author": "Serhii Pelishenko",
+    "content": "group-medical-bag.md",
+    "featured": false
+  },
+  {
+    "slug": "field-medicine-interview",
+    "type": "publication",
+    "format": "video",
+    "category": "tactical-medicine",
+    "role": "Interview",
+    "title": "Field Medicine and Experience in Real Practice",
+    "source": "Facebook",
+    "date": "2022-11-17",
+    "url": "https://www.facebook.com/share/v/14kGYB25fUb/"
+  },
+  {
+    "slug": "example-expert-comment",
+    "type": "publication",
+    "format": "article",
+    "category": "tactical-medicine",
+    "role": "Interview",
+    "title": "The Role of Sanitary Instructors in Modern Tactical Medicine",
+    "source": "Ministry of Internal Affairs of Ukraine",
+    "date": "2022-09-30",
+    "url": "https://mvs.gov.ua/en/news/travmi-buli-riznimi-deyaki-vipadki-ne-zustricav-pid-cas-navcannya-ale-reaguvati-treba-bulo-svidko-nacgvardijec-sergii-pelisenko"
+  },
+  {
+    "slug": "example-expert-comment",
+    "type": "publication",
+    "format": "article",
+    "category": "tactical-medicine",
+    "role": "Expert Opinion",
+    "title": "Current Evidence on Kaolin and Chitosan Dressings",
+    "source": "Hemostasis Today",
+    "date": "2026-07-19",
+    "url": "https://hemostasistoday.com/voices/serhii-pelishenko-70252"
+  }
+]

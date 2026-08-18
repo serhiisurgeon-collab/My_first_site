@@ -1,0 +1,811 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/about.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index-en.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index-en.html" >
+        Home
+      </a>
+
+      <a class="site-nav__link" href="./about-en.html" aria-current="page">
+        About Me
+      </a>
+
+      <a class="site-nav__link" href="./projects-en.html">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="./articles-en.html">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="./contact-en.html">
+        Contact
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Search the site"
+  title="Search"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Language switcher"
+>
+  <a
+    class="site-nav__language-option"
+    href="../about.html"
+    lang="uk"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="./about-en.html"
+    lang="en"
+    aria-current="page"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </div>
+</nav>
+
+<header>
+<section class="about-hero" aria-labelledby="about-hero-title">
+  <div class="about-hero__overlay" aria-hidden="true"></div>
+      <div
+    class="about-hero__background"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="about-hero__overlay"
+    aria-hidden="true"
+  ></div>
+  <div class="container about-hero__container">
+    <div class="about-hero__content">
+
+      <div class="about-hero__eyebrow">
+        <span>About me</span>
+        <span class="about-hero__eyebrow-line"></span>
+      </div>
+
+      <h1 class="about-hero__title" id="about-hero-title">
+        Military physician<span>.</span><br>
+        Instructor<span>.</span> <br> Developer<span>.</span>
+      </h1>
+
+      <p class="about-hero__description">
+        I combine medicine, education, and technology<br>
+        to create practical solutions<br>
+        and share knowledge that saves lives.
+      </p>
+
+<div class="about-hero__stats">
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <path d="M24 4 40 10v11c0 10-6.7 18.8-16 23C14.7 39.8 8 31 8 21V10L24 4Z" />
+        <path d="m17 24 5 5 10-12" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>5+ years</strong>
+      <span>of service and experience</span>
+    </div>
+  </div>
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <path d="m4 18 20-10 20 10-20 10L4 18Z" />
+        <path d="M12 23v11c6 5 18 5 24 0V23" />
+        <path d="M44 18v14" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>TCCC / CLS</strong>
+      <span>instructor</span>
+    </div>
+  </div>
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <rect x="7" y="8" width="34" height="26" rx="3" />
+        <path d="M4 40h40" />
+        <path d="m18 17-5 5 5 5" />
+        <path d="m30 17 5 5-5 5" />
+        <path d="m27 14-6 16" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>Digital solutions</strong>
+      <span>for education and practice</span>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="about-path" aria-labelledby="about-path-title">
+  <div class="about-path__container">
+
+    <!-- Left column -->
+<div class="about-path__story">
+  <header class="about-path__header">
+    <div class="about-path__eyebrow">
+      <span>My journey</span>
+      <span
+        class="about-path__eyebrow-line"
+        aria-hidden="true"
+      ></span>
+    </div>
+
+    <h2
+      class="about-path__title"
+      id="about-path-title"
+    >
+      From medicine<br>
+      to digital solutions
+    </h2>
+  </header>
+
+  <!-- Container where one text replaces another -->
+  <div class="about-path__story-copy">
+
+    <!-- Short version -->
+    <div
+      class="about-path__story-panel is-active"
+      data-story-panel="short"
+    >
+      <p class="about-path__intro">
+        I am a physician by training, a military medic by vocation,
+        and a developer by passion. My journey is shaped by continuous
+        learning, hands-on practice, and a drive to create tools
+        that make complex things simple and accessible.
+      </p>
+    </div>
+
+    <!-- Full version -->
+    <div
+      class="about-path__story-panel about-path__story-panel--full"
+      data-story-panel="full"
+      hidden
+    >
+      <div class="about-path__longread">
+        <p class="about-path__longread-lead">
+          My professional journey began with medicine — a field
+          where knowledge matters only when it helps you
+          make the right decision at the right moment.
+        </p>
+
+        <p>
+          My medical education gave me a strong foundation:
+          an understanding of the human body, clinical reasoning, and
+          responsibility for every decision. My internship and first
+          steps in surgery taught me to work methodically even when
+          there is almost no time for doubt.
+        </p>
+
+        <p>
+          Military medicine changed the scale of that responsibility.
+          Here, knowing the protocol is not enough — you must be able
+          to apply it with limited resources, under threat,
+          and under intense pressure.
+        </p>
+
+        <p>
+          Teaching became a natural extension of
+          my practical experience. I deliver TCCC and CLS training,
+          create educational materials, and strive to explain complex
+          topics so they can be applied not someday,
+          but immediately after the session.
+        </p>
+
+        <p>
+          Over time, technology joined medicine and education.
+          For me, developing apps, bots, and digital tools
+          is not a separate profession for its own sake. It is a way
+          to turn accumulated experience into solutions that can
+          benefit many more people.
+        </p>
+
+        <p>
+          I see my path forward at the intersection of these fields:
+          medicine provides purpose, education helps share knowledge,
+          and technology makes it possible to scale practical solutions.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The timeline always remains at the end -->
+  <ol class="about-path__timeline">
+    <li class="about-path__timeline-item">
+      <time datetime="2019">2019</time>
+
+      <p>Graduated from medical university</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2019">2019–2021</time>
+
+      <p>Internship in forensic medicine</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2021">2021 — present</time>
+
+      <p>Military physician, TCCC / CLS instructor</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2025">2025</time>
+
+      <p>
+       Specialization in surgery and development of digital solutions
+      </p>
+    </li>
+  </ol>
+
+  <button
+    class="about-path__button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="about-path-full-story"
+    data-story-toggle
+  >
+    <span data-story-button-text>
+      Learn more about my experience
+    </span>
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14"></path>
+      <path d="m14 7 5 5-5 5"></path>
+    </svg>
+  </button>
+</div>
+
+    <!-- Right column -->
+    <div class="about-path__expertise">
+      <div class="about-path__eyebrow">
+        <span>Expertise</span>
+      </div>
+
+      <div class="about-path__cards">
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="7" y="13" width="34" height="27" rx="3"></rect>
+              <path d="M18 13V8h12v5"></path>
+              <path d="M24 21v11"></path>
+              <path d="M18.5 26.5h11"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Tactical medicine
+          </h3>
+
+          <p class="expertise-card__text">
+            TCCC, CLS, MARCH, and care in austere environments
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="m5 17 19-10 19 10-19 10L5 17Z"></path>
+              <path d="M13 23v11c6 5 16 5 22 0V23"></path>
+              <path d="M43 17v14"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Education and instruction
+          </h3>
+
+          <p class="expertise-card__text">
+            Delivering courses, creating educational materials,
+            and mentoring
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="5" y="9" width="38" height="29" rx="3"></rect>
+              <path d="m18 18-6 6 6 6"></path>
+              <path d="m30 18 6 6-6 6"></path>
+              <path d="m27 15-6 18"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Development and technology
+          </h3>
+
+          <p class="expertise-card__text">
+            Building apps, bots, and digital solutions
+            for practical needs
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <circle cx="18" cy="16" r="6"></circle>
+              <circle cx="34" cy="17" r="5"></circle>
+              <path d="M6 39v-5c0-6 5-10 12-10s12 4 12 10v5"></path>
+              <path d="M29 27c2-2 4-3 7-3 5 0 8 4 8 9v6"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Coordination and growth
+          </h3>
+
+          <p class="expertise-card__text">
+            Managing teams, projects, and initiatives
+          </p>
+        </article>
+
+      </div>
+
+      <div class="about-path__tools">
+        <h3 class="about-path__tools-title">
+          Tools and technologies
+        </h3>
+
+        <ul class="about-path__tags" aria-label="Technologies">
+          <li>Python</li>
+          <li>Flutter</li>
+          <li>SQLite</li>
+          <li>AI / OpenAI</li>
+          <li>JavaScript</li>
+          <li>Figma</li>
+          <li>Git / GitHub</li>
+          <li>Trello</li>
+          <li>Notion</li>
+        </ul>
+      </div>
+<div
+  class="about-path__gallery-reveal"
+  data-story-gallery
+  aria-hidden="true"
+>
+  <div class="about-path__gallery-inner">
+    <div class="about-path__gallery-content">
+
+      <div class="about-path__gallery-header">
+        <div class="about-path__eyebrow">
+          <span>In action</span>
+
+          <span
+            class="about-path__eyebrow-line"
+            aria-hidden="true"
+          ></span>
+        </div>
+
+        <p class="about-path__gallery-intro">
+          A few moments from practice, teaching,
+          and work on digital solutions.
+        </p>
+      </div>
+
+      <div class="about-path__gallery">
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-01.webp"
+            alt="Hands-on work in military medicine"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Military medicine
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-02.webp"
+            alt="Teaching a tactical medicine class"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Education and instruction
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-03.webp"
+            alt="Preparing educational materials"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Educational materials
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-04.png"
+            alt="Working on digital tools"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Digital solutions
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
+</section>
+<section
+  class="about-values"
+  aria-labelledby="about-values-title"
+>
+  <div class="about-values__container">
+
+    <header class="about-values__intro">
+      <div class="about-values__eyebrow">
+        <span>My principles</span>
+
+        <span
+          class="about-values__eyebrow-line"
+          aria-hidden="true"
+        ></span>
+      </div>
+
+      <h2
+        class="about-values__title"
+        id="about-values-title"
+      >
+        What matters<br>
+        in my work
+      </h2>
+
+      <p class="about-values__description">
+        I work where knowledge has practical value,
+        and technology serves people. My approach is built on
+        responsibility, structured thinking, and continuous growth.
+      </p>
+    </header>
+
+    <div class="about-values__list">
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <path
+              d="M24 4 40 10v11c0 10-6.7 18.8-16 23C14.7 39.8 8 31 8 21V10L24 4Z"
+            ></path>
+
+            <path d="m17 24 5 5 10-12"></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Responsibility
+        </h3>
+
+        <p class="about-values__item-text">
+          Every decision can affect a life.
+          I take full responsibility for it.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <circle cx="23" cy="24" r="16"></circle>
+            <circle cx="23" cy="24" r="9"></circle>
+            <circle cx="23" cy="24" r="3"></circle>
+
+            <path d="M27 20 42 5"></path>
+            <path d="M35 6h8v8"></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Practicality
+        </h3>
+
+        <p class="about-values__item-text">
+          I create solutions that work in real-world
+          conditions, not only on paper.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <path
+              d="M5 10c7-3 13-2 19 2v28c-6-4-12-5-19-2V10Z"
+            ></path>
+
+            <path
+              d="M43 10c-7-3-13-2-19 2v28c6-4 12-5 19-2V10Z"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Continuous growth
+        </h3>
+
+        <p class="about-values__item-text">
+          I learn every day, test new ideas,
+          and improve both myself and the tools I build.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <circle cx="17" cy="15" r="6"></circle>
+            <circle cx="34" cy="17" r="5"></circle>
+
+            <path
+              d="M5 40v-5c0-7 5-11 12-11s12 4 12 11v5"
+            ></path>
+
+            <path
+              d="M29 28c2-2 5-3 8-2 5 1 7 5 7 10v4"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Collaboration
+        </h3>
+
+        <p class="about-values__item-text">
+          The best results come from teamwork
+          and sharing experience.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+</header>
+
+
+  <main>
+<section class="collaboration-cta" id="collaboration">
+  <div class="collaboration-cta__overlay" aria-hidden="true"></div>
+
+  <div class="container collaboration-cta__grid">
+    <div class="collaboration-cta__content">
+      <p class="collaboration-cta__eyebrow">
+        Collaboration and contact
+      </p>
+
+      <h2 class="collaboration-cta__title">
+        Open to collaboration<br>
+        and new initiatives.
+      </h2>
+
+      <p class="collaboration-cta__description">
+        Have an idea, a project, or a need for a medical
+        or educational solution? Let’s discuss
+        how we can work together.
+      </p>
+    </div>
+
+    <div class="collaboration-cta__action">
+      <a
+        class="collaboration-cta__button"
+        href="./contact-en.html"
+      >
+        Contact me
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index-en.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — working as one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="./index-en.html">Home</a>
+        <a href="./about-en.html">About me</a>
+        <a href="./projects-en.html">Projects</a>
+        <a href="./articles-en.html">Articles</a>
+        <a href="./contact-en.html">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contact</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380984538527" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (098) 453-85-27</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="./policy-en.html">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+<script type="module" src="../../js/main.js"></script>
+<script type="module">
+
+  const storyToggle = document.querySelector("[data-story-toggle]");
+  const storyButtonText = document.querySelector("[data-story-button-text]");
+
+  const updateStoryButtonText = () => {
+    if (!storyToggle || !storyButtonText) return;
+
+    const isExpanded = storyToggle.getAttribute("aria-expanded") === "true";
+    storyButtonText.textContent = isExpanded
+      ? "Show less"
+      : "Learn more about my experience";
+  };
+
+  updateStoryButtonText();
+
+  if (storyToggle) {
+    const observer = new MutationObserver(updateStoryButtonText);
+    observer.observe(storyToggle, {
+      attributes: true,
+      attributeFilter: ["aria-expanded"]
+    });
+  }
+</script>
+<script>
+  document.documentElement.classList.add("js");
+</script>
+</body>
+</html>

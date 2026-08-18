@@ -1,17 +1,17 @@
 
   <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
-  <link rel="stylesheet" href="./css/tokens.css">
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/layout.css">
-  <link rel="stylesheet" href="./css/components.css">
-  <link rel="stylesheet" href="./css/pages/home.css">
-  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/home.css">
+  <link rel="stylesheet" href="../css/responsive.css">
   <link
   href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
   rel="stylesheet"
@@ -23,52 +23,51 @@
 </head>
 
 <body>
-<nav class="site-nav" aria-label="Основна навігація">
+<nav class="site-nav" aria-label="Primary navigation">
   <div class="site-nav__inner container">
-    <a class="site-nav__brand" href="./index.html">
+    <a class="site-nav__brand" href="./index-en.html">
       Serhii Pelishenko
     </a>
 
     <div class="site-nav__links">
-      <a class="site-nav__link" href="./index.html" aria-current="page">
-        Головна
+      <a class="site-nav__link" href="./index-en.html" aria-current="page">
+        Home
       </a>
 
-      <a class="site-nav__link" href="./about.html">
-        Про мене
+      <a class="site-nav__link" href="./about-en.html">
+        About Me
       </a>
 
-      <a class="site-nav__link" href="./projects.html">
-        Проєкти
+      <a class="site-nav__link" href="./projects-en.html">
+        Projects
       </a>
 
-      <a class="site-nav__link" href="./articles.html">
-        Статті
+      <a class="site-nav__link" href="./articles-en.html">
+        Articles
       </a>
 
-      <a class="site-nav__link" href="./contact.html">
-        Контакти
+      <a class="site-nav__link" href="./contact-en.html">
+        Contact
       </a>
     </div>
 <button
   class="site-search-trigger"
   type="button"
-  aria-label="Пошук по сайту"
-  title="Пошук"
+  aria-label="Search the site"
+  title="Search"
 >
   <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__label">Search</span>
   <span class="site-search-trigger__hint">Ctrl K</span>
 </button>
 <div
   class="site-nav__language-switcher"
-  aria-label="Перемикач мови"
+  aria-label="Language switcher"
 >
   <a
-    class="site-nav__language-option is-active"
-    href="./index.html"
+    class="site-nav__language-option"
+    href="../index.html"
     lang="uk"
-    aria-current="page"
   >
     UA
   </a>
@@ -81,9 +80,10 @@
   </span>
 
   <a
-    class="site-nav__language-option"
-    href="./en/index-en.html"
+    class="site-nav__language-option is-active"
+    href="./index-en.html"
     lang="en"
+    aria-current="page"
   >
     EN
   </a>
@@ -95,25 +95,10 @@
       aria-expanded="false"
       aria-controls="mobile-navigation"
     >
-      Меню
+      Menu
     </button>
   </div>
 </nav>
-<div
-  class="mobile-nav"
-  id="mobile-navigation"
-  aria-hidden="true"
->
-  <div class="mobile-nav__inner">
-
-    <a href="./index.html">Головна</a>
-    <a href="./about.html">Про мене</a>
-    <a href="./projects.html">Проєкти</a>
-    <a href="./articles.html">Статті</a>
-    <a href="./contact.html">Контакти</a>
-
-  </div>
-</div>
 
 <header class="start-hero" id="home">
   <div class="start-hero__glow start-hero__glow--left"></div>
@@ -125,32 +110,32 @@
 
       <div class="start-hero__eyebrow hero-reveal hero-reveal--1">
         <span class="start-hero__eyebrow-line"></span>
-        <span>Військовий лікар · Україна</span>
+        <span>Military Physician · Ukraine</span>
       </div>
 
       <h1 class="start-hero__title">
-        <span class="hero-reveal hero-reveal--2">Сергій</span>
-        <span class="hero-reveal hero-reveal--3">Пелішенко</span>
+        <span class="hero-reveal hero-reveal--2">Serhii</span>
+        <span class="hero-reveal hero-reveal--3">Pelishenko</span>
       </h1>
 
       <div class="start-hero__roles hero-reveal hero-reveal--4">
-        <span>Військовий лікар</span>
-        <span>Тактична медицина · Освіта · Цифрові проєкти</span>
+        <span>Military Physician</span>
+        <span>Tactical Medicine · Education · Digital Projects</span>
       </div>
 
       <p class="start-hero__description hero-reveal hero-reveal--5">
-        Практична медицина, підготовка людей і цифрові освітні
-        проєкти для роботи у складних умовах.
+        Practical medicine, hands-on training, and digital education
+        projects designed for challenging environments.
       </p>
 
       <div class="start-hero__actions hero-reveal hero-reveal--6">
         <a href="#projects" class="start-hero__btn start-hero__btn--primary">
-          Переглянути проєкти
+          View Projects
           <span>→</span>
         </a>
 
-        <a href="./about.html" class="start-hero__btn start-hero__btn--secondary">
-          Про мене
+        <a href="./about-en.html" class="start-hero__btn start-hero__btn--secondary">
+          About Me
           <span>→</span>
         </a>
       </div>
@@ -159,17 +144,17 @@
 
         <div class="start-hero__stat">
           <strong>5+</strong>
-          <span>роки служби</span>
+          <span>years of service</span>
         </div>
 
         <div class="start-hero__stat">
-          <strong>Навчання</strong>
-          <span>практична підготовка</span>
+          <strong>Training</strong>
+          <span>hands-on instruction</span>
         </div>
 
         <div class="start-hero__stat">
-          <strong>Цифровізація</strong>
-          <span>освітні проєкти</span>
+          <strong>Digital Innovation</strong>
+          <span>educational projects</span>
         </div>
 
       </div>
@@ -188,7 +173,7 @@
 
         <div class="start-hero__photo-wrap">
           <img
-            src="./assets/images/hero-serhii.webp"
+            src="../assets/images/hero-serhii.webp"
             alt="Сергій Пелішенко — військовий лікар та інструктор TCCC/CLS"
             class="start-hero__photo"
           >
@@ -208,7 +193,7 @@
 <a
   class="start-hero__scroll"
   href="#about-preview"
-  aria-label="Перейти до наступної секції"
+  aria-label="Go to the next section"
 >
   <span class="start-hero__scroll-icon" aria-hidden="true">↓</span>
 </a>
@@ -220,17 +205,17 @@
 
     <div class="about-preview__intro">
       <p class="about-preview__eyebrow">
-        Мій професійний напрям
+        My Professional Focus
       </p>
 
       <h2 class="about-preview__title">
-        Медицина, навчання і технології — в одній системі.
+        Medicine, education, and technology — integrated into one system.
       </h2>
 
       <p class="about-preview__description">
-        Я поєдную медичну практику, інструкторську діяльність
-        та цифрові інструменти, щоб створювати рішення,
-        які працюють у реальних умовах і приносять користь людям.
+        I combine clinical practice, instruction, and digital tools
+        to create solutions that work in real-world conditions
+        and deliver practical value.
       </p>
     </div>
 
@@ -239,8 +224,8 @@
         <span class="about-preview__number">01</span>
 
         <div>
-          <h3>Практична медицина</h3>
-          <p>Досвід роботи та прийняття рішень у складних умовах.</p>
+          <h3>Practical Medicine</h3>
+          <p>Experience in working and making decisions in challenging environments.</p>
         </div>
       </li>
 
@@ -248,8 +233,8 @@
         <span class="about-preview__number">02</span>
 
         <div>
-          <h3>Навчання</h3>
-          <p>Інструктор TCCC/CLS. Підготовка і передача знань.</p>
+          <h3>Training</h3>
+          <p>TCCC/CLS instructor. Practical training and knowledge transfer.</p>
         </div>
       </li>
 
@@ -257,8 +242,8 @@
         <span class="about-preview__number">03</span>
 
         <div>
-          <h3>Цифрові інструменти</h3>
-          <p>Сайти, боти та застосунки для медицини й навчання.</p>
+          <h3>Digital Tools</h3>
+          <p>Websites, bots, and applications for medicine and education.</p>
         </div>
       </li>
     </ol>
@@ -269,7 +254,7 @@
   <section class="featured-projects" id="projects">
   <img
     class="featured-projects__rings"
-    src="./assets/images/tree-rings.svg"
+    src="../assets/images/tree-rings.svg"
     alt=""
     aria-hidden="true">
 
@@ -278,17 +263,17 @@
     <header class="featured-projects__header">
       <div class="featured-projects__intro">
         <p class="featured-projects__eyebrow">
-          Обрані проєкти
+          Selected Projects
         </p>
 
         <h2 class="featured-projects__title">
-          Цифрові рішення<br>
-          для практичних задач.
+          Digital solutions<br>
+          for practical challenges.
         </h2>
       </div>
 
-      <a class="featured-projects__all" href="./projects.html">
-        Усі проєкти
+      <a class="featured-projects__all" href="./projects-en.html">
+        All Projects
         <span aria-hidden="true">→</span>
       </a>
     </header>
@@ -298,30 +283,30 @@
       <article class="project-showcase project-showcase--featured">
         <div class="project-showcase__content">
           <p class="project-showcase__label">
-            Флагманський проєкт
+            Flagship Project
           </p>
 
           <h3 class="project-showcase__title">
-            Освітній хаб<br>
-            TCCC/MARCH
+            TCCC/MARCH<br>
+            Education Hub
           </h3>
 
           <p class="project-showcase__description">
-            Платформа з матеріалами, протоколами
-            та інструментами для навчання
-            тактичній медицині.
+            A platform with resources, protocols,
+            and tools for tactical medicine
+            training.
           </p>
 
           <a class="project-showcase__link">
-            В розробці
+            In Development
             <span aria-hidden="true">→</span>
           </a>
         </div>
 
         <div class="project-showcase__visual">
           <img
-            src="./assets/images/project-tccc.webp"
-            alt="Інтерфейс освітнього хабу TCCC/MARCH"
+            src="../assets/images/project-tccc.webp"
+            alt="TCCC/MARCH education hub interface"
           >
         </div>
       </article>
@@ -331,7 +316,7 @@
         <article class="project-showcase project-showcase--compact">
           <div class="project-showcase__content">
             <p class="project-showcase__label">
-              Мобільний застосунок
+              Mobile Application
             </p>
 
             <h3 class="project-showcase__title">
@@ -339,20 +324,20 @@
             </h3>
 
             <p class="project-showcase__description">
-              Довідник і калькулятор доз лікарських засобів
-              для практичного використання.
+              A drug reference and dosage calculator
+              for practical use.
             </p>
 
             <a class="project-showcase__link">
-              В розробці
+              In Development
               <span aria-hidden="true">→</span>
             </a>
           </div>
 
           <div class="project-showcase__visual">
             <img
-              src="./assets/images/project-sdose.webp"
-              alt="Мобільний застосунок S-Dose"
+              src="../assets/images/project-sdose.webp"
+              alt="Mobile Application S-Dose"
             >
           </div>
         </article>
@@ -360,7 +345,7 @@
         <article class="project-showcase project-showcase--compact">
           <div class="project-showcase__content">
             <p class="project-showcase__label">
-              Telegram-бот
+              Telegram Bot
             </p>
 
             <h3 class="project-showcase__title">
@@ -368,8 +353,8 @@
             </h3>
 
             <p class="project-showcase__description">
-              Бот для вивчення іспанської мови:
-              слова, тести, прогрес і персоналізовані вправи.
+              A bot for learning Spanish:
+              vocabulary, quizzes, progress tracking, and personalized exercises.
             </p>
 
             <a
@@ -378,15 +363,15 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Дізнатися більше
+              Learn More
               <span aria-hidden="true">→</span>
             </a>
           </div>
 
           <div class="project-showcase__visual">
             <img
-              src="./assets/images/project-spanish.webp"
-              alt="Telegram-бот Spanish by Serhii"
+              src="../assets/images/project-spanish.webp"
+              alt="Telegram Bot Spanish by Serhii"
             >
           </div>
         </article>
@@ -402,60 +387,59 @@
   <div class="container collaboration-cta__grid">
     <div class="collaboration-cta__content">
       <p class="collaboration-cta__eyebrow">
-        Співпраця та контакти
+        Collaboration & Contact
       </p>
 
       <h2 class="collaboration-cta__title">
-        Відкритий до співпраці<br>
-        та нових ініціатив.
+        Open to collaboration<br>
+        and new initiatives.
       </h2>
 
       <p class="collaboration-cta__description">
-        Якщо у вас є ідея, проєкт або потреба в медичному
-        чи освітньому рішенні — давайте обговоримо,
-        як ми можемо працювати разом.
+        Have an idea, a project, or need a medical
+        or educational solution? Let’s discuss
+        how we can work together.
       </p>
     </div>
 
     <div class="collaboration-cta__action">
       <a
         class="collaboration-cta__button"
-        href="./contact.html"
+        href="./contact-en.html"
       >
-        Зв’язатися зі мною
+        Contact Me
         <span aria-hidden="true">→</span>
       </a>
     </div>
   </div>
 </section>
-  </main>
 <footer class="site-footer">
   <div class="container site-footer__inner">
 
     <div class="site-footer__grid">
 
       <div class="site-footer__brand">
-        <a class="site-footer__logo" href="./index.html">
+        <a class="site-footer__logo" href="./index-en.html">
           Serhii Pelishenko<span>.</span>
         </a>
 
         <p class="site-footer__tagline">
-          Медицина, навчання і технології — в одній системі.
+          Medicine, education, and technology — integrated into one system.
         </p>
       </div>
 
-      <nav class="site-footer__nav" aria-label="Навігація у футері">
-        <p class="site-footer__heading">Навігація</p>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
 
-        <a href="./index.html">Головна</a>
-        <a href="./about.html">Про мене</a>
-        <a href="./projects.html">Проєкти</a>
-        <a href="./articles.html">Статті</a>
-        <a href="./contact.html">Контакти</a>
+        <a href="./index-en.html">Home</a>
+        <a href="./about-en.html">About Me</a>
+        <a href="./projects-en.html">Projects</a>
+        <a href="./articles-en.html">Articles</a>
+        <a href="./contact-en.html">Contact</a>
       </nav>
 
       <div class="site-footer__socials">
-        <p class="site-footer__heading">Соціальні мережі</p>
+        <p class="site-footer__heading">Social Media</p>
 
         <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
@@ -479,7 +463,7 @@
       </div>
 
       <div class="site-footer__contacts">
-        <p class="site-footer__heading">Контакти</p>
+        <p class="site-footer__heading">Contact</p>
 
         <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
           <i class="fa-regular fa-envelope" aria-hidden="true"></i>
@@ -493,7 +477,7 @@
 
         <p class="site-footer__contact-item">
           <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          <span>Україна</span>
+          <span>Ukraine</span>
         </p>
       </div>
 
@@ -502,17 +486,17 @@
     <div class="site-footer__bottom">
       <p>
         © <span id="year"></span> Serhii Pelishenko.
-        Усі права захищені.
+        All rights reserved.
       </p>
 
-      <a href="./policy.html">
-        Політика конфіденційності
+      <a href="./policy-en.html">
+        Privacy Policy
       </a>
     </div>
 
   </div>
 </footer>
-
-<script type="module" src="./js/main.js"></script>
+  </main>
+<script type="module" src="../js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,586 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/home.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/pages/contact.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index-en.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index-en.html" >
+        Home
+      </a>
+
+      <a class="site-nav__link" href="./about-en.html" >
+        About Me
+      </a>
+
+      <a class="site-nav__link" href="./projects-en.html">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="./articles-en.html">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="./contact-en.html" aria-current="page">
+        Contact
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Search the site"
+  title="Search"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Language switcher"
+>
+  <a
+    class="site-nav__language-option"
+    href="../contact.html"
+    lang="uk"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="../contact-en.html"
+    lang="en"
+    aria-current="page"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </div>
+</nav>
+
+<main class="contact-page">
+
+  <!-- ==================================================
+       HERO
+  =================================================== -->
+
+  <section class="contact-hero">
+
+    <div class="contact-container">
+
+      <div class="contact-hero__grid">
+
+        <!-- LEFT -->
+
+        <div class="contact-hero__content">
+
+          <p class="contact-eyebrow">
+            CONTACT
+          </p>
+
+          <h1 class="contact-hero__title">
+            Let’s discuss<br>
+            working together.
+          </h1>
+
+          <p class="contact-hero__description">
+            From training programs and medical education
+            to digital tools and professional
+            collaborations.
+          </p>
+
+          <div class="contact-hero__actions">
+
+            <a
+              href="mailto:hello@serhiipelishenko.com"
+              class="contact-btn contact-btn--primary"
+            >
+              <i class="fa-regular fa-envelope"></i>
+
+              <span>Send an email</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn contact-btn--secondary"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+
+              <span>LinkedIn</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="contact-hero__aside">
+
+          <div class="contact-coordinates">
+            <span class="contact-coordinates__symbol">
+              ✦
+            </span>
+
+            <p>
+              50.449673° N<br>
+              30.525135° E
+            </p>
+          </div>
+
+
+          <div class="contact-available reveal">
+
+            <p class="contact-available__title">
+              Available for:
+            </p>
+
+            <ul>
+              <li>educational projects</li>
+              <li>professional consultations</li>
+              <li>international collaborations</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       MAIN CONTACTS
+  =================================================== -->
+
+  <section class="contact-main">
+
+    <div class="contact-container">
+
+      <div class="contact-main__grid">
+
+
+        <!-- EMAIL -->
+
+        <article class="contact-card reveal">
+
+          <div class="contact-card__label">
+
+            <span class="contact-card__icon">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+
+            <span>Email</span>
+
+          </div>
+
+          <h2 class="contact-card__value">
+            hello@serhiipelishenko.com
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <a
+            href="mailto:hello@serhiipelishenko.com"
+            class="contact-card__action"
+          >
+            <span>Send an email</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </article>
+
+
+        <!-- FACEBOOK -->
+
+        <article class="contact-card reveal reveal-delay-1">
+
+          <div class="contact-card__label">
+
+            <span class="contact-card__icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+
+            <span>Facebook</span>
+
+          </div>
+
+          <h2 class="contact-card__value">
+            Serhii Pelishenko
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <a
+            href="https://www.facebook.com/pelishenko.sergey"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card__action"
+          >
+            <span>View profile</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </article>
+
+
+        <!-- RESPONSE -->
+
+        <article class="contact-card contact-card--info reveal reveal-delay-2">
+
+          <p class="contact-card__overline">
+            I usually reply
+          </p>
+
+          <h2 class="contact-card__response">
+            within 24 hours
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <p class="contact-card__text">
+            I aim to keep communication open
+            and respond to inquiries promptly.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <!-- ==================================================
+           SOCIAL LINKS
+      =================================================== -->
+
+      <div class="contact-socials reveal reveal-delay-3">
+
+        <a
+          href="https://t.me/God_Haides"
+          class="contact-social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fa-brands fa-telegram"></i>
+            Telegram
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/_aid.es_/"
+          class="contact-social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+          href="#"
+          class="contact-social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+          href="#"
+          class="contact-social"
+        >
+          <span>
+            Other platforms
+          </span>
+
+          <i class="fa-solid fa-ellipsis"></i>
+        </a>
+
+      </div>
+
+
+      <!-- ==================================================
+           TOPICS
+      =================================================== -->
+
+      <div class="contact-topics reveal reveal-delay-4">
+
+        <p class="contact-topics__title">
+          What can you contact me about?
+        </p>
+
+        <div class="contact-topics__grid">
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=TCCC / CLS Training"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>
+              Training<br>
+              TCCC / CLS
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Medical Education"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>
+              Medical<br>
+              education
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Shared Materials"
+            class="contact-topic"
+          >
+            <i class="fa-regular fa-file-lines"></i>
+
+            <span>
+              Shared<br>
+              materials
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Digital health"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-desktop"></i>
+
+            <span>
+              Digital<br>
+              health
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Professional Consultation"
+            class="contact-topic"
+          >
+            <i class="fa-regular fa-user"></i>
+
+            <span>
+              Professional<br>
+              consultation
+            </span>
+          </a>
+
+        </div>
+
+        <p class="contact-topics__hint">
+          Choose a topic — and the subject line will already be
+          filled in for your email.
+        </p>
+
+      </div>
+
+
+      <!-- ==================================================
+           FINAL CTA
+      =================================================== -->
+
+      <div class="contact-cta">
+
+        <div class="contact-cta__content">
+
+          <span class="contact-cta__icon">
+            <i class="fa-regular fa-comment-dots"></i>
+          </span>
+
+          <div>
+
+            <h2>
+              Have an idea or proposal?
+            </h2>
+
+            <p>
+              Send me a few lines — I’ll tell you honestly
+              whether I can contribute to your project.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="mailto:hello@serhiipelishenko.com?subject=Collaboration Proposal"
+          class="contact-btn contact-btn--primary"
+        >
+          <span>Send a message</span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+        </section> <!-- /.contact-main -->
+
+</main>
+
+    <footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index-en.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — brought together in one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="./index-en.html">Home</a>
+        <a href="./about-en.html">About me</a>
+        <a href="./projects-en.html">Projects</a>
+        <a href="./articles-en.html">Articles</a>
+        <a href="./contact-en.html">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contact</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380984538527" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (098) 453-85-27</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="./policy-en.html">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>
