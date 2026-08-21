@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S-Dose — офлайн-калькулятор доз | Serhii Pelishenko</title>
+  <meta
+    name="description"
+    content="S-Dose — офлайн-довідник, калькулятор і журнал введення лікарських засобів для практичного використання."
+  >
+  <!-- Прибери цей рядок, коли сторінка буде готова до індексації. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/home.css">
+  <link rel="stylesheet" href="./css/pages/s-dose.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" aria-current="page">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./index.html"
+    lang="uk"
+    aria-current="page"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/s-dose-en.html"
+    lang="en"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html">Головна</a>
+    <a href="./about.html">Про мене</a>
+    <a href="./projects.html">Проєкти</a>
+    <a href="./articles.html">Статті</a>
+    <a href="./contact.html">Контакти</a>
+
+  </div>
+</div>
+
+
+
+  <main class="s-dose-page">
+    <section class="s-dose-hero" aria-labelledby="s-dose-title">
+      <div class="s-dose-hero__overlay" aria-hidden="true"></div>
+
+      <div class="container s-dose-hero__grid">
+        <div class="s-dose-hero__content">
+          <div class="s-dose-hero__meta">
+            <span class="s-dose-hero__category">Медицина · Технології</span>
+            <span class="s-dose-status">
+              <span class="s-dose-status__dot" aria-hidden="true"></span>
+              У розробці
+            </span>
+          </div>
+
+          <h1 class="s-dose-hero__title" id="s-dose-title">S-Dose</h1>
+
+          <p class="s-dose-hero__lead">
+            Офлайн-довідник, калькулятор і журнал доз лікарських засобів
+            для швидкої роботи в екстрених та польових умовах.
+          </p>
+
+          <p class="s-dose-hero__note">
+            Українська й англійська мови · локальне збереження даних · без реклами
+          </p>
+
+          <div class="s-dose-hero__actions">
+            <a class="s-dose-button s-dose-button--primary" href="#features">
+              Переглянути можливості
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="s-dose-button s-dose-button--secondary" href="#feedback">
+              Зворотний зв’язок
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="s-dose-section-nav" aria-label="Навігація сторінкою S-Dose">
+      <div class="container">
+        <div class="s-dose-section-nav__track">
+          <a class="s-dose-section-nav__link is-active" href="#overview">Огляд</a>
+          <a class="s-dose-section-nav__link" href="#features">Можливості</a>
+          <a class="s-dose-section-nav__link" href="#how-it-works">Як працює</a>
+          <a class="s-dose-section-nav__link" href="#safety">Безпека</a>
+          <a class="s-dose-section-nav__link" href="#faq">FAQ</a>
+          <a class="s-dose-section-nav__link" href="#feedback">Зворотний зв’язок</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="s-dose-section s-dose-overview" id="overview">
+      <div class="container s-dose-overview__grid">
+        <div class="s-dose-section__heading">
+          <p class="s-dose-section__eyebrow">Про застосунок</p>
+          <h2>Розрахунок і фіксація доз без зайвих дій</h2>
+        </div>
+
+        <div class="s-dose-overview__content">
+          <p>
+            S-Dose об’єднує довідник препаратів, розрахунок доз, перевірку
+            критичних обмежень і журнал введень у межах одного кейсу.
+          </p>
+
+          <div class="s-dose-facts" aria-label="Основні характеристики S-Dose">
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+              <strong>Офлайн</strong>
+              <span>Основні функції доступні без інтернету</span>
+            </article>
+
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+              <strong>UA / EN</strong>
+              <span>Повна українська й англійська локалізація</span>
+            </article>
+
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+              <strong>Локально</strong>
+              <span>Робочі записи залишаються на пристрої</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-section s-dose-section--muted" id="features">
+      <div class="container">
+        <div class="s-dose-section__heading s-dose-section__heading--centered">
+          <p class="s-dose-section__eyebrow">Основні можливості</p>
+          <h2>Інструменти для практичної роботи</h2>
+          <p>Тут ми пізніше доповнимо кожну функцію скриншотами застосунку.</p>
+        </div>
+
+        <div class="s-dose-feature-grid">
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-calculator"></i></span>
+            <h3>Розрахунок доз</h3>
+            <p>Розрахунок за масою тіла, концентрацією та шляхом введення.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <h3>Перевірка обмежень</h3>
+            <p>Контроль разової, добової дози та мінімального інтервалу.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-briefcase-medical"></i></span>
+            <h3>Мої кейси</h3>
+            <p>Окрема історія призначень і введень для кожного кейсу.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-capsules"></i></span>
+            <h3>Власні препарати</h3>
+            <p>Можливість доповнювати локальний довідник під власний SOP.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-section" id="how-it-works">
+      <div class="container">
+        <div class="s-dose-section__heading">
+          <p class="s-dose-section__eyebrow">Як це працює</p>
+          <h2>Від створення кейсу до запису введення</h2>
+        </div>
+
+        <ol class="s-dose-steps">
+          <li class="s-dose-step">
+            <span class="s-dose-step__number">01</span>
+            <div>
+              <h3>Створіть або відкрийте кейс</h3>
+              <p>Вкажіть масу, категорію та базову інформацію.</p>
+            </div>
+          </li>
+
+          <li class="s-dose-step">
+            <span class="s-dose-step__number">02</span>
+            <div>
+              <h3>Оберіть препарат і маршрут</h3>
+              <p>S-Dose розрахує необхідну кількість та перевірить обмеження.</p>
+            </div>
+          </li>
+
+          <li class="s-dose-step">
+            <span class="s-dose-step__number">03</span>
+            <div>
+              <h3>Збережіть введення</h3>
+              <p>Запис з’явиться у хронології кейсу для подальшої перевірки.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="s-dose-section s-dose-section--dark" id="safety">
+      <div class="container s-dose-safety">
+        <div class="s-dose-safety__icon" aria-hidden="true">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div class="s-dose-safety__content">
+          <p class="s-dose-section__eyebrow">Безпека та відповідальність</p>
+          <h2>Інструмент підтримки, а не заміна клінічного рішення</h2>
+          <p>
+            S-Dose має довідковий та розрахунковий характер. Застосунок не
+            замінює професійну медичну оцінку, офіційні протоколи, інструкції
+            виробників лікарських засобів або клінічне мислення користувача.
+          </p>
+          <a href="./policy.html">Переглянути політику та застереження →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-section" id="faq">
+      <div class="container s-dose-faq__grid">
+        <div class="s-dose-section__heading">
+          <p class="s-dose-section__eyebrow">FAQ</p>
+          <h2>Поширені запитання</h2>
+          <p>Цей список можна поступово доповнювати після перших тестувань.</p>
+        </div>
+
+        <div class="s-dose-faq">
+          <details class="s-dose-faq__item">
+            <summary>Чи працює S-Dose без інтернету?</summary>
+            <p>Так. Основний довідник, калькулятор і кейси працюють локально.</p>
+          </details>
+
+          <details class="s-dose-faq__item">
+            <summary>Де зберігаються дані?</summary>
+            <p>Робочі дані зберігаються локально на пристрої користувача.</p>
+          </details>
+
+          <details class="s-dose-faq__item">
+            <summary>Чи можна додавати власні препарати?</summary>
+            <p>Так. Користувач може створити власний запис і пов’язати його зі своїм SOP.</p>
+          </details>
+
+          <details class="s-dose-faq__item">
+            <summary>Коли застосунок буде доступний?</summary>
+            <p>S-Dose перебуває в активній розробці. Інформація про реліз з’явиться на цій сторінці.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-section s-dose-feedback" id="feedback">
+      <div class="container s-dose-feedback__grid">
+        <div>
+          <p class="s-dose-section__eyebrow">Зворотний зв’язок</p>
+          <h2>Допоможіть зробити S-Dose кращим</h2>
+          <p>
+            Повідомте про помилку, незрозумілий сценарій або запропонуйте
+            функцію, якої вам бракує.
+          </p>
+          <small>Не надсилайте персональні або медичні дані пацієнтів.</small>
+        </div>
+
+        <div class="s-dose-feedback__actions">
+          <a
+            class="s-dose-button s-dose-button--primary"
+            href="mailto:hello@serhiipelishenko.com?subject=S-Dose%20bug%20report"
+          >
+            <i class="fa-solid fa-bug" aria-hidden="true"></i>
+            Повідомити про помилку
+          </a>
+
+          <a
+            class="s-dose-button s-dose-button--secondary"
+            href="mailto:hello@serhiipelishenko.com?subject=S-Dose%20feature%20suggestion"
+          >
+            <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+            Запропонувати функцію
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+<section class="collaboration-cta" id="collaboration">
+  <div class="collaboration-cta__overlay" aria-hidden="true"></div>
+
+  <div class="container collaboration-cta__grid">
+    <div class="collaboration-cta__content">
+      <p class="collaboration-cta__eyebrow">
+        Співпраця та контакти
+      </p>
+
+      <h2 class="collaboration-cta__title">
+        Відкритий до співпраці<br>
+        та нових ініціатив.
+      </h2>
+
+      <p class="collaboration-cta__description">
+        Якщо у вас є ідея, проєкт або потреба в медичному
+        чи освітньому рішенні — давайте обговоримо,
+        як ми можемо працювати разом.
+      </p>
+    </div>
+
+    <div class="collaboration-cta__action">
+      <a
+        class="collaboration-cta__button"
+        href="./contact.html"
+      >
+        Зв’язатися зі мною
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html">Головна</a>
+        <a href="./about.html">Про мене</a>
+        <a href="./projects.html">Проєкти</a>
+        <a href="./articles.html">Статті</a>
+        <a href="./contact.html">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="./js/main.js"></script>
+<script src="./js/s-dose.js"></script>
+</body>
+</html>
