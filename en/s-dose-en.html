@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S-Dose — Offline Dose Calculator | Serhii Pelishenko</title>
+  <meta
+    name="description"
+    content="S-Dose is an offline medication reference, dose calculator, and administration log designed for practical use."
+  >
+ 
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/home.css">
+  <link rel="stylesheet" href="../css/pages/s-dose.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index-en.html">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index-en.html" >
+        Home
+      </a>
+
+      <a class="site-nav__link" href="./about-en.html">
+        About Me
+      </a>
+
+      <a class="site-nav__link" href="./projects-en.html" aria-current="page">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="./articles-en.html">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="./contact-en.html">
+        Contact
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Search the site"
+  title="Search"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Language switcher"
+>
+  <a
+    class="site-nav__language-option"
+    href="../s-dose.html"
+    lang="uk"
+  >
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="./s-dose-en.html"
+    lang="en"
+    aria-current="page"
+  >
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html">Home</a>
+    <a href="./about.html">About Me</a>
+    <a href="./projects.html">Projects</a>
+    <a href="./articles.html">Articles</a>
+    <a href="./contact.html">Contact</a>
+
+  </div>
+</div>
+
+
+
+  <main class="s-dose-page">
+    <section class="s-dose-hero" aria-labelledby="s-dose-title">
+      <div class="s-dose-hero__overlay" aria-hidden="true"></div>
+
+      <div class="container s-dose-hero__grid">
+        <div class="s-dose-hero__content">
+          <div class="s-dose-hero__meta">
+            <span class="s-dose-hero__category">Medicine · Technology</span>
+            <span class="s-dose-status">
+              <span class="s-dose-status__dot" aria-hidden="true"></span>
+              Available
+            </span>
+          </div>
+
+          <h1 class="s-dose-hero__title" id="s-dose-title">S-Dose</h1>
+
+          <p class="s-dose-hero__lead">
+            An offline medication reference, dose calculator, and administration
+            log designed for rapid use in emergency and field settings.
+          </p>
+
+          <p class="s-dose-hero__note">
+            Ukrainian and English · local data storage · no ads
+          </p>
+
+          <div class="s-dose-hero__actions">
+            <a class="s-dose-button s-dose-button--primary" href="#features">
+              Explore Features
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="s-dose-button s-dose-button--secondary" href="#feedback">
+              Feedback
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="s-dose-hero__copyright">
+        © 2026 Serhii Pelishenko. S-Dose. All rights reserved.
+      </p>
+    </section>
+
+    <nav class="s-dose-section-nav" aria-label="S-Dose page navigation">
+      <div class="container">
+        <div class="s-dose-section-nav__track">
+          <a class="s-dose-section-nav__link is-active" href="#overview">Overview</a>
+          <a class="s-dose-section-nav__link" href="#features">Features</a>
+          <a class="s-dose-section-nav__link" href="#how-it-works">How It Works</a>
+          <a class="s-dose-section-nav__link" href="#safety">Safety</a>
+          <a class="s-dose-section-nav__link" href="#faq">FAQ</a>
+          <a class="s-dose-section-nav__link" href="#feedback">Feedback</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="s-dose-section s-dose-overview" id="overview">
+      <div class="container s-dose-overview__grid">
+        <div class="s-dose-section__heading">
+          <p class="s-dose-section__eyebrow">About the App</p>
+          <h2>Calculate and Record Doses with Fewer Steps</h2>
+        </div>
+
+        <div class="s-dose-overview__content">
+          <p>
+            S‑Dose brings together a medication reference, dose calculations, critical limit checks, and an administration log in one consistent workflow for each case.
+          </p>
+
+          <div class="s-dose-facts" aria-label="Key S-Dose features">
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+              <strong>Offline</strong>
+              <span>Core features are available without an internet connection</span>
+            </article>
+
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-language" aria-hidden="true"></i>
+              <strong>UA / EN</strong>
+              <span>Full Ukrainian and English localization</span>
+            </article>
+
+            <article class="s-dose-fact">
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+              <strong>Local</strong>
+              <span>Case data remains on your device only</span>
+            </article>
+          </div>
+        </div>
+      </div>
+        <div class="s-dose-demo-band">
+          <div class="s-dose-demo-band__inner">
+
+            <div class="s-dose-demo-band__content">
+              <span class="s-dose-demo-band__eyebrow">
+                S‑DOSE IN ACTION
+              </span>
+
+              <h2>
+                One case.<br>
+                The entire workflow.
+              </h2>
+
+              <p>
+                From selecting a medication and calculating the dose to
+                checking limits and recording administration.
+              </p>
+            </div>
+
+            <div class="s-dose-demo-band__frame">
+              <video
+                class="s-dose-demo-band__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Demonstration of the S-Dose app"
+              >
+                <source
+                  src="../assets/video/en/s-dose-demo.mp4"
+                  type="video/mp4"
+                >
+              </video>
+            </div>
+
+          </div>
+        </div>
+    </section>
+    
+    <section class="s-dose-section s-dose-section--muted" id="features">
+      <div class="container">
+        <div class="s-dose-section__heading s-dose-section__heading--centered">
+          <p class="s-dose-section__eyebrow">Core Features</p>
+          <h2>Tools for Practical Use</h2>
+          <p>S‑Dose's core features are organized around a single case and work together as one consistent workflow.</p>
+        </div>
+
+        <div class="s-dose-feature-grid">
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-calculator"></i></span>
+            <h3>Dose Calculation</h3>
+            <p>Calculate doses based on body weight, concentration, and route of administration.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <h3>Limit Checks</h3>
+            <p>Check single-dose and daily limits, as well as the minimum dosing interval.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-briefcase-medical"></i></span>
+            <h3>My Cases</h3>
+            <p>A separate medication and administration history for each case.</p>
+          </article>
+
+          <article class="s-dose-feature-card">
+            <span class="s-dose-feature-card__icon"><i class="fa-solid fa-capsules"></i></span>
+            <h3>Custom Medications</h3>
+            <p>Add medications to the local reference to match your own SOP.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-guide" id="how-it-works">
+      <div class="s-dose-guide__container">
+
+        <header class="s-dose-guide__header">
+          <span class="s-dose-guide__eyebrow">HOW IT WORKS</span>
+
+          <h2>Explore the Interface</h2>
+
+          <p>
+            Select a section to view its main elements
+            and purpose.
+          </p>
+        </header>
+
+        <div class="s-dose-guide__list">
+
+          <details class="s-dose-guide__item" open>
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">01</span>
+              <span class="s-dose-guide__title">Home Screen</span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/home_page.png"
+                  alt="S-Dose app home screen"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Start a Calculation</h3>
+                    <p>
+                      Opens the dose calculator, where you can create a case and calculate medication doses.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>My Cases</h3>
+                    <p>
+                      Create, select, and review cases and their administration logs.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Medication List</h3>
+                    <p>
+                      A reference for standard and user-created medications, including routes, dosing, and limits.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Settings</h3>
+                    <p>
+                      Choose the language, protocol, and main app settings.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Disclaimer</h3>
+                    <p>
+                      Important information about the safe use and limitations of S‑Dose.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">02</span>
+              <span class="s-dose-guide__title">Create a Case</span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/new_case.png"
+                  alt="S-Dose app home screen"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Call Sign or Name</h3>
+                    <p>
+                      Enter a name or call sign so you can quickly find the relevant case.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Unit</h3>
+                    <p>
+                      Add the unit or other information needed to identify the patient.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Notes</h3>
+                    <p>
+                      Describe the injury, mechanism of injury, exact date of the incident, or any other important details that should be retained.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Category</h3>
+                    <p>
+                      Select the case category: red, yellow, green, or expectant.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Automatic Creation Time</h3>
+                    <p>
+                      The case creation date and time are saved automatically.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">03</span>
+              <span class="s-dose-guide__title">
+                Your Case List
+              </span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/my_case.png"
+                  alt="Cases and administration log in S-Dose"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Individual Cases</h3>
+                    <p>
+                      Each patient's data is stored in a separate case.
+                    </p>
+                  </div>
+                </div>
+                  <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Search, Filters, and Sorting</h3>
+                    <p>
+                      Cases can be searched, filtered by category, and sorted.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Pinning Cases</h3>
+                    <p>
+                      Important cases can be pinned to the top of the list.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Editing and Deletion</h3>
+                    <p>
+                      Case data can be edited, archived, or deleted.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Administration Timeline</h3>
+                    <p>
+                      The log shows the medication, dose, route, and time of administration.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>06</span>
+                  <div>
+                    <h3>Case Context</h3>
+                    <p>
+                      The category, unit, and notes remain
+                      available throughout the workflow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">04</span>
+              <span class="s-dose-guide__title">Dose Calculator</span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/calculator.png"
+                  alt="S-Dose dose calculator"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Case Selection</h3>
+                    <p>
+                      Select an existing case or create a new one. A case is required to save the calculation to the administration log.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Medication Selection</h3>
+                    <p>
+                      Find and select a medication from the built-in reference or your custom list.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Route of Administration</h3>
+                    <p>
+                      Select an available route of administration: PO (oral), IM (intramuscular), IV (intravenous), IO (intraosseous), IN (intranasal), or OTFC (oral transmucosal fentanyl citrate).
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Medication Dose</h3>
+                    <p>
+                      Enter the required dose to be administered to the patient and select the unit of measurement—milligrams or micrograms.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Concentration</h3>
+                    <p>
+                      Enter the medication concentration or the amount contained in a tablet, together with the relevant units.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>06</span>
+                  <div>
+                    <h3>Ampoule and Dilution</h3>
+                    <p>
+                      Specify the ampoule volume (or tablet strength) and select the final diluted solution volume—the capacity of the syringe you will use.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>08</span>
+                  <div>
+                    <h3>Calculation Result</h3>
+                    <p>
+                      S‑Dose will determine the medication volume, the required number of ampoules, and the diluent volume.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>07</span>
+                  <div>
+                    <h3>Review and Save</h3>
+                    <p>
+                      The app will check the dose, daily limit, and interval between administrations. The result can then be saved to the case log.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="s-dose-dosing-scheme">
+                <div class="s-dose-dosing-scheme__visual">
+                  <img
+                    src="../assets/images/s_dose/en/road_drug.png"
+                    alt="Example of a preset medication regimen in S-Dose"
+                    loading="lazy"
+                  >
+                </div>
+
+                <div class="s-dose-dosing-scheme__content">
+                  <span class="s-dose-dosing-scheme__number">09</span>
+
+                  <div>
+                    <h4>Preset Medication Regimens</h4>
+
+                    <p>
+                      Preset regimens are already available for some medications in S-Dose. After you select
+                      a regimen, the calculator automatically enters the specified dose, unit
+                      of measurement, route of administration, and the appropriate dosage form.
+                    </p>
+
+                    <dl class="s-dose-dosing-scheme__legend">
+                      <div>
+                        <dt>Mild–moderate pain</dt>
+                        <dd>Indication: mild to moderate pain.</dd>
+                      </div>
+
+                      <div>
+                        <dt>CWMP</dt>
+                        <dd>
+                          Combat Wound Medication Pack—a regimen based on the medications provided
+                          to a casualty.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt>1000 mg / 1300 mg</dt>
+                        <dd>
+                          Single medication dose. Different values correspond to the
+                          available regimen or dosage-form options.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt>PO</dt>
+                        <dd>Per os—oral administration.</dd>
+                      </div>
+
+                      <div>
+                        <dt>q8h</dt>
+                        <dd>Administer or take the medication every 8 hours.</dd>
+                      </div>
+                    </dl>
+
+                    <span class="s-dose-guide-notes__important">
+                      <strong>Important:</strong>
+                      a preset regimen speeds up calculator entry, but you must verify
+                      the selected option, dosage form, and compliance with the current
+                      protocol before use.
+                    </span>
+                  </div>
+                </div>
+              </div>
+                <div class="s-dose-guide-notes">
+                  <h4 class="s-dose-guide-notes__title">Notes</h4>
+
+                    <ol class="s-dose-guide-notes__list">
+                      <li>
+                        <strong>Context-Specific Restrictions.</strong>
+                        S-Dose adjusts the available parameters according to the selected route
+                        of administration. For example, only the applicable 2
+                        mL and 5 mL syringe options are available for intramuscular administration.
+                      </li>
+
+                      <li>
+                        <strong>Available Routes of Administration.</strong>
+                        Permitted routes of administration are predefined for medications in the
+                        built-in reference. Routes that are not specified for a particular
+                        medication cannot be selected.
+                      </li>
+
+                        <li>
+                          <strong>Dose and Interval Checks.</strong>
+                          Before saving, S-Dose checks the single dose, the total amount
+                          administered during the previous 24 hours, and the time elapsed since the last
+                          administration. If the medication's defined limits are exceeded, the app
+                          displays an additional warning.
+
+                          <span class="s-dose-guide-notes__important">
+                            <strong>Important:</strong>
+                            the warning does not prevent further action. If the clinical situation
+                            requires a dose outside the defined limits, you can
+                            confirm the decision and save the entry. You may also add a note
+                            explaining the reason for the decision.
+                          </span>
+                        </li>
+
+                      <li>
+                        <strong>Input Verification.</strong>
+                        The result depends on the entered dose, concentration, and units
+                        of measurement. If an extra digit is entered accidentally, the calculator
+                        may display a disproportionately large result—an indication that all fields should be
+                        checked again. The app cannot automatically detect every input error.
+                      </li>
+
+                        <li>
+                          <strong>Administration Date and Time.</strong>
+                          The date and time of each entry are determined automatically
+                          from the phone's system settings. S-Dose does not set or adjust them.
+
+                          <span class="s-dose-guide-notes__important">
+                            <strong>Important:</strong>
+                            when operating in an environment affected by GPS spoofing, the phone
+                            may determine its location incorrectly. If automatic
+                            location-based time-zone detection is enabled, this may result in incorrect times
+                            in the administration log. Before use, verify the phone's system date,
+                            time, and time zone.
+                          </span>
+                        </li>
+
+                      <li>
+                        <strong>Decision-Support Tool.</strong>
+                        S-Dose assists with calculations and highlights potential errors, but
+                        it does not replace clinical judgement, medication verification, or current
+                        medical protocols.
+                      </li>
+                    </ol>
+                </div>
+              </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">05</span>
+              <span class="s-dose-guide__title">
+                Your Saved Cases
+              </span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/your_case.png"
+                  alt="Cases and administration log in S-Dose"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Case Details</h3>
+                    <p>
+                      The top of the screen shows the name or call sign, category, unit, note, creation date, and most recent activity.
+                    </p>
+                  </div>
+                </div>
+                  <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Administration Log</h3>
+                    <p>
+                      All saved administrations are displayed chronologically within the selected case.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Administration Details</h3>
+                    <p>
+                      Each entry shows the medication, dose, route of administration, calculated volume, and exact time.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Saved Warnings</h3>
+                    <p>
+                      If an administration is recorded after a critical warning, the warning remains visible in the log together with the stated reason.
+                    </p>
+                    <span class="s-dose-guide-notes__important">
+                      <strong>Important:</strong>
+                      the acknowledged warning and the reason entered by the user
+                      are saved with the record. This provides visibility not only into the administered dose, but also into the
+                      context in which the decision was made.
+                    </span>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Continue Working</h3>
+                    <p>
+                      The “Open Calculator” button returns you to dose calculations for the current case.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>06</span>
+                  <div>
+                    <h3>Case Context</h3>
+                    <p>
+                      The category, unit, and notes remain
+                      available throughout the workflow.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>07</span>
+                  <div>
+                    <h3>Sharing Case Data</h3>
+                    <p>
+                      The “Share” button at the top of the screen creates a .txt file containing the patient's key details and administration
+                      log. It can be shared using any method available on the phone, including a messaging app,
+                       email, Bluetooth, or another app.
+                    </p>
+                  <span class="s-dose-guide-notes__important">
+                  <strong>Important:</strong>
+                  the exported file may contain the patient's personal and medical data. Before
+                  sending it, verify the file contents, the recipient, and
+                  the security of the selected transfer method.
+                </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">06</span>
+              <span class="s-dose-guide__title">Medication Reference</span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/list_medicine.png"
+                  alt="S-Dose medication reference"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Standard Medications</h3>
+                    <p>
+                      S-Dose includes a built-in medication list. Available routes, dosing regimens, and limits used by the app in
+                      TCCC mode are predefined for these medications.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Protected from Changes</h3>
+                    <p>
+                      Standard medications are marked with a lock icon. They cannot be edited or deleted, preventing accidental changes to the
+                      protocol parameters built into the app.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Custom Medications</h3>
+                    <p>
+                      The “+” button lets you create a custom medication by specifying its name, route,
+                      form, concentration, dosing, limits, and repeat-administration rules.
+                    </p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Personal / SOP</h3>
+                    <p>
+                      User-created medications become available in the calculator in “Personal / SOP” mode. This allows S-Dose
+                      to be adapted to a local protocol or an institutional or unit SOP.
+                    </p>
+                    <span class="s-dose-guide-notes__important">
+                  <strong>Important:</strong>
+                  Custom medications and their parameters are defined by the user. Before use, verify that they comply with the
+                  current local SOP or another current authoritative source.
+                </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">07</span>
+              <span class="s-dose-guide__title">
+                Create a Custom Medication
+              </span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/add_drug.png"
+                  alt="Creating a custom medication in S-Dose"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Core Medication Parameters</h3>
+                    <p>
+                      Enter the medication name, route of administration, and form/unit. Depending on the selected form, S-Dose lets you specify
+                      the concentration or the amount of active ingredient in a tablet, capsule, spray, or other available form.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>Dose Limits</h3>
+                    <p>
+                      You can set a maximum single dose and maximum daily dose for a custom medication. These values are
+                       used by the S-Dose validation system even in “Personal / SOP” mode.
+                    </p>
+                  <span class="s-dose-guide-notes__important">
+                  <strong>Important:</strong>
+                  If no limit has been defined for a medication, the field may be left blank—but the app will then be unable to check that value
+                   automatically.
+                </span>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Custom SOP Regimen</h3>
+                    <p>
+                    If needed, you can enter a recommended dose based on the local SOP. If the dose entered by the user
+                     differs from the defined regimen, S-Dose can display an appropriate warning.
+                    </p>
+                  </div>
+                </div>
+                  <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Repeat-Administration Rules</h3>
+                    <p>You can define the repeat-administration logic for a medication:</p>
+                    <ul class="s-dose-guide__options">
+                      <li>no repeat rule;</li>
+                      <li>scheduled administration;</li>
+                      <li>repeat after reassessment or as needed;</li>
+                      <li>repeat after a clinical event or indication;</li>
+                      <li>single administration per case.</li>
+                    </ul>
+                    <p>
+                      For regimens with a time interval, you can also set the
+                      <strong>earliest permitted repeat dose</strong>.
+                    </p>
+                  </div>
+                </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Repeat-Administration Controls</h3>
+                    <p>
+                    You can define how S-Dose responds when an administration is recorded too early: display a standard
+                    warning or require critical confirmation.
+                    </p>
+                    <p>Additional rules are also available:</p>
+                    <p><strong>“Require reassessment before repeat administration”</strong> —reminds the user to assess the casualty's condition and the effect of the previous administration.</p>
+                    <p><strong>“Requires prior administration”</strong>—used for regimens that cannot be the first relevant administration in a case.</p>
+                  </div>
+                </div>
+                <div class="s-dose-guide__description">
+                  <span>06</span>
+                  <div>
+                    <h3>Note</h3>
+                    <p>
+                    You can add a custom text note to the medication—for example, details about the local SOP, medication preparation, or other information important to the user.
+                    </p>
+                  </div>
+                </div>
+              
+                  <span class="s-dose-guide-notes__important">
+                  <strong>Important:</strong>
+                  Custom medication parameters are defined by the user. S-Dose does not validate them against an external clinical source.
+                   Before using a custom regimen, verify the dosing, limits, and repeat-administration rules against a current SOP, protocol, or other authoritative source.
+                </span>
+            </div>
+          </details>
+
+          <details class="s-dose-guide__item">
+            <summary class="s-dose-guide__summary">
+              <span class="s-dose-guide__number">08</span>
+              <span class="s-dose-guide__title">Settings</span>
+              <span class="s-dose-guide__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div class="s-dose-guide__panel">
+              <div class="s-dose-guide__visual">
+                <img
+                  src="../assets/images/s_dose/en/setting.png"
+                  alt="S-Dose settings"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="s-dose-guide__descriptions">
+                <div class="s-dose-guide__description">
+                  <span>01</span>
+                  <div>
+                    <h3>Default Protocol</h3>
+                    <p>
+                      Defines the mode S-Dose uses for medications and
+                      dosing rules.
+                    </p>
+
+                    <p>
+                      <strong>TCCC</strong> —uses the built-in standard medications
+                      and their configured protocol rules.
+                    </p>
+
+                    <p>
+                      <strong>Personal / SOP</strong> —also allows the use
+                      of custom medications and user-created regimens.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>02</span>
+                  <div>
+                    <h3>App Language</h3>
+                    <p>
+                      Lets you switch the S-Dose interface between Ukrainian and English.
+                    </p>
+
+                    <p>
+                      When the system setting is selected, the app uses the device language
+                      if it is supported.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>03</span>
+                  <div>
+                    <h3>Local Data Management</h3>
+                    <p>In this section, you can separately delete:</p>
+
+                    <ul class="s-dose-guide__options">
+                      <li>
+                        <strong>cases</strong> —together with their medication administration history;
+                      </li>
+                      <li>
+                        <strong>custom medications</strong> —user-created entries for
+                        “Personal / SOP” mode.
+                      </li>
+                    </ul>
+
+                    <p>
+                      S-Dose asks for confirmation before deletion because these actions cannot
+                      be undone.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>04</span>
+                  <div>
+                    <h3>Medical and Legal Disclaimer</h3>
+                    <p>
+                      Opens the full S-Dose Disclaimer, which explains the app's intended
+                      purpose, calculation limitations, the need to independently verify
+                      medical data, and the user's responsibilities.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>05</span>
+                  <div>
+                    <h3>Feedback</h3>
+                    <p>
+                      This section lets you contact the developer or
+                      visit official S-Dose resources:
+                    </p>
+
+                    <ul class="s-dose-guide__options">
+                      <li>Email;</li>
+                      <li>X / Twitter;</li>
+                      <li>official website.</li>
+                    </ul>
+
+                    <p>
+                      Links open in the relevant apps
+                      or the device's browser.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="s-dose-guide__description">
+                  <span>06</span>
+                  <div>
+                    <h3>Licenses</h3>
+                    <p>
+                      The Licenses section provides information about Flutter and
+                      the third-party software libraries used in S-Dose, together
+                      with their applicable license terms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="s-dose-guide-notes__important">
+              <strong>Data Storage</strong>
+              <p>
+                Cases, medication administration records, and custom medications are stored
+                locally on the device. Deleting the relevant data in
+                Settings removes it from S-Dose's local storage.
+              </p>
+            </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="s-dose-section s-dose-section--dark" id="safety">
+      <div class="container s-dose-safety">
+        <div class="s-dose-safety__icon" aria-hidden="true">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div class="s-dose-safety__content">
+          <p class="s-dose-section__eyebrow">Safety and Responsibility</p>
+
+          <h2>A Support Tool, Not a Substitute for Clinical Judgement</h2>
+
+          <p>
+            S-Dose is a reference and calculation tool. It does
+            not replace professional medical assessment, official protocols,
+            medication manufacturers' instructions, or the user's clinical judgement.
+          </p>
+
+          <button
+            class="s-dose-safety__policy-link"
+            type="button"
+            data-disclaimer-open
+          >
+            View Policy and Disclaimer →
+          </button>
+        </div>
+      </div>
+    </section>
+    <div
+  class="s-dose-disclaimer-modal"
+  data-disclaimer-modal
+  aria-hidden="true"
+>
+  <div
+    class="s-dose-disclaimer-modal__backdrop"
+    data-disclaimer-close
+  ></div>
+
+  <div
+    class="s-dose-disclaimer-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="s-dose-disclaimer-title"
+  >
+    <div class="s-dose-disclaimer-modal__header">
+      <div class="s-dose-disclaimer-modal__heading">
+        <p class="s-dose-disclaimer-modal__eyebrow">
+          Safety and Responsibility
+        </p>
+
+        <h2 id="s-dose-disclaimer-title">
+          Medical Disclaimer and Limitation of Liability
+        </h2>
+
+        <p class="s-dose-disclaimer-modal__date">
+          Effective date: 21 August 2026
+        </p>
+      </div>
+
+      <button
+        class="s-dose-disclaimer-modal__close"
+        type="button"
+        aria-label="Close"
+        data-disclaimer-close
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="s-dose-disclaimer-modal__content">
+
+      <section>
+        <h3>1. Intended Purpose of the App</h3>
+
+        <p>
+          S-Dose is reference, educational, and informational
+          software intended to assist qualified
+          healthcare professionals and individuals undergoing medical training
+          under appropriate professional supervision.
+        </p>
+
+        <p>
+          The app may display reference information about medications
+          and perform supporting dose-related calculations. The results of
+          these calculations are provided solely for informational and
+          computational support.
+        </p>
+
+        <p>
+          S-Dose is not intended for independent use by
+          patients or other individuals for self-treatment, independent medication selection,
+          or determination of their own dose.
+        </p>
+      </section>
+
+      <section>
+        <h3>2. Not Medical Advice</h3>
+
+        <p>
+          Information and calculation results obtained through S-Dose do
+          not constitute medical advice, a diagnosis, a prescription,
+          or an individualized treatment plan and must not
+          be used as the sole basis
+          for diagnostic, pharmacological, or treatment decisions.
+        </p>
+
+        <p>
+          A properly qualified healthcare professional must be
+          consulted regarding any medical decision, diagnosis,
+          or treatment.
+        </p>
+      </section>
+
+      <section>
+        <h3>3. Medical Device Status</h3>
+
+        <p>
+          As of the date of this version, S-Dose is not marketed,
+          certified, registered, or approved as a medical device unless expressly stated otherwise
+          in the official information for a specific version of
+          the app and the relevant jurisdiction.
+        </p>
+
+        <p>
+          <strong>
+            S-Dose is not a medical device and is not intended to
+            diagnose, treat, cure, or prevent any
+            disease or medical condition.
+          </strong>
+        </p>
+      </section>
+
+      <section>
+        <h3>4. The App Does Not Replace Professional Judgement</h3>
+
+        <p>
+          S-Dose does not replace professional medical assessment of
+          the patient, clinical reasoning, professional judgement, appropriate medical
+          training, official clinical protocols, instructions for the
+          medical use of medications, local SOPs, or
+          the requirements of applicable law.
+        </p>
+
+        <p>
+          The user must act solely within the scope of their
+          education, qualifications, professional authority, and local rules.
+        </p>
+      </section>
+
+      <section>
+        <h3>5. Mandatory Independent Verification</h3>
+
+        <p>
+          Before prescribing, preparing, or administering any
+          medication, the user must independently verify
+          all clinically relevant data and calculation results.
+        </p>
+
+        <ul>
+          <li>the correct patient and medication selection;</li>
+          <li>the indication for use;</li>
+          <li>body weight and other entered parameters;</li>
+          <li>units of measurement and their conversion;</li>
+          <li>the calculated dose;</li>
+          <li>the medication concentration;</li>
+          <li>the final administration volume;</li>
+          <li>the route and administration interval;</li>
+          <li>the maximum single and daily doses;</li>
+          <li>the cumulative dose already received by the patient;</li>
+          <li>contraindications, allergies, and interactions;</li>
+          <li>compliance with current protocols and SOPs.</li>
+        </ul>
+
+        <p>
+          <strong>
+            No medication should be prescribed, prepared, or administered
+            solely on the basis of a result
+            displayed by S-Dose.
+          </strong>
+        </p>
+      </section>
+
+      <section>
+        <h3>6. Calculation and Software Limitations</h3>
+
+        <p>
+          Calculation results depend on the accuracy and completeness of
+          the data entered by the user. An error in body
+          weight, concentration, units of measurement, route
+          of administration, a previously administered dose, or any other parameter may
+          produce an incorrect result.
+        </p>
+
+        <p>
+          Despite the quality-control measures taken, the app may contain
+          software errors, calculation or localization
+          inaccuracies, incomplete or outdated data, or other unforeseen technical failures.
+        </p>
+      </section>
+
+      <section>
+        <h3>7. Currency of Information</h3>
+
+        <p>
+          Medical protocols, medication instructions, available
+          concentrations, recommendations, and regulatory requirements
+          may change.
+        </p>
+
+        <p>
+          The app's availability offline does not mean
+          that the information stored in it is current.
+          The user must verify information against current
+          official sources.
+        </p>
+      </section>
+
+      <section>
+        <h3>8. Emergencies</h3>
+
+        <p>
+          S-Dose is not an emergency service and does not provide
+          remote medical support.
+        </p>
+
+        <p>
+          Patient care must not be delayed because the app is unavailable,
+          a technical failure occurs, or information needs to
+          be found in S-Dose.
+        </p>
+      </section>
+
+      <section>
+        <h3>9. User Responsibility</h3>
+
+        <p>
+          The user is solely responsible for the accuracy
+          of the entered data, independent verification of results, the
+          applicability of information to the individual patient, and any decision
+          to prescribe, prepare, or administer a medication.
+        </p>
+
+        <p>
+          Use of S-Dose does not transfer responsibility for
+          clinical decisions from the user to the app developer.
+        </p>
+      </section>
+
+      <section>
+        <h3>10. No Warranties</h3>
+
+        <p>
+          S-Dose and all information contained in it are provided
+          “as is” and “as available.”
+        </p>
+
+        <p>
+          To the fullest extent permitted by applicable
+          law, the developer makes no warranties regarding the completeness, accuracy, or
+          currency of the information, the absence of
+          errors in calculations, or the app's suitability for a
+          particular clinical situation.
+        </p>
+      </section>
+
+      <section>
+        <h3>11. Limitation of the Developer's Liability</h3>
+
+        <p>
+          To the fullest extent permitted by
+          applicable law, the developer of S-Dose shall
+          not be liable for any harm or loss arising from the use
+          of, or inability to use, the
+          app, incorrect input data, calculation results,
+          technical failures, or user decisions.
+        </p>
+
+        <p>
+          Nothing in this document excludes or limits any
+          liability that cannot lawfully be excluded or
+          limited under applicable law.
+        </p>
+      </section>
+
+      <section>
+        <h3>12. Third-Party Sources and Materials</h3>
+
+        <p>
+          The app may contain information obtained or
+          adapted from clinical guidelines, instructions, scientific publications,
+          and other third-party sources.
+        </p>
+
+        <p>
+          Rights in third-party materials, trademarks, and software libraries
+          belong to their respective owners.
+        </p>
+      </section>
+
+      <section>
+        <h3>13. Related Documents</h3>
+
+        <p>
+          This medical disclaimer does not replace the
+          Privacy Policy, Terms of Use, copyright information,
+          or third-party software licenses.
+        </p>
+      </section>
+
+      <section>
+        <h3>14. Acceptance of Terms</h3>
+
+        <p>
+          By using S-Dose, the user confirms that they
+          have read and understood this medical disclaimer, understand the
+          app's intended purpose and limitations, and agree to use it
+          only within the scope of their competence and in accordance with applicable rules.
+        </p>
+
+        <p>
+          If the user does not agree to these terms,
+          they must discontinue use of S-Dose.
+        </p>
+      </section>
+
+      <footer class="s-dose-disclaimer-modal__footer">
+        <p>© 2026 Serhii Pelishenko. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </div>
+</div>
+
+
+
+<section class="s-dose-section" id="faq">
+  <div class="container s-dose-faq__grid">
+
+    <div class="s-dose-section__heading">
+      <p class="s-dose-section__eyebrow">FAQ</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p>
+        Brief answers about how the app works, how data is stored,
+        and how custom settings are used.
+      </p>
+    </div>
+
+    <div class="s-dose-faq">
+
+      <details class="s-dose-faq__item">
+        <summary>Does S‑Dose work without an internet connection?</summary>
+
+        <p>
+          Yes. The medication reference, dose calculator, cases,
+          and administration log all work locally on the device.
+        </p>
+      </details>
+
+      <details class="s-dose-faq__item">
+        <summary>Where is the data stored?</summary>
+
+        <p>
+          Operational data is stored locally on the user's device and
+          is not transmitted to the app's author.
+        </p>
+      </details>
+
+      <details class="s-dose-faq__item">
+        <summary>Can I add custom medications?</summary>
+
+        <p>
+          Yes. Users can create custom medication entries,
+          define dosing parameters, and link them to their own SOP.
+        </p>
+      </details>
+
+      <details class="s-dose-faq__item">
+        <summary>When will the app be available?</summary>
+
+        <p>
+          The current app version and information about available
+          installation methods are published on this page.
+        </p>
+      </details>
+
+        <details class="s-dose-faq__item">
+        <summary>Does S‑Dose replace clinical judgement?</summary>
+
+        <p>
+        No. S‑Dose is a supporting tool for calculations and
+        documentation. The final decision regarding medication use must
+        always be made by a qualified user.
+        </p>
+      </details>
+
+        <details class="s-dose-faq__item">
+        <summary>Can case information be shared?</summary>
+
+        <p>
+        Yes. Case information can be exported as a TXT file and
+        shared using any method available on the device. Before
+        sharing it, verify that the file does not contain
+        the patient's personal data.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+    <section class="s-dose-section s-dose-feedback" id="feedback">
+      <div class="container s-dose-feedback__grid">
+        <div>
+          <p class="s-dose-section__eyebrow">Feedback</p>
+          <h2>Help Improve S-Dose</h2>
+          <p>
+            Report a bug or an unclear workflow, or suggest a
+            feature you would find useful.
+          </p>
+          <small>Do not send patients' personal or medical data.</small>
+        </div>
+
+        <div class="s-dose-feedback__actions">
+          <a
+            class="s-dose-button s-dose-button--primary"
+            href="mailto:hello@serhiipelishenko.com?subject=S-Dose%20bug%20report"
+          >
+            <i class="fa-solid fa-bug" aria-hidden="true"></i>
+            Report a Bug
+          </a>
+
+          <a
+            class="s-dose-button s-dose-button--secondary"
+            href="mailto:hello@serhiipelishenko.com?subject=S-Dose%20feature%20suggestion"
+          >
+            <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+            Suggest a Feature
+          </a>
+        </div>
+      </div>
+    </section>
+
+<section class="s-dose-support" id="support-project">
+  <div class="s-dose-support__inner">
+
+    <div class="s-dose-support__icon" aria-hidden="true">
+      <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="s-dose-support__content">
+      <span class="s-dose-support__eyebrow">
+        SUPPORT THE PROJECT
+      </span>
+
+      <h2>Help S‑Dose Grow</h2>
+
+      <p>
+        S‑Dose is an independent, non-commercial project and remains free regardless of whether support is provided.</p>
+        <p>
+          If you would like to provide financial support for its development,
+          contact the author to discuss the details individually.
+        </p>
+        <p>Funds received may be used for testing, technical infrastructure, and the preparation of S‑Dose updates.
+      </p>
+    </div>
+
+    <div class="s-dose-support__action">
+        <a
+          class="s-dose-support__button"
+          href="mailto:hello@serhiipelishenko.com?subject=Support%20for%20the%20S-Dose%20project"
+        >
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>Discuss Support</span>
+        </a>
+
+      <p class="s-dose-support__note">
+        Support is voluntary and does not unlock additional
+        features in the app.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="collaboration-cta" id="collaboration">
+  <div class="collaboration-cta__overlay" aria-hidden="true"></div>
+
+  <div class="container collaboration-cta__grid">
+    <div class="collaboration-cta__content">
+      <p class="collaboration-cta__eyebrow">
+        Collaboration & Contact
+      </p>
+
+      <h2 class="collaboration-cta__title">
+        Open to collaboration<br>
+        and new initiatives.
+      </h2>
+
+      <p class="collaboration-cta__description">
+        Have an idea, a project, or need a medical
+        or educational solution? Let’s discuss
+        how we can work together.
+      </p>
+    </div>
+
+    <div class="collaboration-cta__action">
+      <a
+        class="collaboration-cta__button"
+        href="./contact-en.html"
+      >
+        Contact Me
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index-en.html">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — integrated into one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="./index-en.html">Home</a>
+        <a href="./about-en.html">About Me</a>
+        <a href="./projects-en.html">Projects</a>
+        <a href="./articles-en.html">Articles</a>
+        <a href="./contact-en.html">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social Media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contact</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="./policy-en.html">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+<script src="../js/s-dose.js"></script>
+</body>
+</html>
