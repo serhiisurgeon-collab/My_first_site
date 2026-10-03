@@ -261,4 +261,13 @@ toggleButton.addEventListener("click", () => {
   });
 
   setInitialHeight();
+
+  // Font loading can change line wrapping after the initial measurement.
+  // Keep the animated wrapper fitted to whichever panel is currently shown.
+  const panelResizeObserver = new ResizeObserver(() => {
+    const activePanel = isExpanded ? fullPanel : shortPanel;
+    copyWrapper.style.height = `${activePanel.scrollHeight}px`;
+  });
+  panelResizeObserver.observe(shortPanel);
+  panelResizeObserver.observe(fullPanel);
 });
