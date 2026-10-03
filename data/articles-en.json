@@ -1,5 +1,19 @@
 [
   {
+    "slug": "medical-app-without-internet",
+    "type": "article",
+    "format": "text",
+    "category": "technology",
+    "title": "A Medical App Without Internet: What Needs to Be Considered",
+    "description": "What to check in a medical app for use without connectivity: available functions, reference content currency, updates and protection of locally stored data.",
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "readTime": 14,
+    "author": "Serhii Pelishenko",
+    "content": "medical-app-without-internet.md",
+    "featured": true
+  },
+  {
     "slug": "hospital-capabilities",
     "type": "article",
     "format": "text",

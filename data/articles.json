@@ -1,5 +1,19 @@
 [
   {
+    "slug": "medical-app-without-internet",
+    "type": "article",
+    "format": "text",
+    "category": "technology",
+    "title": "Медичний застосунок без інтернету: що потрібно продумати",
+    "description": "Що перевірити в медичному застосунку для роботи без зв’язку: доступність функцій, актуальність довідника, оновлення та захист локальних даних.",
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "readTime": 12,
+    "author": "Сергій Пелішенко",
+    "content": "medical-app-without-internet.md",
+    "featured": true
+  },
+  {
     "slug": "hospital-capabilities",
     "type": "article",
     "format": "text",
