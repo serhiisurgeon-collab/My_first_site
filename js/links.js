@@ -4,6 +4,12 @@ function prepareLink(link) {
 
   const url = new URL(href, document.baseURI);
   if (url.protocol !== "http:" && url.protocol !== "https:") return;
+  if (link.closest("nav, .mobile-nav") ||
+      (url.origin === location.origin &&
+       /\/(?:article|articles)(?:-en)?\.html$/.test(url.pathname))) {
+    link.removeAttribute("target");
+    return;
+  }
   if (url.hash && url.origin === location.origin &&
       url.pathname === location.pathname && url.search === location.search) return;
 

@@ -3,4 +3,4 @@ import "./animations.js";
 import "./about.js";
 import "./contact.js";
 import "./search.js?v=20261003-links";
-import "./links.js?v=20261003";
+import "./links.js?v=20261003-nav";
