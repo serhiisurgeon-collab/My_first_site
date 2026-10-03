@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!trigger) return;
 
   const lang = document.documentElement.lang || "uk";
+  const siteRoot = new URL("../", import.meta.url);
 
   const text = {
     uk: {
@@ -111,8 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadSearchIndex() {
   try {
     const [uaResponse, enResponse] = await Promise.all([
-      fetch("../data/articles.json"),
-      fetch("../data/articles-en.json")
+      fetch(new URL("data/articles.json", siteRoot), { cache: "no-cache" }),
+      fetch(new URL("data/articles-en.json", siteRoot), { cache: "no-cache" })
     ]);
 
     if (!uaResponse.ok || !enResponse.ok) {
@@ -132,13 +133,16 @@ document.addEventListener("DOMContentLoaded", () => {
           "",
         category: article.category || "Article",
         lang,
-        type: "article",
+        type: article.type || "article",
         slug: article.slug || "",
 
         url:
-          lang === "en"
-            ? `/en/article-en.html?article=${article.slug}`
-            : `/article.html?article=${article.slug}`
+          article.type === "publication"
+            ? article.url
+            : new URL(
+                `${lang === "en" ? "en/article-en.html" : "article.html"}?article=${encodeURIComponent(article.slug)}`,
+                siteRoot
+              ).href
       }));
     };
 
@@ -238,6 +242,10 @@ function renderResults(results, query) {
 
     result.className = "site-search__result";
     result.href = item.url;
+    if (item.type === "publication") {
+      result.target = "_blank";
+      result.rel = "noopener noreferrer";
+    }
 
     result.innerHTML = `
       <div class="site-search__result-icon">
