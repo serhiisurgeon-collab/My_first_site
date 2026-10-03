@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     const articlesResponse =
-    await fetch(current.data, { cache: "no-cache" });
+    await fetch(`${current.data}?v=20260903-footer`, { cache: "no-cache" });
 
     if (!articlesResponse.ok) {
       throw new Error(
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     const markdownPath =
-      `${current.content}${article.content}`;
+      `${current.content}${article.content}?v=20260903-footer`;
 
 
     const markdownResponse = await fetch(markdownPath, { cache: "no-cache" });
@@ -258,7 +258,25 @@ async function getArticleReadTime(article) {
        MARKDOWN → HTML
     ====================================================== */
 
-    articleContent.innerHTML = marked.parse(markdown);
+    // The template owns the revision footer for every article, including
+    // older Markdown responses that still contain a revision history.
+    const articleMarkdown = markdown
+      .replace(/^## (?:Історія редакції|Revision history)\s*\r?\n[\s\S]*$/m, "")
+      .replace(/^(?:Дата редакції|Revision date):[^\r\n]*\s*$/m, "");
+
+    articleContent.innerHTML = marked.parse(articleMarkdown);
+
+    if (article.updated) {
+      const revision = document.createElement("p");
+      const revisionTime = document.createElement("time");
+      const [year, month, day] = article.updated.split("-");
+      revision.className = "article-revision-date";
+      revision.append(isEnglish ? "Revision date: " : "Дата редакції: ");
+      revisionTime.dateTime = article.updated;
+      revisionTime.textContent = `${day}.${month}.${year}`;
+      revision.append(revisionTime);
+      articleContent.append(revision);
+    }
 
 
 
