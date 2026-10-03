@@ -199,6 +199,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     updateArticleHeader(article);
 
+    await setupArticleLanguageSwitcher(article);
+
     setupArticlePagination(materials, article);
 
 
@@ -677,6 +679,49 @@ function getCategoryName(category) {
   }
 
 
+
+  /* =====================================================
+     LANGUAGE SWITCHER
+  ====================================================== */
+
+    async function setupArticleLanguageSwitcher(article) {
+      const links = document.querySelectorAll(
+        ".site-nav__language-option"
+      );
+
+      for (const link of links) {
+        const url = new URL(link.href);
+        url.search = window.location.search;
+        url.searchParams.set("article", article.slug);
+        url.hash = window.location.hash;
+        link.href = url.href;
+
+        if (link.lang === language) continue;
+
+        try {
+          const catalogPath = link.lang === "en"
+            ? `${root}/data/articles-en.json`
+            : `${root}/data/articles.json`;
+          const response = await fetch(catalogPath);
+
+          if (!response.ok) {
+            throw new Error(`Translation catalog: ${response.status}`);
+          }
+
+          const materials = await response.json();
+          const translation = materials.find(item =>
+            item.type === "article" && item.content === article.content
+          );
+
+          if (translation) {
+            url.searchParams.set("article", translation.slug);
+            link.href = url.href;
+          }
+        } catch (error) {
+          console.error("Could not load article translation link:", error);
+        }
+      }
+    }
 
   /* =====================================================
      ERROR
