@@ -181,7 +181,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const article = materials.find(
       item =>
         item.type === "article" &&
-        item.slug === slug
+        (item.slug === slug || item.content === `${slug}.md` ||
+          (slug === "how-kaolin-works-en" &&
+            item.content === "how-kaolin-works.md"))
     );
 
 
@@ -198,8 +200,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     updateArticleHeader(article);
-
-    await setupArticleLanguageSwitcher(article);
 
     setupArticlePagination(materials, article);
 
@@ -278,7 +278,7 @@ async function getArticleReadTime(article) {
     console.error("Помилка завантаження статті:", error);
 
     showError(
-      current.articleNotSpecified
+      current.loadError
     );
 
   }
@@ -679,49 +679,6 @@ function getCategoryName(category) {
   }
 
 
-
-  /* =====================================================
-     LANGUAGE SWITCHER
-  ====================================================== */
-
-    async function setupArticleLanguageSwitcher(article) {
-      const links = document.querySelectorAll(
-        ".site-nav__language-option"
-      );
-
-      for (const link of links) {
-        const url = new URL(link.href);
-        url.search = window.location.search;
-        url.searchParams.set("article", article.slug);
-        url.hash = window.location.hash;
-        link.href = url.href;
-
-        if (link.lang === language) continue;
-
-        try {
-          const catalogPath = link.lang === "en"
-            ? `${root}/data/articles-en.json`
-            : `${root}/data/articles.json`;
-          const response = await fetch(catalogPath);
-
-          if (!response.ok) {
-            throw new Error(`Translation catalog: ${response.status}`);
-          }
-
-          const materials = await response.json();
-          const translation = materials.find(item =>
-            item.type === "article" && item.content === article.content
-          );
-
-          if (translation) {
-            url.searchParams.set("article", translation.slug);
-            link.href = url.href;
-          }
-        } catch (error) {
-          console.error("Could not load article translation link:", error);
-        }
-      }
-    }
 
   /* =====================================================
      ERROR
