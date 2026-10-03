@@ -26,7 +26,7 @@ Kaolin is a naturally occurring mineral material based on kaolinite, an aluminos
 In hemostatic products such as QuikClot Combat Gauze, kaolin particles are applied to the gauze. Contact between blood and this mineral surface initiates what is known as contact activation of the coagulation system.
 The electrical charge of the kaolin surface is particularly important.
 
-Negatively charged surfaces can promote activation of Factor XII (FXII, Hageman factor). This phenomenon has been known for a long time and is used, among other things, in laboratory coagulation tests. Experimental studies directly demonstrate contact activation of FXII on kaolin-containing surfaces.
+Negatively charged surfaces can promote activation of Factor XII (FXII, Hageman factor). This phenomenon has been known for a long time and is used, among other things, in laboratory coagulation tests. Experimental studies demonstrate contact activation of FXII on kaolin-containing surfaces ([2](#kaolin-source-2), [3](#kaolin-source-3)). These are mechanistic laboratory findings, not evidence of the clinical superiority of a particular dressing.
 
 In other words, kaolin does not contain ready-made thrombin, fibrin, or other clotting factors.
 It does not add a new hemostatic system to the body.  
@@ -56,7 +56,7 @@ There are people with severe inherited Factor XII deficiency. Their laboratory t
 Logically, one might expect such a person to experience severe bleeding.
 But this usually does not happen.
 
-Even profound congenital FXII deficiency, unlike deficiencies of Factors VIII or IX, does not cause the typical clinical bleeding phenotype. This is one of the classic examples of how the laboratory model of the “intrinsic” and “extrinsic” pathways differs from hemostasis as it actually occurs in vivo.
+Even profound congenital FXII deficiency, unlike deficiencies of Factors VIII or IX, does not cause the typical clinical bleeding phenotype ([5](#kaolin-source-5)). This is one of the classic examples of how the laboratory model of the “intrinsic” and “extrinsic” pathways differs from hemostasis as it actually occurs in vivo.
 
 The traditional coagulation cascade remains very useful for teaching and for understanding laboratory tests.
 However, true hemostasis in injured tissue is considerably more complex.
@@ -77,7 +77,7 @@ In real trauma, the following interact simultaneously:
 - pH;
 - concentration and availability of coagulation factors.
 
-The cell-based model therefore explains hemostasis in vivo better than a simple diagram of two independent coagulation cascades.
+The cell-based model therefore explains hemostasis in vivo better than a simple diagram of two independent coagulation cascades ([4](#kaolin-source-4)).
 
 For this reason, the role of kaolin is better described not as: **“Kaolin initiates blood clotting.”**  
 But rather as:
@@ -132,8 +132,8 @@ Compression temporarily reduces blood flow through the injured area and allows t
 Without adequate compression, high blood flow can mechanically interfere with formation of a stable clot or disrupt it before it becomes sufficiently strong.
 
 That is why an active hemostatic agent does not eliminate the need for direct pressure.
-The current TCCC Guidelines dated May 1, 2026 recommend Combat Gauze as the CoTCCC hemostatic dressing of choice for external compressible hemorrhage that is not anatomically amenable to an extremity tourniquet, as well as an adjunct during tourniquet conversion.  
-Hemostatic dressings should be applied with at least three minutes of direct pressure.
+The May 1, 2026 TCCC Guidelines recommend Combat Gauze as the CoTCCC hemostatic dressing of choice for external compressible hemorrhage that is not anatomically amenable to an extremity tourniquet, as well as an adjunct during tourniquet conversion.
+Combat Gauze should be applied with at least three minutes of direct pressure ([1](#kaolin-source-1)).
 
 #### When should you think about kaolin?
 
@@ -181,7 +181,7 @@ All of these can make formation of a stable clot more difficult.
 But this does not mean that “kaolin does not work in coagulopathy.”
 That would be an equally excessive simplification.
 
-Experimental animal studies have demonstrated the effectiveness of kaolin-containing hemostatic materials even under conditions of significant hemodilution, hypothermia, acidosis, and laboratory-confirmed coagulopathy. For example, Combat Gauze has been studied in hypothermic and coagulopathic models of severe liver injury, in a bleeding model involving hemodilution and hypothermia, and in a modern junctional hemorrhage model with acidosis to approximately pH 7.2 and coagulopathy.
+Experimental animal studies have demonstrated the effectiveness of kaolin-containing hemostatic materials even under conditions of significant hemodilution, hypothermia, acidosis, and laboratory-confirmed coagulopathy. For example, Combat Gauze has been studied in hypothermic and coagulopathic models of severe liver injury, in a bleeding model involving hemodilution and hypothermia, and in a modern junctional hemorrhage model with acidosis to approximately pH 7.2 and coagulopathy ([6](#kaolin-source-6), [7](#kaolin-source-7), [8](#kaolin-source-8)).
 
 At the same time, these studies are predominantly experimental animal studies, so they should not be interpreted as evidence that severe traumatic coagulopathy ceases to matter in a real casualty.
 
@@ -205,45 +205,45 @@ It makes correctly performed wound packing more effective.
 
 ## References
 
-1. Joint Trauma System / Committee on Tactical Combat Casualty Care.
-[Tactical Combat Casualty Care Guidelines — official JTS directory](https://jts.health.mil/index.cfm/PI_CPGs/cpgs). Current version — 1 May 2026.
-Massive Hemorrhage section: Combat Gauze is designated as the CoTCCC hemostatic dressing of choice for compressible external hemorrhage not amenable to an extremity tourniquet and as an adjunct to tourniquet removal; hemostatic dressings are applied with at least 3 minutes of direct pressure.
+1. <span id="kaolin-source-1"></span> Joint Trauma System / Committee on Tactical Combat Casualty Care.
+[Tactical Combat Casualty Care Guidelines — official Deployed Medicine page](https://www.deployedmedicine.com/market/11/content/40). Edition used: **May 1, 2026**, Tactical Field Care, section 4: Massive Hemorrhage. The date was checked against the original PDF title page.
+Massive Hemorrhage section: Combat Gauze is designated as the CoTCCC hemostatic dressing of choice for compressible external hemorrhage not amenable to an extremity tourniquet and as an adjunct to tourniquet removal; Combat Gauze is applied with at least 3 minutes of direct pressure.
 
-2. Zhu S, Diamond SL.
-[Contact activation of blood coagulation on a defined kaolin/collagen surface in a microfluidic assay](https://pubmed.ncbi.nlm.nih.gov/?term=%22Contact+activation+of+blood+coagulation+on+a+defined+kaolin%2Fcollagen+surface+in+a+microfluidic+assay%22).
-Thrombosis Research. 2014.
+2. <span id="kaolin-source-2"></span> Zhu S, Diamond SL.
+[Contact activation of blood coagulation on a defined kaolin/collagen surface in a microfluidic assay](https://doi.org/10.1016/j.thromres.2014.09.030) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/25303860/).
+Thrombosis Research. 2014;134(6):1335–1343.
 The study demonstrates activation of the contact system and FXII on a kaolin-containing surface, followed by platelet deposition and fibrin formation.
 
-3. Griffin JH.
-[Role of surface in surface-dependent activation of Hageman factor (blood coagulation factor XII)](https://pubmed.ncbi.nlm.nih.gov/?term=%22Role+of+surface+in+surface-dependent+activation+of+Hageman+factor+%28blood+coagulation+factor+XII%29%22).
-Proceedings of the National Academy of Sciences. 1978.
+3. <span id="kaolin-source-3"></span> Griffin JH.
+[Role of surface in surface-dependent activation of Hageman factor (blood coagulation factor XII)](https://doi.org/10.1073/pnas.75.4.1998) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/273926/).
+Proceedings of the National Academy of Sciences. 1978;75(4):1998–2002.
 A classic study on the role of negatively charged surfaces, including kaolin, in contact activation of FXII.
 
-4. Hoffman M, Monroe DM.
-[A Cell-based Model of Hemostasis](https://pubmed.ncbi.nlm.nih.gov/?term=%22A+Cell-based+Model+of+Hemostasis%22).
-Thrombosis and Haemostasis. 2001.
+4. <span id="kaolin-source-4"></span> Hoffman M, Monroe DM.
+[A Cell-based Model of Hemostasis](https://doi.org/10.1055/s-0037-1615947) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/11434702/).
+Thrombosis and Haemostasis. 2001;85(6):958–965.
 One of the key papers that shaped the modern cell-based understanding of hemostasis and demonstrated the limitations of the classical “intrinsic/extrinsic pathway” model for describing coagulation in vivo.
 
-5. Fernandes HD, et al.
-[Factor XII Deficiency Mimicking Bleeding Diathesis: A Unique Presentation and Diagnostic Pitfall](https://pubmed.ncbi.nlm.nih.gov/?term=%22Factor+XII+Deficiency+Mimicking+Bleeding+Diathesis%3A+A+Unique+Presentation+and+Diagnostic+Pitfall%22).
-Cureus. 2018.
-A review of the clinical phenomenon in which severe FXII deficiency markedly prolongs aPTT but does not cause a characteristic hemorrhagic diathesis.
+5. <span id="kaolin-source-5"></span> Fernandes HD, et al.
+[Factor XII Deficiency Mimicking Bleeding Diathesis: A Unique Presentation and Diagnostic Pitfall](https://doi.org/10.7759/cureus.2817) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/30128221/).
+Cureus. 2018;10(6):e2817.
+A case report of FXII deficiency with markedly prolonged aPTT but no characteristic clinical bleeding tendency.
 
-6. Johnson D, Bates S, Nukalo S, et al.
-[The effects of QuikClot Combat Gauze on hemorrhage control in the presence of hemodilution and hypothermia](https://pubmed.ncbi.nlm.nih.gov/?term=%22The+effects+of+QuikClot+Combat+Gauze+on+hemorrhage+control+in+the+presence+of+hemodilution+and+hypothermia%22).
-Annals of Medicine and Surgery. 2014;3:21–25.
+6. <span id="kaolin-source-6"></span> Johnson D, Bates S, Nukalo S, et al.
+[The effects of QuikClot Combat Gauze on hemorrhage control in the presence of hemodilution and hypothermia](https://doi.org/10.1016/j.amsu.2014.03.001) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/25568780/).
+Annals of Medicine and Surgery. 2014;3(2):21–25.
 An experimental study of Combat Gauze effectiveness under conditions of hemodilution and hypothermia.
 
-7. Sena MJ, Douglas G, Gerlach T, et al.
-[A pilot study of the use of kaolin-impregnated gauze (Combat Gauze) for packing high-grade hepatic injuries in a hypothermic coagulopathic swine model](https://pubmed.ncbi.nlm.nih.gov/?term=%22A+pilot+study+of+the+use+of+kaolin-impregnated+gauze+%28Combat+Gauze%29+for+packing+high-grade+hepatic+injuries+in+a+hypothermic+coagulopathic+swine+model%22).
+7. <span id="kaolin-source-7"></span> Sena MJ, Douglas G, Gerlach T, et al.
+[A pilot study of the use of kaolin-impregnated gauze (Combat Gauze) for packing high-grade hepatic injuries in a hypothermic coagulopathic swine model](https://doi.org/10.1016/j.jss.2013.02.039) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/23541814/).
 Journal of Surgical Research. 2013;183(2):704–709.
 A study of kaolin-impregnated gauze in a severe liver injury model under conditions of hypothermia and coagulopathy.
 
-8. Gerling KA, Kersey AJ, Lauria AL, et al.
-[Evaluation of novel hemostatic agents in a coagulopathic swine model of junctional hemorrhage](https://pubmed.ncbi.nlm.nih.gov/?term=%22Evaluation+of+novel+hemostatic+agents+in+a+coagulopathic+swine+model+of+junctional+hemorrhage%22).
-Journal of Trauma and Acute Care Surgery. 2023;95–S151.
+8. <span id="kaolin-source-8"></span> Gerling KA, Kersey AJ, Lauria AL, et al.
+[Evaluation of novel hemostatic agents in a coagulopathic swine model of junctional hemorrhage](https://doi.org/10.1097/TA.0000000000004071) — [PubMed](https://pubmed.ncbi.nlm.nih.gov/37259206/).
+Journal of Trauma and Acute Care Surgery. 2023;95(2S):S144–S151.
 In a model of severe coagulopathy and acidosis, Combat Gauze was used as the military standard control for comparison with contemporary hemostatic agents.
 
 ## Revision history
 
-**3 October 2026.** Corrected repeated words and language errors, aligned terminology across the Ukrainian and English versions, and added clickable source links. The original publication date is retained; this text represents this revision and does not necessarily reflect the article as it stood on its original publication date.
+**3 October 2026.** Corrected repeated words and language errors, aligned terminology across the Ukrainian and English versions, and added clickable source links. The original publication date, April 3, 2026, is retained. The May 1, 2026 TCCC Guidelines are cited in this October 3, 2026 revision; the original publication date does not imply that all these sources were available then.

@@ -10,7 +10,7 @@ Its purpose is **not to duplicate each fighter’s individual equipment, but to 
 
 One of the basic TCCC principles regarding the use of medical equipment is very simple: when providing care, the equipment from the casualty’s own IFAK should be used first.
 
-Current Joint Trauma System training materials emphasize this separately for both Combat Lifesavers and medical personnel. The CLS bag is used when the resources of the individual first aid kit are no longer sufficient or when equipment not contained in the IFAK is required. And this principle significantly changes the entire approach to planning.
+Joint Trauma System training modules emphasize this separately for both Combat Lifesavers and medical personnel. The CLS bag is used when the resources of the individual first aid kit are no longer sufficient or when equipment not contained in the IFAK is required. And this principle significantly changes the entire approach to planning.
 
 If a group consists of five people and each of them has a complete IFAK, we do not need to put another five complete sets into the group bag “in case all five become severely wounded at the same time.” Part of the medical resource has already been distributed among the personnel.
 
@@ -53,7 +53,7 @@ Shared equipment in this case may be primarily **reserve and logistical**:
 
 This is where the classic concept of a **CLS bag** becomes relevant.
 
-JTS describes the CLS bag as equipment intended for non-medical personnel with training beyond the basic level. Part of its contents duplicates the IFAK — tourniquets, dressings, chest seals, and so on — precisely because a single casualty may have multiple injuries and require more material than is available in their own first aid kit.
+JTS describes the CLS bag ([3](#bag-source-3), [4](#bag-source-4)) as equipment intended for non-medical personnel with training beyond the basic level. Part of its contents duplicates the IFAK — tourniquets, dressings, chest seals, and so on — precisely because a single casualty may have multiple injuries and require more material than is available in their own first aid kit.
 
 At the same time, the CLS bag usually adds items that are impractical to issue to everyone because they take up a lot of space: active or passive hypothermia prevention equipment, additional wound-care materials, splints, cravats, and other equipment. JTS explicitly notes that the contents of CLS bags may vary depending on the specific unit and service.
 
@@ -106,7 +106,7 @@ Putting an IV catheter, TXA, or an advanced airway kit into a backpack is easy.
 But the mere presence of equipment does not create competence.
 On the contrary, JTS specifically emphasizes that personnel should not carry equipment they do not know how to use or do not plan to use.
 
-Current TCCC Guidelines also repeatedly link more advanced interventions to training, experience, authorization, and medical direction. For example, transfusion of unscreened fresh whole blood should be performed by trained personnel under appropriate medical direction.
+The May 1, 2026 TCCC Guidelines also repeatedly link more advanced interventions to training, experience, authorization, and medical direction. For example, transfusion of unscreened fresh whole blood should be performed by trained personnel under appropriate medical direction.
 
 This is fundamentally important when packing the bag.
 
@@ -164,7 +164,7 @@ Approximately:
 
 This does not mean that each of the five people receives another complete set. Your task is to have enough resources for a situation in which one IFAK has already been used, but the hemorrhage requires a second tourniquet, repeat wound packing, or simultaneous control of several wounds.
 
-Current TCCC Guidelines recommend the use of CoTCCC-recommended tourniquets for life-threatening extremity hemorrhage and CoTCCC-recommended hemostatic dressings and pressure dressings for compressible hemorrhage where a tourniquet cannot be applied.
+The May 1, 2026 TCCC Guidelines recommend the use of CoTCCC-recommended tourniquets for life-threatening extremity hemorrhage and hemostatic dressings with direct pressure for compressible hemorrhage where a tourniquet cannot be applied.
 
 **Airway and respiration**
 
@@ -176,7 +176,7 @@ This is where equipment appears that makes little sense to duplicate five times:
 * additional decompression needles (preferably the type the group is trained to use) — only in accordance with training, current protocols, and the authorizations of the specific unit;
 * where justified — a compact pulse oximeter.
 
-Current TCCC Guidelines provide for the use of a BVM when ventilation is inadequate and recommend pulse oximetry in appropriate casualties, including when significant TBI is suspected.
+The May 1, 2026 TCCC Guidelines provide for the use of a BVM when ventilation is inadequate and recommend pulse oximetry in appropriate casualties, including when significant TBI is suspected.
 
 **Hypothermia**
 
@@ -230,7 +230,7 @@ The same applies to:
 * junctional devices;
 * other medic-level interventions.
 
-In TCCC 2026, IV/IO, TXA, hemostatic resuscitation, and other advanced interventions have specific indications, while a number of procedures additionally depend on training, experience, authorization, and medical direction. If the group does not include a person who can correctly use a particular piece of equipment, simply having that equipment does not create additional capability.
+In TCCC, IV/IO, TXA, hemostatic resuscitation, and other advanced interventions have specific indications, while a number of procedures additionally depend on training, experience, authorization, and medical direction. If the group does not include a person who can correctly use a particular piece of equipment, simply having that equipment does not create additional capability.
 
 It creates **weight, confusion, and a false sense of readiness**.
 
@@ -264,8 +264,6 @@ For a group operating only a few minutes away from a medic and a group that may 
 
 The contents of a group medical bag should be determined not by a universal list, but by the real operating conditions of the specific group. The starting point is that every member already has their own IFAK, while shared equipment should supplement that resource — providing reserves for more complex injuries, multiple casualties, longer evacuation delays, and interventions that cannot or should not be supported through individual first aid kits.
 
-For a small group of 4–5 people, a useful baseline may be a bag that allows full support of one severely wounded casualty while simultaneously enabling key lifesaving interventions for a second casualty. There is no need to duplicate a full set for every member of the group. It is much more important to have an adequate reserve of hemorrhage-control supplies, airway equipment, chest-trauma equipment, hypothermia-prevention equipment, immobilization supplies, documentation, and other consumables that are most likely to run out or take up too much space to place in every IFAK.
-
 Further contents depend on the training level of the people who will use the bag. A CLS, medic, or other trained specialist may have a different scope of permitted interventions, so medications, IV/IO access, TXA, blood, advanced airway equipment, and other specialized equipment should appear in the bag only when trained and authorized personnel are available to use them.
 
 It is equally important to consider the nature of the mission, expected time to evacuation, method of movement, ability to resupply quickly, and risk of simultaneous casualties. If a mission creates a higher demand for medical resources, that does not mean that the entire reserve must be carried on the group’s backs. Part of the reserve may be better kept at the next logistical level, with a method for rapidly delivering it to the group planned in advance.
@@ -276,13 +274,13 @@ Ultimately, a well-packed group bag is not the maximum amount of medical equipme
 
 ## Sources
 
-1. Current [Tactical Combat Casualty Care Guidelines](https://jts.health.mil/index.cfm/PI_CPGs/cpgs) — Joint Trauma System / Committee on Tactical Combat Casualty Care, May 1, 2026 edition.
+1. Current [Tactical Combat Casualty Care Guidelines](https://www.deployedmedicine.com/market/11/content/40) — Joint Trauma System / Committee on Tactical Combat Casualty Care, edition used: **May 1, 2026**, verified against the original PDF title page. Tactical Field Care sections: Massive Hemorrhage, Airway Management, Circulation, Prevention of Hypothermia, and Documentation of Care.
 
-2. [TCCC Combat Lifesaver Course Plan](https://jts.health.mil/index.cfm/PI_CPGs/cpgs) — Joint Trauma System, April 1, 2026 edition.
+2. [TCCC Combat Lifesaver Course Plan](https://www.deployedmedicine.com/market/193/content/1214) — Joint Trauma System, **TCCC-CLS-09-01, April 1, 2026 edition**, verified against the original PDF title page. Used for the training framework and competencies; clinical recommendations are cited from the May 1, 2026 TCCC Guidelines.
 
-3. [TCCC CLS Module 02: Medical Equipment](https://deployedmedicine.com/) — Joint Trauma System / Deployed Medicine.
+3. <span id="bag-source-3"></span> [TCCC CLS Module 02: Medical Equipment](https://www.deployedmedicine.com/market/193/content/1268) — Joint Trauma System / Deployed Medicine. **TCCC-CLS-PPT-02_30 MAY 26**, **May 30, 2026** edition; date verified against the PDF change log and footers.
 
-4. [TCCC Combat Medic/Corpsman Module 2: Medical Equipment](https://deployedmedicine.com/) — Joint Trauma System / Deployed Medicine.
+4. <span id="bag-source-4"></span> [TCCC Combat Medic/Corpsman Module 2: Medical Equipment](https://www.deployedmedicine.com/market/299/content/2448) — Joint Trauma System / Deployed Medicine. Electronic package: **Deployed Medicine, version 5**; no calendar revision date is stated in its text. Used for equipment organization, distribution, inspection, and resupply; clinical recommendations were checked against the May 1, 2026 TCCC Guidelines.
 
 ## Revision history
 

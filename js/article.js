@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     const articlesResponse =
-    await fetch(current.data);
+    await fetch(current.data, { cache: "no-cache" });
 
     if (!articlesResponse.ok) {
       throw new Error(
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `${current.content}${article.content}`;
 
 
-    const markdownResponse = await fetch(markdownPath);
+    const markdownResponse = await fetch(markdownPath, { cache: "no-cache" });
 
 
     if (!markdownResponse.ok) {
