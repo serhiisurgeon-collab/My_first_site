@@ -743,3 +743,9 @@
   }
 
 }
+.article-row[hidden],
+.publication-card[hidden],
+.writing-section[hidden],
+.publications-section[hidden] {
+  display: none;
+}
