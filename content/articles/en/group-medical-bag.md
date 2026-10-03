@@ -282,6 +282,4 @@ Ultimately, a well-packed group bag is not the maximum amount of medical equipme
 
 4. <span id="bag-source-4"></span> [TCCC Combat Medic/Corpsman Module 2: Medical Equipment](https://www.deployedmedicine.com/market/299/content/2448) — Joint Trauma System / Deployed Medicine. Electronic package: **Deployed Medicine, version 5**; no calendar revision date is stated in its text. Used for equipment organization, distribution, inspection, and resupply; clinical recommendations were checked against the May 1, 2026 TCCC Guidelines.
 
-## Revision history
-
-**3 October 2026.** Corrected repeated words and language errors, aligned terminology across the Ukrainian and English versions, and added clickable source links. The original publication date is retained; this text represents this revision and does not necessarily reflect the article as it stood on its original publication date.
+Revision date: 03.09.2026

@@ -244,6 +244,4 @@ A study of kaolin-impregnated gauze in a severe liver injury model under conditi
 Journal of Trauma and Acute Care Surgery. 2023;95(2S):S144–S151.
 In a model of severe coagulopathy and acidosis, Combat Gauze was used as the military standard control for comparison with contemporary hemostatic agents.
 
-## Revision history
-
-**3 October 2026.** Corrected repeated words and language errors, aligned terminology across the Ukrainian and English versions, and added clickable source links. The original publication date, April 3, 2026, is retained. The May 1, 2026 TCCC Guidelines are cited in this October 3, 2026 revision; the original publication date does not imply that all these sources were available then.
+Revision date: 03.09.2026
