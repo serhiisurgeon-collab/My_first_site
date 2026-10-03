@@ -27,6 +27,13 @@
 }
 
 
+.article-header__updated {
+  margin: 0 0 24px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 .article-header__inner {
   width: min(100%, 1040px);
   margin-inline: auto;

@@ -446,6 +446,16 @@ function setupArticlePagination(materials, currentArticle) {
 
     }
 
+    const updated = document.querySelector(".article-header__updated");
+    if (updated) {
+      updated.hidden = !article.updated || article.updated <= article.date;
+      if (!updated.hidden) {
+        const updatedTime = updated.querySelector("time");
+        updatedTime.dateTime = article.updated;
+        updatedTime.textContent = formatDate(article.updated);
+      }
+    }
+
 
     /* PAGE TITLE */
 

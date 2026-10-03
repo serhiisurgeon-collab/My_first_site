@@ -156,9 +156,9 @@ The following is not a “standard CoTCCC bag,” but an example of how a minimu
 
 Approximately:
 
-* 2–4 additional additional tourniquets;
+* 2–4 additional tourniquets;
 * 4 hemostatic gauze dressings;
-* 4–6 compressed/plain gauze** for wound packing, dressing, and creating additional bulk;
+* 4–6 packs of compressed or plain gauze for wound packing and dressing;
 * 3–4 bandages of different sizes;
 * 1 large abdominal dressing.
 
@@ -172,8 +172,8 @@ This is where equipment appears that makes little sense to duplicate five times:
 
 * additional NPAs with lubricant;
 * one compact bag-valve-mask (BVM), if personnel are trained to use it;
-* 2-3 additional chest seals;
-* additional decompression needles (preferably the same ones used by the group) — only in accordance with training, current protocols, and the authorizations of the specific unit;
+* 2–3 additional chest seals;
+* additional decompression needles (preferably the type the group is trained to use) — only in accordance with training, current protocols, and the authorizations of the specific unit;
 * where justified — a compact pulse oximeter.
 
 Current TCCC Guidelines provide for the use of a BVM when ventilation is inadequate and recommend pulse oximetry in appropriate casualties, including when significant TBI is suspected.
@@ -197,7 +197,7 @@ It is logical to add the following to the group kit:
 * several cloth cravats for additional stabilization;
 * additional gauze;
 * elastic bandages;
-* several adjustable eye shields;
+* several rigid protective eye shields;
 * materials for covering larger superficial injuries or burns.
 
 Splints, cravats, additional wound-care supplies, and eye shields are included among the equipment CLS personnel work with in the JTS training system.
@@ -210,7 +210,7 @@ A separate small module is worth dedicating to:
 * trauma shears;
 * medical tape;
 * permanent marker;
-* additional Casualty Card 002/o (DD Form 1380) / TCCC Casualty Cards;
+* additional casualty cards required by the unit; in TCCC, DD Form 1380 (TCCC Casualty Card);
 * means of securing the card to the casualty;
 * other inexpensive consumables.
 
@@ -244,7 +244,7 @@ In practical terms, before stepping off it is worth asking several questions:
 
 1. How long will we realistically remain with the casualty?
 
-2. Where is the nearest next-level medic?
+2. Where is the nearest medic or next-level care facility?
 
 3. What is the actual route for handing the casualty over?
 
@@ -276,10 +276,14 @@ Ultimately, a well-packed group bag is not the maximum amount of medical equipme
 
 ## Sources
 
-1. Current Tactical Combat Casualty Care Guidelines — Joint Trauma System / Committee on Tactical Combat Casualty Care, May 1, 2026 edition.
+1. Current [Tactical Combat Casualty Care Guidelines](https://jts.health.mil/index.cfm/PI_CPGs/cpgs) — Joint Trauma System / Committee on Tactical Combat Casualty Care, May 1, 2026 edition.
 
-2. TCCC Combat Lifesaver Course Plan — Joint Trauma System, April 1, 2026 edition.
+2. [TCCC Combat Lifesaver Course Plan](https://jts.health.mil/index.cfm/PI_CPGs/cpgs) — Joint Trauma System, April 1, 2026 edition.
 
-3. TCCC CLS Module 02: Medical Equipment — Joint Trauma System / Deployed Medicine.
+3. [TCCC CLS Module 02: Medical Equipment](https://deployedmedicine.com/) — Joint Trauma System / Deployed Medicine.
 
-4. TCCC Combat Medic/Corpsman Module 2: Medical Equipment — Joint Trauma System / Deployed Medicine.
+4. [TCCC Combat Medic/Corpsman Module 2: Medical Equipment](https://deployedmedicine.com/) — Joint Trauma System / Deployed Medicine.
+
+## Revision history
+
+**3 October 2026.** Corrected repeated words and language errors, aligned terminology across the Ukrainian and English versions, and added clickable source links. The original publication date is retained; this text represents this revision and does not necessarily reflect the article as it stood on its original publication date.

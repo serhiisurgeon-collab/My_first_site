@@ -52,7 +52,7 @@
 
 ### Чому одного XII фактора недостатньо для пояснення?
 
-Існують люди з тяжким спадковим дефіцитом фактора XII. У лабораторних аналізах у них може спостерігатися різко подовжений aPTT (АЧТЧ - активований частковий тромбіновий час).
+Існують люди з тяжким спадковим дефіцитом фактора XII. У лабораторних аналізах у них може спостерігатися різко подовжений aPTT (АЧТЧ — активований частковий тромбопластиновий час).
 Логічно було б очікувати, що така людина матиме тяжкі кровотечі.
 Але цього зазвичай не відбувається.
 
@@ -85,7 +85,7 @@
 > «Каолін створює штучну прокоагулянтну поверхню в місці кровотечі та посилює локальне утворення згустку».
 
 І це принципова різниця.
-Каолін ампліфікує систему гемостазу пораненого, але не замінює її.
+Каолін посилює роботу системи гемостазу пораненого, але не замінює її.
 Він не є тканинним клеєм.
 Не утворює незалежної фізичної пломби на пошкодженій судині.
 Не стискає судину.
@@ -206,40 +206,44 @@
 ## Джерела
 
 1. Joint Trauma System / Committee on Tactical Combat Casualty Care.
-Tactical Combat Casualty Care Guidelines. Актуальна редакція — 1 May 2026.
+[Tactical Combat Casualty Care Guidelines — офіційний каталог JTS](https://jts.health.mil/index.cfm/PI_CPGs/cpgs). Актуальна редакція — 1 May 2026.
 Розділ Massive Hemorrhage: Combat Gauze визначено як CoTCCC hemostatic dressing of choice для компресійної зовнішньої кровотечі, що не підходить для кінцівкового турнікета, та як adjunct до tourniquet removal; гемостатичні пов’язки застосовуються із щонайменше 3 хвилинами прямого тиску.
 
 2. Zhu S, Diamond SL.
-Contact activation of blood coagulation on a defined kaolin/collagen surface in a microfluidic assay.
+[Contact activation of blood coagulation on a defined kaolin/collagen surface in a microfluidic assay](https://pubmed.ncbi.nlm.nih.gov/?term=%22Contact+activation+of+blood+coagulation+on+a+defined+kaolin%2Fcollagen+surface+in+a+microfluidic+assay%22).
 Thrombosis Research. 2014.
 Робота демонструє активацію контактної системи та FXII на поверхні, що містить каолін, із подальшим відкладенням тромбоцитів і формуванням фібрину.
 
 3. Griffin JH.
-Role of surface in surface-dependent activation of Hageman factor (blood coagulation factor XII).
+[Role of surface in surface-dependent activation of Hageman factor (blood coagulation factor XII)](https://pubmed.ncbi.nlm.nih.gov/?term=%22Role+of+surface+in+surface-dependent+activation+of+Hageman+factor+%28blood+coagulation+factor+XII%29%22).
 Proceedings of the National Academy of Sciences. 1978.
 Класична робота про роль негативно заряджених поверхонь, включно з каоліном, у контактній активації FXII.
 
 4. Hoffman M, Monroe DM.
-A Cell-based Model of Hemostasis.
+[A Cell-based Model of Hemostasis](https://pubmed.ncbi.nlm.nih.gov/?term=%22A+Cell-based+Model+of+Hemostasis%22).
 Thrombosis and Haemostasis. 2001.
 Одна з ключових робіт, що сформувала сучасне клітинне розуміння гемостазу та показала обмеження класичної схеми «intrinsic/extrinsic pathway» для опису коагуляції in vivo.
 
 5. Fernandes HD, et al.
-Factor XII Deficiency Mimicking Bleeding Diathesis: A Unique Presentation and Diagnostic Pitfall.
+[Factor XII Deficiency Mimicking Bleeding Diathesis: A Unique Presentation and Diagnostic Pitfall](https://pubmed.ncbi.nlm.nih.gov/?term=%22Factor+XII+Deficiency+Mimicking+Bleeding+Diathesis%3A+A+Unique+Presentation+and+Diagnostic+Pitfall%22).
 Cureus. 2018.
 Огляд клінічного феномену, за якого тяжкий дефіцит FXII значно подовжує aPTT, але не викликає характерного геморагічного діатезу.
 
 6. Johnson D, Bates S, Nukalo S, et al.
-The effects of QuikClot Combat Gauze on hemorrhage control in the presence of hemodilution and hypothermia.
+[The effects of QuikClot Combat Gauze on hemorrhage control in the presence of hemodilution and hypothermia](https://pubmed.ncbi.nlm.nih.gov/?term=%22The+effects+of+QuikClot+Combat+Gauze+on+hemorrhage+control+in+the+presence+of+hemodilution+and+hypothermia%22).
 Annals of Medicine and Surgery. 2014;3:21–25.
 Експериментальне дослідження ефективності Combat Gauze в умовах гемодилюції та гіпотермії.
 
 7. Sena MJ, Douglas G, Gerlach T, et al.
-A pilot study of the use of kaolin-impregnated gauze (Combat Gauze) for packing high-grade hepatic injuries in a hypothermic coagulopathic swine model.
+[A pilot study of the use of kaolin-impregnated gauze (Combat Gauze) for packing high-grade hepatic injuries in a hypothermic coagulopathic swine model](https://pubmed.ncbi.nlm.nih.gov/?term=%22A+pilot+study+of+the+use+of+kaolin-impregnated+gauze+%28Combat+Gauze%29+for+packing+high-grade+hepatic+injuries+in+a+hypothermic+coagulopathic+swine+model%22).
 Journal of Surgical Research. 2013;183(2):704–709.
 Дослідження каолінової марлі в моделі тяжкої травми печінки на тлі гіпотермії та коагулопатії.
 
 8. Gerling KA, Kersey AJ, Lauria AL, et al.
-Evaluation of novel hemostatic agents in a coagulopathic swine model of junctional hemorrhage.
+[Evaluation of novel hemostatic agents in a coagulopathic swine model of junctional hemorrhage](https://pubmed.ncbi.nlm.nih.gov/?term=%22Evaluation+of+novel+hemostatic+agents+in+a+coagulopathic+swine+model+of+junctional+hemorrhage%22).
 Journal of Trauma and Acute Care Surgery. 2023;95–S151.
 У моделі вираженої коагулопатії та ацидозу Combat Gauze використовувався як контрольний військовий стандарт для порівняння сучасних гемостатичних засобів.
+
+## Історія редакції
+
+**03.10.2026.** Виправлено повтори й мовні помилки, узгоджено терміни в українській та англійській версіях, додано клікабельні посилання на джерела. Дату першої публікації збережено; наведений текст відповідає цій редакції, а не обов’язково стану матеріалу на дату першої публікації.

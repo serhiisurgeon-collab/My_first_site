@@ -7,7 +7,7 @@
     "title": "How and Why Kaolin Works",
     "description": "What actually happens when kaolin comes into contact with blood — and why understanding this mechanism matters in practice.",
     "date": "2026-04-03",
-    "updated": "2026-04-03",
+    "updated": "2026-10-03",
     "readTime": 9,
     "author": "Serhii Pelishenko",
     "content": "how-kaolin-works.md",
@@ -24,7 +24,8 @@
     "readTime": 18,
     "author": "Serhii Pelishenko",
     "content": "group-medical-bag.md",
-    "featured": false
+    "featured": false,
+    "updated": "2026-10-03"
   },
   {
     "slug": "field-medicine-interview",
