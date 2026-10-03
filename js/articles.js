@@ -80,7 +80,7 @@ const current = config[language];
   try {
 
     const response =
-      await fetch(current.data);
+      await fetch(current.data, { cache: "no-cache" });
 
 
     if (!response.ok) {
@@ -544,7 +544,8 @@ function calculateReadTime(markdown) {
       {
         day: "numeric",
         month: "long",
-        year: "numeric"
+        year: "numeric",
+        timeZone: "UTC"
       }
     ).format(
       new Date(dateString)
@@ -562,7 +563,8 @@ function calculateReadTime(markdown) {
         : "uk-UA",
       {
         month: "long",
-        year: "numeric"
+        year: "numeric",
+        timeZone: "UTC"
       }
     ).format(
       new Date(dateString)

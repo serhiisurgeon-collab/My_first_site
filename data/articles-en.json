@@ -1,5 +1,20 @@
 [
   {
+    "slug": "hospital-capabilities",
+    "type": "article",
+    "format": "text",
+    "category": "medicine",
+    "title": "The hospital is nearby. But can it provide the care needed?",
+    "subtitle": "Assessing actual hospital capabilities for medical planning.",
+    "description": "How to clarify specialist, surgical, diagnostic and resource availability and use that information in medical planning. Includes practical questions and an information-recording template.",
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "readTime": 14,
+    "author": "Serhii Pelishenko",
+    "content": "hospital-capabilities.md",
+    "featured": true
+  },
+  {
     "slug": "how-kaolin-works-en",
     "type": "article",
     "format": "text",

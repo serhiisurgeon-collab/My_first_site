@@ -1,5 +1,20 @@
 [
   {
+    "slug": "hospital-capabilities",
+    "type": "article",
+    "format": "text",
+    "category": "medicine",
+    "title": "Лікарня поруч. Але чи може вона надати потрібну допомогу?",
+    "subtitle": "Як оцінювати реальні спроможності закладу для медичного планування.",
+    "description": "Як уточнювати доступність фахівців, хірургії, діагностики й ресурсів та використовувати ці відомості в медичному плануванні. Практичні запитання й картка збору інформації.",
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "readTime": 12,
+    "author": "Сергій Пелішенко",
+    "content": "hospital-capabilities.md",
+    "featured": true
+  },
+  {
     "slug": "how-kaolin-works",
     "type": "article",
     "format": "text",

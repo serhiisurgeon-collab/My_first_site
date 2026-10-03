@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     const articlesResponse =
-    await fetch(`${current.data}?v=20260903-footer`, { cache: "no-cache" });
+    await fetch(`${current.data}?v=20261003-hospital`, { cache: "no-cache" });
 
     if (!articlesResponse.ok) {
       throw new Error(
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ====================================================== */
 
     const markdownPath =
-      `${current.content}${article.content}?v=20260903-footer`;
+      `${current.content}${article.content}?v=20261003-hospital`;
 
 
     const markdownResponse = await fetch(markdownPath, { cache: "no-cache" });
@@ -428,7 +428,7 @@ function setupArticlePagination(materials, currentArticle) {
 
     if (lead) {
       lead.textContent =
-        article.description ?? "";
+        article.subtitle ?? article.description ?? "";
     }
 
 
@@ -479,6 +479,26 @@ function setupArticlePagination(materials, currentArticle) {
 
     document.title =
       `${article.title} — Serhii Pelishenko`;
+
+    let description = document.querySelector('meta[name="description"]');
+    if (!description) {
+      description = document.createElement("meta");
+      description.name = "description";
+      document.head.append(description);
+    }
+    description.content = article.description ?? "";
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.append(canonical);
+    }
+    const canonicalUrl = new URL(window.location.href);
+    canonicalUrl.search = "";
+    canonicalUrl.searchParams.set("article", article.content.replace(/\.md$/, ""));
+    canonicalUrl.hash = "";
+    canonical.href = canonicalUrl.href;
 
   }
 
@@ -668,7 +688,8 @@ function getCategoryName(category) {
         {
           day: "numeric",
           month: "long",
-          year: "numeric"
+          year: "numeric",
+          timeZone: "UTC"
         }
       ).format(
         new Date(dateString)
