@@ -25,6 +25,15 @@ const encode=v=>Buffer.from(JSON.stringify(v)).toString('base64url');const token
    if(hidden){check(await p.locator('.article-discussion').evaluate(e=>e.hidden),'whole public section hidden');check(await p.locator('.comments-list').count()===0,'no public list rendered');}
    else{check(await p.locator('.comments-list > .comment').count()===20,'published thread visible');check(await p.locator('.comments-list').innerText().then(t=>!t.includes('Private pending demonstration.')),'pending stays private');if(name==='read-only'){check(await p.getByText(lang==='uk'?'Нові коментарі тимчасово вимкнено.':'New comments are temporarily disabled.',{exact:true}).count()===1,'localized read-only notice');await login(p,'demo-reader');check(await p.locator('.comments-form').count()===0,'no composer while read-only');check(await p.getByRole('button',{name:lang==='uk'?'Відповісти':'Reply',exact:true}).count()===0,'no reply while read-only');}else{await login(p,'demo-reader');await p.locator('#comment-text').waitFor();check(true,'posting composer remains available');}}
    check(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'no page overflow');check(await p.locator('#articleContent').innerText().then(t=>t.length>1000),'article available');
+   if(name==='open'||name==='read-only'){
+    await p.locator('#comments').scrollIntoViewIfNeeded();
+    const b=p.locator('.comments-auth button').first();await b.focus();await p.keyboard.press('Tab');check(await p.evaluate(()=>document.querySelector('#comments').contains(document.activeElement)),'keyboard navigation remains within controls');
+    await b.focus();check(await b.evaluate(e=>getComputedStyle(e).outlineStyle!=='none'),'visible keyboard focus');
+    await p.emulateMedia({reducedMotion:'reduce'});await b.hover();check(await b.evaluate(e=>getComputedStyle(e).transform==='none'&&getComputedStyle(e).transitionDuration==='0s'),'reduced motion disables animation');await p.emulateMedia({reducedMotion:'no-preference'});
+    if(name==='open'){check(await p.locator('.comments-form button[type=submit]').evaluate(e=>getComputedStyle(e).backgroundColor==='rgb(20, 53, 40)'),'dark green primary submit');check(await p.getByText(lang==='uk'?'Видно лише вам і модератору':'Visible only to you and the moderator',{exact:false}).count()>0,'localized compact pending privacy');}
+    await p.locator('.article-discussion').evaluate(e=>e.scrollIntoView({block:'start'}));await p.mouse.move(0,0);await p.screenshot({path:out+'/'+lang+'-'+width+'-'+name+'-design.png'});
+    check(await p.evaluate(()=>devicePixelRatio===1&&visualViewport.scale===1),'100 percent screenshot scale');
+   }
    if(width===390&&name==='read-only')await p.screenshot({path:out+'/'+lang+'-read-only.png'});
    await p.context().close();
   }
@@ -36,6 +45,17 @@ const encode=v=>Buffer.from(JSON.stringify(v)).toString('base64url');const token
    await db.doc('settings/comments').set(settings('hidden'));const entry=await open(lang,390,true);await login(entry,'demo-admin');check(await entry.locator('.comments-admin').count()===1,'hidden administrative sign-in entry works');check(await entry.locator('.comments-list').count()===0,'admin entry does not reveal public thread');await entry.screenshot({path:out+'/'+lang+'-hidden-admin.png'});await entry.context().close();
    await db.doc('settings/comments').set({enabled:false,moderationMode:'pre',schemaVersion:1});const migration=await open(lang,390,true);migration.on('dialog',d=>d.accept());await login(migration,'demo-admin');await migration.locator('#comments-visibility').selectOption('visible');await migration.getByRole('button',{name:lang==='uk'?'Зберегти налаштування':'Save settings',exact:true}).click();await migration.waitForFunction(()=>document.querySelector('#comments').dataset.state==='ready');const migrated=(await db.doc('settings/comments').get()).data();check(migrated.schemaVersion===2&&migrated.visibility==='visible'&&migrated.enabled===false,'legacy disabled migrates atomically to visible read-only via admin UI');await migration.context().close();
    await db.doc('settings/comments').set(settings('hidden'));const ordinary=await open(lang,390,true);await login(ordinary,'demo-reader');check(await ordinary.locator('.comments-admin').count()===0,'entry flag gives no admin role');check(await ordinary.locator('.comments-form').count()===0,'ordinary hidden has no form');check(await ordinary.locator('.comments-list').count()===0,'ordinary hidden has no discussion');await ordinary.context().close();
+  }
+  await db.doc('settings/comments').set(settings('visible',true));
+  await db.doc('comments/demo-pending').update({status:'pending'});
+  for(const lang of ['uk','en'])for(const width of [1280,390,360]){
+   const p=await open(lang,width);await login(p,'demo-reader');await p.getByRole('button',{name:lang==='uk'?'Завантажити ще':'Load more',exact:true}).first().click();await p.locator('[data-comment-id=demo-depth-3]').waitFor();
+   check(await p.locator('.comment-replies').first().evaluate(e=>getComputedStyle(e).borderLeftWidth==='1px'),'reply vertical divider');
+   if(width<480)check(await p.locator('[data-comment-id=demo-depth-3]').evaluate(e=>e.clientWidth>innerWidth-90),'deep mobile replies retain usable width');
+   check(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'nested replies do not overflow');
+   await p.locator('[data-comment-id=demo-00]').first().evaluate(e=>{e.style.scrollMarginTop='80px';e.scrollIntoView({block:'start'});});await p.screenshot({path:out+'/'+lang+'-'+width+'-replies-design.png'});
+   await p.locator('[data-comment-id=demo-pending]').first().evaluate(e=>{e.style.scrollMarginTop='80px';e.scrollIntoView({block:'start'});});await p.screenshot({path:out+'/'+lang+'-'+width+'-pending-design.png'});await p.context().close();
+   const admin=await open(lang,width);await login(admin,'demo-admin');await admin.locator('.comments-admin').evaluate(e=>{e.style.scrollMarginTop='80px';e.scrollIntoView({block:'start'});});await admin.screenshot({path:out+'/'+lang+'-'+width+'-moderation-design.png'});check(await admin.locator('.comments-admin-queue + .comments-admin-settings').count()===1,'moderation queue separated from settings');check(await admin.locator('.comment-danger').count()>0,'destructive actions separated');await admin.context().close();
   }
   console.log(JSON.stringify({result:'PASS',checks,widths:[1280,390,360],languages:['uk','en'],screenshots:out,scope:'Synthetic loopback only; real OAuth/cloud not run'},null,2));
  }finally{await browser.close();await db.terminate();await deleteApp(app);}
