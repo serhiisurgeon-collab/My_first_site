@@ -5,7 +5,18 @@ service cloud.firestore {
     function admin() { return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)) && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'admin'; }
     function googleUser() { return signedIn() && request.auth.token.firebase.sign_in_provider == 'google.com'; }
     function frozen() { return get(/databases/$(database)/documents/control/state).data.frozen; }
-    function enabled() { return get(/databases/$(database)/documents/settings/comments).data.enabled && !frozen(); }
+    function validSettings(s) {
+      return s.enabled is bool && s.moderationMode in ['pre','post'] &&
+        ((s.schemaVersion == 1 && s.keys().hasAll(['enabled','moderationMode','schemaVersion']) &&
+          s.keys().hasOnly(['enabled','moderationMode','schemaVersion'])) ||
+         (s.schemaVersion == 2 && s.keys().hasAll(['enabled','visibility','moderationMode','schemaVersion']) &&
+          s.keys().hasOnly(['enabled','visibility','moderationMode','schemaVersion']) &&
+          s.visibility in ['visible','hidden'] && !(s.visibility == 'hidden' && s.enabled)));
+    }
+    function enabled() {
+      let s = get(/databases/$(database)/documents/settings/comments).data;
+      return validSettings(s) && s.enabled && s.get('visibility', 'visible') == 'visible' && !frozen();
+    }
     function blocked() { return exists(/databases/$(database)/documents/blockedUsers/$(request.auth.uid)); }
     function bounded(n) { return request.query.limit != null && request.query.limit <= n; }
     function exportOwner() { return admin() && frozen() && get(/databases/$(database)/documents/control/state).data.ownerUid == request.auth.uid; }
@@ -97,9 +108,8 @@ service cloud.firestore {
     match /settings/comments {
       allow get: if true;
       allow list: if exportOwner();
-      allow update: if admin() && !frozen() && request.resource.data.keys().hasAll(['enabled','moderationMode','schemaVersion']) &&
-        request.resource.data.keys().hasOnly(['enabled','moderationMode','schemaVersion']) && request.resource.data.enabled is bool &&
-        request.resource.data.moderationMode in ['pre','post'] && request.resource.data.schemaVersion == 1;
+      allow update: if admin() && !frozen() && validSettings(request.resource.data) &&
+        (request.resource.data.schemaVersion == 2 || resource.data.schemaVersion == 1);
       allow create, delete: if false;
     }
     match /control/state {

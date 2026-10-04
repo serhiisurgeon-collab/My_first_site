@@ -22,3 +22,6 @@
 .comment-block { overflow-wrap:anywhere; margin:12px 0; }
 .comment-block button { margin-left:12px; }
 @media(max-width:480px) { .comment { padding:12px; } .comment-replies { margin-left:6px; } .comments-widget button { max-width:100%; overflow-wrap:anywhere; } }
+
+.article-discussion[hidden], .article-discussion__header[hidden] { display:none !important; }
+.comments-read-only { color:var(--color-text-secondary); }

@@ -1,4 +1,5 @@
-export const SCHEMA_VERSION = 1;
+import { validateSettings } from './settings.js';
+export const SCHEMA_VERSION = 2;
 export const COLLECTIONS = ['comments','articles','moderation','blockedUsers','rateLimits','admins'];
 const idPattern = /^(?!__proto__$|prototype$|constructor$)[A-Za-z0-9_-]{1,128}$/;
 export function encode(value) {
@@ -18,7 +19,7 @@ export function decode(value, Timestamp) {
 export function validateBackup(backup) {
   const errors = [];
   const validTime = t => t && t.__type === 'timestamp' && Object.keys(t).length===3 && Number.isInteger(t.seconds) && t.seconds >= -62135596800 && t.seconds <= 253402300799 && Number.isInteger(t.nanoseconds) && t.nanoseconds >= 0 && t.nanoseconds < 1e9;
-  if (!backup || backup.schemaVersion !== SCHEMA_VERSION || typeof backup.projectId !== 'string' || !backup.articleMap || backup.articleMap.schemaVersion !== 1 || !Array.isArray(backup.articleMap.articles)) return ['Unsupported schema or missing article map'];
+  if (!backup || ![1, SCHEMA_VERSION].includes(backup.schemaVersion) || typeof backup.projectId !== 'string' || !backup.articleMap || backup.articleMap.schemaVersion !== 1 || !Array.isArray(backup.articleMap.articles)) return ['Unsupported schema or missing article map'];
   const records = backup.records;
   if (records && Object.keys(records).some(k=>![...COLLECTIONS,'settings','control'].includes(k))) errors.push('Unexpected collection');
   if (!records || !backup.counts || backup.freezeUsed !== true) return ['Missing records/counts or unfrozen export'];
@@ -49,7 +50,7 @@ export function validateBackup(backup) {
   for (const b of Object.values(records.blockedUsers)) if (!exact(b,['blockedAt','blockedBy']) || !validTime(b.blockedAt) || typeof b.blockedBy !== 'string' || !idPattern.test(b.blockedBy)) errors.push('Invalid block');
   for(const a of Object.values(records.admins))if(!exact(a,['role']) || a.role!=='admin')errors.push('Invalid administrator');
   const settings=records.settings.comments;
-  if (Object.keys(records.settings).length !== 1 || !exact(settings,['enabled','moderationMode','schemaVersion']) || typeof settings.enabled !== 'boolean' || !['pre','post'].includes(settings.moderationMode) || settings.schemaVersion !== 1) errors.push('Invalid settings');
+  if (Object.keys(records.settings).length !== 1 || !validateSettings(settings) || (backup.schemaVersion === 1 && settings.schemaVersion !== 1)) errors.push('Invalid settings');
   const control=records.control.state;
   if (Object.keys(records.control).length !== 1 || !exact(control,['frozen','ownerUid']) || control.frozen !== false || control.ownerUid !== null) errors.push('Invalid restore control');
   return errors;

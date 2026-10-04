@@ -164,6 +164,10 @@ EN: `http://localhost:8133/en/article-en.html?article=how-kaolin-works-en`
 py tools/comments/serve-local.py --site-dir . --port 8133 --web-config "D:\PrivateConfig\firebase-web-config.json"
 ```
 
-Цей режим обмежений serhii-comments-test, не змінює хмарні settings/Rules і поважає enabled:false. При enabled:false форма входу/надсилання не показується. Для тестування надсилання потрібне окремо погоджене тимчасове enabled:true з moderationMode:pre; після тесту повернути enabled:false й прочитати його із сервера. Не використовуйте цей helper для production.
+Цей режим обмежений serhii-comments-test і не змінює хмарні settings/Rules. При schema2 visibility:visible/enabled:false відображаються гілки, вхід і модерація, без форми надсилання. Legacy enabled:false залишається hidden до явної міграції. Для тестування надсилання потрібне окремо погоджене тимчасове enabled:true з moderationMode:pre; після тесту повернути enabled:false й прочитати його із сервера. Не використовуйте цей helper для production.
 
 Restore CLI вимагає явний loopback FIRESTORE_EMULATOR_HOST; apply у будь-яку непорожню ціль, включно з ідентичними документами, відхиляється. Внутрішній helper може звіряти непорожню ціль; це не дозвіл CLI на повторне застосування.
+
+## Оновлення visibility / settings schema2
+
+Чинна схема, сумісність v1/v2 резервних копій, read-only/hidden, службовий вхід адміністратора й точний порядок test-project міграції описані повністю в [comments-visibility-update.md](comments-visibility-update.md). Раніші schema1 приклади в цьому документі є legacy; для нового розгортання використовуйте schema2 з enabled:false та visibility:visible.

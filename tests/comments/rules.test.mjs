@@ -53,3 +53,42 @@ test('ordinary user cannot create, update or delete admin documents',async()=>{
  await deniedExactly(updateDoc(doc(db,'admins/admin'),{role:'reader'}));await deniedExactly(deleteDoc(doc(db,'admins/admin')));
  await privileged(d=>setDoc(doc(d,'admins/reader'),{role:'reader'}));await deniedExactly(updateDoc(doc(db,'admins/reader'),{role:'admin'}));await deniedExactly(deleteDoc(doc(db,'admins/reader')));
 });
+test('visible read-only and hidden settings deny direct roots/replies but retain public API reads',async()=>{
+ await privileged(db=>setDoc(doc(db,'comments/root-visible'),base({status:'published',createdAt:Timestamp.now(),updatedAt:Timestamp.now()})));
+ for(const visibility of ['visible','hidden']){
+  await privileged(db=>setDoc(doc(db,'settings/comments'),{enabled:false,visibility,moderationMode:'pre',schemaVersion:2}));
+  await deniedExactly(pair(user(),'root-'+visibility));
+  await deniedExactly(pair(user(),'reply-'+visibility,{parentId:'root-visible',depth:1}));
+  await assertSucceeds(getDoc(doc(anon(),'comments/root-visible')));
+  await assertSucceeds(getDocs(query(collection(anon(),'comments'),where('status','==','published'),limit(20))));
+ }
+});
+test('settings require valid v2 state, forbid downgrade and do not promote existing comments',async()=>{
+ await privileged(async db=>{await setDoc(doc(db,'comments/kept-pending'),base({createdAt:Timestamp.now(),updatedAt:Timestamp.now()}));await setDoc(doc(db,'comments/kept-hidden'),base({status:'hidden',createdAt:Timestamp.now(),updatedAt:Timestamp.now()}));});
+ const db=user('admin');
+ await assertSucceeds(updateDoc(doc(db,'settings/comments'),{enabled:false,visibility:'visible',moderationMode:'pre',schemaVersion:2}));
+ await deniedExactly(updateDoc(doc(user(),'settings/comments'),{enabled:true}));
+ await deniedExactly(setDoc(doc(db,'settings/comments'),{enabled:true,visibility:'hidden',moderationMode:'pre',schemaVersion:2}));
+ await deniedExactly(setDoc(doc(db,'settings/comments'),{enabled:true,moderationMode:'pre',schemaVersion:1}));
+ for(const change of [{visibility:'hidden',enabled:false},{visibility:'visible',enabled:false},{enabled:true,moderationMode:'post'}]){
+  await assertSucceeds(updateDoc(doc(db,'settings/comments'),change));
+  assert.equal((await getDoc(doc(db,'comments/kept-pending'))).data().status,'pending');
+  assert.equal((await getDoc(doc(db,'comments/kept-hidden'))).data().status,'hidden');
+ }
+});
+test('admin moderation remains allowed while read-only or hidden',async()=>{
+ await privileged(db=>setDoc(doc(db,'comments/moderate-readonly'),base({createdAt:Timestamp.now(),updatedAt:Timestamp.now()})));
+ const db=user('admin');
+ for(const[visibility,status,action]of[['visible','published','approve'],['hidden','hidden','hide']]){
+  await privileged(d=>setDoc(doc(d,'settings/comments'),{enabled:false,visibility,moderationMode:'pre',schemaVersion:2}));
+  const b=writeBatch(db);b.update(doc(db,'comments/moderate-readonly'),{status,updatedAt:serverTimestamp()});b.set(doc(db,'moderation/moderate-readonly'),{moderatorUid:'admin',action,at:serverTimestamp()});await assertSucceeds(b.commit());
+ }
+});
+test('schema2 visible enabled permits valid paired roots and replies',async()=>{
+ await assertSucceeds(updateDoc(doc(user('admin'),'settings/comments'),{enabled:true,visibility:'visible',moderationMode:'pre',schemaVersion:2}));
+ await assertSucceeds(pair(user(),'v2-root'));
+ assert.equal((await getDoc(doc(user(),'comments/v2-root'))).data().status,'pending');
+ await privileged(db=>updateDoc(doc(db,'comments/v2-root'),{status:'published'}));
+ await assertSucceeds(pair(user('v2-replier'),'v2-reply',{authorUid:'v2-replier',parentId:'v2-root',depth:1}));
+ const reply=(await getDoc(doc(user('v2-replier'),'comments/v2-reply'))).data();assert.equal(reply.status,'pending');assert.equal(reply.parentId,'v2-root');assert.equal(reply.articleId,'a-0001');
+});

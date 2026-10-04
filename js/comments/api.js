@@ -1,4 +1,5 @@
 import * as browserSdk from './firebase-sdk.js';
+import { normalizeSettings, updatedSettings } from './settings.js';
 import { COLLECTIONS, SCHEMA_VERSION, encode, validateBackup } from './backup-format.js';
 export async function createCommentsApi(config, f = browserSdk) {
   const app=f.initializeApp(config.firebase,'article-comments');
@@ -15,7 +16,7 @@ export async function createCommentsApi(config, f = browserSdk) {
     finally{clearTimeout(timer);}
   }
   const get=path=>request(()=>f.getDoc(f.doc(db,path)));
-  const settings=async()=>{const s=await get('settings/comments');if(!s.exists())throw new Error('missing-settings');return s.data();};
+  const settings=async()=>{const s=await get('settings/comments');if(!s.exists())throw new Error('missing-settings');return normalizeSettings(s.data());};
   async function page(articleId,{cursor=null,kind='published'}={}) {
     const filters=[f.where('articleId','==',articleId)];
     if(kind==='mine')filters.push(f.where('authorUid','==',auth.currentUser.uid));
@@ -40,7 +41,8 @@ export async function createCommentsApi(config, f = browserSdk) {
     const change={status,updatedAt:f.serverTimestamp()};if(action==='delete')Object.assign(change,{text:'',authorName:''});
     const batch=f.writeBatch(db);batch.update(f.doc(db,'comments',comment.id),change);batch.set(f.doc(db,'moderation',comment.id),{moderatorUid:auth.currentUser.uid,action,at:f.serverTimestamp()});await request(()=>batch.commit());
   }
-  async function setMode(moderationMode) {const batch=f.writeBatch(db);batch.update(f.doc(db,'settings/comments'),{moderationMode});await request(()=>batch.commit());}
+  async function setSettings(changes) {return request(()=>f.runTransaction(db,async tx=>{const ref=f.doc(db,'settings/comments');const snapshot=await tx.get(ref);const next=updatedSettings(snapshot.data(),changes);tx.update(ref,next);return normalizeSettings(next);},{maxAttempts:3}));}
+  async function setMode(moderationMode) {return setSettings({moderationMode});}
   async function block(uid,blocked) {const batch=f.writeBatch(db);const ref=f.doc(db,'blockedUsers',uid);if(blocked)batch.set(ref,{blockedBy:auth.currentUser.uid,blockedAt:f.serverTimestamp()});else batch.delete(ref);await request(()=>batch.commit());}
   async function blockedPage(cursor=null) {const parts=[f.orderBy(f.documentId()),f.limit(20)];if(cursor)parts.push(f.startAfter(cursor));const result=await request(()=>f.getDocs(f.query(f.collection(db,'blockedUsers'),...parts)));return {items:result.docs.map(d=>({id:d.id,...d.data()})),cursor:result.docs.at(-1),hasMore:result.size===20};}
   async function freeze() {return request(()=>f.runTransaction(db,async tx=>{const ref=f.doc(db,'control/state');const s=await tx.get(ref);if(s.data().frozen)throw new Error('backup-already-frozen');tx.update(ref,{frozen:true,ownerUid:auth.currentUser.uid});return s.data();},{maxAttempts:3}));}
@@ -61,7 +63,8 @@ export async function createCommentsApi(config, f = browserSdk) {
       }
       records.settings={comments:encode((await get('settings/comments')).data())};counts.settings=1;
       records.control={state:original};counts.control=1;
-      const backup={schemaVersion:SCHEMA_VERSION,projectId:config.firebase.projectId,exportedAt:new Date().toISOString(),freezeUsed:true,articleMap,counts,records};
+      const exportedMap={...articleMap,articles:articleMap.articles.filter(a=>Object.hasOwn(records.articles,a.id))};
+      const backup={schemaVersion:SCHEMA_VERSION,projectId:config.firebase.projectId,exportedAt:new Date().toISOString(),freezeUsed:true,articleMap:exportedMap,counts,records};
       const errors=validateBackup(backup);if(errors.length)throw new Error(errors.join('; '));complete=true;return backup;
     }finally {
       // A failed/partial export is never offered as a valid backup.
@@ -70,5 +73,5 @@ export async function createCommentsApi(config, f = browserSdk) {
       if(!complete)console.warn('No complete backup was produced.');
     }
   }
-  return {auth,db,onAuth:callback=>f.onAuthStateChanged(auth,callback),login:()=>f.signInWithPopup(auth,new f.GoogleAuthProvider()),logout:()=>f.signOut(auth),settings,page,post,moderate,block,setMode,blockedPage,exportBackup,unfreeze,isAdmin:async()=>{if(!auth.currentUser)return false;const record=await get(`admins/${auth.currentUser.uid}`);return record.exists()&&record.data().role==='admin';},isBlocked:async()=>auth.currentUser&&(await get(`blockedUsers/${auth.currentUser.uid}`)).exists()};
+  return {auth,db,onAuth:callback=>f.onAuthStateChanged(auth,callback),login:()=>f.signInWithPopup(auth,new f.GoogleAuthProvider()),logout:()=>f.signOut(auth),settings,page,post,moderate,block,setMode,setSettings,blockedPage,exportBackup,unfreeze,isAdmin:async()=>{if(!auth.currentUser)return false;const record=await get(`admins/${auth.currentUser.uid}`);return record.exists()&&record.data().role==='admin';},isBlocked:async()=>auth.currentUser&&(await get(`blockedUsers/${auth.currentUser.uid}`)).exists()};
 }

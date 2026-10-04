@@ -42,5 +42,16 @@ test('201-comment export/restore, deletion suppression, interrupted export and o
   await assert.rejects(api.exportBackup(map),/comments-service-timeout/);assert.equal((await source.db.doc('control/state').get()).data().frozen,true);await assert.rejects(api.page('a-0001'),/comments-service-stopped/);
   await api.logout();await appSdk.deleteApp(api.auth.app);api=null;
   api=await createCommentsApi(config,f);await f.signInWithCredential(api.auth,f.GoogleAuthProvider.credential(googleToken()));await api.unfreeze();assert.equal((await source.db.doc('control/state').get()).data().frozen,false);const recovered=await api.exportBackup(map);assert.equal(recovered.counts.comments,201);assert.deepEqual(recovered.records,safe.backup.records);const posted=await api.post('a-0004','Works after interrupted export');assert.equal(posted.status,'pending');
+  const unchangedComments=(await readCurrent(source.db)).comments;
+  for(const visibility of ['visible','hidden']){
+   const setting=await api.setSettings({enabled:false,visibility,moderationMode:'pre'});assert.equal(setting.schemaVersion,2);assert.equal(setting.enabled,false);assert.equal(setting.visibility,visibility);
+   assert.deepEqual((await readCurrent(source.db)).comments,unchangedComments);
+   const snapshot=await api.exportBackup(map);assert.equal(snapshot.schemaVersion,2);assert.deepEqual(snapshot.records.settings.comments,setting);
+   const isolated=localServices('demo-visibility-'+visibility+'-'+Date.now());try{assert.equal((await isolated.db.listCollections()).length,0);await applyRestore(isolated.db,snapshot);assert.deepEqual(await readCurrent(isolated.db),snapshot.records);}finally{await isolated.db.terminate();await deleteApp(isolated.app);}
+  }
+  await api.setSettings({visibility:'visible'});assert.equal((await api.settings()).enabled,false);
+  const subset=await api.exportBackup({...map,articles:[...map.articles,{id:'a-0005',slug:'not-in-test-database',aliases:[]}]});assert.deepEqual(subset.articleMap,map);assert.deepEqual(validateBackup(subset),[]);
+
+
  }finally{if(api){await api.logout();await f.terminate(api.db);}await env.cleanup();await source.db.terminate();await target.db.terminate();await deleteApp(source.app);await deleteApp(target.app);}
 });
