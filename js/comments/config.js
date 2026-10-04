@@ -1,16 +1,12 @@
-// PUBLIC web config only. Production is deliberately disabled until approval.
+// Public Firebase Web App configuration; server settings control posting.
 export const commentsConfig = {
-  enabled: false,
-  firebase: null,
+  enabled: true,
+  firebase: {
+    apiKey: 'AIzaSyDb1AIFEt_am-p1XDndEz-z293W4hu5Blw',
+    appId: '1:586066277369:web:475035b8910a70b9e0c328',
+    projectId: 'serhii-comments-test',
+    authDomain: 'serhii-comments-test.firebaseapp.com'
+  },
   pageSize: 20,
   emulators: null
 };
-// Explicit local demo opt-in; a public URL cannot switch production to a demo.
-if (['localhost', '127.0.0.1'].includes(location.hostname) &&
-    new URL(location.href).searchParams.get('commentsEmulator') === '1') {
-  Object.assign(commentsConfig, {
-    enabled: true,
-    firebase: { apiKey: 'demo-key', projectId: 'demo-serhii-comments', authDomain: 'demo-serhii-comments.firebaseapp.com' },
-    emulators: { auth: 'http://127.0.0.1:9099', firestoreHost: '127.0.0.1', firestorePort: 8080 }
-  });
-}

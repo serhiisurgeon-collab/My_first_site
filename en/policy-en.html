@@ -465,6 +465,24 @@
         </div>
       </details>
 
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">11</span>
+          <span class="privacy-item__question">Article comments</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Comments use Google Sign-In, Firebase Authentication and Cloud Firestore. Published comments can be read without signing in. Posting requires a Google account. New comments and replies become public after moderator approval.</p>
+          <p>Firebase Authentication processes your UID, name, email and Google account information. The site owner has administrative access to this information. Comment documents contain the UID, display name, text, timestamps, article, reply relationship and status. Email, tokens and profile pictures are not added to comment documents.</p>
+          <p>Published records, including UIDs, names and text, are publicly accessible, including through the API. Hiding the discussion interface does not restrict this access. Pending and hidden records are accessible only to their author and administrators. Do not post patient data or sensitive operational information.</p>
+          <p>Operational records retain administrator, blocking, latest moderation action and submission-time information. Deleting comment text removes the text and display name but retains the UID, timestamps and reply relationships. It does not delete the Firebase Authentication account or operational records.</p>
+          <p>Firestore is located in Warsaw, europe-central2. Google/Firebase also processes technical request data, including IP address and browser information, under its own policies. The Firebase SDK retains a local sign-in session in your browser. The comments module adds no advertising or analytics trackers.</p>
+          <p>The owner creates manual private Firestore backups outside the public repository and website directory. Backups may contain unpublished comments and operational data. Deleted text may remain in older copies; an up-to-date private deletion register is applied before restoration to prevent it from returning to the database. Storage location, encryption, backup frequency and retention periods have not yet been defined. Requests concerning access, erasure or anonymization: hello@serhiipelishenko.com.</p>
+        </div>
+      </details>
+
+
+
     </div>
   </div>
 </section>

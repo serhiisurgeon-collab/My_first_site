@@ -1,0 +1,13 @@
+exclude:
+  - docs
+  - tests
+  - tools
+  - node_modules
+  - backups
+  - .private
+  - package.json
+  - package-lock.json
+  - firebase.json
+  - firebase/firestore.rules
+  - firebase/firestore.indexes.json
+  - README.md
