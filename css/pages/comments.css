@@ -1,0 +1,24 @@
+.comments-widget { text-align:left; min-width:0; }
+.comments-widget p { margin:0 0 12px; }
+.comments-status { color:var(--color-text-secondary); min-height:1.6em; }
+.comments-widget button,.comments-widget textarea,.comments-widget select { font:inherit; }
+.comments-widget button { border:1px solid var(--color-accent); border-radius:8px; background:var(--color-light-surface); color:var(--color-text-primary); padding:10px 14px; cursor:pointer; }
+.comments-widget button:disabled { opacity:.55; cursor:wait; }
+.comments-widget :is(button,textarea,select,a):focus-visible { outline:3px solid var(--color-accent); outline-offset:3px; }
+.comments-auth,.comment-actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:12px 0; }
+.comments-auth p { margin:0; }
+.comments-form { display:grid; gap:12px; margin:24px 0; }
+.comments-form label,.comments-admin label { font-weight:600; }
+.comments-form textarea { box-sizing:border-box; width:100%; min-height:130px; resize:vertical; padding:12px; border:1px solid var(--color-accent); border-radius:8px; background:var(--color-light-base); color:var(--color-text-primary); }
+.comments-form p,.comment-state { color:var(--color-text-secondary); font-size:14px; }
+.comments-form button[type=submit] { justify-self:start; }
+.comment { margin:18px 0; padding:16px; border:1px solid var(--color-accent); border-radius:10px; min-width:0; }
+.comment-text { white-space:pre-wrap; overflow-wrap:anywhere; }
+.comment-meta { font-size:14px; overflow-wrap:anywhere; }
+.comment-state { margin:8px 0; }
+.comment-replies { margin-left:16px; min-width:0; }
+.comments-admin { margin-top:28px; padding-top:20px; border-top:1px solid var(--color-accent); }
+.comments-admin select { display:block; max-width:100%; margin:12px 0; }
+.comment-block { overflow-wrap:anywhere; margin:12px 0; }
+.comment-block button { margin-left:12px; }
+@media(max-width:480px) { .comment { padding:12px; } .comment-replies { margin-left:6px; } .comments-widget button { max-width:100%; overflow-wrap:anywhere; } }

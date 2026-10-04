@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {"id": "a-0001", "slug": "how-kaolin-works", "aliases": ["how-kaolin-works-en"]},
+    {"id": "a-0002", "slug": "group-medical-bag", "aliases": []},
+    {"id": "a-0003", "slug": "hospital-capabilities", "aliases": []},
+    {"id": "a-0004", "slug": "medical-app-without-internet", "aliases": []}
+  ]
+}

@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function admin() { return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)) && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'admin'; }
+    function googleUser() { return signedIn() && request.auth.token.firebase.sign_in_provider == 'google.com'; }
+    function frozen() { return get(/databases/$(database)/documents/control/state).data.frozen; }
+    function enabled() { return get(/databases/$(database)/documents/settings/comments).data.enabled && !frozen(); }
+    function blocked() { return exists(/databases/$(database)/documents/blockedUsers/$(request.auth.uid)); }
+    function bounded(n) { return request.query.limit != null && request.query.limit <= n; }
+    function exportOwner() { return admin() && frozen() && get(/databases/$(database)/documents/control/state).data.ownerUid == request.auth.uid; }
+    function visible(c) { return c.status in ['published', 'deleted']; }
+    function owner(c) { return signedIn() && c.authorUid == request.auth.uid; }
+    function commentFields(c) {
+      return c.keys().hasAll(['articleId','authorUid','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
+        c.keys().hasOnly(['articleId','authorUid','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
+        c.articleId is string && exists(/databases/$(database)/documents/articles/$(c.articleId)) &&
+        c.authorUid is string && c.authorUid.size() > 0 && c.authorUid.size() <= 128 &&
+        c.authorName is string && c.authorName.size() <= 120 &&
+        c.text is string && c.text.size() <= 3000 &&
+        (c.parentId == null || (c.parentId is string && c.parentId.size() > 0 && c.parentId.size() <= 128)) &&
+        c.depth is int && c.depth >= 0 && c.depth <= 3 &&
+        c.status in ['pending','published','hidden','deleted'] &&
+        c.createdAt is timestamp && c.updatedAt is timestamp;
+    }
+    function validParent(c) {
+      return (c.parentId == null && c.depth == 0) ||
+        (c.parentId != null && exists(/databases/$(database)/documents/comments/$(c.parentId)) &&
+        get(/databases/$(database)/documents/comments/$(c.parentId)).data.articleId == c.articleId &&
+        get(/databases/$(database)/documents/comments/$(c.parentId)).data.status == 'published' &&
+        c.depth == get(/databases/$(database)/documents/comments/$(c.parentId)).data.depth + 1);
+    }
+    function allowedRate() {
+      return !exists(/databases/$(database)/documents/rateLimits/$(request.auth.uid)) ||
+        request.time >= get(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.lastSubmittedAt + duration.value(60, 's');
+    }
+    match /comments/{id} {
+      allow get: if visible(resource.data) || owner(resource.data) || admin();
+      allow list: if ((admin() && bounded(100)) || exportOwner()) ||
+        (bounded(20) && (visible(resource.data) || owner(resource.data)));
+      allow create: if googleUser() && enabled() && !blocked() && commentFields(request.resource.data) &&
+        request.resource.data.authorUid == request.auth.uid &&
+        request.resource.data.authorName == ('name' in request.auth.token ? request.auth.token.name : 'Google user') &&
+        request.resource.data.text.size() > 0 && request.resource.data.authorName.size() > 0 &&
+        request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time &&
+        request.resource.data.status == (get(/databases/$(database)/documents/settings/comments).data.moderationMode == 'pre' ? 'pending' : 'published') &&
+        validParent(request.resource.data) && allowedRate() &&
+        getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.commentId == id &&
+        getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.lastSubmittedAt == request.time;
+      allow update: if admin() && !frozen() && commentFields(request.resource.data) &&
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['articleId','authorUid','parentId','depth','createdAt']) &&
+        request.resource.data.updatedAt == request.time &&
+        getAfter(/databases/$(database)/documents/moderation/$(id)).data.at == request.time &&
+        getAfter(/databases/$(database)/documents/moderation/$(id)).data.moderatorUid == request.auth.uid &&
+        ((((request.resource.data.status == 'published' && getAfter(/databases/$(database)/documents/moderation/$(id)).data.action == 'approve') || (request.resource.data.status == 'hidden' && getAfter(/databases/$(database)/documents/moderation/$(id)).data.action == 'hide')) && request.resource.data.text == resource.data.text && request.resource.data.authorName == resource.data.authorName && request.resource.data.text.size() > 0 && request.resource.data.authorName.size() > 0 && resource.data.status != 'deleted') ||
+        (getAfter(/databases/$(database)/documents/moderation/$(id)).data.action == 'delete' && request.resource.data.text == '' && request.resource.data.authorName == '' &&
+        request.resource.data.status == (resource.data.status in ['published','deleted'] ? 'deleted' : 'hidden')));
+      allow delete: if false;
+    }
+    match /rateLimits/{uid} {
+      allow get: if signedIn() && (request.auth.uid == uid || admin());
+      allow list: if admin() && (bounded(100) || exportOwner());
+      allow create, update: if googleUser() && request.auth.uid == uid && enabled() && !blocked() && allowedRate() &&
+        request.resource.data.keys().hasAll(['lastSubmittedAt','commentId']) && request.resource.data.keys().hasOnly(['lastSubmittedAt','commentId']) &&
+        request.resource.data.lastSubmittedAt == request.time && request.resource.data.commentId is string && request.resource.data.commentId.size() <= 128 &&
+        !exists(/databases/$(database)/documents/comments/$(request.resource.data.commentId)) &&
+        getAfter(/databases/$(database)/documents/comments/$(request.resource.data.commentId)).data.authorUid == uid &&
+        getAfter(/databases/$(database)/documents/comments/$(request.resource.data.commentId)).data.createdAt == request.time;
+      allow delete: if false;
+    }
+    match /moderation/{id} {
+      allow get: if admin();
+      allow list: if admin() && (bounded(100) || exportOwner());
+      allow create, update: if admin() && !frozen() && request.resource.data.keys().hasAll(['moderatorUid','action','at']) &&
+        request.resource.data.keys().hasOnly(['moderatorUid','action','at']) && request.resource.data.moderatorUid == request.auth.uid &&
+        request.resource.data.action in ['approve','hide','delete'] && request.resource.data.at == request.time &&
+        getAfter(/databases/$(database)/documents/comments/$(id)).data.updatedAt == request.time;
+      allow delete: if false;
+    }
+    match /blockedUsers/{uid} {
+      allow get: if admin() || (signedIn() && request.auth.uid == uid);
+      allow list: if admin() && (bounded(100) || exportOwner());
+      allow create, update: if admin() && !frozen() && request.resource.data.keys().hasAll(['blockedAt','blockedBy']) &&
+        request.resource.data.keys().hasOnly(['blockedAt','blockedBy']) && request.resource.data.blockedAt == request.time && request.resource.data.blockedBy == request.auth.uid;
+      allow delete: if admin() && !frozen();
+    }
+    match /admins/{uid} {
+      allow get: if signedIn() && (uid == request.auth.uid || admin());
+      allow list: if admin() && (bounded(100) || exportOwner());
+      allow write: if false;
+    }
+    match /articles/{id} {
+      allow get: if true;
+      allow list: if bounded(100) || exportOwner();
+      allow write: if false;
+    }
+    match /settings/comments {
+      allow get: if true;
+      allow list: if exportOwner();
+      allow update: if admin() && !frozen() && request.resource.data.keys().hasAll(['enabled','moderationMode','schemaVersion']) &&
+        request.resource.data.keys().hasOnly(['enabled','moderationMode','schemaVersion']) && request.resource.data.enabled is bool &&
+        request.resource.data.moderationMode in ['pre','post'] && request.resource.data.schemaVersion == 1;
+      allow create, delete: if false;
+    }
+    match /control/state {
+      allow get: if admin();
+      allow list: if exportOwner();
+      allow update: if admin() && request.resource.data.keys().hasAll(['frozen','ownerUid']) &&
+        request.resource.data.keys().hasOnly(['frozen','ownerUid']) &&
+        ((!resource.data.frozen && request.resource.data.frozen == true && request.resource.data.ownerUid == request.auth.uid) ||
+         (resource.data.frozen && resource.data.ownerUid == request.auth.uid && request.resource.data.frozen == false && request.resource.data.ownerUid == null));
+      allow create, delete: if false;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

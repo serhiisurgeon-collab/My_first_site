@@ -1,0 +1,16 @@
+node_modules/
+.firebase/
+*-debug.log
+backups/
+*.service-account.json
+
+# Private operator configuration and recovery artifacts
+firebase-web-config.json
+service-account*.json
+serhii-comments-test-firestore-*.json
+serhii-comments-test-manifest-*.json
+deletion-register*.json
+.private/
+
+__pycache__/
+*.pyc

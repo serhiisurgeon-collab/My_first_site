@@ -1,0 +1,24 @@
+{
+  "name": "serhiipelishenko-site",
+  "private": true,
+  "scripts": {
+    "comments:build": "esbuild js/comments/sdk-entry.js --bundle --format=esm --minify --legal-comments=linked --outfile=js/comments/firebase-sdk.js",
+    "comments:emulators": "firebase emulators:start --project demo-serhii-comments --only auth,firestore",
+    "comments:test": "firebase emulators:exec --project demo-serhii-comments --only auth,firestore 'node --test --test-concurrency=1 tests/comments/*.test.mjs'",
+    "comments:seed": "node tools/comments/seed.mjs",
+    "comments:restore": "node tools/comments/restore.mjs"
+  },
+  "dependencies": {
+    "firebase": "12.19.0"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "5.0.2",
+    "esbuild": "0.28.2",
+    "firebase-admin": "14.5.0",
+    "firebase-tools": "15.32.1",
+    "playwright": "1.62.1"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.5"
+  }
+}

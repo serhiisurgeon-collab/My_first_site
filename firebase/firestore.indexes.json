@@ -1,0 +1,7 @@
+{
+  "indexes": [
+    {"collectionGroup": "comments", "queryScope": "COLLECTION", "fields": [{"fieldPath":"articleId","order":"ASCENDING"},{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"createdAt","order":"ASCENDING"}]},
+    {"collectionGroup": "comments", "queryScope": "COLLECTION", "fields": [{"fieldPath":"articleId","order":"ASCENDING"},{"fieldPath":"authorUid","order":"ASCENDING"},{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"createdAt","order":"ASCENDING"}]}
+  ],
+  "fieldOverrides": []
+}

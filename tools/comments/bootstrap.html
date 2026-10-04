@@ -1,0 +1,15 @@
+<!doctype html><html lang="uk"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Локальний перший вхід Firebase</title><body>
+<h1>Перший вхід до погодженого тестового Firebase</h1><p>Ця сторінка працює лише на localhost. Вона використовує Auth, не читає й не змінює Firestore.</p>
+<button id="login" disabled>Увійти через Google</button> <button id="logout" disabled>Вийти</button><pre id="result" role="status">Завантаження локальної конфігурації…</pre>
+<script type="module">
+const result=document.querySelector('#result'),login=document.querySelector('#login'),logout=document.querySelector('#logout');
+if(!['localhost','127.0.0.1'].includes(location.hostname)){result.textContent='Відмовлено: тільки локальний хост.';}else{
+ try{const response=await fetch('./firebase-web-config.json',{cache:'no-store'});if(!response.ok)throw Error('Немає firebase-web-config.json');const config=await response.json();if(!config.projectId||!config.apiKey||!config.authDomain)throw Error('Неповна web config');
+ const f=await import('./firebase-sdk.js');const auth=f.getAuth(f.initializeApp(config,'private-admin-bootstrap'));
+ if(config.authEmulatorUrl){if(!/^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(config.authEmulatorUrl))throw Error('Некоректний емулятор');f.connectAuthEmulator(auth,config.authEmulatorUrl,{disableWarnings:true});}
+ f.onAuthStateChanged(auth,user=>{login.disabled=!!user;logout.disabled=!user;result.textContent=user?'Firebase projectId: '+config.projectId+'\nFirebase Authentication UID: '+user.uid+'\nІм’я: '+(user.displayName||'')+'\nЗвірте UID з Authentication → Users у цьому самому проєкті.':'Firebase projectId: '+config.projectId+'\nВхід не виконано.';});
+ login.onclick=async()=>{login.disabled=true;try{await f.signInWithPopup(auth,new f.GoogleAuthProvider());}catch(e){result.textContent='Вхід не завершено: '+e.code;login.disabled=false;}};
+ logout.onclick=()=>f.signOut(auth);
+ }catch(e){result.textContent='Помилка локальної підготовки: '+e.message;}
+}
+</script></body></html>
