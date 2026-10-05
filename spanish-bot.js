@@ -1,0 +1,347 @@
+const PHRASE_SNAPSHOT = {
+  "schema_version": 1,
+  "cycle_start_utc": "2026-10-05T00:00:00Z",
+  "cycle_length_days": 30,
+  "phrases": [
+    {
+      "id": "phrase-01",
+      "es": "tener ganas de",
+      "uk": "мати бажання",
+      "en": "to feel like",
+      "example_es": "Tengo ganas de dar un paseo.",
+      "example_uk": "Мені хочеться прогулятися.",
+      "example_en": "I feel like going for a walk."
+    },
+    {
+      "id": "phrase-02",
+      "es": "echar de menos",
+      "uk": "сумувати за",
+      "en": "to miss",
+      "example_es": "Echo de menos a mi familia.",
+      "example_uk": "Я сумую за своєю родиною.",
+      "example_en": "I miss my family."
+    },
+    {
+      "id": "phrase-03",
+      "es": "darse cuenta de",
+      "uk": "усвідомити; помітити",
+      "en": "to realise",
+      "example_es": "Me di cuenta de que tenía la dirección equivocada.",
+      "example_uk": "Я зрозумів, що маю неправильну адресу.",
+      "example_en": "I realised I had the wrong address."
+    },
+    {
+      "id": "phrase-04",
+      "es": "valer la pena",
+      "uk": "бути вартим зусиль",
+      "en": "to be worth it",
+      "example_es": "La visita al museo vale la pena.",
+      "example_uk": "До музею варто сходити.",
+      "example_en": "The museum is worth visiting."
+    },
+    {
+      "id": "phrase-05",
+      "es": "tener en cuenta",
+      "uk": "враховувати",
+      "en": "to take into account",
+      "example_es": "Hay que tener en cuenta el tiempo de viaje.",
+      "example_uk": "Треба врахувати час на дорогу.",
+      "example_en": "We need to take the travel time into account."
+    },
+    {
+      "id": "phrase-06",
+      "es": "cambiar de opinión",
+      "uk": "передумати",
+      "en": "to change one's mind",
+      "example_es": "He cambiado de opinión: prefiero ir en tren.",
+      "example_uk": "Я передумав: краще поїду потягом.",
+      "example_en": "I've changed my mind: I'd rather go by train."
+    },
+    {
+      "id": "phrase-07",
+      "es": "ponerse de acuerdo",
+      "uk": "домовитися; дійти згоди",
+      "en": "to reach an agreement",
+      "example_es": "Nos pusimos de acuerdo para salir a las ocho.",
+      "example_uk": "Ми домовилися вирушити о восьмій.",
+      "example_en": "We agreed to leave at eight."
+    },
+    {
+      "id": "phrase-08",
+      "es": "quedarse sin",
+      "uk": "залишитися без",
+      "en": "to run out of",
+      "example_es": "Me he quedado sin batería.",
+      "example_uk": "У мене розрядився телефон.",
+      "example_en": "My phone has run out of battery."
+    },
+    {
+      "id": "phrase-09",
+      "es": "dar un paseo",
+      "uk": "прогулятися",
+      "en": "to go for a walk",
+      "example_es": "¿Damos un paseo por el parque?",
+      "example_uk": "Прогуляємося парком?",
+      "example_en": "Shall we go for a walk in the park?"
+    },
+    {
+      "id": "phrase-10",
+      "es": "hacer una pausa",
+      "uk": "зробити перерву",
+      "en": "to take a break",
+      "example_es": "Vamos a hacer una pausa antes de continuar.",
+      "example_uk": "Зробімо перерву, перш ніж продовжити.",
+      "example_en": "Let's take a break before we continue."
+    },
+    {
+      "id": "phrase-11",
+      "es": "pedir la cuenta",
+      "uk": "попросити рахунок",
+      "en": "to ask for the bill",
+      "example_es": "¿Puedes pedir la cuenta, por favor?",
+      "example_uk": "Можеш попросити рахунок, будь ласка?",
+      "example_en": "Could you ask for the bill, please?"
+    },
+    {
+      "id": "phrase-12",
+      "es": "llegar a tiempo",
+      "uk": "встигнути; прибути вчасно",
+      "en": "to arrive on time",
+      "example_es": "Salimos temprano para llegar a tiempo.",
+      "example_uk": "Ми вирушили рано, щоб прибути вчасно.",
+      "example_en": "We left early to arrive on time."
+    },
+    {
+      "id": "phrase-13",
+      "es": "tener prisa",
+      "uk": "поспішати",
+      "en": "to be in a hurry",
+      "example_es": "No tengo prisa; podemos esperar.",
+      "example_uk": "Я не поспішаю; можемо зачекати.",
+      "example_en": "I'm not in a hurry; we can wait."
+    },
+    {
+      "id": "phrase-14",
+      "es": "llevarse bien",
+      "uk": "добре ладнати",
+      "en": "to get along well",
+      "example_es": "Me llevo bien con mis compañeros de trabajo.",
+      "example_uk": "Я добре ладнаю з колегами.",
+      "example_en": "I get along well with my colleagues."
+    },
+    {
+      "id": "phrase-15",
+      "es": "pasar por",
+      "uk": "зайти; заїхати",
+      "en": "to stop by",
+      "example_es": "Voy a pasar por la farmacia antes de volver a casa.",
+      "example_uk": "Перед поверненням додому я зайду в аптеку.",
+      "example_en": "I'll stop by the pharmacy before going home."
+    },
+    {
+      "id": "phrase-16",
+      "es": "hacer falta",
+      "uk": "бути потрібним",
+      "en": "to be needed",
+      "example_es": "Hace falta reservar una mesa.",
+      "example_uk": "Потрібно забронювати столик.",
+      "example_en": "We need to book a table."
+    },
+    {
+      "id": "phrase-17",
+      "es": "prestar atención",
+      "uk": "звертати увагу",
+      "en": "to pay attention",
+      "example_es": "Presta atención a las indicaciones.",
+      "example_uk": "Звертай увагу на вказівки.",
+      "example_en": "Pay attention to the instructions."
+    },
+    {
+      "id": "phrase-18",
+      "es": "volver a intentar",
+      "uk": "спробувати ще раз",
+      "en": "to try again",
+      "example_es": "Voy a volver a intentar abrir el archivo.",
+      "example_uk": "Я спробую відкрити файл ще раз.",
+      "example_en": "I'll try opening the file again."
+    },
+    {
+      "id": "phrase-19",
+      "es": "de vez en cuando",
+      "uk": "час від часу",
+      "en": "from time to time",
+      "example_es": "De vez en cuando cenamos fuera.",
+      "example_uk": "Час від часу ми вечеряємо не вдома.",
+      "example_en": "We eat out from time to time."
+    },
+    {
+      "id": "phrase-20",
+      "es": "poco a poco",
+      "uk": "поступово; потроху",
+      "en": "little by little",
+      "example_es": "Poco a poco entiendo mejor las conversaciones.",
+      "example_uk": "Поступово я краще розумію розмови.",
+      "example_en": "Little by little, I'm getting better at understanding conversations."
+    },
+    {
+      "id": "phrase-21",
+      "es": "por si acaso",
+      "uk": "про всяк випадок",
+      "en": "just in case",
+      "example_es": "Lleva un paraguas por si acaso.",
+      "example_uk": "Візьми парасольку про всяк випадок.",
+      "example_en": "Take an umbrella just in case."
+    },
+    {
+      "id": "phrase-22",
+      "es": "al fin y al cabo",
+      "uk": "зрештою; врешті-решт",
+      "en": "after all",
+      "example_es": "Podemos cambiar el plan; al fin y al cabo, estamos de vacaciones.",
+      "example_uk": "Можемо змінити план; зрештою, ми у відпустці.",
+      "example_en": "We can change the plan; after all, we're on holiday."
+    },
+    {
+      "id": "phrase-23",
+      "es": "en cuanto",
+      "uk": "щойно; як тільки",
+      "en": "as soon as",
+      "example_es": "Te llamaré en cuanto llegue.",
+      "example_uk": "Я зателефоную тобі, щойно приїду.",
+      "example_en": "I'll call you as soon as I arrive."
+    },
+    {
+      "id": "phrase-24",
+      "es": "por lo menos",
+      "uk": "принаймні",
+      "en": "at least",
+      "example_es": "Necesitamos por lo menos dos horas.",
+      "example_uk": "Нам потрібно принаймні дві години.",
+      "example_en": "We need at least two hours."
+    },
+    {
+      "id": "phrase-25",
+      "es": "me da igual",
+      "uk": "мені байдуже",
+      "en": "I don't mind either way",
+      "example_es": "Me da igual ir hoy o mañana.",
+      "example_uk": "Мені байдуже, їхати сьогодні чи завтра.",
+      "example_en": "I don't mind whether we go today or tomorrow."
+    },
+    {
+      "id": "phrase-26",
+      "es": "no pasa nada",
+      "uk": "нічого страшного",
+      "en": "it's all right",
+      "example_es": "No pasa nada si llegas un poco tarde.",
+      "example_uk": "Нічого страшного, якщо ти трохи запізнишся.",
+      "example_en": "It's all right if you're a little late."
+    },
+    {
+      "id": "phrase-27",
+      "es": "qué te parece",
+      "uk": "що ти думаєш про",
+      "en": "what do you think of",
+      "example_es": "¿Qué te parece esta idea?",
+      "example_uk": "Що ти думаєш про цю ідею?",
+      "example_en": "What do you think of this idea?"
+    },
+    {
+      "id": "phrase-28",
+      "es": "estar a punto de",
+      "uk": "ось-ось щось зробити",
+      "en": "to be about to",
+      "example_es": "El tren está a punto de salir.",
+      "example_uk": "Потяг ось-ось вирушить.",
+      "example_en": "The train is about to leave."
+    },
+    {
+      "id": "phrase-29",
+      "es": "echar una mano",
+      "uk": "допомогти",
+      "en": "to lend a hand",
+      "example_es": "¿Me echas una mano con estas cajas?",
+      "example_uk": "Допоможеш мені з цими коробками?",
+      "example_en": "Could you give me a hand with these boxes?"
+    },
+    {
+      "id": "phrase-30",
+      "es": "salir bien",
+      "uk": "вдатися; пройти добре",
+      "en": "to go well",
+      "example_es": "Espero que la entrevista salga bien.",
+      "example_uk": "Сподіваюся, співбесіда пройде добре.",
+      "example_en": "I hope the interview goes well."
+    }
+  ]
+};
+/* Daily expression: a fixed 30-day cycle starting at cycle_start_utc.
+   JSON is the source; the generated snapshot below also supports opening HTML via file://.
+   After editing JSON, regenerate this snapshot for offline preview.
+   UTC days, never local dates. No randomness or localStorage. */
+function phraseIndex(timestamp, start, length = 30) {
+  const elapsed = Math.floor((timestamp - Date.parse(start)) / 86400000);
+  return ((elapsed % length) + length) % length;
+}
+if (typeof module !== 'undefined' && module.exports) module.exports = { phraseIndex };
+if (typeof document !== 'undefined') {
+  const scriptURL = document.currentScript.src;
+  const language = document.documentElement.lang === 'en' ? 'en' : 'uk';
+  let database = PHRASE_SNAPSHOT;
+  let timer;
+  const fields = Object.fromEntries(['es','uk','en','example-es','example-translation','date'].map(key => [key, document.getElementById(`phrase-${key}`)]));
+  function render() {
+    const now = Date.now();
+    const index = phraseIndex(now, database.cycle_start_utc, database.cycle_length_days);
+    const phrase = database.phrases[index];
+    fields.es.textContent = phrase.es;
+    fields.uk.textContent = phrase.uk;
+    fields.en.textContent = phrase.en;
+    fields['example-es'].textContent = phrase.example_es;
+    fields['example-translation'].textContent = phrase[`example_${language}`];
+    const date = new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : 'uk-UA', {day:'numeric',month:'long',timeZone:'UTC'}).format(now);
+    fields.date.textContent = `${date} · UTC+0`;
+    clearTimeout(timer);
+    // Refresh at the next UTC midnight even if the tab stays open.
+    timer = setTimeout(render, 86400000 - (now % 86400000) + 50);
+  }
+  function validate(data) {
+    if (data.cycle_length_days !== 30 || !Array.isArray(data.phrases) || data.phrases.length !== 30 || !Number.isFinite(Date.parse(data.cycle_start_utc)) || !data.cycle_start_utc.endsWith('Z')) throw Error('Invalid 30-day expression database');
+    const ids = new Set(), expressions = new Set();
+    data.phrases.forEach(p => {
+      ['id','es','uk','en','example_es','example_uk','example_en'].forEach(key => { if (typeof p[key] !== 'string' || !p[key].trim()) throw Error('Missing expression field'); });
+      if (ids.has(p.id) || expressions.has(p.es.trim().toLowerCase())) throw Error('Duplicate expression');
+      ids.add(p.id); expressions.add(p.es.trim().toLowerCase());
+    });
+    return data;
+  }
+  render();
+  if (location.protocol !== 'file:') {
+    fetch(new URL('data/phrases.json', scriptURL), { cache:'no-cache' })
+      .then(response => { if (!response.ok) throw Error('Expression database unavailable'); return response.json(); })
+      .then(validate).then(data => {database = data; render();})
+      .catch(error => console.warn('Using bundled daily expressions:', error.message));
+  }
+  document.addEventListener('visibilitychange', () => {if (!document.hidden) render();});
+  window.addEventListener('pageshow', render);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const cards = [...document.querySelectorAll('.bot-feature')];
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let observer;
+  function configureReveal() {
+    if (observer) observer.disconnect();
+    cards.forEach(card => {card.classList.remove('can-reveal','is-visible');});
+    if (motion.matches || !('IntersectionObserver' in window)) return;
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle('is-visible',entry.isIntersecting));
+    }, {threshold:0, rootMargin:'0px 0px -24px 0px'});
+    cards.forEach((card,index) => {
+      card.style.setProperty('--reveal-delay',`${index * 70}ms`);
+      card.classList.add('can-reveal'); observer.observe(card);
+    });
+  }
+  configureReveal();
+  motion.addEventListener('change',configureReveal);
+}
