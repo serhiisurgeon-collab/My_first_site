@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { Timestamp } from 'firebase-admin/firestore';
+import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 import { localServices } from './local.mjs';
 export async function seed(db,auth) {
   const map=JSON.parse(await readFile(new URL('../../firebase/article-map.json',import.meta.url),'utf8'));
@@ -12,6 +12,7 @@ export async function seed(db,auth) {
   for(const[id,parentId,depth]of[['demo-depth-2','demo-reply',2],['demo-depth-3','demo-depth-2',3]])batch.set(db.doc('comments/'+id),{articleId:'a-0001',authorUid:'demo-reader',authorName:'Demo reader',text:'Deep reply and long text: '+ 'long-word-'.repeat(30),parentId,depth,status:'published',createdAt:Timestamp.fromMillis(start+30000+depth*1000),updatedAt:Timestamp.fromMillis(start+30000+depth*1000)});
   batch.set(db.doc('comments/demo-pending'),{articleId:'a-0001',authorUid:'demo-reader',authorName:'Demo reader',text:'Private pending demonstration.',parentId:null,depth:0,status:'pending',createdAt:Timestamp.fromMillis(start+40000),updatedAt:Timestamp.fromMillis(start+40000)});
   await batch.commit();
+  const owners=db.batch();for(const d of (await db.collection('comments').get()).docs){const c=d.data();owners.set(db.doc('commentOwners/'+d.id),{authorUid:c.authorUid,articleId:c.articleId,createdAt:c.createdAt,confirmation:null});owners.update(d.ref,{schemaVersion:3,authorUid:FieldValue.delete()});}await owners.commit();
   for(const[uid,email,name]of[['demo-admin','admin@example.test','Demo admin'],['demo-reader','reader@example.test','Demo reader']]){
     try{await auth.getUser(uid);}catch{await auth.createUser({uid,email,displayName:name,emailVerified:true});}
     await auth.updateUser(uid,{providersToLink:[{providerId:'google.com',uid:uid+'-google',email,displayName:name}]});

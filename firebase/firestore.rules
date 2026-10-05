@@ -21,12 +21,20 @@ service cloud.firestore {
     function bounded(n) { return request.query.limit != null && request.query.limit <= n; }
     function exportOwner() { return admin() && frozen() && get(/databases/$(database)/documents/control/state).data.ownerUid == request.auth.uid; }
     function visible(c) { return c.status in ['published', 'deleted']; }
-    function owner(c) { return signedIn() && c.authorUid == request.auth.uid; }
+    function owner(id) { return signedIn() && exists(/databases/$(database)/documents/commentOwners/$(id)) && get(/databases/$(database)/documents/commentOwners/$(id)).data.authorUid == request.auth.uid; }
+    function privatePair(id,c) {
+      let o = getAfter(/databases/$(database)/documents/commentOwners/$(id)).data;
+      return o.authorUid == request.auth.uid && o.articleId == c.articleId && o.createdAt == request.time;
+    }
+    function publicComment(c) {
+      return c.keys().hasAll(['schemaVersion','articleId','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
+        c.keys().hasOnly(['schemaVersion','articleId','authorName','text','parentId','depth','status','createdAt','updatedAt']) && c.schemaVersion == 3;
+    }
     function commentFields(c) {
-      return c.keys().hasAll(['articleId','authorUid','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
-        c.keys().hasOnly(['articleId','authorUid','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
+      return c.keys().hasAll(['schemaVersion','articleId','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
+        c.keys().hasOnly(['schemaVersion','articleId','authorName','text','parentId','depth','status','createdAt','updatedAt']) &&
         c.articleId is string && exists(/databases/$(database)/documents/articles/$(c.articleId)) &&
-        c.authorUid is string && c.authorUid.size() > 0 && c.authorUid.size() <= 128 &&
+        c.schemaVersion == 3 &&
         c.authorName is string && c.authorName.size() <= 120 &&
         c.text is string && c.text.size() <= 3000 &&
         (c.parentId == null || (c.parentId is string && c.parentId.size() > 0 && c.parentId.size() <= 128)) &&
@@ -46,11 +54,11 @@ service cloud.firestore {
         request.time >= get(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.lastSubmittedAt + duration.value(60, 's');
     }
     match /comments/{id} {
-      allow get: if visible(resource.data) || owner(resource.data) || admin();
+      allow get: if (publicComment(resource.data) && (visible(resource.data) || owner(id))) || admin();
       allow list: if ((admin() && bounded(100)) || exportOwner()) ||
-        (bounded(20) && (visible(resource.data) || owner(resource.data)));
+        (bounded(20) && resource.data.schemaVersion == 3 && resource.data.keys().hasOnly(['schemaVersion','articleId','authorName','text','parentId','depth','status','createdAt','updatedAt']) && visible(resource.data));
       allow create: if googleUser() && enabled() && !blocked() && commentFields(request.resource.data) &&
-        request.resource.data.authorUid == request.auth.uid &&
+        id.matches('^[A-Za-z0-9]{20}$') && !id.matches('.*' + request.auth.uid + '.*') && privatePair(id,request.resource.data) &&
         request.resource.data.authorName == ('name' in request.auth.token ? request.auth.token.name : 'Google user') &&
         request.resource.data.text.size() > 0 && request.resource.data.authorName.size() > 0 &&
         request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time &&
@@ -59,7 +67,7 @@ service cloud.firestore {
         getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.commentId == id &&
         getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.lastSubmittedAt == request.time;
       allow update: if admin() && !frozen() && commentFields(request.resource.data) &&
-        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['articleId','authorUid','parentId','depth','createdAt']) &&
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['schemaVersion','articleId','parentId','depth','createdAt']) &&
         request.resource.data.updatedAt == request.time &&
         getAfter(/databases/$(database)/documents/moderation/$(id)).data.at == request.time &&
         getAfter(/databases/$(database)/documents/moderation/$(id)).data.moderatorUid == request.auth.uid &&
@@ -68,6 +76,27 @@ service cloud.firestore {
         request.resource.data.status == (resource.data.status in ['published','deleted'] ? 'deleted' : 'hidden')));
       allow delete: if false;
     }
+    match /commentOwners/{id} {
+      allow get: if admin() || (signedIn() && resource.data.authorUid == request.auth.uid);
+      allow list: if (admin() && (bounded(100) || exportOwner())) || (signedIn() && bounded(20) && resource.data.authorUid == request.auth.uid);
+      allow create: if googleUser() && enabled() && !blocked() &&
+        id.matches('^[A-Za-z0-9]{20}$') && !id.matches('.*' + request.auth.uid + '.*') &&
+        request.resource.data.keys().hasAll(['authorUid','articleId','createdAt','confirmation']) &&
+        request.resource.data.keys().hasOnly(['authorUid','articleId','createdAt','confirmation']) &&
+        request.resource.data.authorUid == request.auth.uid && request.resource.data.createdAt == request.time &&
+        request.resource.data.confirmation.keys().hasAll(['accepted','version','confirmedAt']) &&
+        request.resource.data.confirmation.keys().hasOnly(['accepted','version','confirmedAt']) &&
+        request.resource.data.confirmation.accepted == true &&
+        request.resource.data.confirmation.version == (get(/databases/$(database)/documents/settings/comments).data.moderationMode == 'pre' ? 'comments-publication-2026-10-v1' : 'comments-publication-post-2026-10-v1') &&
+        request.resource.data.confirmation.confirmedAt == request.time &&
+        !exists(/databases/$(database)/documents/comments/$(id)) &&
+        getAfter(/databases/$(database)/documents/comments/$(id)).data.schemaVersion == 3 &&
+        getAfter(/databases/$(database)/documents/comments/$(id)).data.articleId == request.resource.data.articleId &&
+        getAfter(/databases/$(database)/documents/comments/$(id)).data.createdAt == request.time &&
+        getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.commentId == id &&
+        getAfter(/databases/$(database)/documents/rateLimits/$(request.auth.uid)).data.lastSubmittedAt == request.time;
+      allow update, delete: if false;
+    }
     match /rateLimits/{uid} {
       allow get: if signedIn() && (request.auth.uid == uid || admin());
       allow list: if admin() && (bounded(100) || exportOwner());
@@ -75,7 +104,7 @@ service cloud.firestore {
         request.resource.data.keys().hasAll(['lastSubmittedAt','commentId']) && request.resource.data.keys().hasOnly(['lastSubmittedAt','commentId']) &&
         request.resource.data.lastSubmittedAt == request.time && request.resource.data.commentId is string && request.resource.data.commentId.size() <= 128 &&
         !exists(/databases/$(database)/documents/comments/$(request.resource.data.commentId)) &&
-        getAfter(/databases/$(database)/documents/comments/$(request.resource.data.commentId)).data.authorUid == uid &&
+        getAfter(/databases/$(database)/documents/commentOwners/$(request.resource.data.commentId)).data.authorUid == uid &&
         getAfter(/databases/$(database)/documents/comments/$(request.resource.data.commentId)).data.createdAt == request.time;
       allow delete: if false;
     }
@@ -101,12 +130,12 @@ service cloud.firestore {
       allow write: if false;
     }
     match /articles/{id} {
-      allow get: if true;
-      allow list: if bounded(100) || exportOwner();
+      allow get: if resource.data.keys().hasAll(['slug','aliases']) && resource.data.keys().hasOnly(['slug','aliases']);
+      allow list: if exportOwner() || (bounded(100) && resource.data.keys().hasOnly(['slug','aliases']));
       allow write: if false;
     }
     match /settings/comments {
-      allow get: if true;
+      allow get: if validSettings(resource.data);
       allow list: if exportOwner();
       allow update: if admin() && !frozen() && validSettings(request.resource.data) &&
         (request.resource.data.schemaVersion == 2 || resource.data.schemaVersion == 1);

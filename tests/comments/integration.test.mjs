@@ -5,6 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {initializeTestEnvironment} from '@firebase/rules-unit-testing';
 import {Timestamp} from 'firebase-admin/firestore';
 import {deleteApp} from 'firebase-admin/app';
+import {PUBLICATION_NOTICE_VERSION} from '../../js/comments/publication.js';
 import {createCommentsApi} from '../../js/comments/api.js';
 import * as appSdk from 'firebase/app';
 import * as authSdk from 'firebase/auth';
@@ -14,15 +15,15 @@ import {localServices} from '../../tools/comments/local.mjs';
 import {seed} from '../../tools/comments/seed.mjs';
 import {applyRestore,previewRestore,readCurrent} from '../../tools/comments/restore.mjs';
 import {buildDeletionRegister,sanitizeRestoreBackup} from '../../js/comments/restore-safety.js';
-import {validateBackup} from '../../js/comments/backup-format.js';
+import {validateBackup,upgradePrivateBackup} from '../../js/comments/backup-format.js';
 function googleToken(){const b=v=>Buffer.from(JSON.stringify(v)).toString('base64url');return b({alg:'none',typ:'JWT'})+'.'+b({iss:'https://accounts.google.com',aud:'demo-key',sub:'demo-admin-google',email:'admin@example.test',email_verified:true,name:'Demo admin',iat:Math.floor(Date.now()/1000),exp:Math.floor(Date.now()/1000)+3600})+'.';}
 test('201-comment export/restore, deletion suppression, interrupted export and owner recovery',async()=>{
  const projectId='demo-serhii-comments';const env=await initializeTestEnvironment({projectId,firestore:{host:'127.0.0.1',port:8080,rules:await readFile('firebase/firestore.rules','utf8')}});
  const source=localServices(projectId),target=localServices('demo-serhii-comments-restored');let api;
  try{
   await env.clearFirestore();const map=await seed(source.db,source.auth);
-  const bulk=source.db.batch();for(let i=0;i<174;i++)bulk.set(source.db.doc('comments/bulk-'+String(i).padStart(3,'0')),{articleId:'a-0004',authorUid:'demo-reader',authorName:'Demo reader',text:'Bulk '+i,parentId:null,depth:0,status:i%3===0?'pending':'published',createdAt:new Timestamp(1700000000+i,123456000),updatedAt:new Timestamp(1700000000+i,123456000)});await bulk.commit();
-  await source.db.doc('comments/demo-00').update({createdAt:new Timestamp(1700000000,123456789)});
+  const bulk=source.db.batch();for(let i=0;i<174;i++)bulk.set(source.db.doc('comments/bulk-'+String(i).padStart(3,'0')),{schemaVersion:3,articleId:'a-0004',authorName:'Demo reader',text:'Bulk '+i,parentId:null,depth:0,status:i%3===0?'pending':'published',createdAt:new Timestamp(1700000000+i,123456000),updatedAt:new Timestamp(1700000000+i,123456000)});await bulk.commit();const owners=source.db.batch();for(let i=0;i<174;i++){const key='bulk-'+String(i).padStart(3,'0');owners.set(source.db.doc('commentOwners/'+key),{articleId:'a-0004',authorUid:'demo-reader',createdAt:new Timestamp(1700000000+i,123456000),confirmation:null});}await owners.commit();
+  await source.db.doc('comments/demo-00').update({createdAt:new Timestamp(1700000000,123456789)});await source.db.doc('commentOwners/demo-00').update({createdAt:new Timestamp(1700000000,123456789)});
   await source.db.doc('blockedUsers/blocked-demo').set({blockedAt:Timestamp.now(),blockedBy:'demo-admin'});
   const pageSizes=[];const measuredSdk={...f,getDocs:async q=>{const r=await f.getDocs(q);if(r.docs[0]?.ref.parent.id==='comments')pageSizes.push(r.size);return r;}};
   api=await createCommentsApi({firebase:{apiKey:'demo-key',projectId,authDomain:projectId+'.firebaseapp.com'},emulators:{auth:'http://127.0.0.1:9099',firestoreHost:'127.0.0.1',firestorePort:8080}},measuredSdk);
@@ -41,12 +42,12 @@ test('201-comment export/restore, deletion suppression, interrupted export and o
   const config={firebase:{apiKey:'demo-key',projectId,authDomain:projectId+'.firebaseapp.com'},emulators:{auth:'http://127.0.0.1:9099',firestoreHost:'127.0.0.1',firestorePort:8080}};api=await createCommentsApi(config,brokenSdk);await f.signInWithCredential(api.auth,f.GoogleAuthProvider.credential(googleToken()));
   await assert.rejects(api.exportBackup(map),/comments-service-timeout/);assert.equal((await source.db.doc('control/state').get()).data().frozen,true);await assert.rejects(api.page('a-0001'),/comments-service-stopped/);
   await api.logout();await appSdk.deleteApp(api.auth.app);api=null;
-  api=await createCommentsApi(config,f);await f.signInWithCredential(api.auth,f.GoogleAuthProvider.credential(googleToken()));await api.unfreeze();assert.equal((await source.db.doc('control/state').get()).data().frozen,false);const recovered=await api.exportBackup(map);assert.equal(recovered.counts.comments,201);assert.deepEqual(recovered.records,safe.backup.records);const posted=await api.post('a-0004','Works after interrupted export');assert.equal(posted.status,'pending');
+  api=await createCommentsApi(config,f);await f.signInWithCredential(api.auth,f.GoogleAuthProvider.credential(googleToken()));await api.unfreeze();assert.equal((await source.db.doc('control/state').get()).data().frozen,false);const recovered=await api.exportBackup(map);assert.equal(recovered.counts.comments,201);assert.deepEqual(recovered.records,safe.backup.records);const posted=await api.post('a-0004','Works after interrupted export',null,{accepted:true,version:PUBLICATION_NOTICE_VERSION});assert.equal(posted.status,'pending');
   const unchangedComments=(await readCurrent(source.db)).comments;
   for(const visibility of ['visible','hidden']){
    const setting=await api.setSettings({enabled:false,visibility,moderationMode:'pre'});assert.equal(setting.schemaVersion,2);assert.equal(setting.enabled,false);assert.equal(setting.visibility,visibility);
    assert.deepEqual((await readCurrent(source.db)).comments,unchangedComments);
-   const snapshot=await api.exportBackup(map);assert.equal(snapshot.schemaVersion,2);assert.deepEqual(snapshot.records.settings.comments,setting);
+   const snapshot=await api.exportBackup(map);assert.equal(snapshot.schemaVersion,3);assert.deepEqual(snapshot.records.settings.comments,setting);
    const isolated=localServices('demo-visibility-'+visibility+'-'+Date.now());try{assert.equal((await isolated.db.listCollections()).length,0);await applyRestore(isolated.db,snapshot);assert.deepEqual(await readCurrent(isolated.db),snapshot.records);}finally{await isolated.db.terminate();await deleteApp(isolated.app);}
   }
   await api.setSettings({visibility:'visible'});assert.equal((await api.settings()).enabled,false);

@@ -2514,3 +2514,7 @@ body.hero-loaded .hero-reveal--6 {
 body.hero-loaded .hero-reveal--7 {
   transition-delay: 1.14s;
 }
+
+.privacy-update-notice{padding:20px 0;border-block:1px solid var(--color-border);background:var(--color-light-base);color:var(--color-text-primary)}
+.privacy-update-notice p{margin:0;overflow-wrap:anywhere}
+.privacy-update-notice a{text-decoration:underline;text-underline-offset:3px}

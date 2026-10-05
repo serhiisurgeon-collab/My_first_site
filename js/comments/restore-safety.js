@@ -1,4 +1,4 @@
-import {validateBackup} from './backup-format.js';
+import {validateBackup,upgradePrivateBackup} from './backup-format.js?v=20261005-privacy';
 const clone=v=>JSON.parse(JSON.stringify(v));
 export function validateDeletionRegister(register,sourceProjectId) {
  if(!register||register.schemaVersion!==1||register.sourceProjectId!==sourceProjectId||!Number.isFinite(Date.parse(register.verifiedThrough))||!register.comments||typeof register.comments!=='object'||Array.isArray(register.comments))throw Error('Missing or invalid authoritative deletion register');
@@ -14,8 +14,8 @@ export function buildDeletionRegister(currentBackup,previous=null) {
  const register={schemaVersion:1,sourceProjectId:currentBackup.projectId,verifiedThrough:currentBackup.exportedAt,comments:clone(previous?.comments||{})};
  for(const[id,c]of Object.entries(currentBackup.records.comments))if(c.status==='deleted'||(c.status==='hidden'&&c.text===''&&c.authorName==='')){
   const m=currentBackup.records.moderation[id];if(!m||m.action!=='delete')throw Error('Missing deletion provenance '+id);
-  const known=register.comments[id];if(known&&(known.articleId!==c.articleId||known.authorUid!==c.authorUid))throw Error('Deletion identity changed '+id);if(known&&(known.at.seconds>m.at.seconds||(known.at.seconds===m.at.seconds&&known.at.nanoseconds>m.at.nanoseconds)))continue;
-  register.comments[id]={articleId:c.articleId,authorUid:c.authorUid,status:c.status,at:clone(m.at),moderatorUid:m.moderatorUid};
+  const known=register.comments[id];if(known&&(known.articleId!==c.articleId||known.authorUid!==(currentBackup.schemaVersion===3?currentBackup.records.commentOwners[id]?.authorUid:c.authorUid)))throw Error('Deletion identity changed '+id);if(known&&(known.at.seconds>m.at.seconds||(known.at.seconds===m.at.seconds&&known.at.nanoseconds>m.at.nanoseconds)))continue;
+  register.comments[id]={articleId:c.articleId,authorUid:currentBackup.schemaVersion===3?currentBackup.records.commentOwners[id]?.authorUid:c.authorUid,status:c.status,at:clone(m.at),moderatorUid:m.moderatorUid};
  }
  return validateDeletionRegister(register,currentBackup.projectId);
 }
@@ -25,10 +25,10 @@ export function sanitizeRestoreBackup(backup,register) {
  const result=clone(backup),suppressed=[];
  for(const[id,r]of Object.entries(register.comments)){
   const c=result.records.comments[id];if(!c)continue;
-  if(c.articleId!==r.articleId||c.authorUid!==r.authorUid)throw Error('Deletion identity mismatch '+id);
+  if(c.articleId!==r.articleId||(backup.schemaVersion===3?backup.records.commentOwners[id]?.authorUid:c.authorUid)!==r.authorUid)throw Error('Deletion identity mismatch '+id);
   Object.assign(c,{text:'',authorName:'',status:r.status,updatedAt:clone(r.at)});
   result.records.moderation[id]={action:'delete',moderatorUid:r.moderatorUid,at:clone(r.at)};suppressed.push(id);
  }
  result.counts.moderation=Object.keys(result.records.moderation).length;
- const finalErrors=validateBackup(result);if(finalErrors.length)throw Error(finalErrors.join('; '));return {backup:result,suppressed};
+ const finalErrors=validateBackup(result);if(finalErrors.length)throw Error(finalErrors.join('; '));return {backup:upgradePrivateBackup(result),suppressed};
 }

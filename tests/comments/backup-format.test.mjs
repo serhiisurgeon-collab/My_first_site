@@ -18,3 +18,13 @@ test('v1 backups remain valid; v2 read-only and hidden settings restore exactly'
  assert.ok(validateBackup(b).length);
  b.schemaVersion=2;b.records.settings.comments.enabled=true;b.records.settings.comments.visibility='hidden';assert.ok(validateBackup(b).length);
 });
+
+test('legacy conversion preserves content, timestamps and identifiers; no retroactive confirmation or public UID',async()=>{
+ const {upgradePrivateBackup}=await import('../../js/comments/backup-format.js');const b=backup(),source=structuredClone(b),v3=upgradePrivateBackup(b);assert.deepEqual(b,source);assert.equal(v3.schemaVersion,3);assert.deepEqual(validateBackup(v3),[]);
+ for(const [id,c] of Object.entries(b.records.comments)){assert.equal(v3.records.commentOwners[id].authorUid,c.authorUid);assert.equal(v3.records.commentOwners[id].confirmation,null);const old={...c};delete old.authorUid;assert.deepEqual(v3.records.comments[id],{...old,schemaVersion:3});}
+ const exposed=structuredClone(v3);exposed.records.comments.parent.authorUid='user';assert.ok(validateBackup(exposed).length);
+ const missing=structuredClone(v3);delete missing.records.commentOwners.parent;missing.counts.commentOwners--;assert.ok(validateBackup(missing).length);
+ const mismatched=structuredClone(v3);mismatched.records.commentOwners.parent.articleId='other';assert.ok(validateBackup(mismatched).length);
+ const forged=structuredClone(v3);forged.records.commentOwners.parent.confirmation={accepted:true,version:'unknown',confirmedAt:time};assert.ok(validateBackup(forged).length);
+ const exposedId=backup();exposedId.records.comments.user=exposedId.records.comments.parent;delete exposedId.records.comments.parent;exposedId.records.comments.reply.parentId='user';assert.throws(()=>upgradePrivateBackup(exposedId),/Public data contains Auth UID/);
+});

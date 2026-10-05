@@ -70,3 +70,7 @@
 @media(prefers-reduced-motion:reduce) {
  .comments-widget button,.comments-widget button:not(:disabled):hover { transition:none; transform:none; }
 }
+.comments-form .comments-confirmation { display:flex; align-items:flex-start; gap:10px; font-weight:400; line-height:1.5; }
+.comments-confirmation input { flex:0 0 20px; width:20px; height:20px; margin:3px 0 0; accent-color:#143528; }
+
+.comments-confirmation input:focus-visible{outline:3px solid #527860;outline-offset:3px}
