@@ -1,0 +1,586 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/home.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/pages/contact.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html"  rel="noopener noreferrer">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html" rel="noopener noreferrer">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" rel="noopener noreferrer">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html" rel="noopener noreferrer">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html" aria-current="page" rel="noopener noreferrer">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./contact.html"
+    lang="uk"
+    aria-current="page"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/contact-en.html"
+    lang="en"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html" rel="noopener noreferrer">Головна</a>
+    <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+    <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+    <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+    <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+
+  </div>
+</div>
+
+<main class="contact-page">
+
+  <!-- ==================================================
+       HERO
+  =================================================== -->
+
+  <section class="contact-hero">
+
+    <div class="contact-container">
+
+      <div class="contact-hero__grid">
+
+        <!-- LEFT -->
+
+        <div class="contact-hero__content">
+
+          <p class="contact-eyebrow">
+            КОНТАКТИ
+          </p>
+
+          <h1 class="contact-hero__title">
+            Обговорімо<br>
+            спільну роботу.
+          </h1>
+
+          <p class="contact-hero__description">
+            Від навчальних програм і медичної освіти
+            до цифрових інструментів та професійних
+            колаборацій.
+          </p>
+
+          <div class="contact-hero__actions">
+
+            <a
+              href="mailto:hello@serhiipelishenko.com"
+              class="contact-btn contact-btn--primary"
+            >
+              <i class="fa-regular fa-envelope"></i>
+
+              <span>Написати на email</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/"
+              rel="noopener noreferrer"
+              class="contact-btn contact-btn--secondary"
+             target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+
+              <span>LinkedIn</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="contact-hero__aside">
+
+          <div class="contact-coordinates">
+            <span class="contact-coordinates__symbol">
+              ✦
+            </span>
+
+            <p>
+              50.449673° N<br>
+              30.525135° E
+            </p>
+          </div>
+
+
+          <div class="contact-available reveal">
+
+            <p class="contact-available__title">
+              Доступний для:
+            </p>
+
+            <ul>
+              <li>освітніх проєктів</li>
+              <li>професійних консультацій</li>
+              <li>міжнародних колаборацій</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       MAIN CONTACTS
+  =================================================== -->
+
+  <section class="contact-main">
+
+    <div class="contact-container">
+
+      <div class="contact-main__grid">
+
+
+        <!-- EMAIL -->
+
+        <article class="contact-card reveal">
+
+          <div class="contact-card__label">
+
+            <span class="contact-card__icon">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+
+            <span>Email</span>
+
+          </div>
+
+          <h2 class="contact-card__value">
+            hello@serhiipelishenko.com
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <a
+            href="mailto:hello@serhiipelishenko.com"
+            class="contact-card__action"
+          >
+            <span>Написати</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </article>
+
+
+        <!-- FACEBOOK -->
+
+        <article class="contact-card reveal reveal-delay-1">
+
+          <div class="contact-card__label">
+
+            <span class="contact-card__icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+
+            <span>Facebook</span>
+
+          </div>
+
+          <h2 class="contact-card__value">
+            Serhii Pelishenko
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <a
+            href="https://www.facebook.com/pelishenko.sergey"
+            rel="noopener noreferrer"
+            class="contact-card__action"
+           target="_blank">
+            <span>Перейти до профілю</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </article>
+
+
+        <!-- RESPONSE -->
+
+        <article class="contact-card contact-card--info reveal reveal-delay-2">
+
+          <p class="contact-card__overline">
+            Відповідаю зазвичай
+          </p>
+
+          <h2 class="contact-card__response">
+            протягом 24 годин
+          </h2>
+
+          <span class="contact-card__line"></span>
+
+          <p class="contact-card__text">
+            Прагну підтримувати відкриту комунікацію
+            та швидко відповідати на запити.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <!-- ==================================================
+           SOCIAL LINKS
+      =================================================== -->
+
+      <div class="contact-socials reveal reveal-delay-3">
+
+        <a
+          href="https://t.me/Arlecchino_Noctis"
+          class="contact-social"
+          rel="noopener noreferrer"
+         target="_blank">
+          <span>
+            <i class="fa-brands fa-telegram"></i>
+            Telegram
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/_aid.es_/"
+          class="contact-social"
+          rel="noopener noreferrer"
+         target="_blank">
+          <span>
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+        <a
+          href="#"
+          class="contact-social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+
+      </div>
+
+
+      <!-- ==================================================
+           TOPICS
+      =================================================== -->
+
+      <div class="contact-topics reveal reveal-delay-4">
+
+        <p class="contact-topics__title">
+          З чим можна звертатися?
+        </p>
+
+        <div class="contact-topics__grid">
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Навчання TCCC / CLS"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>
+              Навчання<br>
+              TCCC / CLS
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Медична освіта"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>
+              Медична<br>
+              освіта
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Спільні матеріали"
+            class="contact-topic"
+          >
+            <i class="fa-regular fa-file-lines"></i>
+
+            <span>
+              Спільні<br>
+              матеріали
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Digital health"
+            class="contact-topic"
+          >
+            <i class="fa-solid fa-desktop"></i>
+
+            <span>
+              Digital<br>
+              health
+            </span>
+          </a>
+
+
+          <a
+            href="mailto:hello@serhiipelishenko.com?subject=Професійна консультація"
+            class="contact-topic"
+          >
+            <i class="fa-regular fa-user"></i>
+
+            <span>
+              Професійна<br>
+              консультація
+            </span>
+          </a>
+
+        </div>
+
+        <p class="contact-topics__hint">
+          Оберіть тему — і у вашому листі вже буде готова
+          тема повідомлення.
+        </p>
+
+      </div>
+
+
+      <!-- ==================================================
+           FINAL CTA
+      =================================================== -->
+
+      <div class="contact-cta">
+
+        <div class="contact-cta__content">
+
+          <span class="contact-cta__icon">
+            <i class="fa-regular fa-comment-dots"></i>
+          </span>
+
+          <div>
+
+            <h2>
+              Є ідея або пропозиція?
+            </h2>
+
+            <p>
+              Напишіть кілька речень — я чесно скажу,
+              чи можу бути корисним у вашому проєкті.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="mailto:hello@serhiipelishenko.com?subject=Пропозиція співпраці"
+          class="contact-btn contact-btn--primary"
+        >
+          <span>Написати повідомлення</span>
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+        </section> <!-- /.contact-main -->
+
+</main>
+
+    <footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html" rel="noopener noreferrer">Головна</a>
+        <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+        <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+        <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+        <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html" rel="noopener noreferrer" target="_blank">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="./js/main.js?v=20261003-nav"></script>
+</body>
+</html>

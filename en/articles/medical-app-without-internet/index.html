@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="en" data-static-article="true" data-article-slug="medical-app-without-internet" data-article-id="a-0004"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/articles.css?v=4163405615a36bec">
+  <link rel="stylesheet" href="/css/pages/article.css?v=0d993e24626792fe">
+  <link rel="stylesheet" href="/css/pages/about.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/css/pages/comments.css?v=20261005-privacy">
+<title>A Medical App Without Internet: What Needs to Be Considered — Serhii Pelishenko</title>
+<meta name="description" content="What to check in a medical app for use without connectivity: available functions, reference content currency, updates and protection of locally stored data.">
+<link rel="canonical" href="https://serhiipelishenko.com/en/articles/medical-app-without-internet/">
+<link rel="alternate" hreflang="uk" href="https://serhiipelishenko.com/articles/medical-app-without-internet/">
+<link rel="alternate" hreflang="en" href="https://serhiipelishenko.com/en/articles/medical-app-without-internet/">
+<meta property="og:title" content="A Medical App Without Internet: What Needs to Be Considered — Serhii Pelishenko">
+<meta property="og:description" content="What to check in a medical app for use without connectivity: available functions, reference content currency, updates and protection of locally stored data.">
+<meta property="og:url" content="https://serhiipelishenko.com/en/articles/medical-app-without-internet/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<script type="application/ld+json" data-article-schema="">{"@context":"https://schema.org","@type":"Article","headline":"A Medical App Without Internet: What Needs to Be Considered","description":"What to check in a medical app for use without connectivity: available functions, reference content currency, updates and protection of locally stored data.","inLanguage":"en","author":{"@type":"Person","name":"Serhii Pelishenko","url":"https://serhiipelishenko.com/en/about-en.html"},"mainEntityOfPage":"https://serhiipelishenko.com/en/articles/medical-app-without-internet/","datePublished":"2026-10-03","dateModified":"2026-10-03"}</script></head>
+
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="/en/index-en.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="/en/index-en.html" rel="noopener noreferrer">
+        Home
+      </a>
+
+      <a class="site-nav__link" href="/en/about-en.html" rel="noopener noreferrer">
+        About me
+      </a>
+
+      <a class="site-nav__link" href="/en/projects-en.html" rel="noopener noreferrer">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="/en/articles-en.html" aria-current="page" rel="noopener noreferrer">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="/en/contact-en.html" rel="noopener noreferrer">
+        Contact
+      </a>
+    </div>
+<button class="site-search-trigger" type="button" aria-label="Search the site" title="Search">
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div class="site-nav__language-switcher" aria-label="Language switcher">
+  <a class="site-nav__language-option" href="/articles/medical-app-without-internet/" lang="uk" rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span class="site-nav__language-divider" aria-hidden="true">
+    /
+  </span>
+
+  <a class="site-nav__language-option is-active" href="/en/articles/medical-app-without-internet/" lang="en" aria-current="page" rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">
+      Menu
+    </button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-navigation" aria-hidden="true">
+  <div class="mobile-nav__inner">
+
+    <a href="/en/index-en.html" rel="noopener noreferrer">Home</a>
+    <a href="/en/about-en.html" rel="noopener noreferrer">About me</a>
+    <a href="/en/projects-en.html" rel="noopener noreferrer">Projects</a>
+    <a href="/en/articles-en.html" rel="noopener noreferrer">Articles</a>
+    <a href="/en/contact-en.html" rel="noopener noreferrer">Contact</a>
+
+  </div>
+</div>
+
+<header>
+ <div class="article-page">
+
+
+    <!-- =================================================
+         ARTICLE HEADER
+    ================================================== -->
+
+    <section class="article-header">
+
+      <div class="article-header__inner">
+
+
+        <a class="article-back" href="/en/articles-en.html" rel="noopener noreferrer">
+          ← All articles
+        </a>
+
+
+        <div class="article-header__meta"><span class="article-header__category">Technology</span><time datetime="2026-10-03">3 October 2026</time><span>14 min read</span></div>
+
+
+        <p class="article-header__updated" hidden=""></p>
+
+        <h1 class="article-header__title">A Medical App Without Internet: What Needs to Be Considered</h1>
+
+
+        <p class="article-header__lead">What to check in a medical app for use without connectivity: available functions, reference content currency, updates and protection of locally stored data.</p>
+
+
+        <div class="article-header__author"><a href="/en/about-en.html">Serhii Pelishenko</a></div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OPTIONAL COVER
+    ================================================== -->
+
+    <!--
+    <figure class="article-cover">
+
+      <img
+        src="./assets/images/articles/how-kaolin-works/cover.webp"
+        alt="Kaolin and the mechanism of haemostasis"
+      >
+
+    </figure>
+    -->
+
+
+
+    <!-- =================================================
+         ARTICLE LAYOUT
+         LEFT TOC + ARTICLE BODY
+    ================================================== -->
+
+    <div class="article-layout">
+
+
+      <!-- ===============================================
+           STICKY TABLE OF CONTENTS
+      ================================================ -->
+
+      <aside class="article-toc" aria-label="Article navigation">
+
+        <nav class="article-toc__nav"><span class="article-toc__label">In this article</span><a class="article-toc__link" href="#offline-is-a-property-of-a-particular-function">Offline is a property of a particular function</a><a class="article-toc__link" href="#preparation-starts-before-connectivity-is-lost">Preparation starts before connectivity is lost</a><a class="article-toc__link" href="#available-information-and-current-information">Available information and current information</a><a class="article-toc__link" href="#an-update-should-leave-a-clear-working-state">An update should leave a clear working state</a><a class="article-toc__link article-toc__link--sub" href="#integrity-provenance-and-compatibility">Integrity, provenance and compatibility</a><a class="article-toc__link article-toc__link--sub" href="#when-an-older-version-has-a-known-critical-error">When an older version has a known critical error</a><a class="article-toc__link" href="#local-data-needs-its-own-plan">Local data needs its own plan</a><a class="article-toc__link" href="#connectivity-returning-is-a-separate-stage">Connectivity returning is a separate stage</a><a class="article-toc__link" href="#test-a-completed-action-not-just-an-open-screen">Test a completed action, not just an open screen</a><a class="article-toc__link" href="#what-should-you-ask-about-works-offline">What should you ask about “works offline”?</a><a class="article-toc__link" href="#sources">Sources</a></nav>
+
+      </aside>
+
+
+
+      <!-- ===============================================
+           ARTICLE CONTENT
+      ================================================ -->
+
+      <article class="article-body" id="articleContent">
+
+<p>“Works without internet” is a useful description of a medical app. But what does it actually mean? Being able to open the home screen, read a previously downloaded reference, perform a calculation, or save a record that remains available after restarting the phone?</p>
+<p>These capabilities are related, but they are different. Users need to know which parts of their work they can complete without connectivity, what they must prepare beforehand and which limitations will appear. Developers need to define how the tool behaves in each of these situations.</p>
+<p>I am a Ukrainian military physician, working in medical planning and TCCC/CLS education, and developing S-Dose. This combination of medicine and development explains my interest in the subject. In this article, S-Dose provides context rather than an example of a verified implementation: its specific offline functions, update mechanisms, data protection and test results are not assessed here.</p>
+<p>The central question goes beyond having a local reference: <strong>can someone complete the necessary task without a network connection, while understanding the state of the information and the outcome of their actions?</strong></p>
+<h2 id="offline-is-a-property-of-a-particular-function" class="article-section-heading">Offline is a property of a particular function</h2>
+<p>Android Developers describes an offline-first approach as the ability to perform all, or a critical subset, of an app's core functionality without internet access. This requires a local data source; reading and writing capabilities are considered separately [1]. An “offline” label should therefore be explained in terms of specific actions.</p>
+<p>Launching means the app opens. Reference access means the required materials are on the device. Search requires a way to find information within those materials. A calculation depends on where it runs and where its necessary rules and values come from. Saving a record requires reliable local storage. Synchronisation, where provided, exchanges changes with another system once connectivity returns.</p>
+<p>Not every app needs all these capabilities. A simple reference may have no account, patient record system or synchronisation. A calculator may perform calculations on the device while downloading reference data separately. A tool for shared records has different dependencies and more complex requirements.</p>
+<p><strong>Hypothetical example.</strong> A user has downloaded the text of a recommendation, but the app's search function calls a server. Without connectivity, the text can be reached through the menu but not found through the search box. This reflects a difference between two functions that should be explained beforehand.</p>
+<p>Information stored on a device can also take different forms. Materials may be included with the installed app, downloaded as a separate package, or retained temporarily after viewing. That temporary copy is called a cache. Android explicitly warns that cache files may be deleted when storage space is low [2]. Viewing a page online therefore does not establish that it will remain reliably available later.</p>
+<p>For a medical tool, it is useful to show which materials have been saved for offline access and which still need downloading. An empty search result should explain the situation: the information is absent from the downloaded collection, search is unavailable, or the material does not exist in the reference at all. These are different causes requiring different actions.</p>
+<h2 id="preparation-starts-before-connectivity-is-lost" class="article-section-heading">Preparation starts before connectivity is lost</h2>
+<p>Offline operation should be tested from the state in which the tool will actually be used. Installation may require connectivity; the first launch may require additional materials; access to particular sections may require authentication. Even after signing in, a session — the period of confirmed access — may expire.</p>
+<p>Users need a clear explanation of what is installed immediately, what is downloaded separately, whether the first launch must occur online and how to check that preparation is complete. If a reference remains available without authentication but personal records require a confirmed sign-in, that distinction should also be visible.</p>
+<p><strong>Hypothetical example.</strong> Before work, someone opens the required section while connected. Later, they restart the phone and the app requests another sign-in. The first check demonstrated access to an already open screen, but did not test launching in a new session. That is why it helps to close and reopen the app without connectivity, then repeat the check after restarting the device.</p>
+<p>The developer faces a trade-off: access restrictions protect sensitive information but may impede use without connectivity. The decision should reflect the function's purpose and the nature of the data. A public reference and access to patient records do not necessarily need the same sign-in conditions.</p>
+<p>Weak connectivity also matters. An app may wait a long time for a server response despite having the necessary local copy. To the user, this looks like unavailability. Prepared offline access should remain understandable when a network icon is visible but the server does not respond.</p>
+<h2 id="available-information-and-current-information" class="article-section-heading">Available information and current information</h2>
+<p>A local copy provides availability. Whether it is up to date is another question. If a device cannot contact the update source, it cannot confirm that nothing has changed since its last check.</p>
+<p>For a reference or protocol, I suggest distinguishing four labels:</p>
+<ul>
+<li><strong>App version</strong> — which software is installed.</li>
+<li><strong>Data or protocol version</strong> — which edition of the materials the function uses.</li>
+<li><strong>Source date</strong> — when the underlying document was issued or updated.</li>
+<li><strong>Last successful update check</strong> — when the app was able to check for a newer edition.</li>
+</ul>
+<p>An installation or download date does not replace the source date. An unsuccessful connection attempt should not appear to be a successful freshness check. If individual materials are updated independently, one date for the entire reference may not be sufficiently informative.</p>
+<p>A clear status might read: “A saved edition is available. Updates cannot be checked right now because there is no connection.” The source, content version and date of the last successful update check should be shown alongside it. This is an author-proposed example of a message, rather than a description of an S-Dose screen.</p>
+<p>Currency cannot be determined solely by a file's age. A recommendation may remain applicable for a long time, while an error in a new edition may require rapid correction. A universal rule such as “everything remains valid for six months” conceals differences between sources, their changes and the information's intended use.</p>
+<p>For medical material, provenance and context also matter: which audience and circumstances the source addresses, and which adaptations have been made. A correct date does not, by itself, establish that a recommendation applies to a particular situation.</p>
+<h2 id="an-update-should-leave-a-clear-working-state" class="article-section-heading">An update should leave a clear working state</h2>
+<p>Updating an app and updating its reference are different actions. In one tool, materials change only when a new app version is installed. In another, they are downloaded separately. The first approach simplifies release coordination but ties content changes to software updates; the second allows independent content changes but requires compatibility checks.</p>
+<p>For a separate package, the sequence needs planning: download it to a temporary location, verify it, and only then activate it. If connectivity disappears halfway through, the partially downloaded package should not silently replace the working copy.</p>
+<p>This is the idea of an <strong>atomic change</strong>: a related update is applied completely or not applied. SQLite describes mechanisms for atomic transaction completion and recovery after interruption [3]. A transaction is a group of changes that a database treats as a single unit. However, using a database does not automatically organise the entire update process: separate files, search data and calculation logic also need to remain consistent.</p>
+<h3 class="seo-heading-sub article-section-heading" id="integrity-provenance-and-compatibility">Integrity, provenance and compatibility</h3>
+<p>Integrity means that a file was received completely and matches its expected contents. A cryptographic hash — a calculated “fingerprint” of the file — can help check this. However, a hash obtained with the file from an unverified source does not establish who published it.</p>
+<p>Provenance requires a trusted basis for verification. For example, a digital signature allows a package to be checked against a key the app already trusts. The Update Framework describes signed metadata, hashes and versions used to protect updates [4]. This provides a technical basis for the explanation, rather than a requirement for every medical tool to implement that particular framework.</p>
+<p>Compatibility answers a third question: does the installed software interpret the new data correctly? <strong>Hypothetical example:</strong> a package uses a new unit of measurement that an older calculator's logic interprets differently. The file may be complete and authentic but unsuitable for that version of the calculation. Signature verification therefore does not replace checks of format, units, dependencies and processing rules.</p>
+<p>Recovery also needs planning: which copy remains after an unsuccessful update, whether downloading can be retried, and how users learn that changes were not applied. During a calculation already in progress, it is preferable to retain a defined rule version or explicitly offer recalculation after the rules change.</p>
+<h3 class="seo-heading-sub article-section-heading" id="when-an-older-version-has-a-known-critical-error">When an older version has a known critical error</h3>
+<p>A previously verified copy can help when a new download fails technically. But if that copy has a known critical error, automatically returning to it requires a different decision.</p>
+<p>I suggest considering this at the level of the affected function. An error that could change a calculation result may require a clear warning, a restriction or disabling that calculation until corrected. The message should explain what is affected and what action is needed. The consequences of the error determine the response; a generic “outdated version” banner may not convey the problem.</p>
+<p>There is also a fundamental limit: a disconnected device will not receive notification of an error discovered after connectivity was lost. Available ways to inform users, and the tool's behaviour after receiving that notification, should therefore be planned beforehand. Arbitrarily blocking all older materials by calendar date does not resolve this problem.</p>
+<h2 id="local-data-needs-its-own-plan" class="article-section-heading">Local data needs its own plan</h2>
+<p>A public reference and personal records create different requirements. For a reference, availability, provenance and consistency matter. Records add questions about access, confidentiality, recovery and deletion.</p>
+<p>Offline operation does not, by itself, guarantee confidentiality. OWASP MASVS-STORAGE addresses protection of sensitive stored data and prevention of leaks, including through logs and backups [5]. For a particular tool, the starting point is understanding which data is stored and who can obtain it.</p>
+<p>Reliable records also depend on when a “saved” message appears. Entering text on a screen does not mean it has been written to storage. If saving fails, for example because storage is full, users should see the error and be able to save their input after it is resolved. Changes to the storage structure also need testing: do existing records remain accessible after an app version change?</p>
+<p>Data minimisation is a useful first step: does the stated function need a name, full identifiers or other personal details? If the task can be completed without them, collecting them adds responsibility without an obvious benefit.</p>
+<p>Next come access protection for the device and app, encryption where needed, and protection of the keys that make encrypted data readable. Encryption does not protect information from someone using an already open screen of records. Ease of access and protection need to be considered together.</p>
+<p>Backups reduce the risk of loss but create another copy of the information. Android's backup guidance explains how protection depends on platform versions and configuration, and the risks of exporting to directories accessible to other apps [6]. Users need to know what is copied, where it goes, who has access and whether restoration has been tested.</p>
+<p>Keeping records only on a phone leaves a risk of device loss or damage. If remote locking or deletion requires connectivity, it may not happen immediately. Deleting a record on the device also does not automatically delete copies from backups or a server. These rules should be explained according to the tool's actual features.</p>
+<h2 id="connectivity-returning-is-a-separate-stage" class="article-section-heading">Connectivity returning is a separate stage</h2>
+<p>For a simple local reference, reconnecting may mean only checking for updates. It does not need personal record synchronisation if it has no such records.</p>
+<p>For a tool that exchanges records, distinguish “saved on this device” from “transferred and acknowledged by the other system.” This helps users understand whether their work remains only local.</p>
+<p><strong>Hypothetical example.</strong> Two users change the same record while disconnected. After reconnection, automatically accepting the latest change may hide the other user's correction. In another situation, the server accepts a record but its acknowledgement never reaches the phone. Resending can create a duplicate unless the system recognises the same action.</p>
+<p>I suggest providing recognition of repeated submissions, a history of important changes and explicit conflict handling where conflicts are possible. The reconciliation rule depends on the type of record: adding a separate event and editing an existing value do not necessarily need the same treatment. An automatic decision is appropriate only when its consequences for the data are understood.</p>
+<h2 id="test-a-completed-action-not-just-an-open-screen" class="article-section-heading">Test a completed action, not just an open screen</h2>
+<p>A practical check begins with the required function: finding a reference, performing a calculation or saving a record. Define the conditions and expected outcome before testing. Then check whether the result remains available after closing and reopening the app.</p>
+<p>Basic scenarios include launching without a network, restarting the app and phone, missing local material, an interrupted update and reconnection. Where the corresponding features exist, add session expiry, repeated submission, conflicting records and backup restoration. Developers can also test low storage, rejection of corrupted or incompatible packages, and notification of a known error.</p>
+<p>These checks should use test data. Connectivity loss or interrupted updates should not be deliberately introduced while providing care or on the only copy of important records.</p>
+<p>A successful technical test establishes behaviour only under the tested conditions. <strong>Clinical correctness of the reference and calculations requires a separate check</strong>: agreement with the source, units, input assumptions, limits and expected results. A calculator can operate perfectly without connectivity while applying an incorrect rule.</p>
+<h2 id="what-should-you-ask-about-works-offline" class="article-section-heading">What should you ask about “works offline”?</h2>
+<p>Choose the questions relevant to your tool and check the functions you need, or ask the developer to clarify how they work.</p>
+<ol>
+<li>Which actions are available without connectivity: reading, search, calculations and saving?</li>
+<li>What must be installed, opened, downloaded or authenticated beforehand?</li>
+<li>Do the required functions work after restarting the app and device? What happens when a session expires?</li>
+<li>How can users see which materials are stored locally and which are missing?</li>
+<li>Where are the app version, data edition, source date and last successful update check shown?</li>
+<li>What remains available after an interrupted or failed update? How can you tell whether it has completed?</li>
+<li>How are users informed of a known critical error, and what happens to the affected function afterwards?</li>
+<li>If there are personal records, what is stored and how is it protected, backed up, restored and deleted?</li>
+<li>If synchronisation exists, how is completed transfer shown and how are duplicates and conflicts handled?</li>
+<li>Which offline scenarios have been tested, on which versions and devices, and how was the medical content checked separately?</li>
+</ol>
+<p>Thoughtful offline operation makes a tool's dependencies understandable. Users know what is available, what to prepare, which edition they are using and whether a result has been saved. Developers have defined behaviour for failure and recovery.</p>
+<blockquote>
+<p><strong>A useful offline function lets users complete the required action and understand its result, even when checking for updates or transferring data is currently impossible.</strong></p>
+</blockquote>
+<p>That specificity helps people choose medical tools for unreliable connectivity and discuss their capabilities without excessive promises.</p>
+<h2 id="sources" class="article-section-heading">Sources</h2>
+<ol>
+<li>Google, Android Developers. <a href="https://developer.android.com/topic/architecture/data-layer/offline-first"><strong>Build an offline-first app</strong></a>. Page updated <strong>13 May 2026</strong>. The description of local and network sources and separate read and write strategies was checked. Scope: Android app architecture.</li>
+<li>Google, Android Developers. <a href="https://developer.android.com/training/data-storage/app-specific"><strong>Access app-specific files</strong></a>. Page updated <strong>1 October 2026</strong>. File storage and cache sections checked, including possible cache removal when storage is low. Scope: Android; other platforms' behaviour should be checked against their documentation.</li>
+<li>SQLite. <a href="https://www.sqlite.org/atomiccommit.html"><strong>Atomic Commit In SQLite</strong></a>. Current online documentation, covering atomic commit, recovery and limitations. Used to explain a technical principle, rather than demonstrate a particular app's reliability.</li>
+<li>The Update Framework. <a href="https://theupdateframework.github.io/specification/latest/"><strong>The Update Framework Specification</strong></a>. Current online specification, with sections on signed metadata, hashes and the update verification process. Scope: technical protection of update delivery, rather than verification of medical content.</li>
+<li>OWASP Mobile Application Security. <a href="https://mas.owasp.org/MASVS/05-MASVS-STORAGE/"><strong>MASVS-STORAGE: Storage</strong></a>. Current online edition; MASVS-STORAGE-1, MASVS-STORAGE-2 and the description of local storage risks checked. Scope: mobile application security.</li>
+<li>Google, Android Developers. <a href="https://developer.android.com/privacy-and-security/risks/backup-best-practices"><strong>Security recommendations for backups</strong></a>. Page updated <strong>25 October 2024</strong>. The overview of backup, protection settings and export risks was checked. Scope: Android.</li>
+</ol>
+<p>Links and the cited sections were checked on 3 October 2026. This article discusses technical and organisational decisions; it does not establish S-Dose's regulatory status or conformity with any standards.</p>
+<p class="article-revision-date">Revision date: <time datetime="2026-10-03">03.10.2026</time></p></article>
+
+    </div>
+
+
+
+    <!-- =================================================
+         DISCUSSION
+    ================================================== -->
+
+    <section class="article-discussion">
+
+      <div class="article-discussion__inner">
+
+
+        <div class="article-discussion__header">
+
+          <h2>
+            Discussion
+          </h2>
+
+          <p>
+            Questions, corrections, and professional discussion
+            are welcome.
+          </p>
+
+        </div>
+
+
+        <div class="article-comments" id="comments">
+
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ARTICLE NAVIGATION
+    ================================================== -->
+
+<aside class="article-related"><h2>Related articles</h2><ul><li><a href="/en/articles/hospital-capabilities/">The hospital is nearby. But can it provide the care needed?</a></li></ul></aside><nav class="article-pagination">
+
+  <a class="article-pagination__item article-pagination__item--previous" id="previousArticle" href="/en/articles/npa-effectiveness/">
+    <span class="article-pagination__label">
+      ← Previous article
+    </span>
+
+    <span class="article-pagination__title" id="previousArticleTitle">Nasopharyngeal Airway: How Can We Tell Whether It Is Helping?</span>
+  </a>
+
+
+  <a class="article-pagination__item article-pagination__item--next" id="nextArticle" href="/en/articles/hospital-capabilities/">
+    <span class="article-pagination__label">
+      Next article →
+    </span>
+
+    <span class="article-pagination__title" id="nextArticleTitle">The hospital is nearby. But can it provide the care needed?</span>
+  </a>
+
+</nav>
+
+
+  </div>
+</header>
+
+<main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="/en/index-en.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — in one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="/en/index-en.html" rel="noopener noreferrer">Home</a>
+        <a href="/en/about-en.html" rel="noopener noreferrer">About me</a>
+        <a href="/en/projects-en.html" rel="noopener noreferrer">Projects</a>
+        <a href="/en/articles-en.html" rel="noopener noreferrer">Articles</a>
+        <a href="/en/contact-en.html" rel="noopener noreferrer">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&amp;utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contacts</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="/en/policy-en.html" rel="noopener noreferrer" target="_blank">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+</main>
+
+
+<script type="module" src="/js/main.js?v=d1a46f6a39e75bac"></script>
+
+
+
+<script>
+  document.documentElement.classList.add("js");
+</script>
+<script type="module" src="/js/comments/index.js?v=31429ee4b115d238"></script>
+
+
+<script type="module" src="/js/article-static.js?v=a278d4eda50678bb"></script></body></html>

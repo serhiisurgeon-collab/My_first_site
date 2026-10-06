@@ -1,0 +1,417 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/policy.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html"  rel="noopener noreferrer">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html" rel="noopener noreferrer">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" rel="noopener noreferrer">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html" rel="noopener noreferrer">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html" rel="noopener noreferrer">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./policy.html"
+    lang="uk"
+    aria-current="page"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/policy-en.html"
+    lang="en"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html" rel="noopener noreferrer">Головна</a>
+    <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+    <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+    <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+    <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+
+  </div>
+</div>
+
+<header>
+<section class="privacy-policy" id="privacy-policy">
+  <div class="container">
+
+    <header class="privacy-policy__header">
+      <p class="privacy-policy__eyebrow">
+        Юридична інформація
+      </p>
+
+      <h1 class="privacy-policy__title">
+        Політика конфіденційності
+      </h1>
+
+      <p class="privacy-policy__intro">
+        Ця Політика конфіденційності пояснює, які дані можуть
+        оброблятися під час використання вебсайту
+        <strong>serhiipelishenko.com</strong>, для чого вони потрібні
+        та які права має користувач.
+      </p>
+      <p class="privacy-policy__updated">Чинна з <time datetime="2026-10-05">05.10.2026</time></p>
+    </header>
+
+    <div class="privacy-policy__accordion">
+
+      <details class="privacy-item" open>
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">01</span>
+          <span class="privacy-item__question">Хто є власником сайту?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Ця політика стосується нинішнього сайту: статей, опису діяльності й проєктів, контактів та коментарів через Google-вхід. Вона не описує майбутню навчальну платформу.</p>
+          <p>Власником <strong>serhiipelishenko.com</strong> є <strong>Сергій Пелішенко / Serhii Pelishenko</strong>. Він визначає цілі й спосіб обробки даних, потрібних для роботи сайту та коментарів, і є їхнім володільцем.</p>
+<p>З питань приватності, доступу, виправлення або видалення даних звертайтеся на <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">02</span>
+          <span class="privacy-item__question">Які дані обробляються та звідки вони надходять?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<ul><li><strong>Під час відвідування.</strong> Хостинг і постачальники зовнішніх ресурсів отримують технічні дані запитів: IP-адресу, відомості браузера й пристрою, запитаний ресурс і час. GitHub Pages реєструє IP-адреси відвідувачів для безпеки.</li><li><strong>Під час входу через Google.</strong> Firebase Authentication обробляє UID, ім’я, email і відомості провайдера входу. Власник має адміністративний доступ до цих облікових записів. Сайт не отримує пароль Google.</li><li><strong>У коментарях.</strong> Firestore зберігає ім’я, текст, дати, статтю, зв’язок відповіді, глибину та статус. У публічному документі немає Auth UID, email, токенів чи аватара. Зв’язок із UID зберігається окремо, приватно: його може читати лише відповідний автор та адміністратор.</li><li><strong>Підтвердження публікації.</strong> Для нових повідомлень приватно зберігаються версія повідомлення перед надсиланням і серверний час явного підтвердження. Для старих коментарів таке підтвердження не створюється заднім числом.</li><li><strong>Для адміністрування.</strong> Окремі приватні записи містять дані модерації, блокування, обмеження частоти, адміністративних прав і резервування. Автор має доступ лише до своїх передбачених правилами записів; адміністратор — до службових даних.</li><li><strong>У листуванні.</strong> Обробляються адреса відправника, зазначене ім’я, текст, вкладення та інші надіслані вами відомості.</li></ul><p>Дані надходять від вас, від Google, з браузерних запитів та під час роботи й модерації обговорення.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">03</span>
+          <span class="privacy-item__question">Для чого потрібні дані та які підстави обробки?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Для різних цілей використовуються окремі правові підстави:</p>
+<ul>
+<li><strong>Авторизація.</strong> Законний інтерес у наданні запитаного користувачем доступу до коментарів і розпізнаванні автора; лише необхідні для цього дані.</li>
+<li><strong>Публікація коментарів.</strong> Поінформована добровільна згода на поширення персональних даних у повідомленні. Це окрема мета від входу. Окреме підтвердження стосується публікації імені та повідомлення; Auth UID залишається приватним.</li>
+<li><strong>Модерація.</strong> Законний інтерес у розгляді повідомлень і підтриманні доречного професійного обговорення.</li>
+<li><strong>Захист від зловживань.</strong> Законний інтерес у захисті сайту, користувачів і адміністративного доступу, зокрема через обмеження частоти та блокування.</li>
+<li><strong>Листування.</strong> Законний інтерес у відповіді на звичайне звернення. Для виконання передбачених законом вимог щодо персональних даних — відповідний юридичний обов’язок.</li>
+<li><strong>Резервування.</strong> Законний інтерес у відновленні даних і роботи обговорення з обмеженим строком та доступом до копій. Для обов’язкових за законом записів про обробку — відповідний юридичний обов’язок.</li>
+</ul>
+<p>Законний інтерес застосовний лише за необхідності й пропорційності обробки та якщо права і свободи людини не переважають його. Він не замінює підставу для публічного поширення даних за українським законом.</p>
+<p>Відвідування сайту чи вхід через Google не є універсальною згодою. Підтвердження публікації запитується окремо перед кожним новим надсиланням. Для старих коментарів воно не створюється заднім числом.</p>
+<p>Передавання даних органу влади можливе лише за конкретною застосовною нормою, з перевіркою повноважень, обов’язковості й обсягу вимоги. Сам факт отримання запиту не є правовою підставою.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">04</span>
+          <span class="privacy-item__question">Cookies та зберігання даних у браузері</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Вхід у коментарі діє на поточну сесію вкладки. До початку входу Firebase Authentication налаштовано на browserSessionPersistence із sessionStorage. Перезавантаження та переходи між сторінками в цій вкладці зберігають вхід. Після завершення сесії вкладки потрібен новий вхід; постійне «запам’ятати мене» не використовується.</p><p>На спільному пристрої явно виходьте з коментарів: браузер може відновити закриту сесію. Вихід із коментарів не є виходом із Google. Закриття вкладки, вихід або очищення браузера не видаляють серверний акаунт чи коментарі.</p><p>Модуль коментарів не додає аналітичних або рекламних трекерів; це не твердження про весь сайт чи сервіси провайдерів. Зберігання й доступ на пристрої охоплюють не лише cookies, а й браузерні сховища. Cookies Google описані в <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">поясненні Google</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">05</span>
+          <span class="privacy-item__question">Які провайдери отримують дані?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <ul>
+<li><strong>GitHub Pages</strong> розміщує сайт. GitHub обробляє власні технічні й безпекові журнали за <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">своєю політикою приватності</a>.</li>
+<li><strong>Google Sign-In, Firebase Authentication і Cloud Firestore</strong> забезпечують вхід та обговорення. Для даних користувачів, оброблюваних за дорученням власника, Google виступає постачальником обробки відповідно до застосовних договірних умов. Власне використання Google-акаунта та інша самостійна обробка Google регулюються <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">політикою Google</a>. Докладніше: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">приватність і безпека Firebase</a>, <a href="https://firebase.google.com/terms/" target="_blank" rel="noopener noreferrer">умови Firebase</a> та <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer">Cloud Data Processing Addendum</a>.</li>
+<li><strong>Google Fonts</strong> завантажує шрифти; <strong>cdnjs / Cloudflare</strong> доставляє файли Font Awesome для іконок; <strong>jsDelivr</strong> доставляє бібліотеку відображення статей. Браузер звертається до цих зовнішніх серверів і передає технічні дані запиту. Для Cloudflare див. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">політику приватності</a>.</li>
+<li><strong>Поштові провайдери</strong> обробляють листи, коли ви звертаєтеся електронною поштою. Це окремий канал від коментарів.</li>
+</ul>
+<p>На сайті є посилання на соціальні мережі й зовнішні платформи. Після переходу діють правила відповідного сервісу. Саме посилання слід відрізняти від вбудованого вмісту, який завантажується зі стороннього сервера без переходу.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">06</span>
+          <span class="privacy-item__question">Які дані обробляються в email-зверненнях?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Якщо ви надсилаєте листа, обробляються зазначене вами ім’я, email, текст повідомлення, вкладення та інші надані відомості. Вони потрібні для розгляду звернення, відповіді й подальшого листування з цього питання. Контактне посилання відкриває ваш поштовий застосунок.</p>
+<p><strong>Не надсилайте даних пацієнтів, чужих персональних даних, чутливих службових відомостей, паролів або токенів входу.</strong> Email сайту й коментарі не є каналами надання медичної допомоги чи передавання клінічної документації.</p>
+<p>Якщо такі відомості вже надіслано або опубліковано, повідомте про це на <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>, не повторюючи самих даних. Обмеження доступу, видалення та можливі законні обов’язки оцінюються за обставинами; автоматичного очищення всіх копій немає.</p>
+<p>Сайт має професійне спрямування. Вхід через Google не є перевіркою віку. Якщо звернення стосується даних дитини, це потрібно зазначити без надсилання її медичних даних; повноваження заявника й необхідні дії визначаються відповідно до застосовного закону.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">07</span>
+          <span class="privacy-item__question">Публічний доступ і міжнародні передачі</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Персональні дані не продаються й не обмінюються. Вони доступні власнику та уповноваженим адміністраторам у межах їхніх завдань і залученим провайдерам для надання послуг. <strong>Опубліковані документи коментарів доступні будь-кому, зокрема через API.</strong> Розкриття органам влади потребує підстав, описаних у розділі 03.</p>
+<p>База коментарів Firestore розміщена у <strong>europe-central2, Варшава, Польща</strong>. Це не місце зберігання всіх даних сайту: за документацією Google, Firebase Authentication працює зі збереженими даними у США. Хостинг, пошта, зовнішні ресурси та залучені провайдерами постачальники можуть обробляти дані в інших країнах.</p>
+<p>За українським законом передавання за кордон оцінюється за статтею 29: зокрема, враховується належний рівень захисту в країні отримувача або інша передбачена законом підстава. Закон визнає належний рівень для держав ЄЕП, учасниць Конвенції про захист осіб у зв’язку з автоматизованою обробкою персональних даних, а також держав, регулятори ринків капіталу яких є підписантами зазначеного в законі меморандуму IOSCO. Передавання до США не є автоматично забороненим і не завжди потребує окремої згоди.</p>
+<p>Якщо застосовний GDPR, його правила міжнародних передач оцінюються окремо: рішення про адекватність, належні гарантії, зокрема стандартні договірні положення, або передбачені регламентом винятки мають різні умови. Рішення ЄС щодо США охоплює організації, які беруть участь у відповідній програмі, а не будь-якого отримувача у США. Ця політика не засвідчує конкретної сертифікації чи укладеного договору.</p>
+<p>Інформацію про отримувачів, місця обробки та застосовні гарантії можна запросити на <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">08</span>
+          <span class="privacy-item__question">Як захищаються дані?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Сайт використовує HTTPS. Доступ до неопублікованих коментарів обмежено автором і адміністратором; адміністративні дії мають окремі права доступу. Публічні записи мають навмисно відкритий доступ, описаний нижче.</p>
+<p>За документацією Firebase, передавання даних захищене шифруванням, а Firestore та Authentication також використовують шифрування збережених даних. Це опис захисту провайдера, а не підтвердження шифрування ручних експортів власника.</p>
+<p>Жоден спосіб передавання або зберігання даних не гарантує абсолютної безпеки. Захист також залежить від облікових записів, пристроїв, налаштувань доступу та поводження з резервними копіями.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">09</span>
+          <span class="privacy-item__question">Як звернутися щодо доступу, виправлення чи видалення?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Ви можете запросити доступ і відомості про обробку, виправлення неточностей, видалення за відсутності законних підстав зберігати дані, заперечити проти обробки та відкликати згоду, якщо обробка спирається на неї. Пишіть на <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>. Достатньо зрозуміло описати бажаний результат; посилання на коментар або відомості, що допоможуть знайти дані, надайте, якщо вони вам відомі.</p>
+<p><strong>Загальний запит на видалення не потребує переліку всіх технічних сховищ.</strong> Власник має перевірити коментарі й залишкові ідентифікатори, службові записи, Firebase Authentication, листування та резервні копії, які стосуються запиту. У відповіді слід пояснити виконані дії, залишки, законні винятки та подальше поводження з копіями.</p>
+<p>Перевірка особи має бути пропорційною ризику розкриття або видалення чужих даних. Пароль Google, токени чи обов’язкова копія паспорта не потрібні. Для формального запиту на доступ закон України передбачає ідентифікаційні реквізити; за потреби власник уточнить належні відомості та спосіб їх безпечного надання.</p>
+<ul>
+<li><strong>Доступ за українським законом:</strong> вивчення запиту — до 10 робочих днів від надходження, із повідомленням про задоволення або законну відмову; задоволення — до 30 календарних днів, якщо законом не передбачено інше. Доступ людини до власних даних не відстрочується за правилом для третіх осіб.</li>
+<li><strong>Вмотивована вимога припинити обробку або змінити склад чи зміст даних:</strong> розгляд протягом 10 днів від отримання за Типовим порядком обробки персональних даних. Неточні дані виправляються невідкладно після встановлення неточності. Про зміну, видалення, знищення чи обмеження доступу повідомляють протягом 10 робочих днів після відповідної дії. Це різні строки, а не єдиний строк для всіх звернень.</li>
+<li><strong>Якщо застосовний GDPR:</strong> відповідь щодо дій за запитом — без зайвої затримки й протягом одного місяця від отримання. За складністю або кількістю запитів можливе продовження ще на два місяці з повідомленням про причини протягом першого місяця.</li>
+</ul>
+<p>Очищення тексту модератором не є повним видаленням персональних даних. Видалення облікового запису Firebase Authentication для цього сайту не видаляє ваш Google-акаунт; сайт ним не керує. Законні винятки зі знищення даних оцінюються окремо, а не застосовуються до всіх записів автоматично.</p>
+<p>Для захисту прав можна звернутися до Уповноваженого Верховної Ради України з прав людини або суду. Якщо обробка підпадає під GDPR, його додаткові права, зокрема обмеження обробки й перенесення даних, та право скарги до компетентного наглядового органу діють за умовами регламенту. Англійська версія сайту або база в Польщі самі по собі не встановлюють застосовність GDPR.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">10</span>
+          <span class="privacy-item__question">Як зв’язатися щодо приватності?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>З питаннями про цю політику, обробку даних, коментарі або запити щодо ваших прав звертайтеся до Сергія Пелішенка на <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">11</span>
+          <span class="privacy-item__question">Коментарі під статтями</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Опубліковані коментарі можна читати без входу. Для надсилання потрібен Google-акаунт. Нові коментарі та відповіді проходять премодерацію й стають публічними після схвалення. Українська та англійська версії статті мають спільне обговорення.</p><p>Перед кожним надсиланням показано, що після схвалення публічними стануть ім’я, текст і дата, з посиланням на політику. Потрібно окремо встановити галочку підтвердження, яка початково вимкнена. Вхід через Google не є згодою на всі види обробки.</p><p>Публічний API містить ім’я, текст, часові мітки, статус і технічні зв’язки коментаря та статті, але не Auth UID. Приватний зв’язок із автором і запис підтвердження доступні лише відповідному автору й адміністратору. Очікувані та приховані коментарі також доступні лише автору й адміністратору.</p><p>У режимі лише читання надсилання вимкнено. Приховування блоку прибирає його з інтерфейсу та забороняє нові записи, але саме по собі не закриває публічне API-читання раніше опублікованих документів.</p><p>Дія «видалити текст» очищає ім’я й текст, залишаючи ідентифікатор документа, дати та зв’язки відповідей. Зв’язок із UID і службові записи залишаються приватними; акаунт Firebase Authentication не видаляється. Це не повне знеособлення. Приховування чи видалення на сайті не прибирає копій, зроблених іншими людьми.</p><p><strong>Не публікуйте персональні дані пацієнтів, інших людей або чутливі оперативні відомості.</strong> Коментарі — публічне обговорення, а не захищений канал клінічного чи оперативного обміну.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">12</span>
+          <span class="privacy-item__question">Як довго зберігаються дані та що є в резервних копіях?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Автоматичний календар очищення не запроваджено. Опубліковані коментарі зберігаються як частина обговорення з урахуванням запитів на видалення. Очікувані та приховані повідомлення потребують окремого розгляду модератором; службові дані — оцінки необхідності для авторства, захисту від зловживань і розгляду звернень. Строки не є однаковими для всіх категорій.</p><p>Для резервних копій погоджено строк 30 діб від створення експорту. Для кожної копії потрібно записувати дату ручного видалення; автоматичного видалення немає. Копії вручну шифруються архівом 7z із AES-256 та прихованими іменами файлів і зберігаються у приватній папці Google Drive без спільного доступу. Пароль зберігається окремо. Після завантаження перевіряються розпакування та контрольна сума файла.</p><p>Ручна приватна копія Firestore може містити неопубліковані повідомлення, приватні зв’язки з UID, підтвердження та службові записи. Копія не розміщується на сайті чи в Git. Автоматичного розкладу експорту, ротації або видалення копій немає.</p><p>Актуальний реєстр видалень використовується під час відновлення, щоб не повернути видалені текст та ім’я; він не очищає старі файли копій. Старі копії перед відновленням перетворюються так, щоб UID не потрапив у публічні документи. Під час розгляду запиту на видалення копії потребують окремої перевірки.</p><p>Вихід із сесії не є видаленням акаунта. Ручна копія Firestore не є резервною копією Firebase Authentication. Логи та акаунти в системах провайдерів мають власні строки за їхніми умовами й застосовним законом.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">13</span>
+          <span class="privacy-item__question">Зміни політики та дата набрання чинності</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Про суттєві зміни повідомлятимемо окремим повідомленням із посиланням на політику, описом змін і датою набрання чинності. Повідомлення про зміну не є підтвердженням публікації нових повідомлень і не створює згоду заднім числом.</p><p>Нова політика сама по собі не надає згоди на нові цілі й не узаконює минулу обробку. Якщо потрібна інша правова підстава або нове підтвердження, одного повідомлення про зміну недостатньо.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+</header>
+
+
+  <main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html" rel="noopener noreferrer">Головна</a>
+        <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+        <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+        <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+        <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html" rel="noopener noreferrer" target="_blank">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+<script type="module" src="./js/main.js?v=20261003-nav"></script>
+</body>
+</html>

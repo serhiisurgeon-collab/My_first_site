@@ -11,3 +11,12 @@ exclude:
   - firebase/firestore.rules
   - firebase/firestore.indexes.json
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - artifacts
+  - attachments
+  - review
+  - scratch
+  - comments-backup-*.json
+  - deletion-register*.json
+  - js/comments/package.json

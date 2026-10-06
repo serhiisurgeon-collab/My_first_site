@@ -6,7 +6,7 @@ function prepareLink(link) {
   if (url.protocol !== "http:" && url.protocol !== "https:") return;
   if (link.closest("nav, .mobile-nav") ||
       (url.origin === location.origin &&
-       /\/(?:article|articles)(?:-en)?\.html$/.test(url.pathname))) {
+       (/\/(?:article|articles)(?:-en)?\.html$/.test(url.pathname) || /\/(?:en\/)?articles\/[a-z0-9-]+\/$/.test(url.pathname)))) {
     link.removeAttribute("target");
     return;
   }

@@ -1,0 +1,402 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/policy.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index-en.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index-en.html" rel="noopener noreferrer">
+        Home
+      </a>
+
+      <a class="site-nav__link" href="./about-en.html" rel="noopener noreferrer">
+        About Me
+      </a>
+
+      <a class="site-nav__link" href="./projects-en.html" rel="noopener noreferrer">
+        Projects
+      </a>
+
+      <a class="site-nav__link" href="./articles-en.html" rel="noopener noreferrer">
+        Articles
+      </a>
+
+      <a class="site-nav__link" href="./contact-en.html" rel="noopener noreferrer">
+        Contact
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Search the site"
+  title="Search"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Search</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Language switcher"
+>
+  <a
+    class="site-nav__language-option"
+    href="../policy.html"
+    lang="uk"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="./policy-en.html"
+    lang="en"
+    aria-current="page"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </div>
+</nav>
+
+<header>
+<section class="privacy-policy" id="privacy-policy">
+  <div class="container">
+
+    <header class="privacy-policy__header">
+      <p class="privacy-policy__eyebrow">
+        Legal Information
+      </p>
+
+      <h1 class="privacy-policy__title">
+        Privacy Policy
+      </h1>
+
+      <p class="privacy-policy__intro">
+        This Privacy Policy explains what data may be
+        processed while using the website
+        <strong>serhiipelishenko.com</strong>, why it is needed,
+        and what rights users have.
+      </p>
+      <p class="privacy-policy__updated">Effective from <time datetime="2026-10-05">05.10.2026</time></p>
+    </header>
+
+    <div class="privacy-policy__accordion">
+
+      <details class="privacy-item" open>
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">01</span>
+          <span class="privacy-item__question">Who owns the website?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>This policy covers the current website: articles, descriptions of activities and projects, contact information, and comments using Google sign-in. It does not describe a future learning platform.</p>
+          <p><strong>Serhii Pelishenko / Сергій Пелішенко</strong> owns <strong>serhiipelishenko.com</strong>. He determines the purposes and means of processing the data needed to operate the website and its comments, and is the controller of that data.</p>
+<p>For privacy enquiries or requests to access, correct or delete data, contact <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">02</span>
+          <span class="privacy-item__question">What data is processed, and where does it come from?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<ul><li><strong>When you visit.</strong> Hosting and external resource providers receive technical request data: IP address, browser and device information, requested resources and time. GitHub Pages logs visitors’ IP addresses for security.</li><li><strong>When you sign in with Google.</strong> Firebase Authentication processes a UID, name, email and sign-in provider information. The owner has administrative access to these accounts. The website does not receive your Google password.</li><li><strong>In comments.</strong> Firestore stores the name, text, dates, article, reply relationship, depth and status. Public documents contain no Auth UID, email, tokens or avatar. The UID link is stored separately and privately; only the corresponding author and administrator may read it.</li><li><strong>Publication confirmation.</strong> For new contributions, the pre-submission notice version and server time of explicit confirmation are stored privately. Confirmation is not retrospectively created for older comments.</li><li><strong>For administration.</strong> Separate private records contain moderation, blocking, rate-limit, administrative permission and backup data. Authors may access only their own records as permitted by the rules; the administrator may access operational data.</li><li><strong>In correspondence.</strong> The sender’s address, supplied name, message, attachments and other information you send are processed.</li></ul><p>Data comes from you, Google, browser requests and the operation and moderation of the discussion.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">03</span>
+          <span class="privacy-item__question">Why is data needed, and what are the legal bases?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Different purposes use separate legal bases:</p>
+<ul>
+<li><strong>Authentication.</strong> A legitimate interest in providing access to comments requested by the user and identifying the author, using only the data needed for this purpose.</li>
+<li><strong>Publishing comments.</strong> Informed, voluntary consent to the public dissemination of personal data in the contribution. This is separate from signing in. Separate confirmation concerns publishing the name and contribution; the Auth UID remains private.</li>
+<li><strong>Moderation.</strong> A legitimate interest in reviewing contributions and maintaining an appropriate professional discussion.</li>
+<li><strong>Preventing abuse.</strong> A legitimate interest in protecting the website, users and administrative access, including rate limits and blocking.</li>
+<li><strong>Correspondence.</strong> A legitimate interest in responding to ordinary enquiries. Handling legally required personal-data requests relies on the corresponding legal obligation.</li>
+<li><strong>Backups.</strong> A legitimate interest in restoring data and discussion functionality, with limited retention and access to copies. Legally required records of processing rely on the corresponding legal obligation.</li>
+</ul>
+<p>A legitimate interest applies only where processing is necessary and proportionate and the person’s rights and freedoms do not override that interest. It does not replace the basis required for public dissemination under Ukrainian law.</p>
+<p>Visiting the website or signing in with Google is not blanket consent. Publication confirmation is requested separately before each new submission. It is not retrospectively created for older comments.</p>
+<p>Disclosure to a public authority requires a specific applicable legal provision and verification of the authority’s powers, whether the request is binding and its scope. Receiving a request is not, by itself, a legal basis.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">04</span>
+          <span class="privacy-item__question">Cookies and browser storage</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Comments sign-in lasts for the current tab session. Before sign-in, Firebase Authentication uses browserSessionPersistence with sessionStorage. Reloading and navigating between pages in that tab retain sign-in. A new sign-in is needed after the tab session ends; persistent “remember me” storage is not used.</p><p>On a shared device, explicitly sign out of comments: your browser may restore a closed session. Signing out of comments does not sign you out of Google. Closing a tab, signing out or clearing browser storage does not delete the server-side account or comments.</p><p>The comments module does not add analytics or advertising trackers; this is not a statement about the entire website or providers’ services. Device storage and access cover browser storage as well as cookies. Google cookies are described in <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">Google’s explanation</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">05</span>
+          <span class="privacy-item__question">Which providers receive data?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <ul>
+<li><strong>GitHub Pages</strong> hosts the website. GitHub processes its own technical and security logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">its privacy statement</a>.</li>
+<li><strong>Google Sign-In, Firebase Authentication and Cloud Firestore</strong> provide sign-in and discussions. For user data processed on the owner’s behalf, Google acts as a processing provider under the applicable contractual terms. Use of the Google account itself and Google’s other independent processing are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s policy</a>. See also <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy and security</a>, <a href="https://firebase.google.com/terms/" target="_blank" rel="noopener noreferrer">Firebase terms</a> and the <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer">Cloud Data Processing Addendum</a>.</li>
+<li><strong>Google Fonts</strong> loads fonts; <strong>cdnjs / Cloudflare</strong> delivers Font Awesome icon files; <strong>jsDelivr</strong> delivers the article-rendering library. Your browser requests these resources from external servers and sends technical request data. For Cloudflare, see its <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</li>
+<li><strong>Email providers</strong> process messages when you contact the owner by email. This is a separate channel from comments.</li>
+</ul>
+<p>The website links to social networks and external platforms. Their rules apply after you follow a link. A link is different from embedded content that loads from an external server without following a link.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">06</span>
+          <span class="privacy-item__question">What data is processed in email enquiries?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>If you send an email, the name you provide, email address, message, attachments and other supplied information are processed to consider the enquiry, respond and continue related correspondence. The contact link opens your email application.</p>
+<p><strong>Do not send patient data, other people’s personal data, sensitive operational information, passwords or sign-in tokens.</strong> The website’s email and comments are not channels for providing medical care or transmitting clinical records.</p>
+<p>If such information has already been sent or published, notify <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a> without repeating the data itself. Restricting access, erasure and any legal obligations are assessed according to the circumstances; all copies are not automatically cleared.</p>
+<p>The website is professionally oriented. Google sign-in is not age verification. If an enquiry concerns a child’s data, state this without sending their medical data; the requester’s authority and necessary actions are determined under applicable law.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">07</span>
+          <span class="privacy-item__question">Public access and international transfers</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>Personal data are not sold or traded. Access is available to the owner and authorised administrators for their tasks and to providers delivering services. <strong>Published comment documents are accessible to anyone, including through the API.</strong> Disclosure to public authorities requires the grounds described in section 03.</p>
+<p>The Firestore comments database is located in <strong>europe-central2, Warsaw, Poland</strong>. This is not the location of all website data: Google’s documentation states that Firebase Authentication stores data in the United States. Hosting, email, external resources and providers’ subcontractors may process data in other countries.</p>
+<p>Under Ukrainian law, overseas transfers are assessed under Article 29, including adequate protection in the recipient country or another ground provided by law. The law recognises adequate protection in EEA states, parties to the Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data, and states whose capital-market regulators are signatories to the IOSCO memorandum specified in the law. Transfers to the United States are not automatically prohibited and do not always require separate consent.</p>
+<p>If the GDPR applies, its international-transfer rules require a separate assessment: adequacy decisions, appropriate safeguards such as standard contractual clauses, and derogations have different conditions. The EU decision concerning the United States covers organisations participating in the relevant framework, not every US recipient. This policy does not establish that a particular recipient is certified or that a specific agreement has been executed.</p>
+<p>You may request information about recipients, processing locations and applicable safeguards at <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">08</span>
+          <span class="privacy-item__question">How is data protected?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>The website uses HTTPS. Access to unpublished comments is limited to their author and the administrator; administrative actions require separate permissions. Public records intentionally have the open access described below.</p>
+<p>Firebase’s documentation describes encryption in transit and encryption at rest for Firestore and Authentication. This describes the provider’s protection, and does not establish that the owner’s manual exports are encrypted.</p>
+<p>No method of transferring or storing data guarantees absolute security. Protection also depends on accounts, devices, access settings and how backups are handled.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">09</span>
+          <span class="privacy-item__question">How can you request access, correction or deletion?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>You may request access and information about processing, correction of inaccuracies, erasure where there is no lawful reason to retain data, object to processing, and withdraw consent where processing relies on it. Email <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>. Clearly describe the outcome you want; provide a comment link or information that helps locate your data if you know it.</p>
+<p><strong>A general erasure request does not require a list of every technical data store.</strong> The owner must check comments and residual identifiers, operational records, Firebase Authentication, correspondence and backups relevant to the request. The response should explain actions taken, remaining data, lawful exceptions and further treatment of copies.</p>
+<p>Identity verification must be proportionate to the risk of disclosing or deleting someone else’s data. Your Google password, tokens or a mandatory passport copy are not required. Ukrainian law prescribes identifying particulars for a formal access request; if necessary, the owner will clarify the appropriate information and how to provide it securely.</p>
+<ul>
+<li><strong>Access under Ukrainian law:</strong> assessment within 10 working days of receipt, with notice of approval or lawful refusal; fulfilment within 30 calendar days unless the law provides otherwise. A person’s access to their own data is not deferred under the rule for third-party access.</li>
+<li><strong>A reasoned demand to stop processing or change the data’s composition or content:</strong> consideration within 10 days of receipt under the Model Procedure for Personal Data Processing. Inaccuracies are corrected without delay once established. Changes, erasure, destruction or access restrictions are notified within 10 working days after the action. These are distinct deadlines, not one deadline for all enquiries.</li>
+<li><strong>If the GDPR applies:</strong> information on action taken without undue delay and within one month of receipt. Complexity or the number of requests may justify an extension of two further months, with reasons notified within the first month.</li>
+</ul>
+<p>A moderator clearing text is not full personal-data erasure. Deleting this website’s Firebase Authentication account does not delete your Google account, which the website does not control. Lawful exceptions to erasure are assessed individually and do not automatically cover every record.</p>
+<p>You may seek protection from the Ukrainian Parliament Commissioner for Human Rights or a court. If processing falls under the GDPR, its additional rights, including restriction and portability, and complaints to a competent supervisory authority apply under the Regulation’s conditions. An English-language website or a database in Poland does not, by itself, establish GDPR applicability.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">10</span>
+          <span class="privacy-item__question">How can you contact the owner about privacy?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+          <p>For questions about this policy, data processing, comments or requests concerning your rights, contact Serhii Pelishenko at <a href="mailto:hello@serhiipelishenko.com" target="_blank" rel="noopener noreferrer">hello@serhiipelishenko.com</a>.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">11</span>
+          <span class="privacy-item__question">Article comments</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Published comments can be read without signing in. Posting requires a Google account. New comments and replies undergo premoderation and become public after approval. The Ukrainian and English versions of an article share one discussion.</p><p>Before every submission, a notice explains that your name, text and date will become public after approval and links to this policy. You must explicitly select a checkbox that is initially unchecked. Signing in with Google is not consent to all forms of processing.</p><p>The public API includes the name, text, timestamps, status and technical comment and article relationships, but no Auth UID. The private author link and confirmation record are accessible only to the corresponding author and administrator. Pending and hidden comments are also accessible only to their author and administrator.</p><p>Read-only mode disables submissions. Hiding the block removes it from the interface and prohibits new submissions, but does not itself restrict public API access to previously published documents.</p><p>“Delete text” clears the name and text while retaining the document identifier, dates and reply relationships. The UID link and operational records remain private; the Firebase Authentication account is not deleted. This is not full anonymisation. Hiding or deleting a contribution on the website does not remove copies made by other people.</p><p><strong>Do not publish patients’ or other people’s personal data or sensitive operational information.</strong> Comments are a public discussion, not a protected channel for clinical or operational exchanges.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">12</span>
+          <span class="privacy-item__question">How long is data retained, and what do backups contain?</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>No automatic cleanup schedule is implemented. Published comments are retained as part of the discussion, taking erasure requests into account. Pending and hidden messages require individual moderation review; operational data requires an assessment of its necessity for authorship, abuse prevention and handling enquiries. Different categories do not share one retention period.</p><p>A retention period of 30 days from export creation has been agreed for backups. Each backup requires a recorded manual deletion date; automatic deletion is not implemented. Backups are manually encrypted in a 7z archive using AES-256 and encrypted file names, then stored in a private Google Drive folder without shared access. The password is kept separately. Extraction and the file checksum are verified after downloading the uploaded archive.</p><p>A manual private Firestore backup may contain unpublished contributions, private UID links, confirmations and operational records. It is not placed on the website or in Git. There is no automatic export schedule, backup rotation or deletion.</p><p>The current deletion register is used during restoration to prevent deleted text and names from returning; it does not clear older backup files. Older backups are converted before restoration so that UIDs cannot re-enter public documents. Backups require separate review when handling erasure requests.</p><p>Signing out is not account deletion. A manual Firestore backup is not a Firebase Authentication backup. Logs and accounts in providers’ systems have their own retention periods under their terms and applicable law.</p>
+        </div>
+      </details>
+
+      <details class="privacy-item">
+        <summary class="privacy-item__summary">
+          <span class="privacy-item__number">13</span>
+          <span class="privacy-item__question">Policy changes and effective date</span>
+          <span class="privacy-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="privacy-item__content">
+<p>Material changes will be announced separately with a policy link, a description of the changes and an effective date. A change notice is not confirmation to publish new contributions and does not create consent retrospectively.</p><p>A new policy does not itself provide consent for new purposes or legitimise past processing. Where a different legal basis or new confirmation is required, a change notice alone is insufficient.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+</header>
+
+
+  <main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index-en.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Medicine, education, and technology — integrated into one system.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <p class="site-footer__heading">Navigation</p>
+
+        <a href="./index-en.html" rel="noopener noreferrer">Home</a>
+        <a href="./about-en.html" rel="noopener noreferrer">About Me</a>
+        <a href="./projects-en.html" rel="noopener noreferrer">Projects</a>
+        <a href="./articles-en.html" rel="noopener noreferrer">Articles</a>
+        <a href="./contact-en.html" rel="noopener noreferrer">Contact</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Social Media</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Contact</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Ukraine</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        All rights reserved.
+      </p>
+
+      <a href="./policy-en.html" rel="noopener noreferrer" target="_blank">
+        Privacy Policy
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+<script type="module" src="../js/main.js?v=20261003-nav"></script>
+</body>
+</html>

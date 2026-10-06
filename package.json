@@ -6,19 +6,31 @@
     "comments:emulators": "firebase emulators:start --project demo-serhii-comments --only auth,firestore",
     "comments:test": "firebase emulators:exec --project demo-serhii-comments --only auth,firestore 'node --test --test-concurrency=1 tests/comments/*.test.mjs'",
     "comments:seed": "node tools/comments/seed.mjs",
-    "comments:restore": "node tools/comments/restore.mjs"
+    "comments:restore": "node tools/comments/restore.mjs",
+    "seo:build": "node tools/seo/build.mjs",
+    "seo:check": "node tools/seo/build.mjs --check",
+    "seo:test": "node --test tests/seo/*.test.mjs",
+    "seo:jekyll": "node tools/seo/jekyll-build.mjs",
+    "seo:public-check": "node tools/seo/public-audit.mjs .private/seo-jekyll"
   },
   "dependencies": {
     "firebase": "12.19.0"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",
+    "cheerio": "1.0.0",
     "esbuild": "0.28.2",
     "firebase-admin": "14.5.0",
     "firebase-tools": "15.32.1",
-    "playwright": "1.62.1"
+    "marked": "15.0.12",
+    "playwright": "1.62.1",
+    "sanitize-html": "2.17.0",
+    "sharp": "0.34.5"
   },
   "overrides": {
     "@grpc/grpc-js": "1.14.5"
+  },
+  "engines": {
+    "node": ">=22 <25"
   }
 }

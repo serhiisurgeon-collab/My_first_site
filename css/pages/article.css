@@ -1060,3 +1060,12 @@ html {
 
 /* Keep long medical terms inside the article header on narrow screens. */
 .article-header__title { overflow-wrap: anywhere; hyphens: manual; }
+
+/* Semantically repaired former H4s keep their original browser typography. */
+.article-body h3.seo-heading-sub { font-size: 1em; font-weight: bold; line-height: inherit; margin: 1.33em 0; }
+.article-header__author a { color: inherit; text-decoration: none; }
+.article-header__author a:hover { text-decoration: underline; }
+.article-related { width: min(100% - 48px, 1040px); margin: 24px auto; }
+.article-related h2 { font: inherit; font-weight: 600; }
+.article-body img { max-width: 100%; height: auto; }
+.article-body a { overflow-wrap: anywhere; }

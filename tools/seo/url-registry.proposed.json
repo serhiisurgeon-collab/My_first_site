@@ -1,0 +1,304 @@
+{
+  "status": "approved",
+  "baseCommit": "02cc821745cfaf0b1cfdd1a5dca0fa68a108bf58",
+  "origin": "https://serhiipelishenko.com",
+  "routes": [
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/index.html",
+      "canonicalUrl": "/",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/articles.html",
+      "canonicalUrl": "/articles.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/about.html",
+      "canonicalUrl": "/about.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/projects.html",
+      "canonicalUrl": "/projects.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/contact.html",
+      "canonicalUrl": "/contact.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/policy.html",
+      "canonicalUrl": "/policy.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/s-dose.html",
+      "canonicalUrl": "/s-dose.html",
+      "kind": "page",
+      "includeInSitemap": false,
+      "initialRobots": "noindex,nofollow"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/spanish-bot.html",
+      "canonicalUrl": "/spanish-bot.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0001",
+      "currentUrl": "/article.html?article=how-kaolin-works",
+      "canonicalUrl": "/articles/how-kaolin-works/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0001",
+      "currentUrl": "/article.html?article=how-kaolin-works-en",
+      "canonicalUrl": "/articles/how-kaolin-works/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0002",
+      "currentUrl": "/article.html?article=group-medical-bag",
+      "canonicalUrl": "/articles/group-medical-bag/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0003",
+      "currentUrl": "/article.html?article=hospital-capabilities",
+      "canonicalUrl": "/articles/hospital-capabilities/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0004",
+      "currentUrl": "/article.html?article=medical-app-without-internet",
+      "canonicalUrl": "/articles/medical-app-without-internet/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0005",
+      "currentUrl": "/article.html?article=npa-effectiveness",
+      "canonicalUrl": "/articles/npa-effectiveness/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/index-en.html",
+      "canonicalUrl": "/en/index-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/articles-en.html",
+      "canonicalUrl": "/en/articles-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/about-en.html",
+      "canonicalUrl": "/en/about-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/projects-en.html",
+      "canonicalUrl": "/en/projects-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/contact-en.html",
+      "canonicalUrl": "/en/contact-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/policy-en.html",
+      "canonicalUrl": "/en/policy-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/s-dose-en.html",
+      "canonicalUrl": "/en/s-dose-en.html",
+      "kind": "page",
+      "includeInSitemap": false,
+      "initialRobots": "noindex,nofollow"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/spanish-bot-en.html",
+      "canonicalUrl": "/en/spanish-bot-en.html",
+      "kind": "page",
+      "includeInSitemap": true,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0001",
+      "currentUrl": "/en/article-en.html?article=how-kaolin-works",
+      "canonicalUrl": "/en/articles/how-kaolin-works/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0001",
+      "currentUrl": "/en/article-en.html?article=how-kaolin-works-en",
+      "canonicalUrl": "/en/articles/how-kaolin-works/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0002",
+      "currentUrl": "/en/article-en.html?article=group-medical-bag",
+      "canonicalUrl": "/en/articles/group-medical-bag/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0003",
+      "currentUrl": "/en/article-en.html?article=hospital-capabilities",
+      "canonicalUrl": "/en/articles/hospital-capabilities/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0004",
+      "currentUrl": "/en/article-en.html?article=medical-app-without-internet",
+      "canonicalUrl": "/en/articles/medical-app-without-internet/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": "a-0005",
+      "currentUrl": "/en/article-en.html?article=npa-effectiveness",
+      "canonicalUrl": "/en/articles/npa-effectiveness/",
+      "kind": "legacy-query",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/articles/not-a-real-article/",
+      "canonicalUrl": null,
+      "kind": "error-control",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/articles/not-a-real-article/",
+      "canonicalUrl": null,
+      "kind": "error-control",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html?article=unknown",
+      "canonicalUrl": null,
+      "kind": "error-control",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html?article=",
+      "canonicalUrl": null,
+      "kind": "error-control",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html",
+      "canonicalUrl": null,
+      "kind": "error-control",
+      "includeInSitemap": false,
+      "initialRobots": "default; no blanket noindex"
+    }
+  ]
+}

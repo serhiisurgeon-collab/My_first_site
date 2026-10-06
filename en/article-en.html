@@ -1,121 +1,82 @@
-
-  <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
-  <link rel="stylesheet" href="../css/tokens.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/pages/articles.css">
-  <link rel="stylesheet" href="../css/pages/article.css?v=20261006-npa">
-  <link rel="stylesheet" href="../css/pages/about.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/articles.css?v=4163405615a36bec">
+  <link rel="stylesheet" href="/css/pages/article.css?v=0d993e24626792fe">
+  <link rel="stylesheet" href="/css/pages/about.css">
+  <link rel="stylesheet" href="/css/responsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet"
-  />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  />
-<link rel="stylesheet" href="../css/pages/comments.css?v=20261005-privacy">
-</head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/css/pages/comments.css?v=20261005-privacy">
+<title>Choose an article — Serhii Pelishenko</title></head>
 
 <body>
 <nav class="site-nav" aria-label="Main navigation">
   <div class="site-nav__inner container">
-    <a class="site-nav__brand" href="./index-en.html" rel="noopener noreferrer">
+    <a class="site-nav__brand" href="/en/index-en.html" rel="noopener noreferrer">
       Serhii Pelishenko
     </a>
 
     <div class="site-nav__links">
-      <a class="site-nav__link" href="./index-en.html"  rel="noopener noreferrer">
+      <a class="site-nav__link" href="/en/index-en.html" rel="noopener noreferrer">
         Home
       </a>
 
-      <a class="site-nav__link" href="./about-en.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/en/about-en.html" rel="noopener noreferrer">
         About me
       </a>
 
-      <a class="site-nav__link" href="./projects-en.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/en/projects-en.html" rel="noopener noreferrer">
         Projects
       </a>
 
-      <a class="site-nav__link" href="./articles-en.html" aria-current="page" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/en/articles-en.html" aria-current="page" rel="noopener noreferrer">
         Articles
       </a>
 
-      <a class="site-nav__link" href="./contact-en.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/en/contact-en.html" rel="noopener noreferrer">
         Contact
       </a>
     </div>
-<button
-  class="site-search-trigger"
-  type="button"
-  aria-label="Search the site"
-  title="Search"
->
+<button class="site-search-trigger" type="button" aria-label="Search the site" title="Search">
   <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
   <span class="site-search-trigger__label">Search</span>
   <span class="site-search-trigger__hint">Ctrl K</span>
 </button>
-<div
-  class="site-nav__language-switcher"
-  aria-label="Language switcher"
->
-  <a
-    class="site-nav__language-option"
-    href="../article.html"
-    lang="uk"
-   rel="noopener noreferrer">
+<div class="site-nav__language-switcher" aria-label="Language switcher">
+  <a class="site-nav__language-option" href="/article.html" lang="uk" rel="noopener noreferrer">
     UA
   </a>
 
-  <span
-    class="site-nav__language-divider"
-    aria-hidden="true"
-  >
+  <span class="site-nav__language-divider" aria-hidden="true">
     /
   </span>
 
-  <a
-    class="site-nav__language-option is-active"
-    href="./article-en.html"
-    lang="en"
-    aria-current="page"
-   rel="noopener noreferrer">
+  <a class="site-nav__language-option is-active" href="/en/article-en.html" lang="en" aria-current="page" rel="noopener noreferrer">
     EN
   </a>
 </div>
 
-    <button
-      class="site-nav__toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="mobile-navigation"
-    >
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">
       Menu
     </button>
   </div>
 </nav>
-<div
-  class="mobile-nav"
-  id="mobile-navigation"
-  aria-hidden="true"
->
+<div class="mobile-nav" id="mobile-navigation" aria-hidden="true">
   <div class="mobile-nav__inner">
 
-    <a href="./index-en.html" rel="noopener noreferrer">Home</a>
-    <a href="./about-en.html" rel="noopener noreferrer">About me</a>
-    <a href="./projects-en.html" rel="noopener noreferrer">Projects</a>
-    <a href="./articles-en.html" rel="noopener noreferrer">Articles</a>
-    <a href="./contact-en.html" rel="noopener noreferrer">Contact</a>
+    <a href="/en/index-en.html" rel="noopener noreferrer">Home</a>
+    <a href="/en/about-en.html" rel="noopener noreferrer">About me</a>
+    <a href="/en/projects-en.html" rel="noopener noreferrer">Projects</a>
+    <a href="/en/articles-en.html" rel="noopener noreferrer">Articles</a>
+    <a href="/en/contact-en.html" rel="noopener noreferrer">Contact</a>
 
   </div>
 </div>
@@ -133,50 +94,23 @@
       <div class="article-header__inner">
 
 
-        <a
-          class="article-back"
-          href="./articles-en.html"
-         rel="noopener noreferrer">
+        <a class="article-back" href="/en/articles-en.html" rel="noopener noreferrer">
           ← All articles
         </a>
 
 
-        <div class="article-header__meta">
-
-          <span class="article-header__category">
-            Tactical Medicine
-          </span>
-
-          <time datetime="2026-08-10">
-            10 August 2026
-          </time>
-
-          <span>
-            8 min read
-          </span>
-
-        </div>
 
 
-        <p class="article-header__updated" hidden>
-          Updated: <time></time>
-        </p>
-
-        <h1 class="article-header__title">
-          How and Why Kaolin Works
-        </h1>
 
 
-        <p class="article-header__lead">
-          What really happens when kaolin comes into contact with blood
-          — and why understanding this mechanism matters
-          in practice.
-        </p>
+
+        <h1 class="article-header__title">Choose an article</h1>
 
 
-        <div class="article-header__author">
-          Serhii Pelishenko
-        </div>
+
+
+
+
 
 
       </div>
@@ -214,13 +148,9 @@
            STICKY TABLE OF CONTENTS
       ================================================ -->
 
-      <aside
-        class="article-toc"
-        aria-label="Article navigation"
-      >
+      <aside class="article-toc" aria-label="Article navigation">
 
-        <nav class="article-toc__nav">
-        </nav>
+
 
       </aside>
 
@@ -230,11 +160,7 @@
            ARTICLE CONTENT
       ================================================ -->
 
-      <article
-        class="article-body"
-        id="articleContent"
-      >
-      </article>
+      <article class="article-body" id="articleContent"><p>Following an older link? Choose the corresponding article below.</p><ul><li><a href="/en/articles/npa-effectiveness/">Nasopharyngeal Airway: How Can We Tell Whether It Is Helping?</a></li><li><a href="/en/articles/medical-app-without-internet/">A Medical App Without Internet: What Needs to Be Considered</a></li><li><a href="/en/articles/hospital-capabilities/">The hospital is nearby. But can it provide the care needed?</a></li><li><a href="/en/articles/how-kaolin-works/">How and Why Kaolin Works</a></li><li><a href="/en/articles/group-medical-bag/">From IFAK to Group Medical Kit</a></li></ul></article>
 
     </div>
 
@@ -244,38 +170,7 @@
          DISCUSSION
     ================================================== -->
 
-    <section class="article-discussion">
 
-      <div class="article-discussion__inner">
-
-
-        <div class="article-discussion__header">
-
-          <h2>
-            Discussion
-          </h2>
-
-          <p>
-            Questions, corrections, and professional discussion
-            are welcome.
-          </p>
-
-        </div>
-
-
-        <div
-          class="article-comments"
-          id="comments"
-        >
-
-
-
-        </div>
-
-
-      </div>
-
-    </section>
 
 
 
@@ -283,40 +178,7 @@
          ARTICLE NAVIGATION
     ================================================== -->
 
-<nav class="article-pagination">
 
-  <a
-    class="article-pagination__item article-pagination__item--previous"
-    id="previousArticle"
-    href="#"
-  >
-    <span class="article-pagination__label">
-      ← Previous article
-    </span>
-
-    <span
-      class="article-pagination__title"
-      id="previousArticleTitle"
-    ></span>
-  </a>
-
-
-  <a
-    class="article-pagination__item article-pagination__item--next"
-    id="nextArticle"
-    href="#"
-  >
-    <span class="article-pagination__label">
-      Next article →
-    </span>
-
-    <span
-      class="article-pagination__title"
-      id="nextArticleTitle"
-    ></span>
-  </a>
-
-</nav>
 
 
   </div>
@@ -329,7 +191,7 @@
     <div class="site-footer__grid">
 
       <div class="site-footer__brand">
-        <a class="site-footer__logo" href="./index-en.html" rel="noopener noreferrer" target="_blank">
+        <a class="site-footer__logo" href="/en/index-en.html" rel="noopener noreferrer" target="_blank">
           Serhii Pelishenko<span>.</span>
         </a>
 
@@ -341,11 +203,11 @@
       <nav class="site-footer__nav" aria-label="Footer navigation">
         <p class="site-footer__heading">Navigation</p>
 
-        <a href="./index-en.html" rel="noopener noreferrer">Home</a>
-        <a href="./about-en.html" rel="noopener noreferrer">About me</a>
-        <a href="./projects-en.html" rel="noopener noreferrer">Projects</a>
-        <a href="./articles-en.html" rel="noopener noreferrer">Articles</a>
-        <a href="./contact-en.html" rel="noopener noreferrer">Contact</a>
+        <a href="/en/index-en.html" rel="noopener noreferrer">Home</a>
+        <a href="/en/about-en.html" rel="noopener noreferrer">About me</a>
+        <a href="/en/projects-en.html" rel="noopener noreferrer">Projects</a>
+        <a href="/en/articles-en.html" rel="noopener noreferrer">Articles</a>
+        <a href="/en/contact-en.html" rel="noopener noreferrer">Contact</a>
       </nav>
 
       <div class="site-footer__socials">
@@ -361,7 +223,7 @@
               <span>X (Twitter)</span>
         </a>
 
-        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&amp;utm_source=qr" rel="noopener noreferrer" target="_blank">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               <span>Instagram</span>
         </a>
@@ -399,7 +261,7 @@
         All rights reserved.
       </p>
 
-      <a href="./policy-en.html" rel="noopener noreferrer" target="_blank">
+      <a href="/en/policy-en.html" rel="noopener noreferrer" target="_blank">
         Privacy Policy
       </a>
     </div>
@@ -408,14 +270,15 @@
 </footer>
 </main>
 
-<script src="../js/article-language.js?v=2"></script>
-<script type="module" src="../js/main.js?v=20261003-nav"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="../js/article.js?v=20261006-npa"></script>
-<script src="../js/articles.js?v=20261003-hospital"></script>
+
+<script type="module" src="/js/main.js?v=d1a46f6a39e75bac"></script>
+
+
+
 <script>
   document.documentElement.classList.add("js");
 </script>
-<script type="module" src="../js/comments/index.js?v=20261005-privacy"></script>
-</body>
-</html>
+
+
+
+<script type="module" src="/js/article-legacy.js?v=008523d15d2e15dd"></script></body></html>

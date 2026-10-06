@@ -1,0 +1,121 @@
+{
+  "content/articles/uk/image/npa-effectiveness-1.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/uk/image/optimized/npa-effectiveness-1.webp",
+    "originalBytes": 2172831,
+    "optimizedBytes": 1338218
+  },
+  "content/articles/uk/image/npa-effectiveness-2.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/uk/image/optimized/npa-effectiveness-2.webp",
+    "originalBytes": 2222494,
+    "optimizedBytes": 1515290
+  },
+  "content/articles/uk/image/coalin.jfif": {
+    "width": 1672,
+    "height": 941,
+    "src": "/content/articles/uk/image/coalin.jfif",
+    "originalBytes": 221343,
+    "optimizedBytes": 221343
+  },
+  "content/articles/uk/image/f12_how_work.png": {
+    "width": 1122,
+    "height": 1402,
+    "src": "/content/articles/uk/image/optimized/f12_how_work.webp",
+    "originalBytes": 1541027,
+    "optimizedBytes": 1155996
+  },
+  "content/articles/uk/image/tamandcom.png": {
+    "width": 1122,
+    "height": 1402,
+    "src": "/content/articles/uk/image/optimized/tamandcom.webp",
+    "originalBytes": 1490264,
+    "optimizedBytes": 1091820
+  },
+  "content/articles/uk/image/diamond.png": {
+    "width": 1122,
+    "height": 1402,
+    "src": "/content/articles/uk/image/optimized/diamond.webp",
+    "originalBytes": 1547505,
+    "optimizedBytes": 1142672
+  },
+  "content/articles/uk/image/moreIFAK.png": {
+    "width": 1672,
+    "height": 941,
+    "src": "/content/articles/uk/image/optimized/moreIFAK.webp",
+    "originalBytes": 2100575,
+    "optimizedBytes": 1446978
+  },
+  "content/articles/uk/image/CSL_bag_ex1.png": {
+    "width": 1535,
+    "height": 1024,
+    "src": "/content/articles/uk/image/optimized/CSL_bag_ex1.webp",
+    "originalBytes": 2146513,
+    "optimizedBytes": 1497952
+  },
+  "content/articles/uk/image/CSL-bag-ex2.png": {
+    "width": 1448,
+    "height": 1086,
+    "src": "/content/articles/uk/image/optimized/CSL-bag-ex2.webp",
+    "originalBytes": 1686421,
+    "optimizedBytes": 1163986
+  },
+  "content/articles/uk/image/tree_bags.png": {
+    "width": 1672,
+    "height": 941,
+    "src": "/content/articles/uk/image/optimized/tree_bags.webp",
+    "originalBytes": 2242298,
+    "optimizedBytes": 1636682
+  },
+  "content/articles/en/image/npa-effectiveness-1.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/en/image/optimized/npa-effectiveness-1.webp",
+    "originalBytes": 2182738,
+    "optimizedBytes": 1341250
+  },
+  "content/articles/en/image/npa-effectiveness-2.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/en/image/optimized/npa-effectiveness-2.webp",
+    "originalBytes": 2121704,
+    "optimizedBytes": 1465832
+  },
+  "content/articles/en/image/coalin.jfif": {
+    "width": 1672,
+    "height": 941,
+    "src": "/content/articles/en/image/coalin.jfif",
+    "originalBytes": 221343,
+    "optimizedBytes": 221343
+  },
+  "content/articles/en/image/f12_how_work.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/en/image/optimized/f12_how_work.webp",
+    "originalBytes": 1390631,
+    "optimizedBytes": 846336
+  },
+  "content/articles/en/image/tamandcom.png": {
+    "width": 1086,
+    "height": 1448,
+    "src": "/content/articles/en/image/optimized/tamandcom.webp",
+    "originalBytes": 1552478,
+    "optimizedBytes": 1153552
+  },
+  "content/articles/en/image/diamond.png": {
+    "width": 1122,
+    "height": 1402,
+    "src": "/content/articles/en/image/optimized/diamond.webp",
+    "originalBytes": 1449241,
+    "optimizedBytes": 1060308
+  },
+  "content/articles/en/image/CSL-bag-ex2.png": {
+    "width": 1448,
+    "height": 1086,
+    "src": "/content/articles/en/image/optimized/CSL-bag-ex2.webp",
+    "originalBytes": 1808433,
+    "optimizedBytes": 1266156
+  }
+}

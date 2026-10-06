@@ -749,3 +749,7 @@
 .publications-section[hidden] {
   display: none;
 }
+
+/* Native catalog anchors retain the original row appearance. */
+a.article-row { color: inherit; text-decoration: none; }
+a.article-row:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }

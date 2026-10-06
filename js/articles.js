@@ -120,7 +120,7 @@ const current = config[language];
     );
 
 
-    articlesList.innerHTML = `
+    if (!articlesList.hasAttribute("data-static-catalog")) articlesList.innerHTML = `
       <p class="articles-error">
         ${
           isEnglish
@@ -154,7 +154,7 @@ const current = config[language];
       );
 
 
-    articlesList.innerHTML =
+    if (!articlesList.hasAttribute("data-static-catalog")) articlesList.innerHTML =
       articles
         .map(createArticleHTML)
         .join("");
@@ -176,13 +176,11 @@ const current = config[language];
   function createArticleHTML(article) {
 
     return `
-      <article
+      <a
         class="article-row"
         data-type="${article.type}"
         data-category="${article.category}"
-        data-href="${current.articlePage}?article=${article.slug}"
-        tabindex="0"
-        role="link"
+        href="${isEnglish ? "/en" : ""}/articles/${article.content.replace(/\.md$/, "")}/"
       >
 
         <div class="article-row__meta">
@@ -233,7 +231,7 @@ const current = config[language];
 
       </div>
 
-      </article>
+      </a>
     `;
 
   }

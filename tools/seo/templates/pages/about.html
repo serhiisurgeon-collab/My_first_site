@@ -1,0 +1,770 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html"  rel="noopener noreferrer">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html" aria-current="page" rel="noopener noreferrer">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" rel="noopener noreferrer">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html" rel="noopener noreferrer">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html" rel="noopener noreferrer">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+
+  <a
+    class="site-nav__language-option is-active"
+    href="./about.html"
+    lang="uk"
+    aria-current="page"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/about-en.html"
+    lang="en"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html" rel="noopener noreferrer">Головна</a>
+    <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+    <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+    <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+    <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+
+  </div>
+</div>
+
+<header>
+<section class="about-hero" aria-labelledby="about-hero-title">
+  <div class="about-hero__overlay" aria-hidden="true"></div>
+      <div
+    class="about-hero__background"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="about-hero__overlay"
+    aria-hidden="true"
+  ></div>
+  <div class="container about-hero__container">
+    <div class="about-hero__content">
+
+      <div class="about-hero__eyebrow">
+        <span>Про мене</span>
+        <span class="about-hero__eyebrow-line"></span>
+      </div>
+
+      <h1 class="about-hero__title" id="about-hero-title">
+        Військовий лікар<span>.</span><br>
+        Інструктор<span>.</span> <br> Розробник<span>.</span>
+      </h1>
+
+      <p class="about-hero__description">
+        Я український військовий лікар, хірург і судово-медичний експерт. Моя робота охоплює медичне планування, організацію медичного забезпечення та евакуації, навчання військовослужбовців без медичної освіти й розробку освітніх та цифрових проєктів.
+      </p>
+
+<div class="about-hero__stats">
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <path d="M24 4 40 10v11c0 10-6.7 18.8-16 23C14.7 39.8 8 31 8 21V10L24 4Z" />
+        <path d="m17 24 5 5 10-12" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>Військовий лікар</strong>
+      <span>з 2021 року</span>
+    </div>
+  </div>
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <path d="m4 18 20-10 20 10-20 10L4 18Z" />
+        <path d="M12 23v11c6 5 18 5 24 0V23" />
+        <path d="M44 18v14" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>Навчання</strong>
+      <span>TCCC/CLS</span>
+    </div>
+  </div>
+
+  <div class="about-hero__stat">
+    <div class="about-hero__stat-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <rect x="7" y="8" width="34" height="26" rx="3" />
+        <path d="M4 40h40" />
+        <path d="m18 17-5 5 5 5" />
+        <path d="m30 17 5 5-5 5" />
+        <path d="m27 14-6 16" />
+      </svg>
+    </div>
+
+    <div class="about-hero__stat-text">
+      <strong>Освітні та цифрові</strong>
+      <span>проєкти</span>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="about-path" aria-labelledby="about-path-title">
+  <div class="about-path__container">
+
+    <!-- Ліва колонка -->
+<div class="about-path__story">
+  <header class="about-path__header">
+    <div class="about-path__eyebrow">
+      <span>Мій шлях</span>
+      <span
+        class="about-path__eyebrow-line"
+        aria-hidden="true"
+      ></span>
+    </div>
+
+    <h2
+      class="about-path__title"
+      id="about-path-title"
+    >
+      Від медицини<br>
+      до цифрових рішень
+    </h2>
+  </header>
+
+  <!-- Контейнер, у якому один текст змінюється іншим -->
+  <div class="about-path__story-copy">
+
+    <!-- Коротка версія -->
+    <div
+      class="about-path__story-panel is-active"
+      data-story-panel="short"
+    >
+      <p class="about-path__intro">
+        Медична освіта, військова служба та викладацька робота поступово сформували мій професійний напрям. Практичні завдання підказують, які теми варто пояснювати глибше та які інструменти можуть бути корисними.
+      </p>
+    </div>
+
+    <!-- Повна версія -->
+    <div
+      class="about-path__story-panel about-path__story-panel--full"
+      data-story-panel="full"
+      hidden
+    >
+      <div class="about-path__longread">
+        <p class="about-path__longread-lead">
+          У 2019 році закінчив медичний університет. У 2019–2021 роках пройшов інтернатуру з судово-медичної експертизи. З 2021 року служу військовим лікарем. У 2025 році здобув спеціалізацію з хірургії.
+        </p>
+
+        <p>
+          У роботі з медичним забезпеченням для мене важливо узгодити підготовку людей, доступні ресурси, взаємодію та можливості евакуації. Частина цього планування — з’ясувати, яку допомогу реально можуть надати заклади, що прийматимуть поранених. Для цього спілкуюся з керівниками та лікарями, уточнюю доступність фахівців і досліджень, забезпечення кров’ю, можливості та обмеження хірургічної допомоги.
+        </p>
+
+        <p>
+          Навчаю військовослужбовців без медичної освіти за напрямами TCCC/CLS. Люди приходять із різним досвідом, тому мене цікавить, що кожен зможе зрозуміти й застосувати після навчання. Моя мета — допомогти людині розпізнати загрозливий стан, визначити пріоритети, надати допомогу в межах своєї підготовки та розуміти, коли потрібне залучення медика.
+        </p>
+
+        <p>
+          Пишу професійні статті, створюю навчальні матеріали та розробляю цифрові інструменти. Зокрема, працюю над S-Dose — застосунком із довідковою інформацією про ліки та розрахунком доз. У цих проєктах для мене важливі точність джерел, зрозуміле пояснення та чітке позначення обмежень. Питання з практики й навчання допомагають визначати, над чим працювати далі.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Таймлайн завжди залишається в кінці -->
+  <ol class="about-path__timeline">
+    <li class="about-path__timeline-item">
+      <time datetime="2019">2019</time>
+
+      <p>Закінчив медичний університет</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2019">2019–2021</time>
+
+      <p>Інтернатура з судово-медичної експертизи</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2021">2021 — сьогодні</time>
+
+      <p>Військовий лікар, інструктор TCCC / CLS</p>
+    </li>
+
+    <li class="about-path__timeline-item">
+      <time datetime="2025">2025</time>
+
+      <p>
+       Спеціалізація з хірургії та розвиток цифрових рішень
+      </p>
+    </li>
+  </ol>
+
+  <button
+    class="about-path__button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="about-path-full-story"
+    data-story-toggle
+  >
+    <span data-story-button-text>
+      Більше про мій досвід
+    </span>
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14"></path>
+      <path d="m14 7 5 5-5 5"></path>
+    </svg>
+  </button>
+</div>
+
+    <!-- Права колонка -->
+    <div class="about-path__expertise">
+      <div class="about-path__eyebrow">
+        <span>Експертиза</span>
+      </div>
+
+      <div class="about-path__cards">
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="7" y="13" width="34" height="27" rx="3"></rect>
+              <path d="M18 13V8h12v5"></path>
+              <path d="M24 21v11"></path>
+              <path d="M18.5 26.5h11"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Медичне планування
+          </h3>
+
+          <p class="expertise-card__text">
+            Оцінка потреб, доступних ресурсів і спроможностей закладів для планування допомоги.
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="m5 17 19-10 19 10-19 10L5 17Z"></path>
+              <path d="M13 23v11c6 5 16 5 22 0V23"></path>
+              <path d="M43 17v14"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Медичне забезпечення та евакуація
+          </h3>
+
+          <p class="expertise-card__text">
+            Організація допомоги, планування евакуації та взаємодії між учасниками її надання.
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="5" y="9" width="38" height="29" rx="3"></rect>
+              <path d="m18 18-6 6 6 6"></path>
+              <path d="m30 18 6 6-6 6"></path>
+              <path d="m27 15-6 18"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Навчання TCCC/CLS
+          </h3>
+
+          <p class="expertise-card__text">
+            Підготовка військовослужбовців без медичної освіти з урахуванням їхнього досвіду та меж підготовки.
+          </p>
+        </article>
+
+        <article class="expertise-card">
+          <div class="expertise-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <circle cx="18" cy="16" r="6"></circle>
+              <circle cx="34" cy="17" r="5"></circle>
+              <path d="M6 39v-5c0-6 5-10 12-10s12 4 12 10v5"></path>
+              <path d="M29 27c2-2 4-3 7-3 5 0 8 4 8 9v6"></path>
+            </svg>
+          </div>
+
+          <h3 class="expertise-card__title">
+            Освітні та цифрові проєкти
+          </h3>
+
+          <p class="expertise-card__text">
+            Професійні статті, навчальні матеріали та розробка S-Dose.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="about-path__tools">
+        <h3 class="about-path__tools-title">
+          Інструменти та технології
+        </h3>
+
+        <ul class="about-path__tags" aria-label="Технології">
+          <li>Python</li>
+          <li>Flutter</li>
+          <li>SQLite</li>
+          <li>AI / OpenAI</li>
+          <li>JavaScript</li>
+          <li>Figma</li>
+          <li>Git / GitHub</li>
+          <li>Trello</li>
+          <li>Notion</li>
+        </ul>
+      </div>
+<div
+  class="about-path__gallery-reveal"
+  data-story-gallery
+  aria-hidden="true"
+>
+  <div class="about-path__gallery-inner">
+    <div class="about-path__gallery-content">
+
+      <div class="about-path__gallery-header">
+        <div class="about-path__eyebrow">
+          <span>У роботі</span>
+
+          <span
+            class="about-path__eyebrow-line"
+            aria-hidden="true"
+          ></span>
+        </div>
+
+        <p class="about-path__gallery-intro">
+          Кілька моментів із практики, навчання
+          та роботи над цифровими рішеннями.
+        </p>
+      </div>
+
+      <div class="about-path__gallery">
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-01.webp"
+            alt="Практична робота у сфері військової медицини"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Військова медицина
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-02.webp"
+            alt="Проведення заняття з тактичної медицини"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Навчання та інструкторство
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-03.webp"
+            alt="Підготовка навчальних матеріалів"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Освітні матеріали
+          </figcaption>
+        </figure>
+
+        <figure class="about-path__gallery-item">
+          <img
+            src="../../assets/images/about-gallery-04.png"
+            alt="Робота над цифровими інструментами"
+            loading="lazy"
+            decoding="async"
+          >
+
+          <figcaption>
+            Цифрові рішення
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
+</section>
+<section
+  class="about-values"
+  aria-labelledby="about-values-title"
+>
+  <div class="about-values__container">
+
+    <header class="about-values__intro">
+      <div class="about-values__eyebrow">
+        <span>Мої принципи</span>
+
+        <span
+          class="about-values__eyebrow-line"
+          aria-hidden="true"
+        ></span>
+      </div>
+
+      <h2
+        class="about-values__title"
+        id="about-values-title"
+      >
+        Що важливо<br>
+        в моїй роботі
+      </h2>
+
+      <p class="about-values__description">
+        Я працюю там, де знання мають практичну цінність,
+        а технології служать людям. Мій підхід — це
+        відповідальність, системність і постійний розвиток.
+      </p>
+    </header>
+
+    <div class="about-values__list">
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <path
+              d="M24 4 40 10v11c0 10-6.7 18.8-16 23C14.7 39.8 8 31 8 21V10L24 4Z"
+            ></path>
+
+            <path d="m17 24 5 5 10-12"></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Відповідальність
+        </h3>
+
+        <p class="about-values__item-text">
+          Кожне рішення може впливати на життя.
+          Я несу за нього повну відповідальність.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <circle cx="23" cy="24" r="16"></circle>
+            <circle cx="23" cy="24" r="9"></circle>
+            <circle cx="23" cy="24" r="3"></circle>
+
+            <path d="M27 20 42 5"></path>
+            <path d="M35 6h8v8"></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Практичність
+        </h3>
+
+        <p class="about-values__item-text">
+          Створюю рішення, які працюють у реальних
+          умовах, а не лише на папері.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <path
+              d="M5 10c7-3 13-2 19 2v28c-6-4-12-5-19-2V10Z"
+            ></path>
+
+            <path
+              d="M43 10c-7-3-13-2-19 2v28c6-4 12-5 19-2V10Z"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Постійний розвиток
+        </h3>
+
+        <p class="about-values__item-text">
+          Навчаюся щодня, тестую нове
+          та вдосконалюю себе й інструменти.
+        </p>
+      </article>
+
+      <article class="about-values__item">
+        <div
+          class="about-values__icon"
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48">
+            <circle cx="17" cy="15" r="6"></circle>
+            <circle cx="34" cy="17" r="5"></circle>
+
+            <path
+              d="M5 40v-5c0-7 5-11 12-11s12 4 12 11v5"
+            ></path>
+
+            <path
+              d="M29 28c2-2 5-3 8-2 5 1 7 5 7 10v4"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="about-values__item-title">
+          Співпраця
+        </h3>
+
+        <p class="about-values__item-text">
+          Найкращі результати досягаються в команді
+          та через обмін досвідом.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+</header>
+
+
+  <main>
+<section class="collaboration-cta" id="collaboration">
+  <div class="collaboration-cta__overlay" aria-hidden="true"></div>
+
+  <div class="container collaboration-cta__grid">
+    <div class="collaboration-cta__content">
+      <p class="collaboration-cta__eyebrow">
+        Співпраця та контакти
+      </p>
+
+      <h2 class="collaboration-cta__title">
+        Відкритий до співпраці<br>
+        та нових ініціатив.
+      </h2>
+
+      <p class="collaboration-cta__description">
+        Якщо у вас є ідея, проєкт або потреба в медичному
+        чи освітньому рішенні — давайте обговоримо,
+        як ми можемо працювати разом.
+      </p>
+    </div>
+
+    <div class="collaboration-cta__action">
+      <a
+        class="collaboration-cta__button"
+        href="./contact.html"
+       rel="noopener noreferrer" target="_blank">
+        Зв’язатися зі мною
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html" rel="noopener noreferrer">Головна</a>
+        <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+        <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+        <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+        <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html" rel="noopener noreferrer" target="_blank">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+<script type="module" src="./js/main.js?v=20261003-about-copy"></script>
+<script>
+  document.documentElement.classList.add("js");
+</script>
+</body>
+</html>

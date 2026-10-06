@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
           article.type === "publication"
             ? article.url
             : new URL(
-                `${lang === "en" ? "en/article-en.html" : "article.html"}?article=${encodeURIComponent(article.slug)}`,
+                `${lang === "en" ? "en/" : ""}articles/${encodeURIComponent(article.content.replace(/\.md$/, ""))}/`,
                 siteRoot
               ).href
       }));

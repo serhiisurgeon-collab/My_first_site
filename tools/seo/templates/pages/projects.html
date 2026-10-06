@@ -1,0 +1,716 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/projects.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html"  rel="noopener noreferrer">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html" rel="noopener noreferrer">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" aria-current="page" rel="noopener noreferrer">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html" rel="noopener noreferrer">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html" rel="noopener noreferrer">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./projects.html"
+    lang="uk"
+    aria-current="page"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/projects-en.html"
+    lang="en"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html" rel="noopener noreferrer">Головна</a>
+    <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+    <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+    <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+    <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+
+  </div>
+</div>
+
+<header>
+<div class="projects-page">
+
+  <!-- ==================================================
+       PROJECTS HERO
+  =================================================== -->
+
+  <section class="projects-hero">
+
+    <div class="container projects-hero__container">
+
+<div class="projects-hero__content">
+
+  <p class="projects-hero__eyebrow hero-reveal hero-reveal--1">
+    <span>ПРОЄКТИ</span>
+    <span class="projects-hero__eyebrow-line"></span>
+  </p>
+
+  <h1 class="projects-hero__title hero-reveal hero-reveal--2">
+    Проєкти
+  </h1>
+
+  <p class="projects-hero__lead hero-reveal hero-reveal--3">
+    Речі, які я створюю.
+  </p>
+
+  <p class="projects-hero__description hero-reveal hero-reveal--4">
+    Медичні, освітні та цифрові проєкти —
+    від практичних інструментів до експериментальних ідей,
+    які поступово стають чимось більшим.
+  </p>
+
+</div>
+
+
+      <!-- PROJECT META -->
+
+            <div class="projects-meta hero-reveal hero-reveal--5">
+
+            <div class="projects-meta__item">
+                <span class="projects-meta__value">06</span>
+                <span class="projects-meta__label">проєктів</span>
+            </div>
+
+            <div class="projects-meta__item">
+                <span class="projects-meta__value">03</span>
+                <span class="projects-meta__label">активні</span>
+            </div>
+
+            <div class="projects-meta__item projects-meta__item--wide">
+
+                <span class="projects-meta__heading">
+                Напрями
+                </span>
+
+                <span class="projects-meta__label">
+                Медицина · Освіта · Software
+                </span>
+
+            </div>
+
+            </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       PROJECT FILTERS
+  =================================================== -->
+
+  <section class="projects-index">
+  <div class="projects-intro">
+
+    <span class="projects-intro__eyebrow">
+      Обрані проєкти
+    </span>
+
+    <div class="projects-intro__grid">
+
+      <h2>
+        Проєкти, над якими<br>
+        я працюю.
+      </h2>
+
+      <p>
+        Нижче — кілька основних робіт у медицині,
+        освіті та software: від навчальних платформ
+        до невеликих цифрових інструментів.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="projects-showcase__inner">
+
+    <!-- FEATURED PROJECT -->
+    <article class="project-featured">
+
+      <div class="project-featured__content">
+
+        <span class="project-featured__eyebrow">
+          Featured project
+        </span>
+
+        <h2 class="project-featured__title">
+          Освітній хаб<br>
+          TCCC
+        </h2>
+
+        <div class="project-tags">
+          <span>Медицина</span>
+          <span>Освіта</span>
+        </div>
+
+        <p class="project-featured__description">
+          Платформа для поглибленого вивчення тактичної медицини — від рекомендацій TCCC до фізіології, доказової бази та практичного застосування.
+        </p>
+
+        <a class="project-link">
+          В розробці
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="project-featured__visual">
+        <img
+          src="./assets/images/project-tccc.webp"
+          alt="TCCC / MARCH educational platform"
+        >
+      </div>
+
+    </article>
+
+
+    <!-- SECONDARY PROJECTS -->
+    <div class="project-secondary-grid">
+
+      <!-- S-DOSE -->
+      <article class="project-secondary">
+
+        <div class="project-secondary__content">
+
+          <h3>S-Dose</h3>
+
+          <div class="project-tags">
+            <span>Медицина</span>
+          </div>
+
+          <p>
+            Довідник і калькулятор доз
+            лікарських засобів для практичного
+            використання.
+          </p>
+
+          <a class="project-link" href="./s-dose.html" rel="noopener noreferrer" target="_blank">
+            До проєкту
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div class="project-secondary__visual">
+          <img
+            src="./assets/images/project-sdose.webp"
+            alt="S-Dose application"
+          >
+        </div>
+
+        <div class="project-status project-status--development">
+          <span></span>
+          У розробці
+        </div>
+
+      </article>
+
+
+      <!-- SPANISH -->
+      <article class="project-secondary">
+
+        <div class="project-secondary__content">
+
+          <h3>Spanish by Serhii</h3>
+
+          <div class="project-tags">
+            <span>Освіта</span>
+            <span>Software</span>
+          </div>
+
+          <p>
+            Бот для вивчення іспанської мови:
+            слова, тести, прогрес і
+            персоналізовані вправи.
+          </p>
+
+          <a href="./spanish-bot.html"
+              rel="noopener noreferrer"
+             class="project-link" target="_blank">
+            Переглянути проєкт
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div class="project-secondary__visual">
+          <img
+            src="./assets/images/project-spanish.webp"
+            alt="Spanish by Serhii Telegram bot"
+          >
+        </div>
+
+        <div class="project-status project-status--active">
+          <span></span>
+          Active
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- OTHER PROJECTS -->
+    <div class="other-projects">
+
+      <div class="other-projects__header">
+        <h3>Інші проєкти</h3>
+        <span></span>
+      </div>
+
+
+      <!-- BLOOD -->
+      <a href="/project/project_blood/blood_html.html"
+        rel="noopener noreferrer"
+        class="project-row" target="_blank">
+
+        <div class="project-row__visual">
+          <img
+            src="./assets/images/interactive_4.jpg"
+            alt=""
+          >
+        </div>
+
+        <div class="project-row__content">
+
+          <h4>Blood Donation Project</h4>
+
+          <div class="project-tags">
+            <span>Медицина</span>
+          </div>
+
+          <p>
+            Платформа для залучення донорів і
+            популяризації донорства крові.
+          </p>
+
+        </div>
+
+        <div class="project-status project-status--completed">
+          <span></span>
+          Completed
+        </div>
+
+        <div class="project-row__arrow">→</div>
+
+      </a>
+
+
+      <!-- PORTFOLIO -->
+      <a href="https://serhiipelishenko.com/"
+        rel="noopener noreferrer"
+        class="project-row" target="_blank">
+
+        <div class="project-row__visual">
+          <img
+            src="./assets/images/about-photo.webp"
+            alt=""
+          >
+        </div>
+
+        <div class="project-row__content">
+
+          <h4>serhiipelishenko.com</h4>
+
+          <div class="project-tags">
+            <span>Software</span>
+            <span>Personal</span>
+          </div>
+
+          <p>
+            Мій персональний сайт-портфоліо.
+            Місце, де зібрані мої проєкти,
+            статті та ідеї.
+          </p>
+
+        </div>
+
+        <div class="project-status project-status--active">
+          <span></span>
+          Active
+        </div>
+
+        <div class="project-row__arrow">→</div>
+
+      </a>
+
+
+      <!-- DUNE -->
+      <a href="/project/2d_try.html"
+        rel="noopener noreferrer"
+        class="project-row" target="_blank">
+
+        <div class="project-row__visual">
+          <img
+            src="./assets/images/duna.jpg"
+            alt=""
+          >
+        </div>
+
+        <div class="project-row__content">
+
+          <h4>The World of Dune</h4>
+
+          <div class="project-tags">
+            <span>Освіта</span>
+            <span>Експерименти</span>
+          </div>
+
+          <p>
+            Енциклопедія всесвіту Dune:
+            світобудова, персонажі,
+            хронологія та інтерактивна мапа.
+          </p>
+
+        </div>
+
+        <div class="project-status project-status--archived">
+          <span></span>
+          Archived
+        </div>
+
+        <div class="project-row__arrow">→</div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  </section>
+
+
+
+<section class="projects-lab">
+
+  <img
+    class="projects-lab__rings"
+    src="./assets/images/tree-rings.svg"
+    alt=""
+    aria-hidden="true"
+  >
+
+  <div class="container projects-lab__grid">
+
+    <!-- LEFT -->
+
+    <div class="projects-lab__intro reveal-card">
+
+      <p class="projects-lab__eyebrow">
+        <span class="projects-lab__eyebrow-line"></span>
+        <span>Експерименти / Lab</span>
+      </p>
+
+      <h2 class="projects-lab__title">
+        Тестую.<br>
+        Досліджую.<br>
+        Створюю нове.
+      </h2>
+
+      <p class="projects-lab__description">
+        Ідеї та інструменти, які ще в процесі,
+        але з часом можуть стати окремими проєктами.
+      </p>
+
+      <a
+        class="projects-lab__button"
+        href="./contact.html"
+       rel="noopener noreferrer" target="_blank">
+        <span>Зв’язатися зі мною</span>
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+
+    <!-- CARDS -->
+
+    <div class="projects-lab__cards">
+
+      <!-- 01 -->
+
+      <article class="lab-card reveal-card">
+
+        <div class="lab-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+
+        <h3 class="lab-card__title">
+          Медичні калькулятори
+        </h3>
+
+        <p class="lab-card__text">
+          Дозування, індекси, конверсії
+          та клінічні шкали.
+        </p>
+
+        <span class="lab-card__status">
+          In progress
+        </span>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="lab-card reveal-card">
+
+        <div class="lab-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+        <h3 class="lab-card__title">
+          UI експерименти
+        </h3>
+
+        <p class="lab-card__text">
+          Дизайн-системи, компоненти
+          та мікровзаємодії.
+        </p>
+
+        <span class="lab-card__status">
+          Experiment
+        </span>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="lab-card reveal-card">
+
+        <div class="lab-card__icon" aria-hidden="true">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+
+        <h3 class="lab-card__title">
+          Telegram утиліти
+        </h3>
+
+        <p class="lab-card__text">
+          Боти та невеликі модулі
+          для автоматизації задач.
+        </p>
+
+        <span class="lab-card__status">
+          In progress
+        </span>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="lab-card reveal-card">
+
+        <div class="lab-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-chart-column"></i>
+        </div>
+
+        <h3 class="lab-card__title">
+          Візуалізація даних
+        </h3>
+
+        <p class="lab-card__text">
+          Графіки, дашборди
+          та аналітичні представлення даних.
+        </p>
+
+        <span class="lab-card__status">
+          Experiment
+        </span>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+</header>
+
+<main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html" rel="noopener noreferrer">Головна</a>
+        <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+        <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+        <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+        <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html" rel="noopener noreferrer" target="_blank">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+</main>
+
+<script type="module" src="./js/main.js?v=20261005-spanish"></script>
+<script src="./js/projects.js"></script>
+
+<script>
+  document.documentElement.classList.add("js");
+</script>
+</body>
+</html>

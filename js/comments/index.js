@@ -17,7 +17,7 @@ async function start(){
  if(!commentsConfig.enabled||!commentsConfig.firebase){root.dataset.state='disabled';root.replaceChildren(node('p',strings.disabled));return;}
  root.dataset.state='loading';root.setAttribute('aria-busy','true');root.replaceChildren(node('p',strings.loading));
  const response=await fetch(new URL('../../firebase/article-map.json',import.meta.url),{cache:'no-cache'});if(!response.ok)throw Error('article-map');const map=await response.json();
- const slug=new URL(location.href).searchParams.get('article');const article=map.articles.find(a=>a.slug===slug||a.aliases.includes(slug));if(!article){root.dataset.state='disabled';root.replaceChildren(node('p',strings.disabled));return;}
+ const slug=document.documentElement.dataset.articleSlug||new URL(location.href).searchParams.get('article');const article=map.articles.find(a=>a.slug===slug||a.aliases.includes(slug));if(!article){root.dataset.state='disabled';root.replaceChildren(node('p',strings.disabled));return;}
  const {createCommentsApi}=await import('./api.js?v=20261005-privacy');const api=await createCommentsApi(commentsConfig);const settings=await api.settings();
  const section=root.closest('.article-discussion')||root;const discussionHeader=section.querySelector('.article-discussion__header');const adminEntry=new URL(location.href).searchParams.get('commentsAdmin')==='1';
  root.dataset.articleId=article.id;

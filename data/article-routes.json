@@ -1,0 +1,32 @@
+{
+  "how-kaolin-works": {
+    "id": "a-0001",
+    "uk": "/articles/how-kaolin-works/",
+    "en": "/en/articles/how-kaolin-works/"
+  },
+  "how-kaolin-works-en": {
+    "id": "a-0001",
+    "uk": "/articles/how-kaolin-works/",
+    "en": "/en/articles/how-kaolin-works/"
+  },
+  "group-medical-bag": {
+    "id": "a-0002",
+    "uk": "/articles/group-medical-bag/",
+    "en": "/en/articles/group-medical-bag/"
+  },
+  "hospital-capabilities": {
+    "id": "a-0003",
+    "uk": "/articles/hospital-capabilities/",
+    "en": "/en/articles/hospital-capabilities/"
+  },
+  "medical-app-without-internet": {
+    "id": "a-0004",
+    "uk": "/articles/medical-app-without-internet/",
+    "en": "/en/articles/medical-app-without-internet/"
+  },
+  "npa-effectiveness": {
+    "id": "a-0005",
+    "uk": "/articles/npa-effectiveness/",
+    "en": "/en/articles/npa-effectiveness/"
+  }
+}

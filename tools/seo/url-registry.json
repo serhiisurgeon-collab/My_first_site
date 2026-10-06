@@ -1,0 +1,785 @@
+{
+  "baseCommit": "02cc821745cfaf0b1cfdd1a5dca0fa68a108bf58",
+  "origin": "https://serhiipelishenko.com",
+  "semantics": {
+    "includeInSitemap": "Sitemap eligibility only, not robots or proof of Google indexing",
+    "initialRobots": "Response HTML directives; legacy routes have no initial noindex",
+    "indexing": "Actual Google indexing is unknown without Search Console"
+  },
+  "routes": [
+    {
+      "language": "uk",
+      "articleId": "a-0005",
+      "currentUrl": "/articles/npa-effectiveness/",
+      "previousUrl": "/article.html?article=npa-effectiveness",
+      "canonicalUrl": "/articles/npa-effectiveness/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0004",
+      "currentUrl": "/articles/medical-app-without-internet/",
+      "previousUrl": "/article.html?article=medical-app-without-internet",
+      "canonicalUrl": "/articles/medical-app-without-internet/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0003",
+      "currentUrl": "/articles/hospital-capabilities/",
+      "previousUrl": "/article.html?article=hospital-capabilities",
+      "canonicalUrl": "/articles/hospital-capabilities/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0001",
+      "currentUrl": "/articles/how-kaolin-works/",
+      "previousUrl": "/article.html?article=how-kaolin-works",
+      "canonicalUrl": "/articles/how-kaolin-works/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0002",
+      "currentUrl": "/articles/group-medical-bag/",
+      "previousUrl": "/article.html?article=group-medical-bag",
+      "canonicalUrl": "/articles/group-medical-bag/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0005",
+      "currentUrl": "/en/articles/npa-effectiveness/",
+      "previousUrl": "/en/article-en.html?article=npa-effectiveness",
+      "canonicalUrl": "/en/articles/npa-effectiveness/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0004",
+      "currentUrl": "/en/articles/medical-app-without-internet/",
+      "previousUrl": "/en/article-en.html?article=medical-app-without-internet",
+      "canonicalUrl": "/en/articles/medical-app-without-internet/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0003",
+      "currentUrl": "/en/articles/hospital-capabilities/",
+      "previousUrl": "/en/article-en.html?article=hospital-capabilities",
+      "canonicalUrl": "/en/articles/hospital-capabilities/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0001",
+      "currentUrl": "/en/articles/how-kaolin-works/",
+      "previousUrl": "/en/article-en.html?article=how-kaolin-works-en",
+      "canonicalUrl": "/en/articles/how-kaolin-works/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0002",
+      "currentUrl": "/en/articles/group-medical-bag/",
+      "previousUrl": "/en/article-en.html?article=group-medical-bag",
+      "canonicalUrl": "/en/articles/group-medical-bag/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/",
+      "canonicalUrl": "/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/index-en.html",
+      "canonicalUrl": "/en/index-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/articles.html",
+      "canonicalUrl": "/articles.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/articles-en.html",
+      "canonicalUrl": "/en/articles-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/about.html",
+      "canonicalUrl": "/about.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/about-en.html",
+      "canonicalUrl": "/en/about-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/projects.html",
+      "canonicalUrl": "/projects.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/projects-en.html",
+      "canonicalUrl": "/en/projects-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/contact.html",
+      "canonicalUrl": "/contact.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/contact-en.html",
+      "canonicalUrl": "/en/contact-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/policy.html",
+      "canonicalUrl": "/policy.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/policy-en.html",
+      "canonicalUrl": "/en/policy-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/index.html",
+      "canonicalUrl": "/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default)",
+      "kind": "html-alias",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0001",
+      "currentUrl": "/article.html?article=how-kaolin-works",
+      "canonicalUrl": "/articles/how-kaolin-works/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0001",
+      "currentUrl": "/en/article-en.html?article=how-kaolin-works",
+      "canonicalUrl": "/en/articles/how-kaolin-works/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0001",
+      "currentUrl": "/article.html?article=how-kaolin-works-en",
+      "canonicalUrl": "/articles/how-kaolin-works/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0001",
+      "currentUrl": "/en/article-en.html?article=how-kaolin-works-en",
+      "canonicalUrl": "/en/articles/how-kaolin-works/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0002",
+      "currentUrl": "/article.html?article=group-medical-bag",
+      "canonicalUrl": "/articles/group-medical-bag/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0002",
+      "currentUrl": "/en/article-en.html?article=group-medical-bag",
+      "canonicalUrl": "/en/articles/group-medical-bag/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0003",
+      "currentUrl": "/article.html?article=hospital-capabilities",
+      "canonicalUrl": "/articles/hospital-capabilities/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0003",
+      "currentUrl": "/en/article-en.html?article=hospital-capabilities",
+      "canonicalUrl": "/en/articles/hospital-capabilities/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0004",
+      "currentUrl": "/article.html?article=medical-app-without-internet",
+      "canonicalUrl": "/articles/medical-app-without-internet/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0004",
+      "currentUrl": "/en/article-en.html?article=medical-app-without-internet",
+      "canonicalUrl": "/en/articles/medical-app-without-internet/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0005",
+      "currentUrl": "/article.html?article=npa-effectiveness",
+      "canonicalUrl": "/articles/npa-effectiveness/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0005",
+      "currentUrl": "/en/article-en.html?article=npa-effectiveness",
+      "canonicalUrl": "/en/articles/npa-effectiveness/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/s-dose.html",
+      "canonicalUrl": "/s-dose.html",
+      "includeInSitemap": false,
+      "initialRobots": "noindex,nofollow",
+      "kind": "restricted-page",
+      "indexingIntent": "excluded",
+      "robots": {
+        "initialNoindex": true,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/spanish-bot.html",
+      "canonicalUrl": "/spanish-bot.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/s-dose-en.html",
+      "canonicalUrl": "/en/s-dose-en.html",
+      "includeInSitemap": false,
+      "initialRobots": "noindex,nofollow",
+      "kind": "restricted-page",
+      "indexingIntent": "excluded",
+      "robots": {
+        "initialNoindex": true,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/spanish-bot-en.html",
+      "canonicalUrl": "/en/spanish-bot-en.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html?article=unknown",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "default; JS error state sets noindex",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html?article=",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "default; JS error state sets noindex",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/article.html",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "default; JS error state sets noindex",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/article-en.html?article=unknown",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "default; JS error state sets noindex",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/articles/not-a-real-article/",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "HTTP 404",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 404
+    },
+    {
+      "language": "en",
+      "articleId": null,
+      "currentUrl": "/en/articles/not-a-real-article/",
+      "canonicalUrl": null,
+      "includeInSitemap": false,
+      "initialRobots": "HTTP 404",
+      "kind": "error-control",
+      "indexingIntent": "error",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 404
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/2d_try.html",
+      "canonicalUrl": "/project/2d_try.html",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); existing redirect wrapper",
+      "kind": "legacy-project-alias",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/project_blood/blood_html.html",
+      "canonicalUrl": "/project/project_blood/blood_html.html",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); existing redirect wrapper",
+      "kind": "legacy-project-alias",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    }
+  ]
+}

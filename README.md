@@ -90,3 +90,22 @@ However, donating blood in Ukraine is extremely important and saves lives every 
 Made by **Serhii**  
 Front-end student | Ukraine
  
+
+## Static article generation and SEO review
+
+Article source is Markdown + both JSON catalogs + the stable article map.
+Generated article routes and core pages are committed outputs. Do not edit them
+manually; edit `tools/seo/templates/` for layout or core-page text.
+
+```sh
+npm ci
+npm run seo:build
+npm run seo:check
+npm run seo:test
+npm run seo:jekyll
+npm run seo:public-check
+```
+
+`seo:jekyll` runs the pinned official Pages image locally with Docker; it does
+not publish. Existing Pages publication from `main` remains unchanged.
+See [the authoring, compatibility and rollback guide](docs/seo-static-generation.md).

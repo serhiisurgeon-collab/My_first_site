@@ -1,0 +1,548 @@
+
+  <!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages/home.css?v=20261005-privacy">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+
+<body>
+<nav class="site-nav" aria-label="Основна навігація">
+  <div class="site-nav__inner container">
+    <a class="site-nav__brand" href="./index.html" rel="noopener noreferrer">
+      Serhii Pelishenko
+    </a>
+
+    <div class="site-nav__links">
+      <a class="site-nav__link" href="./index.html" aria-current="page" rel="noopener noreferrer">
+        Головна
+      </a>
+
+      <a class="site-nav__link" href="./about.html" rel="noopener noreferrer">
+        Про мене
+      </a>
+
+      <a class="site-nav__link" href="./projects.html" rel="noopener noreferrer">
+        Проєкти
+      </a>
+
+      <a class="site-nav__link" href="./articles.html" rel="noopener noreferrer">
+        Статті
+      </a>
+
+      <a class="site-nav__link" href="./contact.html" rel="noopener noreferrer">
+        Контакти
+      </a>
+    </div>
+<button
+  class="site-search-trigger"
+  type="button"
+  aria-label="Пошук по сайту"
+  title="Пошук"
+>
+  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="site-search-trigger__label">Пошук</span>
+  <span class="site-search-trigger__hint">Ctrl K</span>
+</button>
+<div
+  class="site-nav__language-switcher"
+  aria-label="Перемикач мови"
+>
+  <a
+    class="site-nav__language-option is-active"
+    href="./index.html"
+    lang="uk"
+    aria-current="page"
+   rel="noopener noreferrer">
+    UA
+  </a>
+
+  <span
+    class="site-nav__language-divider"
+    aria-hidden="true"
+  >
+    /
+  </span>
+
+  <a
+    class="site-nav__language-option"
+    href="./en/index-en.html"
+    lang="en"
+   rel="noopener noreferrer">
+    EN
+  </a>
+</div>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Меню
+    </button>
+  </div>
+</nav>
+<div
+  class="mobile-nav"
+  id="mobile-navigation"
+  aria-hidden="true"
+>
+  <div class="mobile-nav__inner">
+
+    <a href="./index.html" rel="noopener noreferrer">Головна</a>
+    <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+    <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+    <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+    <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+
+  </div>
+</div>
+
+<header class="start-hero" id="home">
+  <div class="start-hero__glow start-hero__glow--left"></div>
+  <div class="start-hero__glow start-hero__glow--right"></div>
+
+  <div class="start-hero__grid">
+
+    <div class="start-hero__content">
+
+      <div class="start-hero__eyebrow hero-reveal hero-reveal--1">
+        <span class="start-hero__eyebrow-line"></span>
+        <span>Військовий лікар · Україна</span>
+      </div>
+
+      <h1 class="start-hero__title">
+        <span class="hero-reveal hero-reveal--2">Сергій</span>
+        <span class="hero-reveal hero-reveal--3">Пелішенко</span>
+      </h1>
+
+      <div class="start-hero__roles hero-reveal hero-reveal--4">
+        <span>Військовий лікар</span>
+        <span>Тактична медицина · Освіта · Цифрові проєкти</span>
+      </div>
+
+      <p class="start-hero__description hero-reveal hero-reveal--5">
+        Практична медицина, підготовка людей і цифрові освітні
+        проєкти для роботи у складних умовах.
+      </p>
+
+      <div class="start-hero__actions hero-reveal hero-reveal--6">
+        <a href="#projects" class="start-hero__btn start-hero__btn--primary">
+          Переглянути проєкти
+          <span>→</span>
+        </a>
+
+        <a href="./about.html" class="start-hero__btn start-hero__btn--secondary" rel="noopener noreferrer" target="_blank">
+          Про мене
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="start-hero__stats hero-reveal hero-reveal--7">
+
+        <div class="start-hero__stat">
+          <strong>5+</strong>
+          <span>роки служби</span>
+        </div>
+
+        <div class="start-hero__stat">
+          <strong>Навчання</strong>
+          <span>практична підготовка</span>
+        </div>
+
+        <div class="start-hero__stat">
+          <strong>Цифровізація</strong>
+          <span>освітні проєкти</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="start-hero__visual hero-photo-reveal">
+
+      <div class="start-hero__dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="start-hero__photo-frame">
+
+        <div class="start-hero__photo-wrap">
+          <img
+            src="./assets/images/hero-serhii.webp"
+            alt="Сергій Пелішенко — військовий лікар та інструктор TCCC/CLS"
+            class="start-hero__photo"
+          >
+
+          <span class="start-hero__photo-shine" aria-hidden="true"></span>
+        </div>
+
+        <span class="start-hero__corner start-hero__corner--top"></span>
+        <span class="start-hero__corner start-hero__corner--bottom"></span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<a
+  class="start-hero__scroll"
+  href="#about-preview"
+  aria-label="Перейти до наступної секції"
+>
+  <span class="start-hero__scroll-icon" aria-hidden="true">↓</span>
+</a>
+</header>
+
+  <main>
+    <section class="about-preview" id="about-preview">
+  <div class="container about-preview__grid">
+
+    <div class="about-preview__intro">
+      <p class="about-preview__eyebrow">
+        Мій професійний напрям
+      </p>
+
+      <h2 class="about-preview__title">
+        Медичне забезпечення, навчання та цифрові інструменти
+      </h2>
+
+      <p class="about-preview__description">
+        Я військовий лікар. Займаюся медичним плануванням, організацією допомоги та евакуації. Цей практичний досвід визначає мій підхід до навчання військовослужбовців без медичної освіти та розробки інструментів для медицини й навчання.
+      </p>
+    </div>
+
+    <ol class="about-preview__directions">
+      <li class="about-preview__direction">
+        <span class="about-preview__number">01</span>
+
+        <div>
+          <h3>Медичне планування та забезпечення</h3>
+          <p>Оцінка реальних спроможностей, організація медичної допомоги та планування евакуації.</p>
+        </div>
+      </li>
+
+      <li class="about-preview__direction">
+        <span class="about-preview__number">02</span>
+
+        <div>
+          <h3>Навчання TCCC/CLS</h3>
+          <p>Підготовка військовослужбовців без медичної освіти до надання допомоги з розумінням своїх завдань і меж підготовки.</p>
+        </div>
+      </li>
+
+      <li class="about-preview__direction">
+        <span class="about-preview__number">03</span>
+
+        <div>
+          <h3>Цифрові інструменти</h3>
+          <p>Розробка S-Dose та інших цифрових інструментів для медичної практики й навчання.</p>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+</section>
+
+<aside class="privacy-update-notice" aria-label="Політика конфіденційності"><div class="container"><p><time datetime="2026-10-05">05.10.2026</time> · Оновлено приватність коментарів: UID автора приватний, перед надсиланням потрібне окреме підтвердження публікації, вхід діє на сесію вкладки. <a href="./policy.html" target="_blank" rel="noopener noreferrer">Політика конфіденційності</a>.</p></div></aside>
+
+<section class="home-articles" id="articles" aria-labelledby="home-articles-title">
+  <div class="container">
+    <header class="home-articles__header">
+      <div>
+        <p class="home-articles__eyebrow">Останні статті</p>
+        <h2 class="home-articles__title" id="home-articles-title">Знання, які працюють<br>на практиці.</h2>
+        <p class="home-articles__description">Пояснюю механізми, розбираю оснащення та ділюся підходами до підготовки й надання допомоги.</p>
+      </div>
+      <a class="home-articles__all" href="./articles.html" rel="noopener noreferrer">Усі статті <span aria-hidden="true">→</span></a>
+    </header>
+    <div class="home-articles__grid">
+      <article class="home-article">
+        <a class="home-article__link" href="./article.html?article=npa-effectiveness" rel="noopener noreferrer">
+          <div class="home-article__meta"><span>Тактична медицина</span><time datetime="2026-10-06">6 жовтня 2026</time></div>
+          <h3 class="home-article__title">Назофарингіальний повітропровід: як зрозуміти, що він допомагає?</h3>
+          <p class="home-article__description">Встановлення назофарингіального повітропроводу — лише частина допомоги. Як оцінювати зміни в диханні, розпізнавати недостатній ефект і навчати цього немедиків: анатомія, межі досліджень та роль NPA в рекомендаціях TCCC.</p>
+          <span class="home-article__read">Читати статтю <span aria-hidden="true">→</span></span>
+        </a>
+      </article>
+      <article class="home-article">
+        <a class="home-article__link" href="./article.html?article=medical-app-without-internet" rel="noopener noreferrer">
+          <div class="home-article__meta"><span>Технології</span><time datetime="2026-10-03">3 жовтня 2026</time></div>
+          <h3 class="home-article__title">Медичний застосунок без інтернету: що потрібно продумати</h3>
+          <p class="home-article__description">Що перевірити в медичному застосунку для роботи без зв’язку: доступність функцій, актуальність довідника, оновлення та захист локальних даних.</p>
+          <span class="home-article__read">Читати статтю <span aria-hidden="true">→</span></span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+  <section class="featured-projects" id="projects">
+  <img
+    class="featured-projects__rings"
+    src="./assets/images/tree-rings.svg"
+    alt=""
+    aria-hidden="true">
+
+  <div class="container">
+
+    <header class="featured-projects__header">
+      <div class="featured-projects__intro">
+        <p class="featured-projects__eyebrow">
+          Обрані проєкти
+        </p>
+
+        <h2 class="featured-projects__title">
+          Цифрові рішення<br>
+          для практичних задач.
+        </h2>
+      </div>
+
+      <a class="featured-projects__all" href="./projects.html" rel="noopener noreferrer" target="_blank">
+        Усі проєкти
+        <span aria-hidden="true">→</span>
+      </a>
+    </header>
+
+    <div class="featured-projects__grid">
+
+      <article class="project-showcase project-showcase--featured">
+        <div class="project-showcase__content">
+          <p class="project-showcase__label">
+            Флагманський проєкт
+          </p>
+
+          <h3 class="project-showcase__title">
+            Освітній хаб<br>
+            TCCC/MARCH
+          </h3>
+
+          <p class="project-showcase__description">
+            Платформа з матеріалами, протоколами
+            та інструментами для навчання
+            тактичній медицині.
+          </p>
+
+          <a class="project-showcase__link">
+            В розробці
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="project-showcase__visual">
+          <img
+            src="./assets/images/project-tccc.webp"
+            alt="Інтерфейс освітнього хабу TCCC/MARCH"
+          >
+        </div>
+      </article>
+
+      <div class="featured-projects__side">
+
+        <article class="project-showcase project-showcase--compact">
+          <div class="project-showcase__content">
+            <p class="project-showcase__label">
+              Мобільний застосунок
+            </p>
+
+            <h3 class="project-showcase__title">
+              S-Dose
+            </h3>
+
+            <p class="project-showcase__description">
+              Довідник і калькулятор доз лікарських засобів
+              для практичного використання.
+            </p>
+
+            <a class="project-showcase__link" href="./s-dose.html" rel="noopener noreferrer" target="_blank">
+              До проєкту
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="project-showcase__visual">
+            <img
+              src="./assets/images/project-sdose.webp"
+              alt="Мобільний застосунок S-Dose"
+            >
+          </div>
+        </article>
+
+        <article class="project-showcase project-showcase--compact">
+          <div class="project-showcase__content">
+            <p class="project-showcase__label">
+              Telegram-бот
+            </p>
+
+            <h3 class="project-showcase__title">
+              Spanish by Serhii
+            </h3>
+
+            <p class="project-showcase__description">
+              Бот для вивчення іспанської мови:
+              слова, тести, прогрес і персоналізовані вправи.
+            </p>
+
+            <a
+              class="project-showcase__link"
+              href="./spanish-bot.html"
+              rel="noopener noreferrer"
+             target="_blank">
+              Дізнатися більше
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="project-showcase__visual">
+            <img
+              src="./assets/images/project-spanish.webp"
+              alt="Telegram-бот Spanish by Serhii"
+            >
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collaboration-cta" id="collaboration">
+  <div class="collaboration-cta__overlay" aria-hidden="true"></div>
+
+  <div class="container collaboration-cta__grid">
+    <div class="collaboration-cta__content">
+      <p class="collaboration-cta__eyebrow">
+        Співпраця та контакти
+      </p>
+
+      <h2 class="collaboration-cta__title">
+        Відкритий до співпраці<br>
+        та нових ініціатив.
+      </h2>
+
+      <p class="collaboration-cta__description">
+        Якщо у вас є ідея, проєкт або потреба в медичному
+        чи освітньому рішенні — давайте обговоримо,
+        як ми можемо працювати разом.
+      </p>
+    </div>
+
+    <div class="collaboration-cta__action">
+      <a
+        class="collaboration-cta__button"
+        href="./contact.html"
+       rel="noopener noreferrer" target="_blank">
+        Зв’язатися зі мною
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="./index.html" rel="noopener noreferrer" target="_blank">
+          Serhii Pelishenko<span>.</span>
+        </a>
+
+        <p class="site-footer__tagline">
+          Медицина, навчання і технології — в одній системі.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Навігація у футері">
+        <p class="site-footer__heading">Навігація</p>
+
+        <a href="./index.html" rel="noopener noreferrer">Головна</a>
+        <a href="./about.html" rel="noopener noreferrer">Про мене</a>
+        <a href="./projects.html" rel="noopener noreferrer">Проєкти</a>
+        <a href="./articles.html" rel="noopener noreferrer">Статті</a>
+        <a href="./contact.html" rel="noopener noreferrer">Контакти</a>
+      </nav>
+
+      <div class="site-footer__socials">
+        <p class="site-footer__heading">Соціальні мережі</p>
+
+        <a href="https://www.linkedin.com/in/serhii-pelishenko-5a702a208/" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+        </a>
+
+        <a href="https://x.com/serhides?s=21" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span>X (Twitter)</span>
+        </a>
+
+        <a href="https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+        </a>
+      </div>
+
+      <div class="site-footer__contacts">
+        <p class="site-footer__heading">Контакти</p>
+
+        <a href="mailto:hello@serhiipelishenko.com" class="site-footer__contact-item">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          <span>hello@serhiipelishenko.com</span>
+        </a>
+
+        <a href="tel:+380994264698" class="site-footer__contact-item">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+38 (099) 426-46-98</span>
+        </a>
+
+        <p class="site-footer__contact-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Україна</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>
+        © <span id="year"></span> Serhii Pelishenko.
+        Усі права захищені.
+      </p>
+
+      <a href="./policy.html" rel="noopener noreferrer" target="_blank">
+        Політика конфіденційності
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="./js/main.js?v=20261003-nav"></script>
+</body>
+</html>
