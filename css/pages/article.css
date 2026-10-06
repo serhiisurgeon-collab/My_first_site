@@ -1057,3 +1057,6 @@ html {
   }
 
 }
+
+/* Keep long medical terms inside the article header on narrow screens. */
+.article-header__title { overflow-wrap: anywhere; hyphens: manual; }

@@ -422,7 +422,11 @@ function setupArticlePagination(materials, currentArticle) {
 
 
     if (title) {
-      title.textContent = article.title;
+      // Discretionary hyphens preserve the title while keeping long medical
+      // compounds readable in the existing large mobile heading.
+      title.textContent = article.title
+        .replace(/Назофарингіальний/g, "Назо\u00adфарин\u00adгіальний")
+        .replace(/повітропровід/g, "повітро\u00adпровід");
     }
 
 
@@ -498,7 +502,39 @@ function setupArticlePagination(materials, currentArticle) {
     canonicalUrl.search = "";
     canonicalUrl.searchParams.set("article", article.content.replace(/\.md$/, ""));
     canonicalUrl.hash = "";
-    canonical.href = canonicalUrl.href;
+    const articleSlug = article.content.replace(/\.md$/, "");
+    const pageUrls = {
+      uk: `https://serhiipelishenko.com/article.html?article=${encodeURIComponent(articleSlug)}`,
+      en: `https://serhiipelishenko.com/en/article-en.html?article=${encodeURIComponent(articleSlug)}`
+    };
+    canonical.href = pageUrls[language];
+    for (const lang of ["uk", "en"]) {
+      let alternate = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (!alternate) { alternate = document.createElement("link"); alternate.rel = "alternate"; alternate.hreflang = lang; document.head.append(alternate); }
+      alternate.href = pageUrls[lang];
+    }
+    const social = {
+      "og:type": "article", "og:title": article.title,
+      "og:description": article.description ?? "", "og:url": pageUrls[language],
+      "og:locale": isEnglish ? "en_US" : "uk_UA"
+    };
+    if (article.image) social["og:image"] = new URL(article.image, "https://serhiipelishenko.com").href;
+    for (const [property, value] of Object.entries(social)) {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) { meta = document.createElement("meta"); meta.setAttribute("property", property); document.head.append(meta); }
+      meta.content = value;
+    }
+    let structured = document.querySelector('script[data-article-schema]');
+    if (!structured) { structured = document.createElement("script"); structured.type = "application/ld+json"; structured.dataset.articleSchema = ""; document.head.append(structured); }
+    const schema = {
+      "@context": "https://schema.org", "@type": "Article", headline: article.title,
+      description: article.description ?? "", inLanguage: language,
+      author: {"@type": "Person", name: article.author},
+      mainEntityOfPage: pageUrls[language], datePublished: article.date
+    };
+    if (article.updated) schema.dateModified = article.updated;
+    if (article.image) schema.image = social["og:image"];
+    structured.textContent = JSON.stringify(schema);
 
   }
 

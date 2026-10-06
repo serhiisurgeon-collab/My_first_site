@@ -1,5 +1,19 @@
 [
   {
+    "slug": "npa-effectiveness",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Nasopharyngeal Airway: How Can We Tell Whether It Is Helping?",
+    "description": "Inserting a nasopharyngeal airway is only part of the intervention. How can responders assess changes in breathing and recognise an insufficient effect? A review of anatomy, evidence limitations, TCCC recommendations and implications for teaching non-medical personnel.",
+    "date": "2026-10-06",
+    "readTime": 8,
+    "author": "Serhii Pelishenko",
+    "content": "npa-effectiveness.md",
+    "featured": true,
+    "image": "/content/articles/en/image/npa-effectiveness-1.png"
+  },
+  {
     "slug": "medical-app-without-internet",
     "type": "article",
     "format": "text",

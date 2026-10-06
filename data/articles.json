@@ -1,5 +1,19 @@
 [
   {
+    "slug": "npa-effectiveness",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Назофарингіальний повітропровід: як зрозуміти, що він допомагає?",
+    "description": "Встановлення назофарингіального повітропроводу — лише частина допомоги. Як оцінювати зміни в диханні, розпізнавати недостатній ефект і навчати цього немедиків: анатомія, межі досліджень та роль NPA в рекомендаціях TCCC.",
+    "date": "2026-10-06",
+    "readTime": 7,
+    "author": "Сергій Пелішенко",
+    "content": "npa-effectiveness.md",
+    "featured": true,
+    "image": "/content/articles/uk/image/npa-effectiveness-1.png"
+  },
+  {
     "slug": "medical-app-without-internet",
     "type": "article",
     "format": "text",
