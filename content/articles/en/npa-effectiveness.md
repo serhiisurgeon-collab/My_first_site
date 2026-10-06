@@ -38,7 +38,7 @@ Head position remains part of the assessment. An NPA does not make casualty posi
 
 ## What the evidence actually shows
 
-In 1993, Stoneham assessed NPA position and performance in 120 anaesthetised adults using fibreoptic laryngoscopy. Findings included malposition, tube compression and soft-tissue obstruction. Three external measurements did not significantly correlate with the nares-to-epiglottis distance in that sample. The [author’s abstract](https://pubmed.ncbi.nlm.nih.gov/8346770/) was checked; the full paper was unavailable for this article.
+In 1993, Stoneham assessed NPA position and performance in 120 anaesthetised adults using fibreoptic laryngoscopy. Findings included malposition, tube compression and soft-tissue obstruction. Three external measurements did not significantly correlate with the nares-to-epiglottis distance in that sample. These findings are reported in the [author’s abstract](https://pubmed.ncbi.nlm.nih.gov/8346770/) the full text was unavailable when this article was prepared.
 
 This demonstrates that an inserted NPA may not relieve obstruction. It does not establish a battlefield failure rate. Anaesthetised patients and combat casualties differ in tissue conditions, injuries and circumstances of care.
 
