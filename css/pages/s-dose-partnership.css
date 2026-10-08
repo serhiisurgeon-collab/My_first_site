@@ -1,0 +1,27 @@
+.s-dose-partnership {
+  box-sizing: border-box;
+  width: min(900px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #315d70;
+  border-radius: 16px;
+  background: #031525;
+  color: #f3f5f4;
+  box-shadow: 0 20px 70px #0008;
+  font-family: var(--font-body, Manrope, sans-serif);
+}
+.s-dose-partnership::backdrop { background: #0007; backdrop-filter: blur(4px); }
+.s-dose-partnership__header { position: sticky; top: 0; z-index: 1; height: 48px; background: #031525; display: flex; justify-content: flex-end; padding: 2px 8px; }
+.s-dose-partnership__close { width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: transparent; color: #fff; font: 32px/1 var(--font-body, sans-serif); cursor: pointer; }
+.s-dose-partnership__banner { display: block; width: 100%; height: auto; object-fit: contain; }
+.s-dose-partnership__footer { padding: 16px 24px 24px; text-align: center; }
+.s-dose-partnership__action { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 12px 24px; box-sizing: border-box; border: 1px solid #739e91; border-radius: 12px; background: #123b2e; color: #fff; font-weight: 700; text-decoration: none; transition: background-color 160ms; }
+.s-dose-partnership__action:focus-visible, .s-dose-partnership__close:focus-visible, [data-partnership-open]:focus-visible { outline: 3px solid #61d9ed; outline-offset: 3px; }
+@media (hover: hover) { .s-dose-partnership__action:hover { background: #20543f; } .s-dose-partnership__close:hover { background: #18435a; } }
+@media (max-width: 480px) { .s-dose-partnership { width: calc(100% - 24px); max-height: calc(100dvh - 24px); border-radius: 12px; } .s-dose-partnership__footer { padding: 12px 16px 16px; } .s-dose-partnership__action { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .s-dose-partnership__action { transition: none; } }
+[data-partnership-open][hidden], [data-partnership-status][hidden] { display: none; }
