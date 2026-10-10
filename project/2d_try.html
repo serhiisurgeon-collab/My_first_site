@@ -38,6 +38,8 @@ html {
         }
 
 @media (max-width: 600px) {
+    body { padding: 20px 12px 10px; }
+    .navbar { box-sizing: border-box; }
     .page {
         padding: 16px;
         border-radius: 6px;
@@ -411,6 +413,8 @@ display: block;
 
 .page {
     flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 
@@ -464,6 +468,10 @@ display: block;
   transition: transform 0.2s ease;
 }
 
+@media (max-width: 600px) {
+  .layout { padding: 0; }
+  .page { width: 100%; margin: 0; }
+}
 </style>
 </head>
 

@@ -1,5 +1,3 @@
-<style>
-
 html {
     scroll-behavior: smooth;
 }
@@ -251,7 +249,7 @@ html {
 .slider {
   position: relative;
   height: min(70vh, 560px);
-  margin: 16px;
+  margin: 16px clamp(16px, 8vw, 128px);
   overflow: hidden;
   clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
 
@@ -537,8 +535,6 @@ html {
   }
 
   .stats-grid, .reviews { grid-template-columns: 1fr; }
-  .slider { height: 52vh; margin: 10px; border-radius: 16px; }
+  .slider { height: 52vh; margin: 10px clamp(12px, 6vw, 24px); border-radius: 16px; }
 
 }
-
-</style>
