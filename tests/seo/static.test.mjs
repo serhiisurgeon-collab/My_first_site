@@ -123,7 +123,7 @@ for (const lang of ["uk", "en"]) {
     });
   }
 }
-test("sitemap includes ten canonical articles, excludes legacy and S-Dose, no fabricated lastmod", async () => {
+test("sitemap includes ten canonical articles, includes S-Dose and excludes legacy, no fabricated lastmod", async () => {
   const $ = load(await read("sitemap.xml"), { xmlMode: true });
   const urls = $("loc")
     .map((_, e) => $(e).text())
@@ -132,7 +132,7 @@ test("sitemap includes ten canonical articles, excludes legacy and S-Dose, no fa
   assert.equal(urls.filter((u) => /\/articles\/.+\/$/.test(u)).length, 10);
   assert.equal($("lastmod").length, 0);
   assert.ok(urls.includes("https://serhiipelishenko.com/"));
-  assert.ok(!urls.some((u) => u.includes("?") || u.includes("s-dose")));
+  assert.ok(!urls.some((u) => u.includes("?")));
   for (const u of urls) {
     const p = new URL(u).pathname;
     await fs.access(path.join(root, p.endsWith("/") ? p + "index.html" : p));
@@ -205,5 +205,22 @@ test("public internal links and resources resolve to physical output", async () 
         );
       }
     assert.equal($("a a").length, 0);
+  }
+});
+
+ test("S-Dose is indexable with own canonicals, reciprocal hreflang and project links", async () => {
+  const origin = "https://serhiipelishenko.com";
+  const pairs = [{file:"s-dose.html",lang:"uk",other:"en/s-dose-en.html",projects:"projects.html"},{file:"en/s-dose-en.html",lang:"en",other:"s-dose.html",projects:"en/projects-en.html"}];
+  const sitemap = load(await read("sitemap.xml"), {xmlMode:true});
+  for (const p of pairs) {
+    const $ = load(await read(p.file));
+    assert.equal($("link[rel=canonical]").length,1);
+    assert.equal($("link[rel=canonical]").attr("href"),origin+"/"+p.file);
+    assert.equal($("link[hreflang="+p.lang+"]").attr("href"),origin+"/"+p.file);
+    assert.equal($("link[hreflang="+(p.lang==="uk"?"en":"uk")+"]").attr("href"),origin+"/"+p.other);
+    assert.ok(!/noindex|nofollow/i.test($("meta[name=robots]").attr("content")||""));
+    assert.ok(sitemap("loc").toArray().some(e=>sitemap(e).text()===origin+"/"+p.file));
+    const projects=load(await read(p.projects));
+    assert.ok(projects("a[href]").toArray().some(e=>new URL(projects(e).attr("href"),origin+"/"+p.projects).href===origin+"/"+p.file));
   }
 });

@@ -531,9 +531,9 @@ for (const l of ["uk", "en"]) {
     articleId: null,
     currentUrl: pageUrl("s-dose", l),
     canonicalUrl: pageUrl("s-dose", l),
-    includeInSitemap: false,
-    initialRobots: "noindex,nofollow",
-    kind: "restricted-page",
+    includeInSitemap: true,
+    initialRobots: "index,follow (default)",
+    kind: "page",
   });
   registry.push({
     language: l,
