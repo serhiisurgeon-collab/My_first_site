@@ -69,6 +69,6 @@ document.querySelectorAll('[data-collapsible-text]').forEach((text) => {
   button.addEventListener('click', () => {
     const collapsed = text.classList.toggle('is-collapsed');
     button.setAttribute('aria-expanded', String(!collapsed));
-    button.textContent = collapsed ? 'Більше…' : 'Менше';
+    button.textContent = collapsed ? 'Більше…' : 'Показати менше';
   });
 });

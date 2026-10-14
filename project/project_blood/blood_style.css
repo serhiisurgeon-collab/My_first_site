@@ -510,8 +510,7 @@ body {
 
 }
 
-.card-content .text-disclosure { display: none; }
-@media (max-width: 768px) {
+
 /* Only enhanced text is collapsed; without JavaScript all content stays visible. */
 .card-content p.is-collapsed {
   display: -webkit-box;
@@ -536,9 +535,16 @@ body {
   outline: 3px solid #fff;
   outline-offset: 3px;
 }
-.card-content:has([data-collapsible-text]) { position: relative; overflow: visible; }
-.card-interactive:has([data-collapsible-text]) > .card-title { display: none; }
+.card-content:has([data-collapsible-text]) { overflow-y: auto; }
+.card-interactive:has([data-collapsible-text]) .card-title { pointer-events: none; }
+.board-interactive .card-interactive:focus-within { flex: 4; }
+.card-interactive:focus-within .card-title { opacity: 0; pointer-events: none; }
+.card-interactive:focus-within .card-content,
+.card-interactive:hover .card-content { opacity: 1; pointer-events: auto; }
 .card-content:has([data-collapsible-text]):focus-within { opacity: 1; pointer-events: auto; }
 .card-content:has([data-collapsible-text]:not(.is-collapsed)) { justify-content: flex-start; }
+@media (max-width: 768px) {
+  .card-content:has([data-collapsible-text]) { position: relative; overflow: visible; }
+  .card-interactive:has([data-collapsible-text]) > .card-title { display: none; }
 }
 </style>
