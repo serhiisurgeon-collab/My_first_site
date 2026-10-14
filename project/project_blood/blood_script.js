@@ -47,7 +47,9 @@ if (typeof ScrollReveal !== 'undefined') {
 
   sr.reveal('.photo_room', {
     origin: 'right',
-    distance: '80px',
+    // Off-screen horizontal transforms also enlarge the mobile scroll area.
+    // Keep the fade, without moving the image outside the viewport.
+    distance: window.matchMedia('(max-width: 768px), (prefers-reduced-motion: reduce)').matches ? '0px' : '80px',
     duration: 900,
     easing: 'ease-out',
   });
