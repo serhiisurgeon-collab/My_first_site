@@ -1,0 +1,6 @@
+.blood-project-return { max-width: 1200px; margin: 100px auto 0; padding: 0 24px; }
+.blood-project-return__link { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 700; line-height: 1.7; min-height: 48px; }
+.blood-project-return__link:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
+.blood-project-return + .hero { margin-top: 24px; }
+.blood-project-return + .contact-section { padding-top: 32px; }
+@media (max-width: 600px) { .blood-project-return { padding: 0 12px; } }
