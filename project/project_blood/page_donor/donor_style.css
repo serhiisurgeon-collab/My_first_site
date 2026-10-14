@@ -1,0 +1,21 @@
+.donor-info-page .navbar-main { background: rgba(0,0,0,.9); }
+.donor-info-page .navbar-inner { padding: 10px 20px; }
+.donor-info-page .nav-btn { color: #fff; }
+.donor-info-page .nav-menu { right: 16px; max-width: min(400px, calc(100vw - 32px)); }
+.donor-info-page .donor-info { max-width: 1000px; margin: 0 auto; padding: 120px 24px 48px; color: #222; line-height: 1.75; overflow-wrap: anywhere; }
+.donor-info-page .donor-info h1 { font-size: clamp(28px,4vw,44px); line-height: 1.25; margin: 24px 0; }
+.donor-info-page .donor-info h2 { color: #a51c30; font-size: clamp(23px,3vw,30px); line-height: 1.35; }
+.donor-info-page .donor-info h3 { font-size: 20px; line-height: 1.4; margin: 28px 0 12px; }
+.donor-info-page .donor-info p { margin: 16px 0; }
+.donor-info-page .donor-info ul { padding-left: 24px; }
+.donor-info-page .donor-info li { margin: 10px 0; }
+.donor-info-page .donor-info__contents { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
+.donor-info-page .donor-info__contents a, .donor-info-page .donor-info__back { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 16px; text-decoration: none; font-weight: 700; }
+.donor-info-page .donor-info__section { padding: 24px clamp(16px,3vw,32px); margin: 24px 0; background: #fff; border-radius: 18px; box-shadow: 0 8px 22px rgba(0,0,0,.06); scroll-margin-top: 110px; }
+.donor-info-page .donor-info__note { margin: 24px 0; padding: 16px 20px; border-left: 4px solid #a51c30; background: #fff1f3; color: #4f1620; }
+.donor-info-page .donor-info__sources { font-size: 14px; margin: 36px 0; }
+.donor-info-page .donor-info__sources a { color: #8a1525; text-decoration: underline; }
+.donor-info-page a:focus-visible, .donor-info-page button:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
+.donor-info-page .navbar-main a:focus-visible, .donor-info-page .burger:focus-visible { outline-color: #8cdbff; }
+@media (max-width: 600px) { .donor-info-page .donor-info { padding: 100px 12px 32px; } .donor-info-page .donor-info__contents { flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) { .donor-info-page { scroll-behavior: auto; } .donor-info-page * { transition: none; } }
