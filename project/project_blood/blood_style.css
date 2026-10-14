@@ -536,7 +536,8 @@ body {
   outline: 3px solid #fff;
   outline-offset: 3px;
 }
-.card-content:has([data-collapsible-text]) { overflow-y: auto; }
+.card-content:has([data-collapsible-text]) { position: relative; overflow: visible; }
+.card-interactive:has([data-collapsible-text]) > .card-title { display: none; }
 .card-content:has([data-collapsible-text]):focus-within { opacity: 1; pointer-events: auto; }
 .card-content:has([data-collapsible-text]:not(.is-collapsed)) { justify-content: flex-start; }
 }
