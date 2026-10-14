@@ -55,3 +55,20 @@ if (typeof ScrollReveal !== 'undefined') {
   });
 }
 
+
+// Progressive enhancement: keep the complete paragraph available without JS.
+document.querySelectorAll('[data-collapsible-text]').forEach((text) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'text-disclosure';
+  button.textContent = 'Більше…';
+  button.setAttribute('aria-controls', text.id);
+  button.setAttribute('aria-expanded', 'false');
+  text.classList.add('is-collapsed');
+  text.after(button);
+  button.addEventListener('click', () => {
+    const collapsed = text.classList.toggle('is-collapsed');
+    button.setAttribute('aria-expanded', String(!collapsed));
+    button.textContent = collapsed ? 'Більше…' : 'Менше';
+  });
+});
