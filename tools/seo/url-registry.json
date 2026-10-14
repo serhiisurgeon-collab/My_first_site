@@ -796,6 +796,22 @@
         "runtimeNoindexOnError": false
       },
       "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": null,
+      "currentUrl": "/project/project_blood/page_news/news_html.html",
+      "canonicalUrl": "/project/project_blood/page_news/news_html.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
     }
   ]
 }
