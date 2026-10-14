@@ -20,6 +20,7 @@ for (const p of [
   "js/article-static.js",
   "css/pages/article.css",
   "css/pages/articles.css",
+  "css/pages/projects.css",
 ])
   assetVersions.set(
     "/" + p,
