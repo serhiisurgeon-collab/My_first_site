@@ -54,7 +54,7 @@
 .bot-section{padding-block:var(--space-10);scroll-margin-top:90px}
 .bot-section-heading{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--space-8);align-items:end;margin-bottom:var(--space-7)}
 .bot-page h2{font-size:clamp(2.125rem,4vw,3rem);line-height:1.12;text-wrap:balance}
-.bot-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-5)}
+.bot-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5)}
 .bot-feature{position:relative;padding:var(--space-6);border-radius:var(--radius-card);border:1px solid #152c5010;min-height:310px}
 .bot-feature--yellow{background:#fff1be}.bot-feature--blue{background:#e9f2ff}.bot-feature--red{background:#fbecee}.bot-feature--white{background:#f3f4f6}
 .bot-feature__number{font-size:.6875rem;font-weight:700;color:var(--bot-muted)}
@@ -97,3 +97,11 @@
 .bot-feature.can-reveal.is-visible{opacity:1;transform:translateY(0);transition-delay:var(--reveal-delay,0ms);}
 @media(max-width:540px){.bot-landing .site-nav__inner{gap:12px}.bot-landing .site-nav__language-switcher{gap:6px}.bot-landing .site-nav__brand{font-size:.875rem}.bot-landing .site-nav__toggle{padding:8px 10px}.bot-preview__body{min-height:0}}
 @media(prefers-reduced-motion:reduce){.bot-feature.can-reveal{opacity:1;transform:none}}
+/* Four-language content; shared site chrome and palette remain unchanged. */
+.bot-card-language{font-size:.8125rem;font-weight:700;color:var(--bot-ink);margin-bottom:16px!important}
+.bot-preview__note{font-size:.8125rem;line-height:1.65;color:var(--bot-muted);padding:0 var(--space-6) 24px}
+.bot-example__translation-label{display:block;margin:12px 0 4px}
+.bot-section-note{font-size:.9375rem;line-height:1.8;color:var(--bot-muted);margin-top:24px!important;max-width:900px}
+.bot-plan__features{padding-left:20px;margin:0;color:var(--bot-muted);font-size:.9375rem;line-height:1.8}
+.bot-plan__features li+li{margin-top:12px}
+@media(max-width:540px){.bot-preview__note{padding-inline:24px}.bot-page h1{font-size:clamp(2.5rem,11vw,3.5rem)}}

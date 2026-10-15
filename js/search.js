@@ -149,8 +149,8 @@ document.addEventListener("DOMContentLoaded", () => {
     searchIndex = [
       ...normalizeArticles(uaArticles, "uk"),
       ...normalizeArticles(enArticles, "en"),
-      {title:"Spanish by Serhii",description:"Іспанська у Telegram: слова, квізи та щоденні вислови",category:"Освіта",lang:"uk",type:"project",url:new URL("spanish-bot.html",siteRoot).href},
-      {title:"Spanish by Serhii",description:"Spanish in Telegram: vocabulary, quizzes and daily expressions",category:"Education",lang:"en",type:"project",url:new URL("en/spanish-bot-en.html",siteRoot).href}
+      {title:"Spanish by Serhii",description:"Чотири мови в Telegram: українська, англійська, іспанська, німецька; 12 напрямків, /myweek і Premium-квізи",category:"Освіта",lang:"uk",type:"project",url:new URL("spanish-bot.html",siteRoot).href},
+      {title:"Spanish by Serhii",description:"Four languages on Telegram: Ukrainian, English, Spanish and German; 12 learning directions, /myweek and Premium quizzes",category:"Education",lang:"en",type:"project",url:new URL("en/spanish-bot-en.html",siteRoot).href}
     ];
 
     console.log("Search index loaded:", searchIndex);
