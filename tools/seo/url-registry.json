@@ -654,6 +654,38 @@
       "expectedHttpStatus": 200
     },
     {
+      "language": "de",
+      "articleId": null,
+      "currentUrl": "/de/spanish-bot-de.html",
+      "canonicalUrl": "/de/spanish-bot-de.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "es",
+      "articleId": null,
+      "currentUrl": "/es/spanish-bot-es.html",
+      "canonicalUrl": "/es/spanish-bot-es.html",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "page",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
       "language": "uk",
       "articleId": null,
       "currentUrl": "/article.html?article=unknown",

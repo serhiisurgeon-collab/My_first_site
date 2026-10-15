@@ -26,7 +26,7 @@ try {
   assert.equal(await page.locator('.bot-feature').count(),6);
   assert.equal(await page.locator('.bot-plan__features li').count(),8);
   assert.equal(await page.locator('h1').count(),1);
-  assert.match(await page.locator('h1').textContent(),lang==='uk'?/Чотири мови/:/Four languages/);
+  assert.match(await page.locator('h1').textContent(),lang==='uk'?/Вивчайте українську/:/Learn Ukrainian/);
   const canonical='https://serhiipelishenko.com'+path;
   assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),canonical);
   assert.equal(await page.locator('link[rel=canonical]').count(),1);

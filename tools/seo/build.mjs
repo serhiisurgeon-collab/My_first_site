@@ -546,6 +546,11 @@ for (const l of ["uk", "en"]) {
     kind: "page",
   });
 }
+for (const l of ["de", "es"]) {
+  const url = `/${l}/spanish-bot-${l}.html`;
+  registry.push({language:l, articleId:null, currentUrl:url, canonicalUrl:url,
+    includeInSitemap:true, initialRobots:"index,follow (default)", kind:"page"});
+}
 for (const url of [
   "/article.html?article=unknown",
   "/article.html?article=",

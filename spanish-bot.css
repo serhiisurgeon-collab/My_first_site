@@ -105,3 +105,26 @@
 .bot-plan__features{padding-left:20px;margin:0;color:var(--bot-muted);font-size:.9375rem;line-height:1.8}
 .bot-plan__features li+li{margin-top:12px}
 @media(max-width:540px){.bot-preview__note{padding-inline:24px}.bot-page h1{font-size:clamp(2.5rem,11vw,3.5rem)}}
+
+/* Four landing languages only; no global site style changes. */
+.bot-page h1{font-size:clamp(2.5rem,4.4vw,4rem);line-height:1.08;overflow-wrap:anywhere}
+.bot-language-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5);margin-top:32px}
+.bot-language{padding:var(--space-6);border:1px solid var(--bot-line);border-radius:var(--radius-card);background:white;min-width:0}
+.bot-language p,.bot-faq p{color:var(--bot-muted);font-size:1rem;line-height:1.8;margin-top:16px}
+.bot-language .bot-text-link{margin-top:20px}
+.bot-faq{background:#eef4fc}
+.bot-faq__list{max-width:900px;margin-top:32px;display:grid;gap:32px}
+.bot-faq h3{font-size:1.5rem;overflow-wrap:anywhere}
+.bot-landing .site-nav__language-switcher{gap:6px;flex-shrink:0}
+.bot-landing .site-nav__links{gap:16px}
+@media(max-width:1200px){html[lang=de] .site-nav__links,html[lang=es] .site-nav__links{display:none}html[lang=de] .site-nav__toggle,html[lang=es] .site-nav__toggle{display:block}}
+@media(max-width:540px){.bot-language-grid{grid-template-columns:1fr}.bot-landing .site-nav__inner{gap:8px}.bot-landing .site-nav__language-option,.bot-landing .site-nav__language-divider{font-size:.75rem}.bot-landing .site-nav__language-switcher{gap:4px}.bot-landing .site-nav__brand{font-size:.75rem;max-width:118px}.bot-landing .site-nav__toggle{padding:8px;font-size:.75rem}.bot-landing .site-search-trigger{padding:8px;min-width:32px}.bot-page h1{font-size:clamp(2.25rem,9vw,3rem)}}
+.bot-language__sample{border-top:1px solid var(--bot-line);margin-top:20px;padding-top:4px}
+.bot-language .bot-language__sample p{font-size:.875rem;line-height:1.7}
+.bot-language .bot-language__sample-label,.bot-sample-label{font-size:.75rem;color:var(--bot-muted)}
+@media(min-width:901px) and (max-width:1200px){
+ html:is([lang=de],[lang=es]) .mobile-nav{position:fixed;top:72px;left:0;right:0;z-index:999;display:grid;max-height:0;overflow:hidden;background:rgba(10,15,12,.96);opacity:0;transition:max-height .35s ease,opacity .25s ease}
+ html:is([lang=de],[lang=es]) .mobile-nav.is-open{max-height:420px;opacity:1}
+ html:is([lang=de],[lang=es]) .mobile-nav__inner{display:flex;flex-direction:column;padding:20px 24px 28px}
+ html:is([lang=de],[lang=es]) .mobile-nav__inner a{padding:15px 0;color:rgba(245,247,242,.78);border-bottom:1px solid #ffffff14}
+}

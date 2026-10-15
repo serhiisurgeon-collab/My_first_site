@@ -286,7 +286,9 @@ function phraseIndex(timestamp, start, length = 30) {
 if (typeof module !== 'undefined' && module.exports) module.exports = { phraseIndex };
 if (typeof document !== 'undefined') {
   const scriptURL = document.currentScript.src;
-  const language = document.documentElement.lang === 'en' ? 'en' : 'uk';
+  const language = ['uk', 'en', 'de', 'es'].includes(document.documentElement.lang) ? document.documentElement.lang : 'uk';
+  // Existing examples only have uk/en translations. DE/ES explicitly label the English example.
+  const exampleLanguage = language === 'uk' ? 'uk' : 'en';
   let database = PHRASE_SNAPSHOT;
   let timer;
   const fields = Object.fromEntries(['es','uk','en','example-es','example-translation','date'].map(key => [key, document.getElementById(`phrase-${key}`)]));
@@ -298,8 +300,8 @@ if (typeof document !== 'undefined') {
     fields.uk.textContent = phrase.uk;
     fields.en.textContent = phrase.en;
     fields['example-es'].textContent = phrase.example_es;
-    fields['example-translation'].textContent = phrase[`example_${language}`];
-    const date = new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : 'uk-UA', {day:'numeric',month:'long',timeZone:'UTC'}).format(now);
+    fields['example-translation'].textContent = phrase[`example_${exampleLanguage}`];
+    const date = new Intl.DateTimeFormat(({uk:'uk-UA',en:'en-GB',de:'de-DE',es:'es-ES'})[language], {day:'numeric',month:'long',timeZone:'UTC'}).format(now);
     fields.date.textContent = `${date} · UTC+0`;
     clearTimeout(timer);
     // Refresh at the next UTC midnight even if the tab stays open.
