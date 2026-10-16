@@ -2357,3 +2357,13 @@ body.s-dose-modal-open {
     text-align: center;
   }
 }
+@media (max-width: 540px) {
+  .s-dose-site .site-nav__inner { width: calc(100% - 24px); gap: 8px; }
+  .s-dose-site .site-nav__brand { font-size: clamp(12px, 3.5vw, 14px); white-space: nowrap; }
+  .s-dose-site .site-search-trigger { flex: 0 0 36px; width: 36px; min-width: 36px; padding: 8px; }
+  .s-dose-site .site-nav__language-switcher { gap: 5px; flex-shrink: 0; }
+  .s-dose-site .site-nav__language-option,
+  .s-dose-site .site-nav__language-divider { font-size: 12px; }
+  .s-dose-site .site-nav__toggle { padding: 8px; font-size: 12px; flex-shrink: 0; }
+  .s-dose-site .mobile-nav { top: 72px; }
+}
