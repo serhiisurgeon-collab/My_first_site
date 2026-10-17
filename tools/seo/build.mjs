@@ -18,6 +18,7 @@ for (const p of [
   "js/comments/index.js",
   "js/article-legacy.js",
   "js/article-static.js",
+  "css/responsive.css",
   "css/pages/article.css",
   "css/pages/articles.css",
   "css/pages/projects.css",

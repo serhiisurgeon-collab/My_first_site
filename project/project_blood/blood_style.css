@@ -259,6 +259,8 @@ body {
 
 
 .page-after {
+  /* Contain ScrollReveal's horizontal entrance without widening the document. */
+  overflow-x: clip;
   max-width: 1200px;
   margin: 0 auto;
   background: none;

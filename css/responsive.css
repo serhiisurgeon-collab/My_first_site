@@ -102,3 +102,13 @@
     border-bottom: none;
   }
 }
+/* Keep every header control reachable on narrow phones, including four-language pages. */
+@media (max-width: 380px) {
+  .site-nav .site-nav__inner { width: calc(100% - 24px); gap: 6px; }
+  .site-nav .site-nav__brand { flex: 1 1 auto; min-width: 0; font-size: 12px; white-space: normal; line-height: 1.25; }
+  .site-nav .site-search-trigger { flex: 0 0 32px; width: 32px; min-width: 32px; height: 40px; padding: 0; }
+  .site-nav .site-nav__language-switcher { flex: 0 0 auto; gap: 3px; margin-left: 0; }
+  .site-nav .site-nav__language-option,
+  .site-nav .site-nav__language-divider { font-size: 11px; }
+  .site-nav .site-nav__toggle { flex: 0 0 auto; padding: 8px 6px; font-size: 12px; }
+}
