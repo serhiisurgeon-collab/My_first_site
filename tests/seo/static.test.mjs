@@ -123,13 +123,13 @@ for (const lang of ["uk", "en"]) {
     });
   }
 }
-test("sitemap includes ten canonical articles, includes S-Dose and excludes legacy, no fabricated lastmod", async () => {
+test("sitemap includes every canonical article, includes S-Dose and excludes legacy, no fabricated lastmod", async () => {
   const $ = load(await read("sitemap.xml"), { xmlMode: true });
   const urls = $("loc")
     .map((_, e) => $(e).text())
     .get();
   assert.equal(new Set(urls).size, urls.length);
-  assert.equal(urls.filter((u) => /\/articles\/.+\/$/.test(u)).length, 10);
+  assert.equal(urls.filter((u) => /\/articles\/.+\/$/.test(u)).length, map.length * 2);
   assert.equal($("lastmod").length, 0);
   assert.ok(urls.includes("https://serhiipelishenko.com/"));
   assert.ok(!urls.some((u) => u.includes("?")));
@@ -150,7 +150,7 @@ test("legacy response has no initial noindex, no false article schema or dates; 
     assert.equal($("meta[name=robots]").length, 0);
     assert.equal($('script[type="application/ld+json"]').length, 0);
     assert.equal($(".article-header__meta").length, 0);
-    assert.equal($("#articleContent a").length, 5);
+    assert.equal($("#articleContent a").length, map.length);
   }
   for (const r of registry.routes.filter((r) => r.kind === "legacy-query")) {
     assert.equal(r.includeInSitemap, false);
@@ -184,7 +184,7 @@ test("core pages have unique static metadata and catalog real links", async () =
       assert.equal($("link[hreflang=en]").length, 1);
       assert.equal($("link[hreflang=ua]").length, 0);
       if (name === "articles")
-        assert.equal($("#articlesList a.article-row[href]").length, 5);
+        assert.equal($("#articlesList a.article-row[href]").length, map.length);
       if (name === "index")
         assert.equal($(".home-article__link[href]").length, 2);
     }

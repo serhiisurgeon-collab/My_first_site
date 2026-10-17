@@ -290,7 +290,10 @@ for (const lang of ["uk", "en"]) {
     $(".site-nav__language-option").each((_, e) =>
       $(e).attr("href", route($(e).attr("lang"), m)),
     );
-    const sorted = [...data[lang]].sort((a, b) => b.date.localeCompare(a.date));
+    // A new catalog-only entry must not rewrite already approved article pages.
+    const sorted = data[lang]
+      .filter(x => x === a || x.includeInExistingPagination !== false)
+      .sort((a, b) => b.date.localeCompare(a.date));
     const idx = sorted.indexOf(a);
     for (const [selector, n] of [
       ["#previousArticle", idx - 1],

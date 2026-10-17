@@ -1,5 +1,20 @@
 [
   {
+    "slug": "ccp-equipment-capability",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Апаратура є. Чи є спроможність? Тривала допомога пораненим на CCP",
+    "description": "Чому оснащення CCP монітором, аналізатором і ШВЛ саме по собі не створює спроможності тривалої допомоги: підготовка команди, живлення, кисень, витратні матеріали та організація роботи.",
+    "date": "2026-10-17",
+    "readTime": 15,
+    "author": "Сергій Пелішенко",
+    "content": "ccp-equipment-capability.md",
+    "featured": true,
+    "image": "/content/articles/uk/image/ccp-equipment-professional.png",
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "npa-effectiveness",
     "type": "article",
     "format": "text",

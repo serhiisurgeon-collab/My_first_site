@@ -1,4 +1,18 @@
 {
+  "content/articles/uk/image/ccp-equipment-professional.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/uk/image/optimized/ccp-equipment-professional.webp",
+    "originalBytes": 2196223,
+    "optimizedBytes": 1411614
+  },
+  "content/articles/uk/image/ccp-equipment-bunker.png": {
+    "width": 1536,
+    "height": 1024,
+    "src": "/content/articles/uk/image/optimized/ccp-equipment-bunker.webp",
+    "originalBytes": 2902764,
+    "optimizedBytes": 1834418
+  },
   "content/articles/uk/image/npa-effectiveness-1.png": {
     "width": 1536,
     "height": 1024,

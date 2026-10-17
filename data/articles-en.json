@@ -1,5 +1,20 @@
 [
   {
+    "slug": "ccp-equipment-capability",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Equipment Is Available. Is the Capability in Place? Prolonged Casualty Care at a CCP",
+    "description": "Why monitors, blood analysers and ventilators alone do not establish prolonged casualty care capability at a CCP: team readiness, power, oxygen, consumables and organisation.",
+    "date": "2026-10-17",
+    "readTime": 17,
+    "author": "Serhii Pelishenko",
+    "content": "ccp-equipment-capability.md",
+    "featured": true,
+    "image": "/content/articles/uk/image/ccp-equipment-professional.png",
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "npa-effectiveness",
     "type": "article",
     "format": "text",

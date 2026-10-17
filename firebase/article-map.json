@@ -27,6 +27,11 @@
       "id": "a-0005",
       "slug": "npa-effectiveness",
       "aliases": []
+    },
+    {
+      "id": "a-0006",
+      "slug": "ccp-equipment-capability",
+      "aliases": []
     }
   ]
 }

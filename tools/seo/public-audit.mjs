@@ -29,13 +29,8 @@ async function walk(dir) {
   }
 }
 await walk(root);
-for (const slug of [
-  "how-kaolin-works",
-  "group-medical-bag",
-  "hospital-capabilities",
-  "medical-app-without-internet",
-  "npa-effectiveness",
-])
+const articleMap = JSON.parse(await fs.readFile(path.join(root, "firebase/article-map.json"), "utf8")).articles;
+for (const {slug} of articleMap)
   for (const prefix of ["", "en/"])
     await fs.access(
       path.join(root, prefix + "articles/" + slug + "/index.html"),
@@ -43,5 +38,5 @@ for (const slug of [
 console.log(
   "PASS public Jekyll output: " +
     files +
-    " files; ten article index.html files; no forbidden files or key material",
+    ` files; ${articleMap.length * 2} article index.html files; no forbidden files or key material`,
 );

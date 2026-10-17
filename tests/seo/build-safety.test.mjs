@@ -57,13 +57,14 @@ test("actual generator fails on a missing mandatory Markdown file before writing
       "tools/seo/templates",
     ])
       await fs.cp(p, path.join(dir, p), { recursive: true });
+    const firstContent = JSON.parse(await fs.readFile(path.join(dir, "data/articles.json"), "utf8"))[0].content;
     await assert.rejects(
       run(process.execPath, ["tools/seo/build.mjs"], {
         env: { ...process.env, SEO_SOURCE_ROOT: dir },
       }),
       (e) =>
         e.stderr.includes("ENOENT") &&
-        e.stderr.includes("npa-effectiveness.md"),
+        e.stderr.includes(firstContent),
     );
     await assert.rejects(fs.access(path.join(dir, "articles")));
   } finally {

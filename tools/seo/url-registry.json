@@ -9,6 +9,23 @@
   "routes": [
     {
       "language": "uk",
+      "articleId": "a-0006",
+      "currentUrl": "/articles/ccp-equipment-capability/",
+      "previousUrl": "/article.html?article=ccp-equipment-capability",
+      "canonicalUrl": "/articles/ccp-equipment-capability/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
       "articleId": "a-0005",
       "currentUrl": "/articles/npa-effectiveness/",
       "previousUrl": "/article.html?article=npa-effectiveness",
@@ -81,6 +98,23 @@
       "currentUrl": "/articles/group-medical-bag/",
       "previousUrl": "/article.html?article=group-medical-bag",
       "canonicalUrl": "/articles/group-medical-bag/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0006",
+      "currentUrl": "/en/articles/ccp-equipment-capability/",
+      "previousUrl": "/en/article-en.html?article=ccp-equipment-capability",
+      "canonicalUrl": "/en/articles/ccp-equipment-capability/",
       "includeInSitemap": true,
       "initialRobots": "index,follow (default)",
       "kind": "canonical-article",
@@ -577,6 +611,40 @@
       "articleId": "a-0005",
       "currentUrl": "/en/article-en.html?article=npa-effectiveness",
       "canonicalUrl": "/en/articles/npa-effectiveness/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0006",
+      "currentUrl": "/article.html?article=ccp-equipment-capability",
+      "canonicalUrl": "/articles/ccp-equipment-capability/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0006",
+      "currentUrl": "/en/article-en.html?article=ccp-equipment-capability",
+      "canonicalUrl": "/en/articles/ccp-equipment-capability/",
       "includeInSitemap": false,
       "initialRobots": "index,follow (default); no blanket noindex",
       "errorStateRobots": "noindex only for unknown or missing article",
