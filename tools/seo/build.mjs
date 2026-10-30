@@ -14,6 +14,7 @@ const outputs = new Map();
 const assetVersions = new Map();
 for (const p of [
   "js/main.js",
+  "css/base.css",
   "js/articles.js",
   "js/comments/index.js",
   "js/article-legacy.js",

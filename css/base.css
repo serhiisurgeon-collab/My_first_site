@@ -217,11 +217,12 @@ main {
 
   transition:
     opacity 0.25s ease,
-    visibility 0.25s ease;
+    visibility 0s linear 0.25s;
 }
 
 /* Відкритий стан */
 .site-search.is-open {
+  transition-delay: 0s;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -453,7 +454,8 @@ body.search-open {
     transform 0.2s ease;
 }
 
-.site-search__result:hover {
+.site-search__result:hover,
+.site-search__result:focus-visible {
   background: rgba(157, 184, 170, 0.08);
   border-color: rgba(157, 184, 170, 0.22);
 
@@ -683,4 +685,14 @@ body.search-open {
   .site-search-trigger i {
     font-size: 1rem;
   }
+}
+/* Announce result counts without shifting the search layout. */
+.site-search__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

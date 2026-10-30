@@ -11,14 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
       placeholder: "Пошук по сайту...",
       label: "Пошук",
       hint: "Почніть вводити назву статті, проєкту або тему",
-      close: "Закрити пошук"
+      close: "Закрити пошук",
+      navigation: "навігація",
+      dismiss: "закрити",
+      noResults: "Нічого не знайдено",
+      resultCount: count => `Знайдено результатів: ${count}`
     },
 
     en: {
       placeholder: "Search the site...",
       label: "Search",
       hint: "Start typing an article, project or topic",
-      close: "Close search"
+      close: "Close search",
+      navigation: "navigation",
+      dismiss: "close",
+      noResults: "No results found",
+      resultCount: count => `Results found: ${count}`
     }
   };
 
@@ -28,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   overlay.className = "site-search";
   overlay.setAttribute("aria-hidden", "true");
+  overlay.inert = true;
 
   overlay.innerHTML = `
     <div class="site-search__backdrop"></div>
@@ -47,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
             class="site-search__input"
             type="search"
             placeholder="${t.placeholder}"
+            aria-label="${t.label}"
+            aria-controls="site-search-results"
             autocomplete="off"
             spellcheck="false"
           >
@@ -69,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${t.hint}</p>
         </div>
 
-        <div class="site-search__results"></div>
+        <p class="site-search__status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="site-search__results" id="site-search-results"></div>
 
       </div>
 
@@ -77,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <span>
           <kbd>↑</kbd>
           <kbd>↓</kbd>
-          navigation
+          ${t.navigation}
         </span>
 
         <span>
           <kbd>ESC</kbd>
-          close
+          ${t.dismiss}
         </span>
       </div>
     </div>
@@ -97,16 +109,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const emptyState = overlay.querySelector(".site-search__empty");
 
     let searchIndex = [];
+  let previousFocus = null;
+  let background = [];
+  const status = overlay.querySelector('.site-search__status');
 
   function openSearch() {
-    overlay.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
-
-    document.body.classList.add("search-open");
-
-    setTimeout(() => {
-      input.focus();
-    }, 100);
+    if (overlay.classList.contains('is-open')) return;
+    previousFocus = document.activeElement;
+    background = [...document.body.children].filter(el => el !== overlay)
+      .map(el => ({el, inert: el.inert}));
+    background.forEach(({el}) => { el.inert = true; });
+    overlay.inert = false;
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('search-open');
+    renderResults(searchSite(input.value), input.value);
+    input.focus();
   }
 
   async function loadSearchIndex() {
@@ -153,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {title:"Spanish by Serhii",description:"Four languages on Telegram: Ukrainian, English, Spanish and German; 12 learning directions, /myweek and Premium quizzes",category:"Education",lang:"en",type:"project",url:new URL("en/spanish-bot-en.html",siteRoot).href}
     ];
 
-    console.log("Search index loaded:", searchIndex);
+    if (overlay.classList.contains("is-open")) renderResults(searchSite(input.value), input.value);
 
   } catch (error) {
     console.error("Search error:", error);
@@ -220,6 +238,7 @@ function searchSite(query) {
 
 function renderResults(results, query) {
   resultsContainer.innerHTML = "";
+  status.textContent = query.trim() ? t.resultCount(results.length) : "";
 
   if (!query.trim()) {
     emptyState.style.display = "flex";
@@ -232,7 +251,7 @@ function renderResults(results, query) {
     resultsContainer.innerHTML = `
       <div class="site-search__no-results">
         <i class="fa-regular fa-face-meh"></i>
-        <p>Нічого не знайдено</p>
+        <p>${t.noResults}</p>
       </div>
     `;
 
@@ -293,13 +312,45 @@ input.addEventListener("input", () => {
 
 
   function closeSearch() {
-    overlay.classList.remove("is-open");
-    overlay.setAttribute("aria-hidden", "true");
-
-    document.body.classList.remove("search-open");
-
-    input.value = "";
+    if (!overlay.classList.contains('is-open')) return;
+    background.forEach(({el, inert}) => { el.inert = inert; });
+    background = [];
+    // Move focus before hiding the dialog from assistive technologies.
+    const restore = previousFocus?.isConnected && !previousFocus.closest('[inert]')
+      ? previousFocus : trigger;
+    restore.focus();
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.inert = true;
+    document.body.classList.remove('search-open');
+    input.value = '';
+    renderResults([], '');
   }
+
+  overlay.addEventListener('keydown', event => {
+    const results = [...resultsContainer.querySelectorAll('a')];
+    const current = document.activeElement;
+    if (event.key === 'Tab') {
+      const focusable = [input, closeButton, ...results];
+      const index = focusable.indexOf(current);
+      if (event.shiftKey && index <= 0) {
+        event.preventDefault();
+        focusable.at(-1).focus();
+      } else if (!event.shiftKey && (index === focusable.length - 1 || index < 0)) {
+        event.preventDefault();
+        input.focus();
+      }
+    } else if (results.length && ['ArrowDown', 'ArrowUp'].includes(event.key)) {
+      event.preventDefault();
+      const index = results.indexOf(current);
+      const next = index < 0 ? (event.key === 'ArrowDown' ? 0 : results.length - 1)
+        : (index + (event.key === 'ArrowDown' ? 1 : -1) + results.length) % results.length;
+      results[next].focus();
+    } else if (event.key === 'Enter' && current === input && results.length && !event.isComposing) {
+      event.preventDefault();
+      results[0].click();
+    }
+  });
 
   trigger.addEventListener("click", openSearch);
 
@@ -325,6 +376,7 @@ input.addEventListener("input", () => {
       event.key === "Escape" &&
       overlay.classList.contains("is-open")
     ) {
+      event.preventDefault();
       closeSearch();
     }
   });

@@ -261,7 +261,7 @@ html {
   line-height: 1.4;
 }
 
-.contact-info h2 {
+.contact-info h1 {
   font-size: 26px;
   margin-bottom: 16px;
   color: #7a0014;
@@ -405,3 +405,11 @@ html {
 
 
 </style>
+.contact-demo-notice {
+  padding: 16px;
+  border: 2px solid #8a5800;
+  border-radius: 12px;
+  background: #fff4d6;
+  color: #332400;
+  line-height: 1.6;
+}
