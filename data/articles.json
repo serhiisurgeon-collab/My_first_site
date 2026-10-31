@@ -1,5 +1,19 @@
 [
   {
+    "slug": "sga-or-intubation",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Надгортанний пристрій чи інтубація: що потрібно пораненому після відновлення вентиляції?",
+    "description": "Коли ефективної вентиляції через надгортанний пристрій достатньо, а коли потрібна інтубація: захист від аспірації, моніторинг, евакуація, можливості команди та межі доказів.",
+    "date": "2026-10-31",
+    "readTime": 16,
+    "author": "Сергій Пелішенко",
+    "content": "sga-or-intubation.md",
+    "featured": true,
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "ccp-equipment-capability",
     "type": "article",
     "format": "text",

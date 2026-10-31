@@ -32,6 +32,11 @@
       "id": "a-0006",
       "slug": "ccp-equipment-capability",
       "aliases": []
+    },
+    {
+      "id": "a-0007",
+      "slug": "sga-or-intubation",
+      "aliases": []
     }
   ]
 }

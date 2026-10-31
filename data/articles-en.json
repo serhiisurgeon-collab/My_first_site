@@ -1,5 +1,19 @@
 [
   {
+    "slug": "sga-or-intubation",
+    "type": "article",
+    "format": "text",
+    "category": "tactical-medicine",
+    "title": "Supraglottic Airway or Intubation: What Does the Injured Patient Need Once Ventilation Is Established?",
+    "description": "When is effective ventilation through a supraglottic airway enough, and when is intubation needed? Aspiration protection, monitoring, evacuation, team capability and the limits of evidence.",
+    "date": "2026-10-31",
+    "readTime": 16,
+    "author": "Serhii Pelishenko",
+    "content": "sga-or-intubation.md",
+    "featured": true,
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "ccp-equipment-capability",
     "type": "article",
     "format": "text",

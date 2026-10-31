@@ -1069,3 +1069,6 @@ html {
 .article-related h2 { font: inherit; font-weight: 600; }
 .article-body img { max-width: 100%; height: auto; }
 .article-body a { overflow-wrap: anywhere; }
+
+/* Keep long reference identifiers within the article on narrow screens. */
+.article-body { overflow-wrap: anywhere; }
