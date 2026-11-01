@@ -138,10 +138,10 @@
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(58px, 7vw, 104px);
+  font-size: clamp(36px, 4vw, 56px);
   font-weight: 600;
 
-  line-height: 0.92;
+  line-height: 1.08;
   letter-spacing: -0.035em;
 
   color: var(--color-text-primary);
@@ -955,7 +955,7 @@ html {
 
 
   .article-header__title {
-    font-size: clamp(48px, 15vw, 72px);
+    font-size: clamp(28px, 7vw, 36px);
   }
 
 
