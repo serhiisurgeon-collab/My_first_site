@@ -1,5 +1,19 @@
 [
   {
+    "slug": "weight-gain-after-30",
+    "type": "article",
+    "format": "text",
+    "category": "understanding-medicine",
+    "title": "Після 30 вага раптом пішла вгору. Невже вся справа в метаболізмі?",
+    "description": "Чи справді після 30 сповільнюється метаболізм? Як повсякденний рух, сон і харчування впливають на вагу та коли варто звернутися до лікаря.",
+    "date": "2026-11-06",
+    "readTime": 8,
+    "author": "Сергій Пелішенко",
+    "content": "weight-gain-after-30.md",
+    "featured": true,
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "sga-or-intubation",
     "type": "article",
     "format": "text",

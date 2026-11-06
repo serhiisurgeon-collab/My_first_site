@@ -72,11 +72,13 @@ const categories = {
     "tactical-medicine": "Тактична медицина",
     medicine: "Медицина",
     technology: "Технології",
+    "understanding-medicine": "Зрозуміло про медицину",
   },
   en: {
     "tactical-medicine": "Tactical Medicine",
     medicine: "Medicine",
     technology: "Technology",
+    "understanding-medicine": "Understanding Medicine",
   },
 };
 

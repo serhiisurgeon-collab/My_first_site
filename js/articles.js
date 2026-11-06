@@ -37,6 +37,7 @@ const config = {
     categories: {
       "tactical-medicine": "Тактична медицина",
       "medicine": "Медицина",
+      "understanding-medicine": "Зрозуміло про медицину",
       "technology": "Технології"
     },
 
@@ -58,6 +59,7 @@ const config = {
     categories: {
       "tactical-medicine": "Tactical Medicine",
       "medicine": "Medicine",
+      "understanding-medicine": "Understanding Medicine",
       "technology": "Technology"
     },
 

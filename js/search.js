@@ -149,7 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
           article.excerpt ||
           article.subtitle ||
           "",
-        category: article.category || "Article",
+        category: article.category === "understanding-medicine"
+          ? (lang === "en" ? "Understanding Medicine" : "Зрозуміло про медицину")
+          : article.category || "Article",
         lang,
         type: article.type || "article",
         slug: article.slug || "",

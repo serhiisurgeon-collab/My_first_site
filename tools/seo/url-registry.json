@@ -9,6 +9,23 @@
   "routes": [
     {
       "language": "uk",
+      "articleId": "a-0008",
+      "currentUrl": "/articles/weight-gain-after-30/",
+      "previousUrl": "/article.html?article=weight-gain-after-30",
+      "canonicalUrl": "/articles/weight-gain-after-30/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
       "articleId": "a-0007",
       "currentUrl": "/articles/sga-or-intubation/",
       "previousUrl": "/article.html?article=sga-or-intubation",
@@ -115,6 +132,23 @@
       "currentUrl": "/articles/group-medical-bag/",
       "previousUrl": "/article.html?article=group-medical-bag",
       "canonicalUrl": "/articles/group-medical-bag/",
+      "includeInSitemap": true,
+      "initialRobots": "index,follow (default)",
+      "kind": "canonical-article",
+      "indexingIntent": "canonical",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": false
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0008",
+      "currentUrl": "/en/articles/weight-gain-after-30/",
+      "previousUrl": "/en/article-en.html?article=weight-gain-after-30",
+      "canonicalUrl": "/en/articles/weight-gain-after-30/",
       "includeInSitemap": true,
       "initialRobots": "index,follow (default)",
       "kind": "canonical-article",
@@ -713,6 +747,40 @@
       "articleId": "a-0007",
       "currentUrl": "/en/article-en.html?article=sga-or-intubation",
       "canonicalUrl": "/en/articles/sga-or-intubation/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "uk",
+      "articleId": "a-0008",
+      "currentUrl": "/article.html?article=weight-gain-after-30",
+      "canonicalUrl": "/articles/weight-gain-after-30/",
+      "includeInSitemap": false,
+      "initialRobots": "index,follow (default); no blanket noindex",
+      "errorStateRobots": "noindex only for unknown or missing article",
+      "kind": "legacy-query",
+      "indexingIntent": "compatibility",
+      "robots": {
+        "initialNoindex": false,
+        "disallowCrawl": false,
+        "runtimeNoindexOnError": true
+      },
+      "expectedHttpStatus": 200
+    },
+    {
+      "language": "en",
+      "articleId": "a-0008",
+      "currentUrl": "/en/article-en.html?article=weight-gain-after-30",
+      "canonicalUrl": "/en/articles/weight-gain-after-30/",
       "includeInSitemap": false,
       "initialRobots": "index,follow (default); no blanket noindex",
       "errorStateRobots": "noindex only for unknown or missing article",

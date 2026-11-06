@@ -73,6 +73,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "medicine":
           "Медицина",
 
+        "understanding-medicine":
+          "Зрозуміло про медицину",
+
         "technology":
           "Технології"
 
@@ -124,6 +127,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         "medicine":
           "Medicine",
+
+        "understanding-medicine":
+          "Understanding Medicine",
 
         "technology":
           "Technology"

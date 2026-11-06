@@ -1,5 +1,19 @@
 [
   {
+    "slug": "weight-gain-after-30",
+    "type": "article",
+    "format": "text",
+    "category": "understanding-medicine",
+    "title": "Weight gain after 30. Is your metabolism really to blame?",
+    "description": "Does metabolism really slow down after 30? How everyday movement, sleep and eating habits affect weight, and when to speak to a doctor.",
+    "date": "2026-11-06",
+    "readTime": 9,
+    "author": "Serhii Pelishenko",
+    "content": "weight-gain-after-30.md",
+    "featured": true,
+    "includeInExistingPagination": false
+  },
+  {
     "slug": "sga-or-intubation",
     "type": "article",
     "format": "text",
