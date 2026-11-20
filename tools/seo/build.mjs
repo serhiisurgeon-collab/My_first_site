@@ -23,6 +23,8 @@ for (const p of [
   "css/pages/article.css",
   "css/pages/articles.css",
   "css/pages/projects.css",
+  "css/pages/about.css",
+  "js/about-profile.js",
 ])
   assetVersions.set(
     "/" + p,
@@ -382,12 +384,12 @@ const basics = {
   },
   about: {
     uk: [
-      "Про автора — Сергій Пелішенко",
-      "Професійний досвід Сергія Пелішенка: медицина, навчання та розроблення практичних інструментів.",
+      "Сергій Пелішенко — військовий лікар, хірург та інструктор",
+      "Профіль Сергія Пелішенка: військова медицина, хірургія, навчання TCCC/CLS і S-Dose. Біографія, портрет і контакти для організаторів та партнерів.",
     ],
     en: [
-      "About the Author — Serhii Pelishenko",
-      "Professional experience of Serhii Pelishenko in medicine, education and development of practical tools.",
+      "Serhii Pelishenko — Military Physician, Surgeon and Instructor",
+      "Serhii Pelishenko: military physician, surgeon and TCCC/CLS instructor. Explore his work, speaker biography, portrait and professional contact details.",
     ],
   },
   projects: {
@@ -437,6 +439,46 @@ for (const [name, localized] of Object.entries(basics))
       pair: { uk: pageUrl(name, "uk"), en: pageUrl(name, "en") },
       lang: l,
     });
+    if (name === "about") {
+      const image = `${origin}/assets/images/profile/about-og-${l}.jpg`;
+      const head = $("head");
+      head.find('meta[name^="twitter:"],script[data-profile-schema]').remove();
+      head.append(`<meta property="og:image" content="${image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc($(".profile-portrait img").attr("alt"))}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(localized[l][0])}">
+<meta name="twitter:description" content="${esc(localized[l][1])}">
+<meta name="twitter:image" content="${image}">
+<meta name="twitter:image:alt" content="${esc($(".profile-portrait img").attr("alt"))}">`);
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": origin + pageUrl(name, l) + "#profile",
+        url: origin + pageUrl(name, l),
+        inLanguage: l,
+        name: localized[l][0],
+        mainEntity: {
+          "@type": "Person",
+          "@id": origin + "/#serhii-pelishenko",
+          name: $("h1").text(),
+          alternateName: $(".profile-name-alternate").text(),
+          url: origin + pageUrl(name, l),
+          image: origin + "/assets/images/profile/portrait.webp",
+          jobTitle: l === "uk" ? "Військовий лікар, хірург та інструктор TCCC/CLS" : "Military physician, surgeon and TCCC/CLS instructor",
+          description: $(".profile-introduction").text(),
+          sameAs: ["https://www.linkedin.com/in/serhii-pelishenko-5a702a208/"],
+          knowsAbout: $(".profile-topic-list li").toArray().map(e => $(e).text()),
+          knowsLanguage: ["Ukrainian", "English"],
+          alumniOf: [
+            { "@type": "EducationalOrganization", name: l === "uk" ? "Запорізький державний медичний університет" : "Zaporizhzhia State Medical University" },
+            { "@type": "EducationalOrganization", name: l === "uk" ? "Національний університет охорони здоров’я України імені П. Л. Шупика" : "Shupyk National Healthcare University of Ukraine" }
+          ]
+        }
+      };
+      head.append(`<script type="application/ld+json" data-profile-schema>${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>`);
+    }
     if (name === "index") {
       $(".home-articles__grid").html(
         [...data[l]]

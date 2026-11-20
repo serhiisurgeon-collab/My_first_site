@@ -1,0 +1,228 @@
+{
+  "uk": {
+    "words": 538,
+    ".site-nav": [
+      {
+        "text": "Serhii Pelishenko",
+        "href": "./index.html"
+      },
+      {
+        "text": "Головна",
+        "href": "./index.html"
+      },
+      {
+        "text": "Про мене",
+        "href": "./about.html"
+      },
+      {
+        "text": "Проєкти",
+        "href": "./projects.html"
+      },
+      {
+        "text": "Статті",
+        "href": "./articles.html"
+      },
+      {
+        "text": "Контакти",
+        "href": "./contact.html"
+      },
+      {
+        "text": "UA",
+        "href": "./about.html"
+      },
+      {
+        "text": "EN",
+        "href": "./en/about-en.html"
+      }
+    ],
+    ".mobile-nav": [
+      {
+        "text": "Головна",
+        "href": "./index.html"
+      },
+      {
+        "text": "Про мене",
+        "href": "./about.html"
+      },
+      {
+        "text": "Проєкти",
+        "href": "./projects.html"
+      },
+      {
+        "text": "Статті",
+        "href": "./articles.html"
+      },
+      {
+        "text": "Контакти",
+        "href": "./contact.html"
+      }
+    ],
+    ".site-footer": [
+      {
+        "text": "Serhii Pelishenko.",
+        "href": "./index.html"
+      },
+      {
+        "text": "Головна",
+        "href": "./index.html"
+      },
+      {
+        "text": "Про мене",
+        "href": "./about.html"
+      },
+      {
+        "text": "Проєкти",
+        "href": "./projects.html"
+      },
+      {
+        "text": "Статті",
+        "href": "./articles.html"
+      },
+      {
+        "text": "Контакти",
+        "href": "./contact.html"
+      },
+      {
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/in/serhii-pelishenko-5a702a208/"
+      },
+      {
+        "text": "X (Twitter)",
+        "href": "https://x.com/serhides?s=21"
+      },
+      {
+        "text": "Instagram",
+        "href": "https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr"
+      },
+      {
+        "text": "hello@serhiipelishenko.com",
+        "href": "mailto:hello@serhiipelishenko.com"
+      },
+      {
+        "text": "+38 (099) 426-46-98",
+        "href": "tel:+380994264698"
+      },
+      {
+        "text": "Політика конфіденційності",
+        "href": "./policy.html"
+      }
+    ]
+  },
+  "en": {
+    "words": 580,
+    ".site-nav": [
+      {
+        "text": "Serhii Pelishenko",
+        "href": "./index-en.html"
+      },
+      {
+        "text": "Home",
+        "href": "./index-en.html"
+      },
+      {
+        "text": "About Me",
+        "href": "./about-en.html"
+      },
+      {
+        "text": "Projects",
+        "href": "./projects-en.html"
+      },
+      {
+        "text": "Articles",
+        "href": "./articles-en.html"
+      },
+      {
+        "text": "Contact",
+        "href": "./contact-en.html"
+      },
+      {
+        "text": "UA",
+        "href": "../about.html"
+      },
+      {
+        "text": "EN",
+        "href": "./about-en.html"
+      }
+    ],
+    ".mobile-nav": [
+      {
+        "text": "Home",
+        "href": "./index-en.html"
+      },
+      {
+        "text": "About Me",
+        "href": "./about-en.html"
+      },
+      {
+        "text": "Projects",
+        "href": "./projects-en.html"
+      },
+      {
+        "text": "Articles",
+        "href": "./articles-en.html"
+      },
+      {
+        "text": "Contact",
+        "href": "./contact-en.html"
+      }
+    ],
+    ".site-footer": [
+      {
+        "text": "Serhii Pelishenko.",
+        "href": "./index-en.html"
+      },
+      {
+        "text": "Home",
+        "href": "./index-en.html"
+      },
+      {
+        "text": "About me",
+        "href": "./about-en.html"
+      },
+      {
+        "text": "Projects",
+        "href": "./projects-en.html"
+      },
+      {
+        "text": "Articles",
+        "href": "./articles-en.html"
+      },
+      {
+        "text": "Contact",
+        "href": "./contact-en.html"
+      },
+      {
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/in/serhii-pelishenko-5a702a208/"
+      },
+      {
+        "text": "X (Twitter)",
+        "href": "https://x.com/serhides?s=21"
+      },
+      {
+        "text": "Instagram",
+        "href": "https://www.instagram.com/_aid.es_?igsh=MW9nenFmeDI5NWt3aA%3D%3D&utm_source=qr"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/share/14Sgqw8jFdN/?mibextid=wwXIfr"
+      },
+      {
+        "text": "hello@serhiipelishenko.com",
+        "href": "mailto:hello@serhiipelishenko.com"
+      },
+      {
+        "text": "+38 (099) 426-46-98",
+        "href": "tel:+380994264698"
+      },
+      {
+        "text": "Privacy Policy",
+        "href": "./policy-en.html"
+      }
+    ]
+  }
+}
