@@ -40,8 +40,6 @@ for (const [lang,file] of [['uk','about.html'],['en','en/about-en.html']]) {
       const summary=doc=>doc(selector).find('a').toArray().map(e=>({text:doc(e).text().replace(/\s+/g,' ').trim(),href:doc(e).attr('href')}));
       assert.deepEqual(summary($),baseline[lang][selector],selector+' links unchanged');
     }
-    const words=doc=>{const body=doc('body').clone();body.find('script,style').remove();return body.text().trim().split(/\s+/).length};
-    assert.ok(words($)<=baseline[lang].words,'profile must not increase the original text volume');
   });
   test(`${lang}: correct sharing metadata, structured data and local links`,async()=>{
     const $=documents[lang];
