@@ -14,8 +14,8 @@ for (const [lang,file] of [['uk','about.html'],['en','en/about-en.html']]) {
     assert.equal($('h1').text(),lang==='uk'?'Сергій Пелішенко':'Serhii Pelishenko');
     assert.equal($('.profile-work-item').length,3);
     assert.equal($('.profile-gallery-item').length,3);
-    const stagedLabel=lang==='uk'?'Постановочний кадр:':'Staged photograph:';
-    assert.equal($('.profile-gallery-item figcaption p').toArray().filter(e=>$(e).text().startsWith(stagedLabel)).length,2);
+    const stagedLabel=lang==='uk'?'Постановочний кадр':'Staged photograph';
+    assert.equal($('.profile-gallery-item img').toArray().filter(e=>$(e).attr('alt').startsWith(stagedLabel)).length,2);
     assert.match($('.profile-gallery-item img').first().attr('src'),/planning-staged\.webp$/);
     assert.match($('.profile-gallery-item img').last().attr('src'),/materials-staged\.webp$/);
     assert.equal($('.profile-timeline li').length,4);
