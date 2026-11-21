@@ -451,7 +451,18 @@
 .about-profile .profile-button-ghost { color: #f3f5f4; background: transparent; border-color: #7c8e80; }
 .about-profile .profile-button-ghost:hover { background: #26392e; border-color: #b4c58e; }
 .about-profile .profile-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.about-profile .profile-hero { padding-block: 128px 64px; background: var(--profile-forest); color: #f3f5f4; }
+.about-profile .profile-hero {
+  padding-block: 128px 64px;
+  background-color: var(--profile-forest);
+  background-image:
+    linear-gradient(0deg, #101e17 0%, rgba(16, 30, 23, 0) 38%),
+    linear-gradient(90deg, rgba(16, 30, 23, .94) 0%, rgba(16, 30, 23, .86) 40%, rgba(16, 30, 23, .4) 72%, rgba(16, 30, 23, .28) 100%),
+    url("../../assets/images/profile/lecture-hall.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f3f5f4;
+}
 .about-profile .profile-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: clamp(32px, 6vw, 80px); }
 .about-profile .profile-hero .profile-eyebrow { color: var(--profile-light-olive); }
 .about-profile .profile-hero h1 { margin: 0; max-width: 13ch; font-size: clamp(2.5rem, 5vw, 4.25rem); line-height: 1.05; letter-spacing: -.03em; }
@@ -519,7 +530,15 @@
   .about-profile .profile-topics-grid, .about-profile .profile-organizer-grid { gap: 36px; }
 }
 @media (max-width: 760px) {
-  .about-profile .profile-hero { padding-block: 112px 48px; }
+  .about-profile .profile-hero {
+    padding-block: 112px 48px;
+    background-image:
+      linear-gradient(180deg, rgba(16, 30, 23, .2) 0, rgba(16, 30, 23, .6) 400px, #101e17 660px),
+      linear-gradient(90deg, rgba(16, 30, 23, .86), rgba(16, 30, 23, .55)),
+      url("../../assets/images/profile/lecture-hall.webp");
+    background-position: center, center, 65% top;
+    background-size: cover, cover, auto 660px;
+  }
   .about-profile .profile-hero-grid, .about-profile .profile-work-grid, .about-profile .profile-gallery-grid, .about-profile .profile-topics-grid, .about-profile .profile-organizer-grid, .about-profile .profile-collaboration-grid { grid-template-columns: minmax(0, 1fr); }
   .about-profile .profile-hero h1 { font-size: clamp(2.375rem, 8vw, 3.5rem); }
   .about-profile .profile-portrait { max-width: 420px; justify-self: start; margin-top: 12px; }
