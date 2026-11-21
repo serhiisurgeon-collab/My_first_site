@@ -34,7 +34,8 @@
   color: #f5f6f2;
 }
 
-.collaboration-cta::before {
+.collaboration-cta::before,
+.about-profile .profile-collaboration::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -49,7 +50,8 @@
     );
 }
 
-.collaboration-cta::after {
+.collaboration-cta::after,
+.about-profile .profile-collaboration::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -499,7 +501,13 @@
 .about-profile .profile-organizer-contact .profile-text-link { padding-block: 7px; }
 .about-profile .profile-organizer-contact h3 { margin-top: 24px; margin-bottom: 10px; }
 .about-profile .profile-organizer-contact .profile-file-note { font-size: .875rem; margin: 2px 0 0; }
-.about-profile .profile-collaboration { background: var(--profile-forest); color: #f3f5f4; }
+.about-profile .profile-collaboration {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: url("../../assets/images/collaboration-mountains.webp") center / cover no-repeat;
+  color: #f3f5f4;
+}
 .about-profile .profile-collaboration-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; }
 .about-profile .profile-collaboration p { color: #cbd5cd; max-width: 640px; margin-bottom: 0; }
 .about-profile :is(.profile-text-link, .profile-button, .profile-bio, .profile-skip):focus-visible { outline: 3px solid #516b42; outline-offset: 5px; }
