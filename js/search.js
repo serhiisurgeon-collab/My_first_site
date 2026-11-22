@@ -1,3 +1,5 @@
+import { lockScroll, unlockScroll } from './scroll-lock.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const trigger = document.querySelector(".site-search-trigger");
 
@@ -115,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function openSearch() {
     if (overlay.classList.contains('is-open')) return;
+    document.dispatchEvent(new Event('site-search:opening'));
     previousFocus = document.activeElement;
     background = [...document.body.children].filter(el => el !== overlay)
       .map(el => ({el, inert: el.inert}));
@@ -122,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.inert = false;
     overlay.classList.add('is-open');
     overlay.setAttribute('aria-hidden', 'false');
+    lockScroll('search');
     document.body.classList.add('search-open');
     renderResults(searchSite(input.value), input.value);
     input.focus();
@@ -149,9 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
           article.excerpt ||
           article.subtitle ||
           "",
-        category: article.category === "understanding-medicine"
-          ? (lang === "en" ? "Understanding Medicine" : "Зрозуміло про медицину")
-          : article.category || "Article",
+        category: ({
+          uk: { 'tactical-medicine': 'Тактична медицина', medicine: 'Медицина', technology: 'Технології', 'understanding-medicine': 'Зрозуміло про медицину' },
+          en: { 'tactical-medicine': 'Tactical Medicine', medicine: 'Medicine', technology: 'Technology', 'understanding-medicine': 'Understanding Medicine' },
+        })[lang][article.category] || article.category || (lang === 'en' ? 'Article' : 'Стаття'),
         lang,
         type: article.type || "article",
         slug: article.slug || "",
@@ -325,6 +330,7 @@ input.addEventListener("input", () => {
     overlay.setAttribute('aria-hidden', 'true');
     overlay.inert = true;
     document.body.classList.remove('search-open');
+    unlockScroll('search');
     input.value = '';
     renderResults([], '');
   }

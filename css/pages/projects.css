@@ -1943,3 +1943,9 @@ body.hero-loaded .hero-reveal--5 {
   .project-row:focus-visible { outline: 3px solid #315b21; outline-offset: 4px; }
 }
 @media (min-width: 761px) { .project-row__arrow .project-row__action-label { display: none; } }
+
+/* Keep the introduction inside its grid just above the stacked-phone layout. */
+@media (min-width: 761px) and (max-width: 980px) {
+  .projects-intro__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .projects-intro__grid > * { min-width: 0; }
+}

@@ -469,43 +469,17 @@
 .about-profile .profile-name-alternate { margin: 14px 0 28px; font-size: 1rem; color: #bdc9bf; }
 .about-profile .profile-profession { margin: 0 0 20px; max-width: 32rem; font-size: 1.125rem; line-height: 1.7; color: #e1e8da; }
 .about-profile .profile-intro { max-width: 36rem; margin: 0 0 32px; color: #cbd5cd; font-size: 1rem; line-height: 1.8; }
+/* Editorial portrait: one quiet edge, no stacked glass or scroll reflection. */
 .about-profile .profile-portrait {
-  --portrait-glint-angle: 140deg;
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  max-width: 400px;
-  justify-self: end;
-  margin: 0;
-  border-radius: 18px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .3), 0 0 24px rgba(160, 220, 240, .12);
+  width: 100%; max-width: 400px; justify-self: end; margin: 0;
+  overflow: hidden; border: 1px solid rgba(218, 226, 220, .28); border-radius: 24px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .24), inset 0 1px 0 rgba(255, 255, 255, .08);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
-.about-profile .profile-portrait::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 16px -12px -16px 12px;
-  border: 1px solid rgba(211, 240, 251, .48);
-  border-radius: inherit;
-  background: linear-gradient(140deg, rgba(174, 222, 239, .17), rgba(95, 158, 178, .08));
-  box-shadow: inset 0 0 20px rgba(190, 235, 250, .1), 0 8px 24px rgba(0, 0, 0, .18);
-  pointer-events: none;
+.about-profile .profile-portrait img { display: block; width: 100%; height: auto; border-radius: inherit; background: #090e0b; }
+@media (hover: hover) {
+  .about-profile .profile-portrait:hover { border-color: rgba(218, 226, 220, .45); box-shadow: 0 28px 68px rgba(0, 0, 0, .28); }
 }
-.about-profile .profile-portrait::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  inset: -1px;
-  padding: 2px;
-  border-radius: 19px;
-  background: conic-gradient(from var(--portrait-glint-angle), transparent 0deg 65deg, rgba(174, 227, 248, .25) 100deg, #edfbff 124deg, rgba(174, 227, 248, .35) 150deg, transparent 190deg 275deg, rgba(220, 247, 255, .8) 306deg, transparent 338deg);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-.about-profile .profile-portrait img { display: block; box-sizing: border-box; width: 100%; height: auto; border: 1px solid rgba(220, 244, 252, .65); border-radius: inherit; background: #090e0b; }
 .about-profile .profile-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
 .about-profile .profile-work-item { display: flex; flex-direction: column; align-items: flex-start; padding-top: 24px; border-top: 1px solid var(--profile-line); }
 .about-profile .profile-work-item p { margin: 0 0 24px; }
@@ -513,7 +487,7 @@
 .about-profile .profile-gallery { padding-top: 0; }
 .about-profile .profile-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .about-profile .profile-gallery-item { min-width: 0; margin: 0; }
-.about-profile .profile-gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; border-radius: 10px; background: #d6ddd7; }
+.about-profile .profile-gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; border: 1px solid rgba(23, 32, 28, .12); border-radius: 24px; box-shadow: 0 10px 28px rgba(23, 32, 28, .07); background: #d6ddd7; }
 .about-profile .profile-gallery-item:first-child img { object-position: 50% 35%; }
 .about-profile .profile-gallery-item:last-child img { object-position: 65% 40%; }
 .about-profile .profile-gallery-item figcaption { padding-top: 20px; }
@@ -540,6 +514,7 @@
 .about-profile .profile-bio-panel { padding: clamp(24px, 3vw, 40px); background: var(--profile-paper); border: 1px solid var(--profile-line); border-radius: 12px; }
 .about-profile .profile-introduction { margin: 0 0 32px; }
 .about-profile .profile-bio { margin: 0 0 28px; }
+.about-profile .profile-bio p + p { margin-top: 1.25em; }
 .about-profile .profile-clipboard-field { position: fixed; top: 0; left: -9999px; }
 .about-profile .profile-copy-status { min-height: 1.75em; margin: 14px 0 0; }
 .about-profile .profile-organizer-contact { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }

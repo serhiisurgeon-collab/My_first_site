@@ -1,17 +1,17 @@
+import { linkPolicy } from './link-policy.js';
+
 function prepareLink(link) {
   const href = link.getAttribute("href");
-  if (!href || href.startsWith("#")) return;
+  if (!href) return;
 
-  const url = new URL(href, document.baseURI);
-  if (url.protocol !== "http:" && url.protocol !== "https:") return;
-  if (link.closest("nav, .mobile-nav") ||
-      (url.origin === location.origin &&
-       (/\/(?:article|articles)(?:-en)?\.html$/.test(url.pathname) || /\/(?:en\/)?articles\/[a-z0-9-]+\/$/.test(url.pathname)))) {
+  const policy = linkPolicy(href, document.baseURI, link.hasAttribute('download'));
+  if (policy.download && !link.hasAttribute('download')) link.setAttribute('download', '');
+  if (!policy.external) {
     link.removeAttribute("target");
+    link.relList.remove('noopener', 'noreferrer');
+    if (!link.relList.length) link.removeAttribute('rel');
     return;
   }
-  if (url.hash && url.origin === location.origin &&
-      url.pathname === location.pathname && url.search === location.search) return;
 
   link.target = "_blank";
   link.relList.add("noopener", "noreferrer");

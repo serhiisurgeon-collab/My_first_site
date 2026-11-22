@@ -42,7 +42,8 @@ function initialiseBiographyCopy() {
     button.disabled = true;
     status.textContent = '';
     try {
-      const copied = await copyBiography(bio.textContent.trim());
+      const text = Array.from(bio.querySelectorAll('p'), paragraph => paragraph.textContent.trim()).join('\n\n');
+      const copied = await copyBiography(text);
       status.textContent = copied ? button.dataset.copySuccess : button.dataset.copyError;
       if (!copied) {
         bio.focus({ preventScroll: true });
@@ -59,41 +60,3 @@ function initialiseBiographyCopy() {
   });
 }
 initialiseBiographyCopy();
-
-/** A scroll-linked reflection on the frame; the portrait itself stays still. */
-function initialisePortraitReflection() {
-  const portrait = document.querySelector('.about-profile .profile-portrait');
-  if (!portrait) return;
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let visible = true;
-  let frame = 0;
-
-  function update() {
-    frame = 0;
-    if (reducedMotion.matches) {
-      portrait.style.removeProperty('--portrait-glint-angle');
-      return;
-    }
-    if (!visible) return;
-    const rect = portrait.getBoundingClientRect();
-    const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight + rect.height)));
-    portrait.style.setProperty('--portrait-glint-angle', `${(80 + progress * 360).toFixed(2)}deg`);
-  }
-
-  function schedule() {
-    if (!frame && visible && !reducedMotion.matches) frame = requestAnimationFrame(update);
-  }
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      if (visible) schedule();
-    });
-    observer.observe(portrait);
-  }
-  window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', schedule, { passive: true });
-  reducedMotion.addEventListener('change', update);
-  schedule();
-}
-initialisePortraitReflection();

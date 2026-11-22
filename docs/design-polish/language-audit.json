@@ -1,0 +1,20 @@
+{
+  "ua_en_html_and_templates": 58,
+  "internal_blank_remaining": 0,
+  "ui_language_issues": [],
+  "intentional_bilingual_person_name": [
+    {
+      "file": "en/policy-en.html",
+      "lang": "en",
+      "kind": "text",
+      "text": "Serhii Pelishenko / Сергій Пелішенко"
+    },
+    {
+      "file": "tools/seo/templates/pages/en/policy-en.html",
+      "lang": "en",
+      "kind": "text",
+      "text": "Serhii Pelishenko / Сергій Пелішенко"
+    }
+  ],
+  "scope": "Service UI and accessible names; authored article text and proper names remain unchanged."
+}

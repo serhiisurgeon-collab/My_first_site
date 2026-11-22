@@ -100,8 +100,8 @@
   .not-found-footer nav { margin-left: 0; }
 }
 @media (max-width: 900px) {
-  .not-found-page { padding-top: 64px; }
-  .not-found-page .site-nav { height: 64px; }
+  .not-found-page { padding-top: 72px; }
+  .not-found-page .site-nav { height: 72px; }
   .not-found-main { min-height: 560px; }
   .not-found-inner { padding-block: 90px; }
   .not-found-code { left: 47%; top: 34%; font-size: 260px; opacity: .045; }

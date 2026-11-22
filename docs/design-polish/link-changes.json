@@ -1,0 +1,902 @@
+[
+  {
+    "file": "about.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "about.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "article.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "article.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/ccp-equipment-capability/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/ccp-equipment-capability/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/group-medical-bag/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/group-medical-bag/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/hospital-capabilities/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/hospital-capabilities/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/how-kaolin-works/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/how-kaolin-works/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/medical-app-without-internet/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/medical-app-without-internet/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/npa-effectiveness/index.html",
+    "href": "/content/articles/uk/image/npa-effectiveness-1.png",
+    "label": ""
+  },
+  {
+    "file": "articles/npa-effectiveness/index.html",
+    "href": "/content/articles/uk/image/npa-effectiveness-2.png",
+    "label": ""
+  },
+  {
+    "file": "articles/npa-effectiveness/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/npa-effectiveness/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/sga-or-intubation/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/sga-or-intubation/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles/weight-gain-after-30/index.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "articles/weight-gain-after-30/index.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "articles.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "articles.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "contact.html",
+    "href": "#",
+    "label": ""
+  },
+  {
+    "file": "contact.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "contact.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "de/spanish-bot-de.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "de/spanish-bot-de.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/about-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/about-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/article-en.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/article-en.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/ccp-equipment-capability/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/ccp-equipment-capability/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/group-medical-bag/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/group-medical-bag/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/hospital-capabilities/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/hospital-capabilities/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/how-kaolin-works/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/how-kaolin-works/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/medical-app-without-internet/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/medical-app-without-internet/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/npa-effectiveness/index.html",
+    "href": "/content/articles/en/image/npa-effectiveness-1.png",
+    "label": ""
+  },
+  {
+    "file": "en/articles/npa-effectiveness/index.html",
+    "href": "/content/articles/en/image/npa-effectiveness-2.png",
+    "label": ""
+  },
+  {
+    "file": "en/articles/npa-effectiveness/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/npa-effectiveness/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/sga-or-intubation/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/sga-or-intubation/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/weight-gain-after-30/index.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles/weight-gain-after-30/index.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/articles-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/contact-en.html",
+    "href": "#",
+    "label": ""
+  },
+  {
+    "file": "en/contact-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/contact-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./about-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./projects-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./s-dose-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./spanish-bot-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./contact-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/index-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "en/policy-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "./s-dose-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "./spanish-bot-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "/project/project_blood/blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "https://serhiipelishenko.com/",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "/project/2d_try.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "./contact-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/projects-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/s-dose-en.html",
+    "href": "./contact-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/s-dose-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/s-dose-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/spanish-bot-en.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "en/spanish-bot-en.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "es/spanish-bot-es.html",
+    "href": "/en/index-en.html",
+    "label": ""
+  },
+  {
+    "file": "es/spanish-bot-es.html",
+    "href": "/en/policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./about.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./projects.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./s-dose.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./spanish-bot.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./contact.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "index.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "policy.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "project/project_blood/page_aboutus/aboutus_html.html",
+    "href": "../blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "project/project_blood/page_contact/contact_html.html",
+    "href": "../blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "./s-dose.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "./spanish-bot.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "/project/project_blood/blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "https://serhiipelishenko.com/",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "/project/2d_try.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "./contact.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "projects.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "s-dose.html",
+    "href": "./contact.html",
+    "label": ""
+  },
+  {
+    "file": "s-dose.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "s-dose.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "spanish-bot.html",
+    "href": "/index.html",
+    "label": ""
+  },
+  {
+    "file": "spanish-bot.html",
+    "href": "/policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/article-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/article-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/article-uk.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/article-uk.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/about.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/about.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/articles.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/articles.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/contact.html",
+    "href": "#",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/contact.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/contact.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/about-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/about-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/articles-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/articles-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/contact-en.html",
+    "href": "#",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/contact-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/contact-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./about-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./projects-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./s-dose-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./spanish-bot-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./contact-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/index-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/policy-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "./s-dose-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "./spanish-bot-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "/project/project_blood/blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "https://serhiipelishenko.com/",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "/project/2d_try.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "./contact-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "./index-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/en/projects-en.html",
+    "href": "./policy-en.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./about.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./projects.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./s-dose.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./spanish-bot.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./contact.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/index.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "mailto:hello@serhiipelishenko.com",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/policy.html",
+    "href": "./policy.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "./s-dose.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "./spanish-bot.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "/project/project_blood/blood_html.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "https://serhiipelishenko.com/",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "/project/2d_try.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "./contact.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "./index.html",
+    "label": ""
+  },
+  {
+    "file": "tools/seo/templates/pages/projects.html",
+    "href": "./policy.html",
+    "label": ""
+  }
+]

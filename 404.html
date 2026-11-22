@@ -13,14 +13,14 @@
   <title>Сторінку не знайдено | Serhii Pelishenko</title>
   <link rel="icon" href="/assets/icons/favicon.png" type="image/png">
   <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/base.css?v=20261030-search">
-  <link rel="stylesheet" href="/css/components.css">
-  <link rel="stylesheet" href="/css/responsive.css?v=20261017">
-  <link rel="stylesheet" href="/css/pages/404.css?v=20261030-concept">
+  <link rel="stylesheet" href="/css/base.css?v=512a57de676fb0c0">
+  <link rel="stylesheet" href="/css/components.css?v=b7f4cb60cb720fe3">
+  <link rel="stylesheet" href="/css/responsive.css?v=e633cf323f269a9b">
+  <link rel="stylesheet" href="/css/pages/404.css?v=6c9b1082be6b1b79">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
   <noscript><style>
-    .not-found-page .site-nav__toggle { display: none; }
-    @media (max-width: 900px) {
+    .not-found-page .site-nav__toggle, .not-found-page .site-search-trigger { display: none; }
+    @media (max-width: 1023px) {
       .not-found-page .mobile-nav { position: relative; top: auto; max-height: none; opacity: 1; }
     }
   </style></noscript>
@@ -35,6 +35,7 @@
 <a class="site-nav__link" href="/projects.html">Проєкти</a>
 <a class="site-nav__link" href="/articles.html">Статті</a>
 <a class="site-nav__link" href="/contact.html">Контакти</a></div>
+      <button class="site-search-trigger" type="button" aria-label="Пошук по сайту" title="Пошук"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="site-search-trigger__label">Пошук</span><span class="site-search-trigger__hint">Ctrl K</span></button>
       <div class="site-nav__language-switcher" role="group" aria-label="Перемикач мови"><a class="site-nav__language-option is-active" href="/404.html" lang="uk" hreflang="uk" aria-current="page">UA</a><span class="site-nav__language-divider" aria-hidden="true">/</span>
 <a class="site-nav__language-option" href="/en/404.html" lang="en" hreflang="en">EN</a></div>
       <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">Меню</button>
@@ -52,7 +53,7 @@
     <div class="not-found-code" aria-hidden="true">404</div>
     <div class="not-found-inner container">
       <div class="not-found-content">
-        <p class="not-found-eyebrow">ПОМИЛКА / ERROR 404<span aria-hidden="true"></span></p>
+        <p class="not-found-eyebrow">ПОМИЛКА 404<span aria-hidden="true"></span></p>
         <h1>Цієї сторінки немає</h1>
         <p class="not-found-description">Можливо, посилання застаріло або в адресі є помилка. Оберіть, куди перейти далі.</p>
         <nav class="not-found-actions" aria-label="Куди перейти далі">
@@ -75,6 +76,6 @@
 <a href="/contact.html">Контакти</a></nav>
     </div>
   </footer>
-  <script type="module" src="/js/404.js?v=20261030"></script>
+  <script type="module" src="/js/404.js?v=0e4ed3bd57d21681"></script>
 </body>
 </html>

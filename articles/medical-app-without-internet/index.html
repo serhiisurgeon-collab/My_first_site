@@ -5,11 +5,11 @@
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/base.css?v=512a57de676fb0c0">
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css?v=b7f4cb60cb720fe3">
   <link rel="stylesheet" href="/css/pages/articles.css?v=4163405615a36bec">
   <link rel="stylesheet" href="/css/pages/article.css?v=dc15bc0c4fd4e3d5">
-  <link rel="stylesheet" href="/css/pages/about.css?v=45e2b1cdaa12cafb">
-  <link rel="stylesheet" href="/css/responsive.css?v=1ff8c6706a02b8a2">
+  <link rel="stylesheet" href="/css/pages/about.css?v=d837143ef27b266e">
+  <link rel="stylesheet" href="/css/responsive.css?v=e633cf323f269a9b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -30,28 +30,28 @@
 <body>
 <nav class="site-nav" aria-label="Основна навігація">
   <div class="site-nav__inner container">
-    <a class="site-nav__brand" href="/index.html" rel="noopener noreferrer">
+    <a class="site-nav__brand" href="/index.html">
       Serhii Pelishenko
     </a>
 
     <div class="site-nav__links">
-      <a class="site-nav__link" href="/index.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/index.html">
         Головна
       </a>
 
-      <a class="site-nav__link" href="/about.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/about.html">
         Про мене
       </a>
 
-      <a class="site-nav__link" href="/projects.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/projects.html">
         Проєкти
       </a>
 
-      <a class="site-nav__link" href="/articles.html" aria-current="page" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/articles.html" aria-current="page">
         Статті
       </a>
 
-      <a class="site-nav__link" href="/contact.html" rel="noopener noreferrer">
+      <a class="site-nav__link" href="/contact.html">
         Контакти
       </a>
     </div>
@@ -62,7 +62,7 @@
 </button>
 <div class="site-nav__language-switcher" aria-label="Перемикач мови">
 
-  <a class="site-nav__language-option is-active" href="/articles/medical-app-without-internet/" lang="uk" aria-current="page" rel="noopener noreferrer">
+  <a class="site-nav__language-option is-active" href="/articles/medical-app-without-internet/" lang="uk" aria-current="page">
     UA
   </a>
 
@@ -70,7 +70,7 @@
     /
   </span>
 
-  <a class="site-nav__language-option" href="/en/articles/medical-app-without-internet/" lang="en" rel="noopener noreferrer">
+  <a class="site-nav__language-option" href="/en/articles/medical-app-without-internet/" lang="en">
     EN
   </a>
 </div>
@@ -83,11 +83,11 @@
 <div class="mobile-nav" id="mobile-navigation" aria-hidden="true">
   <div class="mobile-nav__inner">
 
-    <a href="/index.html" rel="noopener noreferrer">Головна</a>
-    <a href="/about.html" rel="noopener noreferrer">Про мене</a>
-    <a href="/projects.html" rel="noopener noreferrer">Проєкти</a>
-    <a href="/articles.html" rel="noopener noreferrer">Статті</a>
-    <a href="/contact.html" rel="noopener noreferrer">Контакти</a>
+    <a href="/index.html">Головна</a>
+    <a href="/about.html">Про мене</a>
+    <a href="/projects.html">Проєкти</a>
+    <a href="/articles.html">Статті</a>
+    <a href="/contact.html">Контакти</a>
 
   </div>
 </div>
@@ -105,7 +105,7 @@
       <div class="article-header__inner">
 
 
-        <a class="article-back" href="/articles.html" rel="noopener noreferrer">
+        <a class="article-back" href="/articles.html">
           ← Усі статті
         </a>
 
@@ -255,12 +255,12 @@
 <p>Саме така конкретність допомагає обирати медичні інструменти для нестабільного зв'язку та обговорювати їхні можливості без зайвих обіцянок.</p>
 <h2 id="джерела" class="article-section-heading">Джерела</h2>
 <ol>
-<li>Google, Android Developers. <a href="https://developer.android.com/topic/architecture/data-layer/offline-first"><strong>Build an offline-first app</strong></a>. Оновлення сторінки: <strong>13 травня 2026 року</strong>. Перевірено опис локальних і мережевих джерел та окремих стратегій читання й запису. Сфера: архітектура Android-застосунків.</li>
-<li>Google, Android Developers. <a href="https://developer.android.com/training/data-storage/app-specific"><strong>Access app-specific files</strong></a>. Оновлення сторінки: <strong>1 жовтня 2026 року</strong>. Перевірено розділи про файлове сховище й кеш, зокрема можливість очищення кешу при нестачі місця. Сфера: Android; поведінку інших платформ перевіряють за їхньою документацією.</li>
-<li>SQLite. <a href="https://www.sqlite.org/atomiccommit.html"><strong>Atomic Commit In SQLite</strong></a>. Поточна онлайн-документація, розділи про атомарне завершення, відновлення й обмеження. Використано для пояснення технічного принципу, а не як доказ надійності певного застосунку.</li>
-<li>The Update Framework. <a href="https://theupdateframework.github.io/specification/latest/"><strong>The Update Framework Specification</strong></a>. Поточна онлайн-специфікація, розділи про підписані метадані, хеші та процес перевірки оновлень. Сфера: технічний захист доставки оновлень, не перевірка медичного змісту.</li>
-<li>OWASP Mobile Application Security. <a href="https://mas.owasp.org/MASVS/05-MASVS-STORAGE/"><strong>MASVS-STORAGE: Storage</strong></a>. Поточна онлайн-редакція; перевірено положення MASVS-STORAGE-1 і MASVS-STORAGE-2 та опис ризиків локального зберігання. Сфера: безпека мобільних застосунків.</li>
-<li>Google, Android Developers. <a href="https://developer.android.com/privacy-and-security/risks/backup-best-practices"><strong>Security recommendations for backups</strong></a>. Оновлення сторінки: <strong>25 жовтня 2024 року</strong>. Перевірено опис резервування, налаштувань захисту й ризиків експорту. Сфера: Android.</li>
+<li>Google, Android Developers. <a href="https://developer.android.com/topic/architecture/data-layer/offline-first" target="_blank" rel="noopener noreferrer"><strong>Build an offline-first app</strong></a>. Оновлення сторінки: <strong>13 травня 2026 року</strong>. Перевірено опис локальних і мережевих джерел та окремих стратегій читання й запису. Сфера: архітектура Android-застосунків.</li>
+<li>Google, Android Developers. <a href="https://developer.android.com/training/data-storage/app-specific" target="_blank" rel="noopener noreferrer"><strong>Access app-specific files</strong></a>. Оновлення сторінки: <strong>1 жовтня 2026 року</strong>. Перевірено розділи про файлове сховище й кеш, зокрема можливість очищення кешу при нестачі місця. Сфера: Android; поведінку інших платформ перевіряють за їхньою документацією.</li>
+<li>SQLite. <a href="https://www.sqlite.org/atomiccommit.html" target="_blank" rel="noopener noreferrer"><strong>Atomic Commit In SQLite</strong></a>. Поточна онлайн-документація, розділи про атомарне завершення, відновлення й обмеження. Використано для пояснення технічного принципу, а не як доказ надійності певного застосунку.</li>
+<li>The Update Framework. <a href="https://theupdateframework.github.io/specification/latest/" target="_blank" rel="noopener noreferrer"><strong>The Update Framework Specification</strong></a>. Поточна онлайн-специфікація, розділи про підписані метадані, хеші та процес перевірки оновлень. Сфера: технічний захист доставки оновлень, не перевірка медичного змісту.</li>
+<li>OWASP Mobile Application Security. <a href="https://mas.owasp.org/MASVS/05-MASVS-STORAGE/" target="_blank" rel="noopener noreferrer"><strong>MASVS-STORAGE: Storage</strong></a>. Поточна онлайн-редакція; перевірено положення MASVS-STORAGE-1 і MASVS-STORAGE-2 та опис ризиків локального зберігання. Сфера: безпека мобільних застосунків.</li>
+<li>Google, Android Developers. <a href="https://developer.android.com/privacy-and-security/risks/backup-best-practices" target="_blank" rel="noopener noreferrer"><strong>Security recommendations for backups</strong></a>. Оновлення сторінки: <strong>25 жовтня 2024 року</strong>. Перевірено опис резервування, налаштувань захисту й ризиків експорту. Сфера: Android.</li>
 </ol>
 <p>Посилання та наведені розділи перевірено 3 жовтня 2026 року. Текст розглядає технічні й організаційні рішення; він не встановлює регуляторного статусу або відповідності S-Dose будь-яким стандартам.</p>
 <p class="article-revision-date">Дата редакції: <time datetime="2026-10-03">03.10.2026</time></p></article>
@@ -341,7 +341,7 @@
     <div class="site-footer__grid">
 
       <div class="site-footer__brand">
-        <a class="site-footer__logo" href="/index.html" rel="noopener noreferrer" target="_blank">
+        <a class="site-footer__logo" href="/index.html">
           Serhii Pelishenko<span>.</span>
         </a>
 
@@ -353,11 +353,11 @@
       <nav class="site-footer__nav" aria-label="Навігація у футері">
         <p class="site-footer__heading">Навігація</p>
 
-        <a href="/index.html" rel="noopener noreferrer">Головна</a>
-        <a href="/about.html" rel="noopener noreferrer">Про мене</a>
-        <a href="/projects.html" rel="noopener noreferrer">Проєкти</a>
-        <a href="/articles.html" rel="noopener noreferrer">Статті</a>
-        <a href="/contact.html" rel="noopener noreferrer">Контакти</a>
+        <a href="/index.html">Головна</a>
+        <a href="/about.html">Про мене</a>
+        <a href="/projects.html">Проєкти</a>
+        <a href="/articles.html">Статті</a>
+        <a href="/contact.html">Контакти</a>
       </nav>
 
       <div class="site-footer__socials">
@@ -411,7 +411,7 @@
         Усі права захищені.
       </p>
 
-      <a href="/policy.html" rel="noopener noreferrer" target="_blank">
+      <a href="/policy.html">
         Політика конфіденційності
       </a>
     </div>
@@ -421,14 +421,14 @@
 </main>
 
 
-<script type="module" src="/js/main.js?v=e4ecfccdc9adf776"></script>
+<script type="module" src="/js/main.js?v=c8b7829bd31cd6bc"></script>
 
 
 
 <script>
   document.documentElement.classList.add("js");
 </script>
-<script type="module" src="/js/comments/index.js?v=31429ee4b115d238"></script>
+<script type="module" src="/js/comments/index.js?v=a9b1228728a61afb"></script>
 
 
 <script type="module" src="/js/article-static.js?v=a278d4eda50678bb"></script></body></html>

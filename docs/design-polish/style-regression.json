@@ -1,0 +1,40 @@
+{
+  "cases": 36,
+  "widths": [
+    390,
+    1200,
+    1440
+  ],
+  "pages": [
+    "/404.html",
+    "/articles.html",
+    "/articles/npa-effectiveness/",
+    "/contact.html",
+    "/en/404.html",
+    "/en/articles-en.html",
+    "/en/articles/npa-effectiveness/",
+    "/en/contact-en.html",
+    "/en/s-dose-en.html",
+    "/en/spanish-bot-en.html",
+    "/s-dose.html",
+    "/spanish-bot.html"
+  ],
+  "properties": [
+    "display",
+    "color",
+    "backgroundColor",
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "lineHeight",
+    "paddingTop",
+    "paddingBottom",
+    "borderRadius",
+    "boxShadow",
+    "gridTemplateColumns",
+    "gap",
+    "width"
+  ],
+  "differences": [],
+  "excluded": "Navbar/search/mobile navigation are intentionally changed. Home/About/Projects are covered by their dedicated visual and behavior checks."
+}

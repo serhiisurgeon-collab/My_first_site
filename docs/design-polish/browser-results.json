@@ -1,0 +1,654 @@
+{
+  "browser": "158.0.8127.36",
+  "cases": [
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1200,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 900,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 430,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/projects.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/about.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/articles.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/contact.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "uk",
+      "route": "/404.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/index-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/projects-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/about-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/articles-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/contact-en.html",
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "lang": "en",
+      "route": "/en/404.html",
+      "result": "pass"
+    }
+  ],
+  "failures": []
+}
