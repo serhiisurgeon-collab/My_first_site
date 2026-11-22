@@ -42,7 +42,8 @@ function initialiseBiographyCopy() {
     button.disabled = true;
     status.textContent = '';
     try {
-      const copied = await copyBiography(bio.textContent.trim());
+      const text = Array.from(bio.querySelectorAll('p'), paragraph => paragraph.textContent.trim()).join('\n\n');
+      const copied = await copyBiography(text);
       status.textContent = copied ? button.dataset.copySuccess : button.dataset.copyError;
       if (!copied) {
         bio.focus({ preventScroll: true });

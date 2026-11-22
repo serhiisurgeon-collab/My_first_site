@@ -12,6 +12,7 @@ const server=createServer(async(req,res)=>{let file=path.resolve(root,'.'+decode
 await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve)});const origin=`http://127.0.0.1:${server.address().port}`;
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 let cases=0;
+const readBiography=async page=>(await page.locator("#profile-bio p").allTextContents()).map(text=>text.trim()).join("\n\n");
 const inspect=()=>({overflow:document.documentElement.scrollWidth>innerWidth,h1:document.querySelector('h1').textContent,gallery:[...document.querySelectorAll('.profile-gallery-item img')].map(i=>({loaded:i.complete&&i.naturalWidth>0,alt:i.alt})),portrait:document.querySelector('.profile-portrait img').getBoundingClientRect().top,buttons:document.querySelector('.profile-actions').getBoundingClientRect().bottom});
 async function verifyPortraitReflection(page) {
  const portrait=page.locator('.profile-portrait');
@@ -49,7 +50,7 @@ try {
   await verifyPortraitReflection(p);
   for(const img of await p.locator('.profile-gallery-item img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode())}
   const data=await p.evaluate(inspect);assert.equal(data.overflow,false);assert.equal(await p.locator('h1').count(),1);assert.ok(data.gallery.every(i=>i.loaded&&i.alt));if(width<=760)assert.ok(data.portrait>=data.buttons,'mobile portrait follows introduction and buttons');
-  const bio=(await p.locator('#profile-bio').textContent()).trim();const button=p.locator('[data-copy-bio]');await button.focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('[data-copy-status]').textContent.length>0);assert.equal(await p.evaluate(()=>navigator.clipboard.readText()),bio);assert.equal(await button.evaluate(e=>e===document.activeElement),true);
+  const bio=await readBiography(p);const button=p.locator('[data-copy-bio]');await button.focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('[data-copy-status]').textContent.length>0);assert.equal(await p.evaluate(()=>navigator.clipboard.readText()),bio);assert.equal(await button.evaluate(e=>e===document.activeElement),true);
   const downloadEvent=p.waitForEvent('download');await p.locator('a[download]').click();const download=await downloadEvent;assert.equal(download.suggestedFilename(),'serhii-pelishenko-professional-portrait.jpg');assert.deepEqual(await fs.readFile(await download.path()),await fs.readFile('assets/downloads/serhii-pelishenko-professional-portrait.jpg'));
   if(width===390||width===1440){await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));await p.screenshot({path:path.join(out,`${lang}-${width}.png`),fullPage:true});await p.screenshot({path:path.join(out,`${lang}-${width}-hero.png`)});}
   const other=lang==='uk'?'en':'uk';await p.locator(`.site-nav__language-option[lang=${other}]`).click();await p.waitForURL(other==='en'?'**/en/about-en.html':'**/about.html');assert.equal(await p.locator('html').getAttribute('lang'),other);assert.deepEqual(errors,[]);
@@ -62,8 +63,8 @@ try {
   const context=await browser.newContext({viewport:{width:390,height:900},reducedMotion:'reduce'});await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});await context.route(/^https:\/\//,externalAssets);
   await context.addInitScript(failure=>{Object.defineProperty(navigator.clipboard,'writeText',{value:async()=>{throw Error('Permission denied')}});if(failure)document.execCommand=()=>false},failure);
   const p=await context.newPage();await p.goto(origin+'/en/about-en.html');const button=p.locator('[data-copy-bio]');await button.click();await p.waitForFunction(()=>document.querySelector('[data-copy-status]').textContent.length>0);
-  if(failure){assert.match(await p.locator('[data-copy-status]').textContent(),/copy it manually/);assert.equal(await p.locator('#profile-bio').evaluate(e=>e===document.activeElement),true);assert.equal(await p.evaluate(()=>getSelection().toString()),await p.locator('#profile-bio').textContent());}
-  else{assert.equal(await p.evaluate(()=>navigator.clipboard.readText()),await p.locator('#profile-bio').textContent());assert.equal(await button.evaluate(e=>getComputedStyle(e).transitionDuration),'0s');assert.equal(await p.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');}
+  if(failure){assert.match(await p.locator('[data-copy-status]').textContent(),/copy it manually/);assert.equal(await p.locator('#profile-bio').evaluate(e=>e===document.activeElement),true);assert.equal(await p.evaluate(()=>getSelection().toString()),await readBiography(p));}
+  else{assert.equal(await p.evaluate(()=>navigator.clipboard.readText()),await readBiography(p));assert.equal(await button.evaluate(e=>getComputedStyle(e).transitionDuration),'0s');assert.equal(await p.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');}
   await context.close();cases++;
  }
  console.log(`PASS ${cases} About scenarios, including clipboard fallback/failure, no JS, reduced motion`);
