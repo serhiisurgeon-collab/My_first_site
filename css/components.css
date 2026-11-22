@@ -163,3 +163,8 @@
 .site-nav__toggle {
   display: none;
 }
+
+.site-nav .site-search-trigger { flex-shrink: 0; }
+.site-nav :is(a, button):focus-visible,
+.mobile-nav a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; }
+.mobile-nav a[aria-current="page"] { color: var(--color-text-light); border-bottom-color: var(--color-accent); }

@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { safeMarkdown, validate } from "./lib.mjs";
 import { load } from "cheerio";
 import sharp from "sharp";
+import { normaliseLinks } from './link-policy.mjs';
 export const ROOT = process.env.SEO_SOURCE_ROOT
   ? path.resolve(process.env.SEO_SOURCE_ROOT)
   : path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -15,6 +16,8 @@ const assetVersions = new Map();
 for (const p of [
   "js/main.js",
   "css/base.css",
+  "css/components.css",
+  "css/pages/home.css",
   "js/articles.js",
   "js/comments/index.js",
   "js/article-legacy.js",
@@ -34,6 +37,7 @@ for (const p of [
       .slice(0, 16),
   );
 function versionAssets($, base) {
+  normaliseLinks($, origin + base);
   $('script[src],link[rel="stylesheet"][href]').each((_, el) => {
     const key = el.tagName === "script" ? "src" : "href";
     const url = new URL($(el).attr(key), origin + base);

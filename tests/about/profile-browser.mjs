@@ -14,40 +14,27 @@ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'
 let cases=0;
 const readBiography=async page=>(await page.locator("#profile-bio p").allTextContents()).map(text=>text.trim()).join("\n\n");
 const inspect=()=>({overflow:document.documentElement.scrollWidth>innerWidth,h1:document.querySelector('h1').textContent,gallery:[...document.querySelectorAll('.profile-gallery-item img')].map(i=>({loaded:i.complete&&i.naturalWidth>0,alt:i.alt})),portrait:document.querySelector('.profile-portrait img').getBoundingClientRect().top,buttons:document.querySelector('.profile-actions').getBoundingClientRect().bottom});
-async function verifyPortraitReflection(page) {
+async function verifyEditorialPortrait(page) {
  const portrait=page.locator('.profile-portrait');
- const settle=()=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
- await portrait.evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+window.scrollY-150,behavior:'instant'}));
- await settle();
- await page.waitForFunction(()=>document.querySelector('.profile-portrait').style.getPropertyValue('--portrait-glint-angle'));
- const angle=()=>portrait.evaluate(e=>e.style.getPropertyValue('--portrait-glint-angle'));
- const before=await angle();
- const imageTop=await portrait.locator('img').evaluate(e=>e.getBoundingClientRect().top);
+ const image=portrait.locator('img');
+ await image.evaluate(e=>e.decode());
+ const initial=await image.evaluate(e=>({src:e.getAttribute('src'),ratio:e.getBoundingClientRect().width/e.getBoundingClientRect().height}));
+ assert.equal(initial.src,'/assets/images/profile/portrait.webp');
+ assert.ok(Math.abs(initial.ratio-.8)<.002,'portrait retains original aspect ratio');
+ assert.equal(await portrait.evaluate(e=>getComputedStyle(e,'::before').content),'none','no glass stack');
+ assert.equal(await portrait.evaluate(e=>getComputedStyle(e).borderTopWidth),'1px');
+ const radius=await portrait.evaluate(e=>getComputedStyle(e).borderRadius);
+ for(const photo of await page.locator('.profile-gallery-item img').all()) assert.equal(await photo.evaluate(e=>getComputedStyle(e).borderRadius),radius);
  await page.evaluate(()=>window.scrollBy({top:100,behavior:'instant'}));
- await settle();
- await page.waitForFunction(previous=>document.querySelector('.profile-portrait').style.getPropertyValue('--portrait-glint-angle')!==previous,before);
- const after=await angle();
- const image=await portrait.locator('img').evaluate(e=>({top:e.getBoundingClientRect().top,transform:getComputedStyle(e).transform}));
- assert.ok(Math.abs(imageTop-image.top-100)<1,'portrait scrolls normally without parallax');
- assert.equal(image.transform,'none');
- await page.waitForTimeout(100);
- assert.equal(await angle(),after,'reflection stops when scrolling stops');
- await page.evaluate(()=>window.scrollBy({top:-100,behavior:'instant'}));
- await page.waitForFunction(expected=>document.querySelector('.profile-portrait').style.getPropertyValue('--portrait-glint-angle')===expected,before);
- await page.emulateMedia({reducedMotion:'reduce'});
- await page.waitForFunction(()=>!document.querySelector('.profile-portrait').style.getPropertyValue('--portrait-glint-angle'));
- await page.evaluate(()=>window.scrollBy({top:60,behavior:'instant'}));
- await page.waitForTimeout(100);
- assert.equal(await angle(),'','reduced motion keeps a static frame');
- assert.equal(await portrait.evaluate(e=>getComputedStyle(e).getPropertyValue('--portrait-glint-angle').trim()),'140deg');
- await page.emulateMedia({reducedMotion:'no-preference'});
- await page.waitForFunction(()=>document.querySelector('.profile-portrait').style.getPropertyValue('--portrait-glint-angle'));
+ assert.equal(await image.evaluate(e=>getComputedStyle(e).transform),'none');
+ assert.equal(await portrait.evaluate(e=>e.style.getPropertyValue('--portrait-glint-angle')),'');
 }
+
 try {
  for(const lang of ['uk','en']) for(const width of [320,390,768,1024,1440]){
   const context=await browser.newContext({viewport:{width,height:960},acceptDownloads:true});await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});await context.route(/^https:\/\//,externalAssets);
   const p=await context.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));const route=lang==='uk'?'/about.html':'/en/about-en.html';await p.goto(origin+route);await p.evaluate(async()=>{await document.fonts.ready;return true});
-  await verifyPortraitReflection(p);
+  await verifyEditorialPortrait(p);
   for(const img of await p.locator('.profile-gallery-item img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode())}
   const data=await p.evaluate(inspect);assert.equal(data.overflow,false);assert.equal(await p.locator('h1').count(),1);assert.ok(data.gallery.every(i=>i.loaded&&i.alt));if(width<=760)assert.ok(data.portrait>=data.buttons,'mobile portrait follows introduction and buttons');
   const bio=await readBiography(p);const button=p.locator('[data-copy-bio]');await button.focus();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.querySelector('[data-copy-status]').textContent.length>0);assert.equal(await p.evaluate(()=>navigator.clipboard.readText()),bio);assert.equal(await button.evaluate(e=>e===document.activeElement),true);
