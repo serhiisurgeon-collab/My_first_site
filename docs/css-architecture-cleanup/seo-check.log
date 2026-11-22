@@ -1,0 +1,9 @@
+
+> seo:check
+> node tools/seo/build.mjs --check
+
+(node:76742) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/My_first_site/js/link-policy.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/My_first_site/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Checked 52 outputs; 16 article pages.

@@ -15,7 +15,9 @@ const outputs = new Map();
 const assetVersions = new Map();
 for (const p of [
   "js/main.js",
+  "css/tokens.css",
   "css/base.css",
+  "css/layout.css",
   "css/components.css",
   "css/pages/home.css",
   "js/articles.js",
@@ -27,6 +29,13 @@ for (const p of [
   "css/pages/articles.css",
   "css/pages/projects.css",
   "css/pages/about.css",
+  "css/pages/contact.css",
+  "css/pages/comments.css",
+  "css/pages/policy.css",
+  "css/pages/404.css",
+  "css/pages/s-dose.css",
+  "css/pages/s-dose-partnership.css",
+  "spanish-bot.css",
   "js/about-profile.js",
 ])
   assetVersions.set(

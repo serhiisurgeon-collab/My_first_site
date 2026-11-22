@@ -1,4 +1,4 @@
-<style>
+\3c style>
 
 html {
     scroll-behavior: smooth;
@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 70%);
   line-height: 1.2;
   padding: 0;
@@ -230,7 +229,6 @@ body {
   top:0;
   left:0;
 }
-
 .main-title{
   position: absolute;
   top:52%;
@@ -247,15 +245,12 @@ body {
    -2px 2px 0 #4e3b3b,
     2px -2px 0 #4e3b3b,
    -2px -2px 0 #4e3b3b;
-}
-.main-title{
   max-width: 900px;
   width: 90%;
 }
 .main-title:hover{
   color: #be5050;
 }
-
 
 
 .page-after {
@@ -288,8 +283,6 @@ body {
 }
 
 .indent { display: block; text-indent: 40px; margin-top: 8px; line-height: 1.5; }
-
-
 
 
 .board-interactive {
@@ -409,9 +402,9 @@ body {
   .nav-menu a {
     font-size: 18px;
   }
-  
+
 .hero {
-    height: 70vh; 
+    height: 70vh;
   }
 
   .main-title {
@@ -451,9 +444,9 @@ body {
 
     .card-interactive {
     flex: none;
-    height: auto;        
+    height: auto;
     min-height: 0;
-    overflow: visible;   
+    overflow: visible;
   }
 
   .card-interactive img {
@@ -464,17 +457,17 @@ body {
   }
 
 .card-interactive .card-content {
-    position: static;        
+    position: static;
     inset: auto;
     opacity: 1;
     pointer-events: auto;
-    background: #000000cc;   
+    background: #000000cc;
     padding: 16px;
     text-align: left;
   }
 
   .board-interactive:hover .card-interactive,
-  .board-interactive:hover .card-interactive:hover {
+.board-interactive:hover .card-interactive:hover {
     flex: 1;
   }
 
@@ -501,7 +494,7 @@ body {
   }
 
   .footer-hotline,
-  .footer-social a {
+.footer-social a {
     font-size: 14px;
   }
 
@@ -549,4 +542,3 @@ body {
   .card-content:has([data-collapsible-text]) { position: relative; overflow: visible; }
   .card-interactive:has([data-collapsible-text]) > .card-title { display: none; }
 }
-</style>

@@ -2,7 +2,7 @@
    S-DOSE PRODUCT PAGE — SERHII PELISHENKO DESIGN SYSTEM
    ===================================================== */
 
-:root {
+.s-dose-site {
   --sd-black: #0a0a0a;
   --sd-green-900: #123b2e;
   --sd-mint-100: #d4ebe2;
@@ -25,10 +25,6 @@
   /* Підкоригуй, якщо висота основного navbar інша. */
   --sd-main-nav-offset: 68px;
   --sd-section-nav-height: 64px;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .s-dose-page {
@@ -201,9 +197,6 @@ html {
 }
 
 /* Фінальний фон уже міститиме візуал застосунку. */
-.s-dose-hero__visual {
-  display: none;
-}
 
 .s-dose-hero__meta {
   margin-bottom: 24px;
@@ -1805,8 +1798,7 @@ body.s-dose-modal-open {
   background: var(--sd-green-900);
 }
 
-.s-dose-feature-card h3,
-.s-dose-step h3 {
+.s-dose-feature-card h3 {
   margin: 48px 0 0;
   color: var(--sd-text);
   font-family: "Cormorant Garamond", serif;
@@ -1815,8 +1807,7 @@ body.s-dose-modal-open {
   line-height: 32px;
 }
 
-.s-dose-feature-card p,
-.s-dose-step p {
+.s-dose-feature-card p {
   margin: 16px 0 0;
   color: var(--sd-text-secondary);
   font-size: 15px;
@@ -1825,37 +1816,6 @@ body.s-dose-modal-open {
 }
 
 /* Steps */
-
-.s-dose-steps {
-  margin: 64px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  list-style: none;
-}
-
-.s-dose-step {
-  min-height: 260px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  border: var(--sd-border);
-  border-radius: var(--sd-radius-card);
-  background: var(--sd-text-inverse);
-}
-
-.s-dose-step__number {
-  color: var(--sd-accent);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.032em;
-}
-
-.s-dose-step h3 {
-  margin-top: 64px;
-}
 
 /* Safety */
 
@@ -2010,15 +1970,9 @@ body.s-dose-modal-open {
 }
 
 @media (max-width: 820px) {
-  :root {
+  .s-dose-site {
     --sd-main-nav-offset: 64px;
     --sd-section-nav-height: 60px;
-  }
-
-  .s-dose-hero {
-    min-height: min(680px, calc(100vh - var(--sd-main-nav-offset)));
-    min-height: min(680px, calc(100svh - var(--sd-main-nav-offset)));
-    min-height: min(680px, calc(100dvh - var(--sd-main-nav-offset)));
   }
 
   .s-dose-hero::before {
@@ -2033,17 +1987,13 @@ body.s-dose-modal-open {
     pointer-events: none;
     background: rgba(10, 10, 10, 0.48);
   }
-
-  .s-dose-hero__grid {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    grid-template-columns: 1fr;
-  }
-
   .s-dose-hero__content {
     grid-column: 1;
     max-width: 620px;
     margin-left: auto;
+    width: 100%;
+    min-width: 0;
+    margin-inline: 0;
   }
 
   .s-dose-hero__title {
@@ -2061,7 +2011,7 @@ body.s-dose-modal-open {
   }
 
   .s-dose-section h2,
-  .s-dose-feedback h2 {
+.s-dose-feedback h2 {
     font-size: 42px;
     line-height: 46px;
   }
@@ -2079,8 +2029,8 @@ body.s-dose-modal-open {
   }
 
   .s-dose-overview__grid,
-  .s-dose-faq__grid,
-  .s-dose-feedback__grid {
+.s-dose-faq__grid,
+.s-dose-feedback__grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
@@ -2093,14 +2043,6 @@ body.s-dose-modal-open {
   .s-dose-fact {
     min-height: 190px;
     padding: 24px;
-  }
-
-  .s-dose-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .s-dose-step {
-    min-height: 220px;
   }
 
   .s-dose-safety {
@@ -2143,13 +2085,13 @@ body.s-dose-modal-open {
   }
 
   .s-dose-hero__meta,
-  .s-dose-hero__actions {
+.s-dose-hero__actions {
     align-items: stretch;
     flex-direction: column;
   }
 
   .s-dose-hero__category,
-  .s-dose-status {
+.s-dose-status {
     width: fit-content;
     font-size: 11px;
     line-height: 16px;
@@ -2194,7 +2136,7 @@ body.s-dose-modal-open {
   }
 
   .s-dose-section h2,
-  .s-dose-feedback h2 {
+.s-dose-feedback h2 {
     font-size: 34px;
     line-height: 40px;
   }
@@ -2205,7 +2147,7 @@ body.s-dose-modal-open {
   }
 
   .s-dose-section__heading > p:last-child,
-  .s-dose-feedback p {
+.s-dose-feedback p {
     font-size: 15px;
     line-height: 24px;
   }
@@ -2216,19 +2158,17 @@ body.s-dose-modal-open {
   }
 
   .s-dose-facts,
-  .s-dose-feature-grid {
+.s-dose-feature-grid {
     grid-template-columns: 1fr;
   }
 
   .s-dose-fact,
-  .s-dose-feature-card,
-  .s-dose-step {
+.s-dose-feature-card {
     min-height: auto;
     padding: 24px;
   }
 
-  .s-dose-feature-card h3,
-  .s-dose-step h3 {
+  .s-dose-feature-card h3 {
     margin-top: 40px;
     font-size: 24px;
     line-height: 30px;
@@ -2265,10 +2205,10 @@ body.s-dose-modal-open {
   }
 
   .s-dose-hero__meta,
-  .s-dose-hero__title,
-  .s-dose-hero__lead,
-  .s-dose-hero__note,
-  .s-dose-hero__actions {
+.s-dose-hero__title,
+.s-dose-hero__lead,
+.s-dose-hero__note,
+.s-dose-hero__actions {
     opacity: 1;
     filter: none;
     transform: none;
@@ -2276,28 +2216,28 @@ body.s-dose-modal-open {
   }
 
   .s-dose-button,
-  .s-dose-feature-card,
-  .s-dose-section-nav__link::after,
-  .s-dose-guide__title,
-  .s-dose-guide__icon,
-  .s-dose-safety__policy-link,
-  .s-dose-disclaimer-modal,
-  .s-dose-disclaimer-modal__close,
-  .s-dose-support__button {
+.s-dose-feature-card,
+.s-dose-section-nav__link::after,
+.s-dose-guide__title,
+.s-dose-guide__icon,
+.s-dose-safety__policy-link,
+.s-dose-disclaimer-modal,
+.s-dose-disclaimer-modal__close,
+.s-dose-support__button {
     transition: none;
   }
 
   .s-dose-button:hover,
-  .s-dose-feature-card:hover,
-  .s-dose-guide__summary:hover .s-dose-guide__title,
-  .s-dose-safety__policy-link:hover,
-  .s-dose-disclaimer-modal__close:hover,
-  .s-dose-support__button:hover {
+.s-dose-feature-card:hover,
+.s-dose-guide__summary:hover .s-dose-guide__title,
+.s-dose-safety__policy-link:hover,
+.s-dose-disclaimer-modal__close:hover,
+.s-dose-support__button:hover {
     transform: none;
   }
 
   .s-dose-hero::before,
-  .s-dose-hero:hover::before {
+.s-dose-hero:hover::before {
     opacity: 1;
     clip-path: inset(0);
     transform: scale(1.01);
@@ -2326,15 +2266,11 @@ body.s-dose-modal-open {
     align-items: stretch;
   }
   .s-dose-hero__grid {
+    grid-template-columns: 1fr;
     width: calc(100% - 40px);
     padding-top: 112px;
     padding-bottom: 28px;
     gap: 0;
-  }
-  .s-dose-hero__content {
-    width: 100%;
-    min-width: 0;
-    margin-inline: 0;
   }
   .s-dose-hero__copyright {
     position: static;
@@ -2356,14 +2292,4 @@ body.s-dose-modal-open {
     white-space: normal;
     text-align: center;
   }
-}
-@media (max-width: 540px) {
-  .s-dose-site .site-nav__inner { width: calc(100% - 24px); gap: 8px; }
-  .s-dose-site .site-nav__brand { font-size: clamp(12px, 3.5vw, 14px); white-space: nowrap; }
-  .s-dose-site .site-search-trigger { flex: 0 0 36px; width: 36px; min-width: 36px; padding: 8px; }
-  .s-dose-site .site-nav__language-switcher { gap: 5px; flex-shrink: 0; }
-  .s-dose-site .site-nav__language-option,
-  .s-dose-site .site-nav__language-divider { font-size: 12px; }
-  .s-dose-site .site-nav__toggle { padding: 8px; font-size: 12px; flex-shrink: 0; }
-  .s-dose-site .mobile-nav { top: 72px; }
 }

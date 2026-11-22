@@ -11,7 +11,9 @@
     "seo:check": "node tools/seo/build.mjs --check",
     "seo:test": "node --test tests/seo/*.test.mjs",
     "seo:jekyll": "node tools/seo/jekyll-build.mjs",
-    "seo:public-check": "node tools/seo/public-audit.mjs .private/seo-jekyll"
+    "seo:public-check": "node tools/seo/public-audit.mjs .private/seo-jekyll",
+    "css:check": "node tools/css/audit.mjs",
+    "css:test": "node --test tests/css/*.test.mjs"
   },
   "dependencies": {
     "firebase": "12.19.0"
@@ -19,11 +21,13 @@
   "devDependencies": {
     "@firebase/rules-unit-testing": "5.0.2",
     "cheerio": "1.0.0",
+    "css-tree": "3.1.0",
     "esbuild": "0.28.2",
     "firebase-admin": "14.5.0",
     "firebase-tools": "15.32.1",
     "marked": "15.0.12",
     "playwright": "1.62.1",
+    "postcss": "8.5.29",
     "sanitize-html": "2.17.0",
     "sharp": "0.34.5"
   },

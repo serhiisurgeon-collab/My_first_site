@@ -1,0 +1,234 @@
+{
+  "files": 27,
+  "inlineAttributes": 1,
+  "issues": [],
+  "dead": [],
+  "exceptions": [
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 24,
+      "property": "-webkit-font-smoothing"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 45,
+      "property": "-webkit-tap-highlight-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/components.css",
+      "line": 193,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/components.css",
+      "line": 459,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/404.css",
+      "line": 11,
+      "property": "overflow",
+      "values": [
+        "hidden",
+        "clip"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/article.css",
+      "line": 255,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 547,
+      "property": "-webkit-mask"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 551,
+      "property": "-webkit-mask-composite"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 969,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 251,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 309,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 391,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 626,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 841,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1207,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1271,
+      "property": "-webkit-backface-visibility"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1345,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1478,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1548,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1822,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 59,
+      "property": "min-height",
+      "values": [
+        "min(760px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 334,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 344,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 356,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 852,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 858,
+      "property": "max-height",
+      "values": [
+        "88vh",
+        "calc(100dvh - 64px)"
+      ]
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 1300,
+      "property": "max-height",
+      "values": [
+        "94vh",
+        "calc(100dvh - 20px)"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 1582,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 1594,
+      "property": "-webkit-overflow-scrolling"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 2068,
+      "property": "min-height",
+      "values": [
+        "min(640px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/responsive.css",
+      "line": 172,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "project/project_blood/blood_style.css",
+      "line": 512,
+      "property": "-webkit-box-orient"
+    },
+    {
+      "type": "vendor-property",
+      "file": "project/project_blood/blood_style.css",
+      "line": 513,
+      "property": "-webkit-line-clamp"
+    },
+    {
+      "type": "vendor-property",
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "line": 404,
+      "property": "-webkit-overflow-scrolling"
+    }
+  ]
+}

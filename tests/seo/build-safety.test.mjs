@@ -53,6 +53,7 @@ test("actual generator fails on a missing mandatory Markdown file before writing
       "data",
       "js",
       "css",
+      "spanish-bot.css",
       "firebase/article-map.json",
       "tools/seo/templates",
     ])

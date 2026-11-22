@@ -1,0 +1,33 @@
+tests/design-polish/browser.mjs
+Checked 1440px; 12 passed, 0 failed
+Checked 1280px; 24 passed, 0 failed
+Checked 1200px; 36 passed, 0 failed
+Checked 1024px; 48 passed, 0 failed
+Checked 900px; 60 passed, 0 failed
+Checked 768px; 72 passed, 0 failed
+Checked 430px; 84 passed, 0 failed
+Checked 390px; 96 passed, 0 failed
+Checked 360px; 108 passed, 0 failed
+PASS 108 UA/EN Chrome layout, search, keyboard, menu and link cases
+tests/design-polish/flows.mjs
+PASS 34 supplementary project/article layouts, same-tab navigation, external popup safety, scroll restoration, resize and mobile emulation cases
+tests/about/profile-browser.mjs
+PASS uk 320px: layout, gallery, copy, focus, download and language switch
+PASS uk 390px: layout, gallery, copy, focus, download and language switch
+PASS uk 768px: layout, gallery, copy, focus, download and language switch
+PASS uk 1024px: layout, gallery, copy, focus, download and language switch
+PASS uk 1440px: layout, gallery, copy, focus, download and language switch
+PASS en 320px: layout, gallery, copy, focus, download and language switch
+PASS en 390px: layout, gallery, copy, focus, download and language switch
+PASS en 768px: layout, gallery, copy, focus, download and language switch
+PASS en 1024px: layout, gallery, copy, focus, download and language switch
+PASS en 1440px: layout, gallery, copy, focus, download and language switch
+PASS 14 About scenarios, including clipboard fallback/failure, no JS, reduced motion
+tests/about/hero-intro.mjs
+PASS 14 UA/EN intro cases: exact Home timing, photo/text stagger, final visibility, keyboard focus, no replay, reduced motion and no JS
+tests/navigation/not-found.mjs
+PASS 20 UA/EN 404 viewport/JS cases: nested URL fallback, language redirect, switcher, links/assets, mobile menu and SEO exclusions
+tests/navigation/search-keyboard.mjs
+PASS 4 UA/EN desktop/mobile search cases: focus trapping/restoration, shortcuts, result navigation, empty state, Enter
+tests/navigation/mobile-pages.mjs
+PASS 24 desktop/mobile scenarios: menu open/close, no page overflow, slider hover, alias

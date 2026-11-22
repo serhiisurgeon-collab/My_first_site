@@ -1,0 +1,2024 @@
+{
+  "moves": [
+    {
+      "from": "css/base.css",
+      "to": "css/layout.css",
+      "selector": ".container"
+    },
+    {
+      "from": "css/base.css",
+      "to": "css/responsive.css",
+      "selector": "@media (max-width: 600px)"
+    },
+    {
+      "from": "css/base.css",
+      "to": "css/responsive.css",
+      "selector": "@media (max-width: 640px)"
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__inner",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__grid",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__logo",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__logo span",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__tagline",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__heading",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__nav,\n.site-footer__socials,\n.site-footer__contacts",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__nav a,\n.site-footer__socials a,\n.site-footer__contacts a,\n.site-footer__contacts p",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__nav a:hover,\n.site-footer__socials a:hover,\n.site-footer__contacts a:hover",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__contacts",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__contact-item",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__contact-item i",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__contact-item:hover",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__socials a i",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__bottom",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__bottom p,\n.site-footer__bottom a",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__bottom a",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-footer__bottom a:hover",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta::before",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta::after",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__grid",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__content",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__action",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__eyebrow",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__eyebrow::before",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__title",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__description",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__button",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__button span",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__button:hover",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".collaboration-cta__button:hover span",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/tokens.css",
+      "selector": ".site-shell--standard font variables"
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-nav__brand",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-nav__link",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/components.css",
+      "selector": ".site-nav__link:hover,\n  .site-nav__link[aria-current=\"page\"]",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__grid",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__action",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 900px)"
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".container",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__grid",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__title",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__button",
+      "context": ""
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__inner",
+      "context": "@media (max-width: 768px)"
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 768px)"
+    },
+    {
+      "from": "css/pages/about.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__bottom",
+      "context": "@media (max-width: 768px)"
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 980px)"
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__inner",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".site-footer__bottom",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta",
+      "context": ""
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__grid",
+      "context": ""
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__title",
+      "context": ""
+    },
+    {
+      "from": "css/pages/home.css",
+      "to": "css/responsive.css",
+      "selector": ".collaboration-cta__button",
+      "context": ""
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-nav__inner",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-nav__brand",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-search-trigger",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-nav__language-switcher",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-nav__language-option,\n  .s-dose-site .site-nav__language-divider",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .site-nav__toggle",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "css/pages/s-dose.css",
+      "to": "css/responsive.css",
+      "selector": ".s-dose-site .mobile-nav",
+      "context": "@media (max-width: 540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav",
+      "context": "@media (max-width:900px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__inner",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__brand",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__toggle",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/components.css",
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "context": ""
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/components.css",
+      "selector": ".bot-landing .site-nav__links",
+      "context": ""
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html[lang=de] .site-nav__links,html[lang=es] .site-nav__links",
+      "context": "@media (max-width:1200px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html[lang=de] .site-nav__toggle,html[lang=es] .site-nav__toggle",
+      "context": "@media (max-width:1200px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__inner",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__language-option,.bot-landing .site-nav__language-divider",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__brand",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-nav__toggle",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": ".bot-landing .site-search-trigger",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html:is([lang=de],[lang=es]) .mobile-nav",
+      "context": "@media (min-width:901px) and (max-width:1200px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html:is([lang=de],[lang=es]) .mobile-nav.is-open",
+      "context": "@media (min-width:901px) and (max-width:1200px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html:is([lang=de],[lang=es]) .mobile-nav__inner",
+      "context": "@media (min-width:901px) and (max-width:1200px)"
+    },
+    {
+      "from": "spanish-bot.css",
+      "to": "css/responsive.css",
+      "selector": "html:is([lang=de],[lang=es]) .mobile-nav__inner a",
+      "context": "@media (min-width:901px) and (max-width:1200px)"
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/components.css",
+      "selector": ".not-found-page .site-nav",
+      "context": ""
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/components.css",
+      "selector": ".not-found-page .site-nav__language-option.is-active",
+      "context": ""
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/components.css",
+      "selector": ".not-found-page .mobile-nav",
+      "context": ""
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/components.css",
+      "selector": ".not-found-footer .site-nav__brand",
+      "context": ""
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/components.css",
+      "selector": ".not-found-page .site-nav :focus-visible",
+      "context": ""
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/responsive.css",
+      "selector": ".not-found-page .site-nav",
+      "context": "@media (max-width: 900px)"
+    },
+    {
+      "from": "css/pages/404.css",
+      "to": "css/responsive.css",
+      "selector": ".not-found-page .site-nav__inner",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "from": "css/pages/policy.css :root",
+      "to": "css/pages/policy.css .privacy-policy",
+      "selector": "Page-local privacy variables"
+    },
+    {
+      "from": "css/pages/contact.css :root",
+      "to": "css/pages/contact.css .contact-page",
+      "selector": "Page-local contact variables"
+    },
+    {
+      "from": "css/pages/s-dose.css :root",
+      "to": "css/pages/s-dose.css .s-dose-site",
+      "selector": "Page-local S-Dose variables"
+    }
+  ],
+  "removed": [
+    {
+      "file": "project/project_blood/blood_style.css",
+      "type": "invalid-html-tail",
+      "text": "</style>"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__brand"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__link"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__link:hover,\n  .site-nav__link[aria-current=\"page\"]"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta::before"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta::after"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__grid"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__content"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__action"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__eyebrow"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__eyebrow::before"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__title"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__description"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__button"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__button span"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__button:hover"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".collaboration-cta__button:hover span"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__inner"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__grid"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__logo"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__logo span"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__tagline"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__heading"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav,\n.site-footer__socials,\n.site-footer__contacts"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav a,\n.site-footer__socials a,\n.site-footer__contacts a,\n.site-footer__contacts p"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav a:hover,\n.site-footer__socials a:hover,\n.site-footer__contacts a:hover"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contacts"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item i"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item:hover"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__socials a i"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom p,\n.site-footer__bottom a"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom a"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom a:hover"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__brand"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__link"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-nav__link:hover,\n  .site-nav__link[aria-current=\"page\"]"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__inner"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__grid"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__logo"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__logo span"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__tagline"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__heading"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav,\n.site-footer__socials,\n.site-footer__contacts"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav a,\n.site-footer__socials a,\n.site-footer__contacts a,\n.site-footer__contacts p"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__nav a:hover,\n.site-footer__socials a:hover,\n.site-footer__contacts a:hover"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contacts"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item i"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__contact-item:hover"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__socials a i"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom p,\n.site-footer__bottom a"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom a"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-copy",
+      "selector": ".site-footer__bottom a:hover"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-responsive-copy",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 980px)"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-responsive-copy",
+      "selector": ".site-footer__inner",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-responsive-copy",
+      "selector": ".site-footer__grid",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "shared-responsive-copy",
+      "selector": ".site-footer__bottom",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": "body.no-scroll",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".display-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".page-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".display-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".page-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".body-large",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".body-text",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".body-small",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".eyebrow",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".text-primary",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".text-secondary",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".text-light",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".text-light-muted",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".theme-dark",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "type": "dead-selector",
+      "selector": ".theme-light",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "type": "dead-selector",
+      "selector": ".site-nav__language",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "type": "dead-selector",
+      "selector": ".site-nav__language:hover",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "type": "duplicate-selector",
+      "selector": ".site-nav__toggle",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "type": "overridden-property",
+      "selector": ".site-nav__toggle",
+      "property": "display",
+      "value": "none"
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".section--large",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".grid",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".grid--2",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".grid--3",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".stack--sm",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".stack--md",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".stack--lg",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "type": "dead-selector",
+      "selector": ".visually-hidden",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-back:hover",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-header__title",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-body",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-body p",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-body ul,\n.article-body ol",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "duplicate-selector",
+      "selector": ".article-body a",
+      "context": ""
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "overridden-property",
+      "selector": ".article-back:hover",
+      "property": "color",
+      "value": "var(--color-text-primary)"
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "overridden-property",
+      "selector": ".article-back:hover",
+      "property": "transform",
+      "value": "translateX(-4px)"
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "overridden-property",
+      "selector": ".article-body ul,\n.article-body ol",
+      "property": "margin",
+      "value": "16px 0 20px"
+    },
+    {
+      "file": "css/pages/article.css",
+      "type": "overridden-property",
+      "selector": ".article-body ul,\n.article-body ol",
+      "property": "padding-left",
+      "value": "1.6em"
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "duplicate-selector",
+      "selector": ".articles-hero__eyebrow",
+      "context": ""
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "duplicate-selector",
+      "selector": ".articles-hero__title",
+      "context": ""
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "duplicate-selector",
+      "selector": ".articles-hero__description",
+      "context": ""
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "duplicate-selector",
+      "selector": ".article-row__arrow",
+      "context": ""
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "duplicate-selector",
+      "selector": ".article-row:hover .article-row__arrow",
+      "context": ""
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "overridden-property",
+      "selector": ".article-row",
+      "property": "transition",
+      "value": "background-color 220ms ease,\n    transform 220ms ease"
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "overridden-property",
+      "selector": ".article-row__arrow",
+      "property": "transition",
+      "value": "transform 220ms ease,\n    color 220ms ease"
+    },
+    {
+      "file": "css/pages/articles.css",
+      "type": "overridden-property",
+      "selector": ".article-row:hover .article-row__arrow",
+      "property": "transform",
+      "value": "translateX(6px)"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-widget button",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-widget button:disabled",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-auth,\n.comment-actions",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-form",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comment",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comment-replies",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-admin",
+      "context": ""
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comment",
+      "context": "@media (max-width:480px)"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comment-replies",
+      "context": "@media (max-width:480px)"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "duplicate-selector",
+      "selector": ".comments-widget button",
+      "context": "@media (max-width:480px)"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-widget button:disabled",
+      "property": "cursor",
+      "value": "wait"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-auth,\n.comment-actions",
+      "property": "gap",
+      "value": "10px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-auth,\n.comment-actions",
+      "property": "margin",
+      "value": "12px 0"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-form",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-form",
+      "property": "margin",
+      "value": "24px 0"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment",
+      "property": "margin",
+      "value": "18px 0"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment",
+      "property": "padding",
+      "value": "16px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment",
+      "property": "border-radius",
+      "value": "10px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-admin",
+      "property": "margin-top",
+      "value": "28px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comments-admin",
+      "property": "padding-top",
+      "value": "20px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment",
+      "property": "padding",
+      "value": "12px"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment-replies",
+      "property": "margin-left",
+      "value": "6px"
+    },
+    {
+      "file": "css/pages/contact.css",
+      "type": "duplicate-selector",
+      "selector": ".contact-page",
+      "context": ""
+    },
+    {
+      "file": "css/pages/contact.css",
+      "type": "overridden-property",
+      "selector": ".contact-card__value,\n.contact-card__response",
+      "property": "letter-spacing",
+      "value": "0"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".start-hero__scroll-shape",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".start-hero__scroll-shape path",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".start-hero__scroll:hover .start-hero__scroll-shape path",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".privacy-update-notice",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".privacy-update-notice p",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "dead-selector",
+      "selector": ".privacy-update-notice a",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__eyebrow",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__title",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__title",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__roles",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__roles",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__description",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__description",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__actions",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__stat strong",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": ".start-hero__stat span",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "duplicate-selector",
+      "selector": "body:where(.site-shell--home).hero-loaded .hero-photo-reveal",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "overridden-property",
+      "selector": ".start-hero__stat strong",
+      "property": "color",
+      "value": "#91ad55"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "overridden-property",
+      "selector": ".start-hero__stat span",
+      "property": "color",
+      "value": "rgba(238, 241, 235, 0.52)"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "overridden-property",
+      "selector": ".start-hero__title",
+      "property": "color",
+      "value": "#f5f6f2"
+    },
+    {
+      "file": "css/pages/home.css",
+      "type": "overridden-property",
+      "selector": ".start-hero__actions",
+      "property": "margin-bottom",
+      "value": "52px"
+    },
+    {
+      "file": "css/pages/policy.css",
+      "type": "duplicate-selector",
+      "selector": ".privacy-item__summary",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filters",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filter",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filter:hover",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filter.is-active",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filters",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "dead-selector",
+      "selector": ".projects-filter",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".project-row",
+      "context": "@media (max-width: 760px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".project-row__visual",
+      "context": "@media (max-width: 760px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".project-row__content",
+      "context": "@media (max-width: 760px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".project-row__content p",
+      "context": "@media (max-width: 760px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".project-row__arrow",
+      "context": "@media (max-width: 760px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "duplicate-selector",
+      "selector": ".projects-meta__item--wide",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row",
+      "property": "min-height",
+      "value": "150px"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row",
+      "property": "grid-template-columns",
+      "value": "100px minmax(0,1fr) 48px"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row__visual",
+      "property": "height",
+      "value": "100%"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row__content",
+      "property": "padding",
+      "value": "18px"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row__content p",
+      "property": "display",
+      "value": "none"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "type": "overridden-property",
+      "selector": ".project-row__arrow",
+      "property": "padding",
+      "value": "0 14px"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-hero__visual",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step h3",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step p",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-steps",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step__number",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step h3",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-steps",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "dead-selector",
+      "selector": ".s-dose-step h3",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "duplicate-selector",
+      "selector": ".s-dose-hero",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "duplicate-selector",
+      "selector": ".s-dose-hero__grid",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "duplicate-selector",
+      "selector": ".s-dose-hero__content",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "overridden-property",
+      "selector": ".s-dose-hero__grid",
+      "property": "padding-top",
+      "value": "80px"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "overridden-property",
+      "selector": ".s-dose-hero__grid",
+      "property": "padding-bottom",
+      "value": "80px"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-landing .site-nav__inner",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-landing .site-nav__brand",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-landing .site-nav__toggle",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "overridden-property",
+      "selector": ".bot-landing .site-nav__inner",
+      "property": "gap",
+      "value": "12px"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "overridden-property",
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "property": "gap",
+      "value": "6px"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "overridden-property",
+      "selector": ".bot-landing .site-nav__brand",
+      "property": "font-size",
+      "value": ".875rem"
+    },
+    {
+      "file": "css/responsive.css",
+      "type": "overridden-property",
+      "selector": ".bot-landing .site-nav__toggle",
+      "property": "padding",
+      "value": "8px 10px"
+    },
+    {
+      "file": "project/project_blood/blood_style.css",
+      "type": "duplicate-selector",
+      "selector": ".main-title",
+      "context": ""
+    },
+    {
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "type": "duplicate-selector",
+      "selector": ".review",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "dead-selector",
+      "selector": ".bot-dot",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-landing",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-page h1",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-preview__body",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-spanish",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-feature",
+      "context": ""
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-page h1",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-page h1",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "duplicate-selector",
+      "selector": ".bot-preview__body",
+      "context": "@media (max-width:540px)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "overridden-property",
+      "selector": ".bot-spanish",
+      "property": "font-size",
+      "value": "clamp(2.5rem,4.5vw,3.8rem)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "overridden-property",
+      "selector": ".bot-page h1",
+      "property": "font-size",
+      "value": "clamp(2.75rem,6vw,5rem)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "overridden-property",
+      "selector": ".bot-page h1",
+      "property": "line-height",
+      "value": ".95"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "overridden-property",
+      "selector": ".bot-page h1",
+      "property": "font-size",
+      "value": "clamp(3.2rem,14vw,4.4rem)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "type": "overridden-property",
+      "selector": ".bot-page h1",
+      "property": "font-size",
+      "value": "clamp(2.5rem,11vw,3.5rem)"
+    },
+    {
+      "file": "css/pages/comments.css",
+      "type": "overridden-property",
+      "selector": ".comment",
+      "context": "",
+      "property": "border",
+      "value": "1px solid var(--color-accent)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "overridden-property",
+      "selector": ".s-dose-hero",
+      "context": "@media (max-width: 820px)",
+      "property": "min-height",
+      "value": "min(680px, calc(100vh - var(--sd-main-nav-offset)))"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "overridden-property",
+      "selector": ".s-dose-hero",
+      "context": "@media (max-width: 820px)",
+      "property": "min-height",
+      "value": "min(680px, calc(100svh - var(--sd-main-nav-offset)))"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "overridden-property",
+      "selector": ".s-dose-hero",
+      "context": "@media (max-width: 820px)",
+      "property": "min-height",
+      "value": "min(680px, calc(100dvh - var(--sd-main-nav-offset)))"
+    },
+    {
+      "file": "project/project_blood/blood_style.css",
+      "type": "overridden-property",
+      "selector": "body",
+      "context": "",
+      "property": "font-family",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "type": "overridden-property",
+      "selector": "body",
+      "context": "",
+      "property": "font-family",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "file": "project/project_blood/page_contact/contact_style.css",
+      "type": "invalid-selector-rule",
+      "selector": "\\3c /style>\n.contact-demo-notice"
+    },
+    {
+      "file": "project/project_blood/page_contact/contact_style.css",
+      "type": "overridden-property",
+      "selector": "body",
+      "context": "",
+      "property": "font-family",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "file": "project/2d_try.html",
+      "type": "invalid-empty-selector",
+      "declarations": "{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}"
+    },
+    {
+      "file": "project/2d_try.html",
+      "type": "duplicate-selector",
+      "selector": ".page",
+      "context": ""
+    },
+    {
+      "file": "project/2d_try.html",
+      "type": "duplicate-selector",
+      "selector": ".page",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "file": "project/2d_try.html",
+      "type": "overridden-property",
+      "selector": "body",
+      "property": "font-family",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "file": "project/2d_try.html",
+      "type": "overridden-property",
+      "selector": "h4",
+      "property": "margin-bottom",
+      "value": "9px"
+    },
+    {
+      "file": "css/base.css → css/components.css",
+      "type": "dead-selector",
+      "selector": ".navbar .site-search-trigger",
+      "evidence": "Only .site-nav owns the shared search trigger; legacy project navbars never render it."
+    },
+    {
+      "file": "css/base.css → css/components.css",
+      "type": "dead-selector",
+      "selector": ".header .site-search-trigger",
+      "evidence": "Only .site-nav owns the shared search trigger; legacy project navbars never render it."
+    }
+  ],
+  "exceptions": [
+    {
+      "file": "css/pages/comments.css",
+      "type": "progressive-fallback",
+      "selector": ".comment",
+      "property": "border",
+      "values": [
+        "1px solid var(--color-accent)",
+        "0"
+      ]
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "progressive-fallback",
+      "selector": ".s-dose-hero",
+      "property": "min-height",
+      "values": [
+        "min(760px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "progressive-fallback",
+      "selector": ".s-dose-disclaimer-modal__dialog",
+      "property": "max-height",
+      "values": [
+        "88vh",
+        "calc(100dvh - 64px)"
+      ]
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "progressive-fallback",
+      "selector": ".s-dose-disclaimer-modal__dialog",
+      "property": "max-height",
+      "values": [
+        "94vh",
+        "calc(100dvh - 20px)"
+      ]
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "progressive-fallback",
+      "selector": ".s-dose-hero",
+      "property": "min-height",
+      "values": [
+        "min(640px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "type": "progressive-fallback",
+      "selector": ".s-dose-hero",
+      "property": "min-height",
+      "values": [
+        "min(680px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(680px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(680px, calc(100dvh - var(--sd-main-nav-offset)))",
+        "auto"
+      ]
+    },
+    {
+      "file": "project/project_blood/blood_style.css",
+      "type": "progressive-fallback",
+      "selector": "body",
+      "property": "font-family",
+      "values": [
+        "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "\"Tektur\", system-ui, sans-serif"
+      ]
+    },
+    {
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "type": "progressive-fallback",
+      "selector": "body",
+      "property": "font-family",
+      "values": [
+        "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "\"Tektur\", system-ui, sans-serif"
+      ]
+    },
+    {
+      "file": "project/project_blood/page_contact/contact_style.css",
+      "type": "progressive-fallback",
+      "selector": "body",
+      "property": "font-family",
+      "values": [
+        "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "\"Tektur\", system-ui, sans-serif"
+      ]
+    }
+  ]
+}

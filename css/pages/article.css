@@ -42,7 +42,7 @@
 
 .article-back {
 
-  position: relative;  
+  position: relative;
   display: inline-flex;
   align-items: center;
 
@@ -77,11 +77,6 @@
   transform-origin: left;
 
   transition: transform 220ms ease;
-}
-
-.article-back:hover {
-  color: var(--color-text-primary);
-  transform: translateX(-4px);
 }
 
 .article-back:hover::after {
@@ -132,6 +127,9 @@
 
 /* TITLE */
 
+
+/* LEAD */
+
 .article-header__title {
   max-width: 920px;
 
@@ -144,11 +142,7 @@
   line-height: 1.08;
   letter-spacing: -0.035em;
 
-  color: var(--color-text-primary);
-}
-
-
-/* LEAD */
+  color: var(--color-text-primary); overflow-wrap: anywhere; hyphens: manual; }
 
 .article-header__lead {
   max-width: 760px;
@@ -356,8 +350,7 @@
 
   line-height: 1.82;
 
-  color: var(--color-text-primary);
-}
+  color: var(--color-text-primary); overflow-wrap: anywhere; }
 
 .article-body table {
   width: 100%;
@@ -386,11 +379,6 @@
   width: 60%;
 }
 
-.article-body p {
-  text-align: justify;
-  text-indent: 1.25cm;
-}
-
 .article-body__lead,
 .article-note p,
 .article-quote p,
@@ -398,12 +386,6 @@
 .article-sources li {
   text-indent: 0;
   text-align: left;
-}
-
-.article-body ul,
-.article-body ol {
-  margin: 16px 0 20px;
-  padding-left: 1.6em;
 }
 
 .article-body li {
@@ -473,6 +455,8 @@ html {
 /* PARAGRAPHS */
 
 .article-body p {
+  text-align: justify;
+  text-indent: 1.25cm;
   margin:
     0
     0
@@ -531,11 +515,11 @@ html {
 
 /* LINKS */
 
+
 .article-body a {
   color: var(--color-accent);
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
+  text-underline-offset: 3px; overflow-wrap: anywhere; }
 
 
 .article-body a:hover {
@@ -1051,15 +1035,14 @@ html {
 @media (prefers-reduced-motion: reduce) {
 
   .article-back,
-  .article-toc__link,
-  .article-pagination__item {
+.article-toc__link,
+.article-pagination__item {
     transition: none;
   }
 
 }
 
 /* Keep long medical terms inside the article header on narrow screens. */
-.article-header__title { overflow-wrap: anywhere; hyphens: manual; }
 
 /* Semantically repaired former H4s keep their original browser typography. */
 .article-body h3.seo-heading-sub { font-size: 1em; font-weight: bold; line-height: inherit; margin: 1.33em 0; }
@@ -1068,7 +1051,5 @@ html {
 .article-related { width: min(100% - 48px, 1040px); margin: 24px auto; }
 .article-related h2 { font: inherit; font-weight: 600; }
 .article-body img { max-width: 100%; height: auto; }
-.article-body a { overflow-wrap: anywhere; }
 
 /* Keep long reference identifiers within the article on narrow screens. */
-.article-body { overflow-wrap: anywhere; }

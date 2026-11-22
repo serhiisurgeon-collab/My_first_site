@@ -1,0 +1,78 @@
+{
+  "baseline": "4e0521e759e18c2288afcfc86be9c90965456cf3",
+  "browser": "158.0.8127.36",
+  "normalization": [
+    "local preview origin in resolved asset URLs",
+    "CSS animations finished/infinite animations paused at 0; scroll callbacks settled",
+    "Firebase disabled for deterministic article rendering; static fixture covers discussion states"
+  ],
+  "cases": 140,
+  "properties": [
+    "display",
+    "position",
+    "width",
+    "height",
+    "margin",
+    "padding",
+    "color",
+    "background",
+    "backgroundColor",
+    "fontFamily",
+    "fontSize",
+    "fontWeight",
+    "lineHeight",
+    "border",
+    "borderRadius",
+    "boxShadow",
+    "gridTemplateColumns",
+    "gap",
+    "transform",
+    "opacity",
+    "minWidth",
+    "maxWidth",
+    "minHeight",
+    "maxHeight",
+    "overflow",
+    "alignItems",
+    "justifyContent",
+    "flexDirection",
+    "flexBasis",
+    "flexGrow",
+    "flexShrink",
+    "letterSpacing",
+    "textAlign",
+    "textDecoration",
+    "objectFit",
+    "objectPosition",
+    "filter",
+    "backdropFilter",
+    "maskImage",
+    "transition",
+    "animation"
+  ],
+  "screenshots": 43,
+  "differences": [],
+  "pixelDifferences": [
+    {
+      "file": "policy-html-1440.png",
+      "pixels": 87,
+      "total": 1296000
+    },
+    {
+      "file": "en-about-en-html-1440.png",
+      "pixels": 132,
+      "total": 1296000
+    },
+    {
+      "file": "en-articles-en-html-390.png",
+      "pixels": 2891,
+      "total": 351000
+    },
+    {
+      "file": "en-s-dose-en-html-390.png",
+      "pixels": 108,
+      "total": 351000
+    }
+  ],
+  "consoleErrors": []
+}

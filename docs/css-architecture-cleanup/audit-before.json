@@ -1,0 +1,1035 @@
+{
+  "files": 27,
+  "inlineAttributes": 1,
+  "issues": [
+    {
+      "type": "duplicate-selector",
+      "file": "css/components.css",
+      "line": 163,
+      "selector": ".site-nav__toggle",
+      "context": "",
+      "previous": 152
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 91,
+      "selector": ".article-back:hover",
+      "context": "",
+      "previous": 82
+    },
+    {
+      "type": "exact-duplicate-rule",
+      "file": "css/pages/article.css",
+      "line": 91,
+      "selector": ".article-back:hover",
+      "previous": 82
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 475,
+      "selector": ".article-body p",
+      "context": "",
+      "previous": 389
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 548,
+      "selector": ".article-body ul,\n.article-body ol",
+      "context": "",
+      "previous": 403
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 1062,
+      "selector": ".article-header__title",
+      "context": "",
+      "previous": 135
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 1071,
+      "selector": ".article-body a",
+      "context": "",
+      "previous": 534
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/article.css",
+      "line": 1074,
+      "selector": ".article-body",
+      "context": "",
+      "previous": 351
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/articles.css",
+      "line": 121,
+      "selector": ".articles-hero__eyebrow",
+      "context": "",
+      "previous": 86
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/articles.css",
+      "line": 149,
+      "selector": ".articles-hero__title",
+      "context": "",
+      "previous": 91
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/articles.css",
+      "line": 163,
+      "selector": ".articles-hero__description",
+      "context": "",
+      "previous": 96
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/articles.css",
+      "line": 514,
+      "selector": ".article-row__arrow",
+      "context": "",
+      "previous": 407
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/articles.css",
+      "line": 523,
+      "selector": ".article-row:hover .article-row__arrow",
+      "context": "",
+      "previous": 413
+    },
+    {
+      "type": "shadowed-property",
+      "file": "css/pages/articles.css",
+      "line": 370,
+      "selector": ".article-row",
+      "property": "transition",
+      "values": [
+        "background-color 220ms ease,\n    transform 220ms ease",
+        "background-color 220ms ease,\n    padding-left 220ms ease,\n    padding-right 220ms ease"
+      ]
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 33,
+      "selector": ".comments-widget button",
+      "context": "",
+      "previous": 5
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 35,
+      "selector": ".comments-widget button:disabled",
+      "context": "",
+      "previous": 6
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 37,
+      "selector": ".comments-auth,.comment-actions",
+      "context": "",
+      "previous": 8
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 38,
+      "selector": ".comments-form",
+      "context": "",
+      "previous": 10
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 40,
+      "selector": ".comment",
+      "context": "",
+      "previous": 15
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 45,
+      "selector": ".comment-replies",
+      "context": "",
+      "previous": 19
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 50,
+      "selector": ".comments-admin",
+      "context": "",
+      "previous": 20
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 65,
+      "selector": ".comment",
+      "context": "@media (max-width:480px)",
+      "previous": 24
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 66,
+      "selector": ".comment-replies",
+      "context": "@media (max-width:480px)",
+      "previous": 24
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/comments.css",
+      "line": 68,
+      "selector": ".comments-widget button",
+      "context": "@media (max-width:480px)",
+      "previous": 24
+    },
+    {
+      "type": "shadowed-property",
+      "file": "css/pages/contact.css",
+      "line": 536,
+      "selector": ".contact-card__value,\n.contact-card__response",
+      "property": "letter-spacing",
+      "values": [
+        "0",
+        "-0.01em"
+      ]
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 464,
+      "selector": ".start-hero__eyebrow",
+      "context": "",
+      "previous": 239
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 468,
+      "selector": ".start-hero__title",
+      "context": "",
+      "previous": 254
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 472,
+      "selector": ".start-hero__roles",
+      "context": "",
+      "previous": 270
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 476,
+      "selector": ".start-hero__description",
+      "context": "",
+      "previous": 277
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 480,
+      "selector": ".start-hero__stat strong",
+      "context": "",
+      "previous": 444
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 484,
+      "selector": ".start-hero__stat span",
+      "context": "",
+      "previous": 455
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 501,
+      "selector": ".start-hero__title",
+      "context": "",
+      "previous": 468
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 505,
+      "selector": ".start-hero__roles",
+      "context": "",
+      "previous": 472
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 509,
+      "selector": ".start-hero__description",
+      "context": "",
+      "previous": 476
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 513,
+      "selector": ".start-hero__actions",
+      "context": "",
+      "previous": 284
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/home.css",
+      "line": 2484,
+      "selector": "body.hero-loaded .hero-photo-reveal",
+      "context": "",
+      "previous": 2476
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/policy.css",
+      "line": 361,
+      "selector": ".privacy-item__summary",
+      "context": "",
+      "previous": 350
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1905,
+      "selector": ".projects-meta__item--wide",
+      "context": "@media (max-width: 620px)",
+      "previous": 1900
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1932,
+      "selector": ".project-row",
+      "context": "@media (max-width: 760px)",
+      "previous": 1284
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1933,
+      "selector": ".project-row__visual",
+      "context": "@media (max-width: 760px)",
+      "previous": 1291
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1935,
+      "selector": ".project-row__content",
+      "context": "@media (max-width: 760px)",
+      "previous": 1296
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1937,
+      "selector": ".project-row__content p",
+      "context": "@media (max-width: 760px)",
+      "previous": 1301
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/projects.css",
+      "line": 1940,
+      "selector": ".project-row__arrow",
+      "context": "@media (max-width: 760px)",
+      "previous": 1311
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/s-dose.css",
+      "line": 2323,
+      "selector": ".s-dose-hero",
+      "context": "@media (max-width: 820px)",
+      "previous": 2018
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/s-dose.css",
+      "line": 2328,
+      "selector": ".s-dose-hero__grid",
+      "context": "@media (max-width: 820px)",
+      "previous": 2037
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "css/pages/s-dose.css",
+      "line": 2334,
+      "selector": ".s-dose-hero__content",
+      "context": "@media (max-width: 820px)",
+      "previous": 2043
+    },
+    {
+      "type": "invalid-css",
+      "file": "project/2d_try.html#style-0",
+      "line": 8,
+      "message": "Selector is expected"
+    },
+    {
+      "type": "invalid-css",
+      "file": "project/project_blood/blood_style.css",
+      "line": 552,
+      "message": "Unknown word </style>"
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "line": 427,
+      "selector": ".review",
+      "context": "",
+      "previous": 411
+    },
+    {
+      "type": "shadowed-property",
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "line": 9,
+      "selector": "body",
+      "property": "font-family",
+      "values": [
+        "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "\"Tektur\", system-ui, sans-serif"
+      ]
+    },
+    {
+      "type": "invalid-css",
+      "file": "project/project_blood/page_contact/contact_style.css",
+      "line": 1,
+      "message": "Selector is expected"
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 5,
+      "selector": ".bot-landing",
+      "context": "",
+      "previous": 4
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 90,
+      "selector": ".bot-spanish",
+      "context": "",
+      "previous": 38
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 91,
+      "selector": ".bot-preview__body",
+      "context": "",
+      "previous": 35
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 93,
+      "selector": ".bot-feature",
+      "context": "",
+      "previous": 58
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 98,
+      "selector": ".bot-preview__body",
+      "context": "@media (max-width:540px)",
+      "previous": 86
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 107,
+      "selector": ".bot-page h1",
+      "context": "@media (max-width:540px)",
+      "previous": 86
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 110,
+      "selector": ".bot-page h1",
+      "context": "",
+      "previous": 14
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 121,
+      "selector": ".bot-landing .site-nav__inner",
+      "context": "@media (max-width:540px)",
+      "previous": 98
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 121,
+      "selector": ".bot-landing .site-nav__language-switcher",
+      "context": "@media (max-width:540px)",
+      "previous": 98
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 121,
+      "selector": ".bot-landing .site-nav__brand",
+      "context": "@media (max-width:540px)",
+      "previous": 98
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 121,
+      "selector": ".bot-landing .site-nav__toggle",
+      "context": "@media (max-width:540px)",
+      "previous": 98
+    },
+    {
+      "type": "duplicate-selector",
+      "file": "spanish-bot.css",
+      "line": 121,
+      "selector": ".bot-page h1",
+      "context": "@media (max-width:540px)",
+      "previous": 107
+    }
+  ],
+  "dead": [
+    {
+      "file": "css/base.css",
+      "line": 77,
+      "selector": "body.no-scroll",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 101,
+      "selector": ".display-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 101,
+      "selector": ".page-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 110,
+      "selector": ".display-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 116,
+      "selector": ".page-title",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 131,
+      "selector": ".body-large",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 136,
+      "selector": ".body-text",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 141,
+      "selector": ".body-small",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 146,
+      "selector": ".eyebrow",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 159,
+      "selector": ".text-primary",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 163,
+      "selector": ".text-secondary",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 167,
+      "selector": ".text-light",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 171,
+      "selector": ".text-light-muted",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 179,
+      "selector": ".theme-dark",
+      "context": ""
+    },
+    {
+      "file": "css/base.css",
+      "line": 184,
+      "selector": ".theme-light",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "line": 59,
+      "selector": ".site-nav__language",
+      "context": ""
+    },
+    {
+      "file": "css/components.css",
+      "line": 72,
+      "selector": ".site-nav__language:hover",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 9,
+      "selector": ".section--large",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 17,
+      "selector": ".grid",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 22,
+      "selector": ".grid--2",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 26,
+      "selector": ".grid--3",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 39,
+      "selector": ".stack--sm",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 43,
+      "selector": ".stack--md",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 47,
+      "selector": ".stack--lg",
+      "context": ""
+    },
+    {
+      "file": "css/layout.css",
+      "line": 55,
+      "selector": ".visually-hidden",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 827,
+      "selector": ".start-hero__scroll-shape",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 837,
+      "selector": ".start-hero__scroll-shape path",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 847,
+      "selector": ".start-hero__scroll:hover .start-hero__scroll-shape path",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 2518,
+      "selector": ".privacy-update-notice",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 2519,
+      "selector": ".privacy-update-notice p",
+      "context": ""
+    },
+    {
+      "file": "css/pages/home.css",
+      "line": 2520,
+      "selector": ".privacy-update-notice a",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 502,
+      "selector": ".projects-filters",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 513,
+      "selector": ".projects-filter",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 539,
+      "selector": ".projects-filter:hover",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 548,
+      "selector": ".projects-filter.is-active",
+      "context": ""
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 1915,
+      "selector": ".projects-filters",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/projects.css",
+      "line": 1922,
+      "selector": ".projects-filter",
+      "context": "@media (max-width: 620px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 204,
+      "selector": ".s-dose-hero__visual",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1808,
+      "selector": ".s-dose-step h3",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1818,
+      "selector": ".s-dose-step p",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1829,
+      "selector": ".s-dose-steps",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1838,
+      "selector": ".s-dose-step",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1848,
+      "selector": ".s-dose-step__number",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 1856,
+      "selector": ".s-dose-step h3",
+      "context": ""
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 2098,
+      "selector": ".s-dose-steps",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 2102,
+      "selector": ".s-dose-step",
+      "context": "@media (max-width: 820px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 2223,
+      "selector": ".s-dose-step",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "file": "css/pages/s-dose.css",
+      "line": 2230,
+      "selector": ".s-dose-step h3",
+      "context": "@media (max-width: 600px)"
+    },
+    {
+      "file": "spanish-bot.css",
+      "line": 13,
+      "selector": ".bot-dot",
+      "context": ""
+    }
+  ],
+  "exceptions": [
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 24,
+      "property": "-webkit-font-smoothing"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 45,
+      "property": "-webkit-tap-highlight-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 238,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/base.css",
+      "line": 590,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/404.css",
+      "line": 14,
+      "property": "overflow",
+      "values": [
+        "hidden",
+        "clip"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/article.css",
+      "line": 261,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 598,
+      "property": "-webkit-mask"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 602,
+      "property": "-webkit-mask-composite"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/home.css",
+      "line": 1045,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 252,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 310,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 392,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 680,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 895,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1261,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1352,
+      "property": "-webkit-backface-visibility"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1426,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1559,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1629,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/projects.css",
+      "line": 1906,
+      "property": "-webkit-mask-image"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 63,
+      "property": "min-height",
+      "values": [
+        "min(760px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(760px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 341,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 351,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 363,
+      "property": "-webkit-text-fill-color"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 859,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 865,
+      "property": "max-height",
+      "values": [
+        "88vh",
+        "calc(100dvh - 64px)"
+      ]
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 1307,
+      "property": "max-height",
+      "values": [
+        "94vh",
+        "calc(100dvh - 20px)"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 1589,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/pages/s-dose.css",
+      "line": 1601,
+      "property": "-webkit-overflow-scrolling"
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 2018,
+      "property": "min-height",
+      "values": [
+        "min(680px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(680px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(680px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "type": "progressive-fallback",
+      "file": "css/pages/s-dose.css",
+      "line": 2126,
+      "property": "min-height",
+      "values": [
+        "min(640px, calc(100vh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100svh - var(--sd-main-nav-offset)))",
+        "min(640px, calc(100dvh - var(--sd-main-nav-offset)))"
+      ]
+    },
+    {
+      "type": "vendor-property",
+      "file": "css/responsive.css",
+      "line": 82,
+      "property": "-webkit-backdrop-filter"
+    },
+    {
+      "type": "vendor-property",
+      "file": "project/project_blood/page_aboutus/aboutus_style.css",
+      "line": 408,
+      "property": "-webkit-overflow-scrolling"
+    }
+  ]
+}

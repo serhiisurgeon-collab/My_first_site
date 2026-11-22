@@ -8,9 +8,6 @@
   background: #f5f4f0;
   color: #142019;
 }
-.not-found-page .site-nav { background: #101a15; }
-.not-found-page .site-nav__language-option.is-active { color: #b4c58e; }
-.not-found-page .mobile-nav { flex-shrink: 0; }
 .not-found-main {
   position: relative;
   isolation: isolate;
@@ -85,13 +82,12 @@
 .not-found-actions .not-found-primary:hover { background: #304822; transform: translateY(-2px); }
 .not-found-footer { background: #101a15; color: #b9c2be; border-top: 4px solid #fff; }
 .not-found-footer__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; padding-block: 36px; min-height: 120px; }
-.not-found-footer .site-nav__brand { margin-right: 0; }
 .not-found-footer p { max-width: 310px; padding-left: 30px; border-left: 1px solid #35432e; font-size: .75rem; line-height: 1.8; }
 .not-found-footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-left: auto; }
 .not-found-footer nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .75rem; }
 .not-found-footer nav a:hover { color: #fff; }
 .not-found-page :focus-visible { outline: 2px solid #5f783e; outline-offset: 5px; }
-.not-found-page .site-nav :focus-visible, .not-found-footer :focus-visible { outline-color: #c5d5a3; }
+.not-found-footer :focus-visible { outline-color: #c5d5a3; }
 .not-found-skip { position: fixed; top: 8px; left: 16px; z-index: 1100; padding: 12px 18px; transform: translateY(-150%); background: #f5f4f0; color: #142019; }
 .not-found-skip:focus { transform: translateY(0); }
 @media (max-width: 1100px) {
@@ -101,7 +97,6 @@
 }
 @media (max-width: 900px) {
   .not-found-page { padding-top: 72px; }
-  .not-found-page .site-nav { height: 72px; }
   .not-found-main { min-height: 560px; }
   .not-found-inner { padding-block: 90px; }
   .not-found-code { left: 47%; top: 34%; font-size: 260px; opacity: .045; }
@@ -109,7 +104,6 @@
 }
 @media (max-width: 600px) {
   .not-found-page .container { width: calc(100% - 40px); }
-  .not-found-page .site-nav__inner { gap: 10px; }
   .not-found-main { min-height: 540px; }
   .not-found-inner { padding-block: 70px 64px; }
   .not-found-eyebrow { font-size: .75rem; gap: 12px; margin-bottom: 22px; }
@@ -125,5 +119,6 @@
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .not-found-page *, .not-found-page *::after { transition: none !important; }
+  .not-found-page *,
+.not-found-page *::after { transition: none !important; }
 }

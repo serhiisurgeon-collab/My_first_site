@@ -85,40 +85,6 @@
 
 .articles-hero__eyebrow {
   animation-delay: 300ms;
-}
-
-
-.articles-hero__title {
-  animation-delay: 450ms;
-}
-
-
-.articles-hero__description {
-  animation-delay: 550ms;
-}
-
-@keyframes articlesHeroText {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .articles-hero::before,
-  .articles-hero__eyebrow,
-  .articles-hero__title,
-  .articles-hero__description {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-}
-
-
-.articles-hero__eyebrow {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -136,17 +102,8 @@
   color: var(--color-accent);
 }
 
-.articles-hero__eyebrow-line {
-  display: block;
-
-  width: 64px;
-  height: 1px;
-
-  background: currentColor;
-}
-
-
 .articles-hero__title {
+  animation-delay: 450ms;
   margin: 0;
 
   font-family: var(--font-display);
@@ -159,8 +116,8 @@
   color: var(--color-text-primary);
 }
 
-
 .articles-hero__description {
+  animation-delay: 550ms;
   max-width: 620px;
 
   margin: 42px 0 0;
@@ -171,6 +128,35 @@
   line-height: 1.6;
 
   color: var(--color-text-secondary);
+}
+
+@keyframes articlesHeroText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .articles-hero::before,
+.articles-hero__eyebrow,
+.articles-hero__title,
+.articles-hero__description {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+.articles-hero__eyebrow-line {
+  display: block;
+
+  width: 64px;
+  height: 1px;
+
+  background: currentColor;
 }
 
 
@@ -380,10 +366,6 @@
 
     cursor: pointer;
 
-  transition:
-    background-color 220ms ease,
-    transform 220ms ease;
-
   align-items: start;
 
   padding-block: 36px;
@@ -402,17 +384,6 @@
   padding-right: 12px;
 
   background: rgba(0, 0, 0, 0.018);
-}
-
-.article-row__arrow {
-  transition:
-    transform 220ms ease,
-    color 220ms ease;
-}
-
-.article-row:hover .article-row__arrow {
-  transform: translateX(6px);
-  color: var(--color-accent);
 }
 
 
@@ -521,6 +492,7 @@
 
 
 .article-row:hover .article-row__arrow {
+  color: var(--color-accent);
   transform: translateX(7px);
 }
 
