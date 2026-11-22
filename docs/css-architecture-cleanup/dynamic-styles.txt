@@ -1,0 +1,76 @@
+js/about-profile.js:17:  field.className = 'profile-clipboard-field';
+js/search.js:39:  overlay.className = "site-search";
+js/search.js:119:    if (overlay.classList.contains('is-open')) return;
+js/search.js:126:    overlay.classList.add('is-open');
+js/search.js:129:    document.body.classList.add('search-open');
+js/search.js:181:    if (overlay.classList.contains("is-open")) renderResults(searchSite(input.value), input.value);
+js/search.js:251:    emptyState.style.display = "flex";
+js/search.js:255:  emptyState.style.display = "none";
+js/search.js:271:    result.className = "site-search__result";
+js/search.js:322:    if (!overlay.classList.contains('is-open')) return;
+js/search.js:329:    overlay.classList.remove('is-open');
+js/search.js:332:    document.body.classList.remove('search-open');
+js/search.js:375:      if (overlay.classList.contains("is-open")) {
+js/search.js:385:      overlay.classList.contains("is-open")
+js/s-dose.js:17:          link.classList.toggle('is-active', isActive);
+js/s-dose.js:45:  disclaimerModal.classList.add("is-open");
+js/s-dose.js:48:  document.body.classList.add("s-dose-modal-open");
+js/s-dose.js:54:  disclaimerModal.classList.remove("is-open");
+js/s-dose.js:57:  document.body.classList.remove("s-dose-modal-open");
+js/s-dose.js:69:    disclaimerModal?.classList.contains("is-open")
+js/s-dose-partnership.js:24:  dialog.className = 's-dose-partnership';
+js/s-dose-partnership.js:27:  close.type = 'button'; close.className = 's-dose-partnership__close';
+js/s-dose-partnership.js:29:  const header = document.createElement('div'); header.className = 's-dose-partnership__header'; header.append(close);
+js/s-dose-partnership.js:30:  const image = new Image(); image.className = 's-dose-partnership__banner'; image.alt = labels.alt;
+js/s-dose-partnership.js:32:  const action = document.createElement('a'); action.className = 's-dose-partnership__action';
+js/s-dose-partnership.js:34:  const footer = document.createElement('div'); footer.className = 's-dose-partnership__footer'; footer.append(action);
+js/s-dose-partnership.js:61:      .map(([element, property]) => ({element, property, value: element.style.getPropertyValue(property), priority: element.style.getPropertyPriority(property)}));
+js/s-dose-partnership.js:63:    if (gap > 0) document.body.style.paddingRight = `${parseFloat(getComputedStyle(document.body).paddingRight) + gap}px`;
+js/s-dose-partnership.js:64:    document.documentElement.style.overflow = 'hidden'; document.body.style.overflow = 'hidden';
+js/s-dose-partnership.js:70:      if (value) element.style.setProperty(property, value, priority); else element.style.removeProperty(property);
+js/projects.js:3:    document.body.classList.add('hero-loaded');
+js/projects.js:27:    projectsMeta.style.setProperty('--glass-shift', `${shift}%`);
+js/projects.js:28:    projectsMeta.style.setProperty('--glass-glow-x', `${glowX}%`);
+js/projects.js:29:    projectsMeta.style.setProperty('--glass-glow-y', `${glowY}%`);
+js/navigation.js:7:    siteNav.classList.toggle("is-scrolled", window.scrollY > 24);
+js/navigation.js:33:    mobileNav.classList.toggle('is-open', open);
+js/navigation.js:38:    document.body.classList.toggle('mobile-menu-open', open);
+js/links.js:28:new MutationObserver(records => {
+js/contact.js:7:        entry.target.classList.add("is-visible");
+js/contact.js:9:        entry.target.classList.remove("is-visible");
+js/article.js:279:      revision.className = "article-revision-date";
+js/article.js:567:      heading.classList.add(
+js/article.js:608:    link.className =
+js/article.js:613:      link.classList.add(
+js/article.js:620:      link.classList.add("is-active");
+js/article.js:678:              link.classList.toggle(
+js/article-static.js:11:          a.classList.toggle("is-active", a.getAttribute("href") === "#" + active.target.id),
+js/animations.js:12:    photoWrap.style.setProperty("--light-x", `${x}%`);
+js/animations.js:13:    photoWrap.style.setProperty("--light-y", `${y}%`);
+js/animations.js:14:    photoWrap.style.setProperty("--light-x-num", String(x / 100));
+js/animations.js:15:    photoWrap.style.setProperty("--light-y-num", String(y / 100));
+js/animations.js:21:    photoWrap.style.setProperty("--light-x", "50%");
+js/animations.js:22:    photoWrap.style.setProperty("--light-y", "50%");
+js/animations.js:23:    photoWrap.style.setProperty("--light-x-num", "0.5");
+js/animations.js:24:    photoWrap.style.setProperty("--light-y-num", "0.5");
+js/animations.js:30:    document.body.classList.add('hero-loaded');
+js/comments/index.js:12:function node(tag,text='',className=''){const e=document.createElement(tag);e.textContent=text;if(className)e.className=className;return e;}
+js/comments/index.js:16: root.classList.add('comments-widget');
+js/comments/index.js:39:   if(c.status!=='published'){const approve=button(strings.approve,()=>moderation(c,'approve'));approve.classList.add('comments-primary');actions.append(approve);};
+js/about.js:26:        hero.classList.add("is-visible");
+js/about.js:139:    copyWrapper.style.height =
+js/about.js:151:    copyWrapper.style.height = `${currentHeight}px`;
+js/about.js:153:    currentPanel.classList.remove("is-active");
+js/about.js:154:    nextPanel.classList.add("is-active");
+js/about.js:158:        copyWrapper.style.height = `${nextHeight}px`;
+js/about.js:164:    story.classList.remove("is-expanding");
+js/about.js:171:    story.classList.add("is-expanding");
+js/about.js:176:      story.classList.remove("is-expanding");
+js/about.js:189:    aboutSection?.classList.toggle(
+js/about.js:217:    currentPanel.classList.remove("is-active");
+js/about.js:218:    nextPanel.classList.add("is-active");
+js/about.js:220:    copyWrapper.style.height =
+js/about.js:259:    copyWrapper.style.height =
+js/about.js:269:    copyWrapper.style.height = `${activePanel.scrollHeight}px`;
+js/articles.js:403:            btn.classList.remove(
+js/articles.js:409:          button.classList.add(

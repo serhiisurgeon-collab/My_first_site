@@ -49,3 +49,7 @@
   --duration-slow: 600ms;
   --ease-out: cubic-bezier(.22, 1, .36, 1);
 }
+.site-shell--standard {
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", Arial, sans-serif;
+}

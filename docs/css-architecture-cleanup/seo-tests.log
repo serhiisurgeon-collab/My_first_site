@@ -1,0 +1,15 @@
+
+> seo:test
+> node --test tests/seo/*.test.mjs
+
+✔ tests/seo/build-safety.test.mjs (739.96222ms)
+✔ tests/seo/images.test.mjs (2048.885858ms)
+✔ tests/seo/static.test.mjs (1291.189801ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2062.520106

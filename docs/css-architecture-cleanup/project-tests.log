@@ -1,0 +1,25 @@
+tests/blood/card-disclosures.mjs
+PASS 24 card/viewport cases: mouse + keyboard expand/collapse; five lines; no horizontal overflow; no-JS full text
+tests/blood/donor-guide.mjs
+PASS 5 browser scenarios; metadata/structure/source count assertions
+tests/blood/news-page.mjs
+PASS 5 browser scenarios; 30 static cards, no fictional date/schema/link assertions
+tests/spanish/seo-landings.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'false' !== 'true'
+
+    at file:///workspace/My_first_site/tests/spanish/seo-landings.mjs:36:60 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'false',
+  expected: 'true',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

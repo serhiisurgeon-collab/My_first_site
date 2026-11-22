@@ -1,0 +1,7 @@
+{
+  "cases": 44,
+  "errors": [],
+  "badResponses": [],
+  "overflows": [],
+  "firebase": "disabled in test only; no live database operations"
+}

@@ -12,11 +12,15 @@
 .blood-news-page .blood-news__card p { margin: 0; }
 .blood-news-page .blood-news__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; color: #555; }
 .blood-news-page .blood-news__category { color: #a51c30; font-weight: 700; }
-.blood-news-page .blood-news__back, .blood-news-page [data-news-more] { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 700; min-height: 48px; }
+.blood-news-page .blood-news__back,
+.blood-news-page [data-news-more] { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 18px; text-decoration: none; font: inherit; font-weight: 700; min-height: 48px; }
 .blood-news-page [data-news-more] { background: #a51c30; color: #fff; cursor: pointer; }
 .blood-news-page [data-news-more][hidden] { display: none; }
 .blood-news-page .blood-news__more { text-align: center; margin: 24px 0 40px; }
-.blood-news-page a:focus-visible, .blood-news-page button:focus-visible, .blood-news-page h2:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
-.blood-news-page .navbar-main a:focus-visible, .blood-news-page .burger:focus-visible { outline-color: #8cdbff; }
+.blood-news-page a:focus-visible,
+.blood-news-page button:focus-visible,
+.blood-news-page h2:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
+.blood-news-page .navbar-main a:focus-visible,
+.blood-news-page .burger:focus-visible { outline-color: #8cdbff; }
 @media (max-width: 900px) { .blood-news-page .blood-news__grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 600px) { .blood-news-page .blood-news { padding: 100px 12px 32px; } .blood-news-page .blood-news__grid { grid-template-columns: minmax(0,1fr); } }

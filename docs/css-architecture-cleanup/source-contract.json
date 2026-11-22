@@ -1,0 +1,16 @@
+{
+  "baseline": "4e0521e759e18c2288afcfc86be9c90965456cf3",
+  "counts": {
+    "html": 62,
+    "javascript": 36,
+    "media": 104,
+    "content": 23
+  },
+  "differences": [],
+  "allowedChanges": [
+    "stylesheet dependencies/cache hashes",
+    "three existing shell variant markers",
+    "About collaboration shared class",
+    "CSS inside style blocks"
+  ]
+}

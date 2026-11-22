@@ -92,7 +92,6 @@ body.hero-loaded .projects-hero::before {
 }
 
 
-
 /* ---------------------------------------------------------
    Decorative rings
 --------------------------------------------------------- */
@@ -105,7 +104,7 @@ body.hero-loaded .projects-hero::before {
 .projects-hero__container {
   position: relative;
   z-index: 2;
-  
+
   height: 100%;
 }
 
@@ -499,59 +498,6 @@ background:
    FILTERS
 ========================================================= */
 
-.projects-filters {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 10px;
-
-  margin-bottom: 52px;
-}
-
-
-.projects-filter {
-  appearance: none;
-
-  padding: 10px 18px;
-
-  color: #59645f;
-  background: transparent;
-
-  border: 1px solid rgba(89, 100, 95, 0.22);
-  border-radius: 999px;
-
-  font-family: var(--font-body, "Manrope", Arial, sans-serif);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 18px;
-
-  cursor: pointer;
-
-  transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
-}
-
-
-.projects-filter:hover {
-  color: #17201c;
-
-  border-color: rgba(111, 143, 123, 0.55);
-
-  transform: translateY(-1px);
-}
-
-
-.projects-filter.is-active {
-  color: #f5f6f2;
-  background: #17201c;
-
-  border-color: #17201c;
-}
-
 /* =========================================
    PROJECTS SHOWCASE
 ========================================= */
@@ -572,7 +518,7 @@ background:
   min-height: 500px;
 
   display: block;
-  
+
   overflow: hidden;
 
   border-radius: 18px;
@@ -788,7 +734,7 @@ background:
   min-height: 360px;
 
   display: block;
-  
+
   overflow: hidden;
 
   border-radius: 18px;
@@ -1254,7 +1200,7 @@ background:
   }
 
   .project-featured__visual img,
-  .project-secondary__visual img {
+.project-secondary__visual img {
     object-fit: cover;
     object-position: 65% center;
     opacity: 1;
@@ -1263,13 +1209,13 @@ background:
   }
 
   .project-featured__visual::before,
-  .project-secondary__visual::before {
+.project-secondary__visual::before {
     background: linear-gradient(180deg, rgba(12, 17, 15, .65), rgba(12, 17, 15, .78));
   }
 
   .project-secondary__content { padding: 72px 28px 36px; }
   .project-featured__description,
-  .project-secondary__content p { color: rgba(255, 255, 255, .92); }
+.project-secondary__content p { color: rgba(255, 255, 255, .92); }
 
   .project-secondary-grid {
     grid-template-columns: 1fr;
@@ -1281,35 +1227,8 @@ background:
   }
 
 
-  .project-row {
-    min-height: 150px;
-
-    grid-template-columns: 100px minmax(0,1fr) 48px;
-  }
-
-
-  .project-row__visual {
-    height: 100%;
-  }
-
-
-  .project-row__content {
-    padding: 18px;
-  }
-
-
-  .project-row__content p {
-    display: none;
-  }
-
-
   .project-row > .project-status {
     display: none;
-  }
-
-
-  .project-row__arrow {
-    padding: 0 14px;
   }
 
 }
@@ -1339,7 +1258,7 @@ background:
   }
 }
 
-.hero-reveal {
+:where(.projects-page) .hero-reveal {
   opacity: 0;
   transform: translate3d(0, 18px, 0);
 
@@ -1352,7 +1271,7 @@ background:
   -webkit-backface-visibility: hidden;
 }
 
-body.hero-loaded .hero-reveal {
+body.hero-loaded :where(.projects-page) .hero-reveal {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -1360,23 +1279,23 @@ body.hero-loaded .hero-reveal {
 
 /* Послідовність появи */
 
-body.hero-loaded .hero-reveal--1 {
+body.hero-loaded :where(.projects-page) .hero-reveal--1 {
   transition-delay: 0.20s;
 }
 
-body.hero-loaded .hero-reveal--2 {
+body.hero-loaded :where(.projects-page) .hero-reveal--2 {
   transition-delay: 0.38s;
 }
 
-body.hero-loaded .hero-reveal--3 {
+body.hero-loaded :where(.projects-page) .hero-reveal--3 {
   transition-delay: 0.56s;
 }
 
-body.hero-loaded .hero-reveal--4 {
+body.hero-loaded :where(.projects-page) .hero-reveal--4 {
   transition-delay: 0.74s;
 }
 
-body.hero-loaded .hero-reveal--5 {
+body.hero-loaded :where(.projects-page) .hero-reveal--5 {
   transition-delay: 0.96s;
 }
 
@@ -1897,32 +1816,15 @@ body.hero-loaded .hero-reveal--5 {
     font-size: 14px;
   }
 
-  .projects-meta__item--wide {
+    .projects-meta__item--wide {
     grid-column: auto;
     border-top: 0;
-  }
-
-    .projects-meta__item--wide {
     -webkit-mask-image: none;
     mask-image: none;
   }
 
   .projects-index {
     padding: 34px 0 80px;
-  }
-
-
-  .projects-filters {
-    gap: 8px;
-
-    margin-bottom: 38px;
-  }
-
-
-  .projects-filter {
-    padding: 9px 15px;
-
-    font-size: 12px;
   }
 
 }

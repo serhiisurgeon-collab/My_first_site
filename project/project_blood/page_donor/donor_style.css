@@ -10,12 +10,15 @@
 .donor-info-page .donor-info ul { padding-left: 24px; }
 .donor-info-page .donor-info li { margin: 10px 0; }
 .donor-info-page .donor-info__contents { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
-.donor-info-page .donor-info__contents a, .donor-info-page .donor-info__back { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 16px; text-decoration: none; font-weight: 700; }
+.donor-info-page .donor-info__contents a,
+.donor-info-page .donor-info__back { display: inline-block; border: 1px solid #a51c30; border-radius: 14px; color: #8a1525; background: #fff; padding: 12px 16px; text-decoration: none; font-weight: 700; }
 .donor-info-page .donor-info__section { padding: 24px clamp(16px,3vw,32px); margin: 24px 0; background: #fff; border-radius: 18px; box-shadow: 0 8px 22px rgba(0,0,0,.06); scroll-margin-top: 110px; }
 .donor-info-page .donor-info__note { margin: 24px 0; padding: 16px 20px; border-left: 4px solid #a51c30; background: #fff1f3; color: #4f1620; }
 .donor-info-page .donor-info__sources { font-size: 14px; margin: 36px 0; }
 .donor-info-page .donor-info__sources a { color: #8a1525; text-decoration: underline; }
-.donor-info-page a:focus-visible, .donor-info-page button:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
-.donor-info-page .navbar-main a:focus-visible, .donor-info-page .burger:focus-visible { outline-color: #8cdbff; }
+.donor-info-page a:focus-visible,
+.donor-info-page button:focus-visible { outline: 3px solid #005d90; outline-offset: 4px; }
+.donor-info-page .navbar-main a:focus-visible,
+.donor-info-page .burger:focus-visible { outline-color: #8cdbff; }
 @media (max-width: 600px) { .donor-info-page .donor-info { padding: 100px 12px 32px; } .donor-info-page .donor-info__contents { flex-direction: column; } }
 @media (prefers-reduced-motion: reduce) { .donor-info-page { scroll-behavior: auto; } .donor-info-page * { transition: none; } }
